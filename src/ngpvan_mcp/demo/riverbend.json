@@ -1,0 +1,8017 @@
+{
+ "_note": "Fictional demo data for ngpvan-mcp. No real people, programs or organizations.",
+ "today": "2026-11-20",
+ "apiKeyProfile": {
+  "databaseName": "Demo VAN (fake data)",
+  "hasMyVoters": false,
+  "hasMyCampaign": true,
+  "committeeName": "Riverbend Votes (demo)",
+  "apiKeyTypeName": "Custom Integration",
+  "keyReference": "0000",
+  "userFirstName": "riverbend",
+  "userLastName": "api",
+  "username": "riverbend.api",
+  "userId": 1
+ },
+ "people": [
+  {
+   "vanId": 100200101,
+   "firstName": "Malik",
+   "middleName": "J",
+   "lastName": "Vasquez",
+   "suffix": null,
+   "dateOfBirth": "1968-12-05T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Malik",
+   "envelopeName": "Malik Vasquez",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "malik.vasquez@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [],
+    "addresses": [
+     {
+      "addressId": 800000,
+      "addressLine1": "2136 Cedar St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2136 Cedar St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200102,
+   "firstName": "Grace",
+   "middleName": "Lee",
+   "lastName": "Thornbury",
+   "suffix": null,
+   "dateOfBirth": "1963-06-28T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Grace",
+   "envelopeName": "Grace Thornbury",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "grace.thornbury@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700001,
+      "phoneNumber": "9705550101",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-In",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800001,
+      "addressLine1": "527 Foundry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "527 Foundry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200103,
+   "firstName": "Lucia",
+   "middleName": null,
+   "lastName": "Okafor",
+   "suffix": null,
+   "dateOfBirth": "1972-07-12T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Lucia",
+   "envelopeName": "Lucia Okafor",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "lucia.okafor@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700002,
+      "phoneNumber": "9705550102",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-In",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800002,
+      "addressLine1": "486 Beacon St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "486 Beacon St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  },
+  {
+   "vanId": 100200104,
+   "firstName": "Hannah",
+   "middleName": "Lee",
+   "lastName": "Whitfield",
+   "suffix": null,
+   "dateOfBirth": "1953-06-02T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Hannah",
+   "envelopeName": "Hannah Whitfield",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "hannah.whitfield@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700003,
+      "phoneNumber": "9705550103",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-Out",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800003,
+      "addressLine1": "1783 Cedar St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1783 Cedar St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200105,
+   "firstName": "Malik",
+   "middleName": "Ann",
+   "lastName": "Ashdown",
+   "suffix": null,
+   "dateOfBirth": "1975-01-24T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Malik",
+   "envelopeName": "Malik Ashdown",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "malik.ashdown@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [],
+    "addresses": [
+     {
+      "addressId": 800004,
+      "addressLine1": "1578 Foundry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1578 Foundry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200106,
+   "firstName": "Dana",
+   "middleName": "J",
+   "lastName": "Marchetti",
+   "suffix": null,
+   "dateOfBirth": "1956-10-06T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Dana",
+   "envelopeName": "Dana Marchetti",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [],
+    "phones": [
+     {
+      "phoneId": 700005,
+      "phoneNumber": "9705550105",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Home",
+      "deviceType": "Landline",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Unknown",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800005,
+      "addressLine1": "1268 Beacon St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1268 Beacon St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  },
+  {
+   "vanId": 100200107,
+   "firstName": "Samir",
+   "middleName": "J",
+   "lastName": "Brennan",
+   "suffix": null,
+   "dateOfBirth": "1977-01-02T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Samir",
+   "envelopeName": "Samir Brennan",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [],
+    "phones": [
+     {
+      "phoneId": 700006,
+      "phoneNumber": "9705550106",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-In",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800006,
+      "addressLine1": "2959 Willow St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2959 Willow St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200108,
+   "firstName": "Elena",
+   "middleName": "Ann",
+   "lastName": "Fairbanks",
+   "suffix": null,
+   "dateOfBirth": "1953-07-08T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Elena",
+   "envelopeName": "Elena Fairbanks",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [],
+    "phones": [],
+    "addresses": [
+     {
+      "addressId": 800007,
+      "addressLine1": "65 Larkspur St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "65 Larkspur St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200109,
+   "firstName": "Hannah",
+   "middleName": null,
+   "lastName": "Ellery",
+   "suffix": null,
+   "dateOfBirth": "1957-06-01T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Hannah",
+   "envelopeName": "Hannah Ellery",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "hannah.ellery@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700008,
+      "phoneNumber": "9705550108",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-Out",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800008,
+      "addressLine1": "223 Ferry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "223 Ferry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  },
+  {
+   "vanId": 100200110,
+   "firstName": "Noor",
+   "middleName": "Ann",
+   "lastName": "Brennan",
+   "suffix": null,
+   "dateOfBirth": "1985-06-19T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Noor",
+   "envelopeName": "Noor Brennan",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "noor.brennan@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700009,
+      "phoneNumber": "9705550109",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-In",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800009,
+      "addressLine1": "2197 Cedar St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2197 Cedar St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200111,
+   "firstName": "Hannah",
+   "middleName": "Ann",
+   "lastName": "Delacroix",
+   "suffix": null,
+   "dateOfBirth": "1992-03-25T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Hannah",
+   "envelopeName": "Hannah Delacroix",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "hannah.delacroix@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700010,
+      "phoneNumber": "9705550110",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Home",
+      "deviceType": "Landline",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Unknown",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800010,
+      "addressLine1": "1838 Larkspur St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1838 Larkspur St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200112,
+   "firstName": "Samir",
+   "middleName": null,
+   "lastName": "Ashdown",
+   "suffix": null,
+   "dateOfBirth": "1968-06-09T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Samir",
+   "envelopeName": "Samir Ashdown",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "samir.ashdown@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700011,
+      "phoneNumber": "9705550111",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Unknown",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800011,
+      "addressLine1": "2639 Pier St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2639 Pier St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  },
+  {
+   "vanId": 100200113,
+   "firstName": "Wren",
+   "middleName": "Ann",
+   "lastName": "Sorensen",
+   "suffix": null,
+   "dateOfBirth": "1965-12-02T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Wren",
+   "envelopeName": "Wren Sorensen",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [],
+    "phones": [
+     {
+      "phoneId": 700012,
+      "phoneNumber": "9705550112",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-In",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800012,
+      "addressLine1": "1699 Juniper St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1699 Juniper St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200114,
+   "firstName": "Grace",
+   "middleName": "J",
+   "lastName": "Castellanos",
+   "suffix": null,
+   "dateOfBirth": "1967-10-14T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Grace",
+   "envelopeName": "Grace Castellanos",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "grace.castellanos@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [],
+    "addresses": [
+     {
+      "addressId": 800013,
+      "addressLine1": "1014 Quarry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1014 Quarry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200115,
+   "firstName": "Yesenia",
+   "middleName": "Lee",
+   "lastName": "Achebe",
+   "suffix": null,
+   "dateOfBirth": "1976-02-03T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Yesenia",
+   "envelopeName": "Yesenia Achebe",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "yesenia.achebe@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700014,
+      "phoneNumber": "9705550114",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-Out",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800014,
+      "addressLine1": "2719 Ferry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2719 Ferry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  },
+  {
+   "vanId": 100200116,
+   "firstName": "Priya",
+   "middleName": "J",
+   "lastName": "Brennan",
+   "suffix": null,
+   "dateOfBirth": "1992-01-06T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Priya",
+   "envelopeName": "Priya Brennan",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "priya.brennan@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [],
+    "addresses": [
+     {
+      "addressId": 800015,
+      "addressLine1": "2813 Maple St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2813 Maple St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200117,
+   "firstName": "Felix",
+   "middleName": null,
+   "lastName": "Ashdown",
+   "suffix": null,
+   "dateOfBirth": "1964-10-11T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Felix",
+   "envelopeName": "Felix Ashdown",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "felix.ashdown@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700016,
+      "phoneNumber": "9705550116",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Home",
+      "deviceType": "Landline",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Unknown",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800016,
+      "addressLine1": "545 Foundry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "545 Foundry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200118,
+   "firstName": "Aisha",
+   "middleName": null,
+   "lastName": "Marchetti",
+   "suffix": null,
+   "dateOfBirth": "1959-03-06T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Aisha",
+   "envelopeName": "Aisha Marchetti",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "aisha.marchetti@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [],
+    "addresses": [
+     {
+      "addressId": 800017,
+      "addressLine1": "2535 Beacon St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2535 Beacon St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  },
+  {
+   "vanId": 100200119,
+   "firstName": "Tobias",
+   "middleName": "Lee",
+   "lastName": "Vasquez",
+   "suffix": null,
+   "dateOfBirth": "1955-01-22T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Tobias",
+   "envelopeName": "Tobias Vasquez",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "tobias.vasquez@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700018,
+      "phoneNumber": "9705550118",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-Out",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800018,
+      "addressLine1": "464 Cedar St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "464 Cedar St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200120,
+   "firstName": "Calvin",
+   "middleName": null,
+   "lastName": "Lindqvist",
+   "suffix": null,
+   "dateOfBirth": "1971-05-02T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Calvin",
+   "envelopeName": "Calvin Lindqvist",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "calvin.lindqvist@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700019,
+      "phoneNumber": "9705550119",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-Out",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800019,
+      "addressLine1": "1974 Quarry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1974 Quarry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200121,
+   "firstName": "Samir",
+   "middleName": null,
+   "lastName": "Holloway",
+   "suffix": null,
+   "dateOfBirth": "1970-07-15T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Samir",
+   "envelopeName": "Samir Holloway",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [],
+    "phones": [
+     {
+      "phoneId": 700020,
+      "phoneNumber": "9705550120",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Unknown",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800020,
+      "addressLine1": "2302 Beacon St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2302 Beacon St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  },
+  {
+   "vanId": 100200122,
+   "firstName": "Keisha",
+   "middleName": null,
+   "lastName": "Ellery",
+   "suffix": null,
+   "dateOfBirth": "1997-12-21T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Keisha",
+   "envelopeName": "Keisha Ellery",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "keisha.ellery@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700021,
+      "phoneNumber": "9705550121",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-In",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800021,
+      "addressLine1": "2999 Maple St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2999 Maple St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200123,
+   "firstName": "Dana",
+   "middleName": null,
+   "lastName": "Brennan",
+   "suffix": null,
+   "dateOfBirth": "2001-05-07T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Dana",
+   "envelopeName": "Dana Brennan",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "dana.brennan@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [],
+    "addresses": [
+     {
+      "addressId": 800022,
+      "addressLine1": "2443 Larkspur St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2443 Larkspur St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200124,
+   "firstName": "Noor",
+   "middleName": null,
+   "lastName": "Thornbury",
+   "suffix": null,
+   "dateOfBirth": "1952-10-13T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Noor",
+   "envelopeName": "Noor Thornbury",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [],
+    "phones": [
+     {
+      "phoneId": 700023,
+      "phoneNumber": "9705550123",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-Out",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800023,
+      "addressLine1": "2402 Ferry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2402 Ferry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  },
+  {
+   "vanId": 100200125,
+   "firstName": "Jordan",
+   "middleName": null,
+   "lastName": "Abernathy",
+   "suffix": null,
+   "dateOfBirth": "1994-05-04T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Jordan",
+   "envelopeName": "Jordan Abernathy",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [],
+    "phones": [
+     {
+      "phoneId": 700024,
+      "phoneNumber": "9705550124",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-In",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800024,
+      "addressLine1": "2866 Willow St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2866 Willow St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200126,
+   "firstName": "Samir",
+   "middleName": "Lee",
+   "lastName": "Sorensen",
+   "suffix": null,
+   "dateOfBirth": "1980-12-12T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Samir",
+   "envelopeName": "Samir Sorensen",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "samir.sorensen@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700025,
+      "phoneNumber": "9705550125",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Unknown",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800025,
+      "addressLine1": "1122 Quarry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1122 Quarry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200127,
+   "firstName": "Theo",
+   "middleName": "Ann",
+   "lastName": "Abernathy",
+   "suffix": null,
+   "dateOfBirth": "1972-07-11T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Theo",
+   "envelopeName": "Theo Abernathy",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "theo.abernathy@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700026,
+      "phoneNumber": "9705550126",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Home",
+      "deviceType": "Landline",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Unknown",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800026,
+      "addressLine1": "1812 Beacon St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1812 Beacon St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  },
+  {
+   "vanId": 100200128,
+   "firstName": "Samir",
+   "middleName": "J",
+   "lastName": "Lindqvist",
+   "suffix": null,
+   "dateOfBirth": "1950-10-14T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Samir",
+   "envelopeName": "Samir Lindqvist",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [],
+    "phones": [
+     {
+      "phoneId": 700027,
+      "phoneNumber": "9705550127",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Unknown",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800027,
+      "addressLine1": "983 Willow St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "983 Willow St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200129,
+   "firstName": "Felix",
+   "middleName": "Ann",
+   "lastName": "Abernathy",
+   "suffix": null,
+   "dateOfBirth": "1956-07-24T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Felix",
+   "envelopeName": "Felix Abernathy",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "felix.abernathy@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700028,
+      "phoneNumber": "9705550128",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Home",
+      "deviceType": "Landline",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Unknown",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800028,
+      "addressLine1": "1800 Foundry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1800 Foundry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200130,
+   "firstName": "Lucia",
+   "middleName": "Ann",
+   "lastName": "Delacroix",
+   "suffix": null,
+   "dateOfBirth": "1999-11-05T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Lucia",
+   "envelopeName": "Lucia Delacroix",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [],
+    "phones": [],
+    "addresses": [
+     {
+      "addressId": 800029,
+      "addressLine1": "1108 Beacon St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1108 Beacon St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  },
+  {
+   "vanId": 100200131,
+   "firstName": "Keisha",
+   "middleName": "Ann",
+   "lastName": "Abernathy",
+   "suffix": null,
+   "dateOfBirth": "1990-05-22T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Keisha",
+   "envelopeName": "Keisha Abernathy",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "keisha.abernathy@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700030,
+      "phoneNumber": "9705550130",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-In",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800030,
+      "addressLine1": "2136 Cedar St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2136 Cedar St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200132,
+   "firstName": "Rowan",
+   "middleName": "Ann",
+   "lastName": "Lindqvist",
+   "suffix": null,
+   "dateOfBirth": "1978-05-05T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Rowan",
+   "envelopeName": "Rowan Lindqvist",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "rowan.lindqvist@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700031,
+      "phoneNumber": "9705550131",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-In",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800031,
+      "addressLine1": "1805 Quarry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1805 Quarry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200133,
+   "firstName": "Dana",
+   "middleName": "J",
+   "lastName": "Abernathy",
+   "suffix": null,
+   "dateOfBirth": "1976-03-26T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Dana",
+   "envelopeName": "Dana Abernathy",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "dana.abernathy@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700032,
+      "phoneNumber": "9705550132",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-In",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800032,
+      "addressLine1": "2402 Ferry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2402 Ferry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  },
+  {
+   "vanId": 100200134,
+   "firstName": "Rowan",
+   "middleName": "Ann",
+   "lastName": "Ramirez",
+   "suffix": null,
+   "dateOfBirth": "1963-06-27T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Rowan",
+   "envelopeName": "Rowan Ramirez",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "rowan.ramirez@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700033,
+      "phoneNumber": "9705550133",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-In",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800033,
+      "addressLine1": "933 Willow St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "933 Willow St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200135,
+   "firstName": "Yesenia",
+   "middleName": "Lee",
+   "lastName": "Nakamura",
+   "suffix": null,
+   "dateOfBirth": "1986-03-27T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Yesenia",
+   "envelopeName": "Yesenia Nakamura",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "yesenia.nakamura@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700034,
+      "phoneNumber": "9705550134",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-Out",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800034,
+      "addressLine1": "2625 Larkspur St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2625 Larkspur St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200136,
+   "firstName": "Keisha",
+   "middleName": "J",
+   "lastName": "Okafor",
+   "suffix": null,
+   "dateOfBirth": "1951-09-08T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Keisha",
+   "envelopeName": "Keisha Okafor",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [],
+    "phones": [],
+    "addresses": [
+     {
+      "addressId": 800035,
+      "addressLine1": "2697 Ferry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "2697 Ferry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  },
+  {
+   "vanId": 100200137,
+   "firstName": "Desmond",
+   "middleName": null,
+   "lastName": "Achebe",
+   "suffix": null,
+   "dateOfBirth": "1953-11-25T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Desmond",
+   "envelopeName": "Desmond Achebe",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "desmond.achebe@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700036,
+      "phoneNumber": "9705550136",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-In",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800036,
+      "addressLine1": "1319 Cedar St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1319 Cedar St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200138,
+   "firstName": "Tamsin",
+   "middleName": null,
+   "lastName": "Ramirez",
+   "suffix": null,
+   "dateOfBirth": "1958-08-09T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Tamsin",
+   "envelopeName": "Tamsin Ramirez",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [],
+    "phones": [
+     {
+      "phoneId": 700037,
+      "phoneNumber": "9705550137",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Home",
+      "deviceType": "Landline",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Unknown",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800037,
+      "addressLine1": "1980 Quarry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1980 Quarry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200139,
+   "firstName": "Noor",
+   "middleName": null,
+   "lastName": "Marchetti",
+   "suffix": null,
+   "dateOfBirth": "1973-07-15T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Noor",
+   "envelopeName": "Noor Marchetti",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "noor.marchetti@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700038,
+      "phoneNumber": "9705550138",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-Out",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800038,
+      "addressLine1": "887 Ferry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "887 Ferry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  },
+  {
+   "vanId": 100200140,
+   "firstName": "Beatriz",
+   "middleName": null,
+   "lastName": "Whitfield",
+   "suffix": null,
+   "dateOfBirth": "2002-03-11T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Beatriz",
+   "envelopeName": "Beatriz Whitfield",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "beatriz.whitfield@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700039,
+      "phoneNumber": "9705550139",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-In",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800039,
+      "addressLine1": "1359 Maple St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1359 Maple St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200141,
+   "firstName": "Tobias",
+   "middleName": "J",
+   "lastName": "Nakamura",
+   "suffix": null,
+   "dateOfBirth": "1994-11-07T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Tobias",
+   "envelopeName": "Tobias Nakamura",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "tobias.nakamura@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700040,
+      "phoneNumber": "9705550140",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Home",
+      "deviceType": "Landline",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Unknown",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800040,
+      "addressLine1": "1748 Larkspur St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1748 Larkspur St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200142,
+   "firstName": "Calvin",
+   "middleName": null,
+   "lastName": "Kowalczyk",
+   "suffix": null,
+   "dateOfBirth": "1970-03-28T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Calvin",
+   "envelopeName": "Calvin Kowalczyk",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [],
+    "phones": [],
+    "addresses": [
+     {
+      "addressId": 800041,
+      "addressLine1": "1488 Beacon St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1488 Beacon St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  },
+  {
+   "vanId": 100200143,
+   "firstName": "Owen",
+   "middleName": null,
+   "lastName": "Vasquez",
+   "suffix": null,
+   "dateOfBirth": "2002-05-23T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Owen",
+   "envelopeName": "Owen Vasquez",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "owen.vasquez@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [],
+    "addresses": [
+     {
+      "addressId": 800042,
+      "addressLine1": "40 Juniper St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "40 Juniper St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200144,
+   "firstName": "Rowan",
+   "middleName": null,
+   "lastName": "Fairbanks",
+   "suffix": null,
+   "dateOfBirth": "1956-05-08T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Rowan",
+   "envelopeName": "Rowan Fairbanks",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "rowan.fairbanks@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700043,
+      "phoneNumber": "9705550143",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Home",
+      "deviceType": "Landline",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Unknown",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800043,
+      "addressLine1": "930 Larkspur St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "930 Larkspur St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200145,
+   "firstName": "Malik",
+   "middleName": "Ann",
+   "lastName": "Ellery",
+   "suffix": null,
+   "dateOfBirth": "1958-12-26T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Malik",
+   "envelopeName": "Malik Ellery",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "malik.ellery@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [],
+    "addresses": [
+     {
+      "addressId": 800044,
+      "addressLine1": "1271 Beacon St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1271 Beacon St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  },
+  {
+   "vanId": 100200146,
+   "firstName": "Tamsin",
+   "middleName": "J",
+   "lastName": "Oduya",
+   "suffix": null,
+   "dateOfBirth": "2003-01-13T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Tamsin",
+   "envelopeName": "Tamsin Oduya",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "tamsin.oduya@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700045,
+      "phoneNumber": "9705550145",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Home",
+      "deviceType": "Landline",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Unknown",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800045,
+      "addressLine1": "1948 Willow St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1948 Willow St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
+  },
+  {
+   "vanId": 100200147,
+   "firstName": "Beatriz",
+   "middleName": "Ann",
+   "lastName": "Vasquez",
+   "suffix": null,
+   "dateOfBirth": "1978-04-09T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Beatriz",
+   "envelopeName": "Beatriz Vasquez",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [],
+    "phones": [
+     {
+      "phoneId": 700046,
+      "phoneNumber": "9705550146",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Unknown",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800046,
+      "addressLine1": "860 Foundry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Eastgate",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80902",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "860 Foundry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Eastgate"
+  },
+  {
+   "vanId": 100200148,
+   "firstName": "Dana",
+   "middleName": "Ann",
+   "lastName": "Ashdown",
+   "suffix": null,
+   "dateOfBirth": "1968-06-05T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Dana",
+   "envelopeName": "Dana Ashdown",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "dana.ashdown@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700047,
+      "phoneNumber": "9705550147",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-In",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800047,
+      "addressLine1": "1079 Ferry St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Harbor Point",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80903",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1079 Ferry St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Harbor"
+  }
+ ],
+ "activistCodes": [
+  {
+   "activistCodeId": 4101,
+   "type": "Volunteer",
+   "name": "Volunteer",
+   "mediumName": "Vol",
+   "shortName": "VOL",
+   "description": "Has volunteered at least once",
+   "scriptQuestion": "Would you volunteer with us?",
+   "status": "Active"
+  },
+  {
+   "activistCodeId": 4102,
+   "type": "Volunteer",
+   "name": "Phone Banker",
+   "mediumName": "PhoneB",
+   "shortName": "PB",
+   "description": "Makes calls",
+   "scriptQuestion": "Can you make calls from home?",
+   "status": "Active"
+  },
+  {
+   "activistCodeId": 4103,
+   "type": "Volunteer",
+   "name": "Canvasser",
+   "mediumName": "Canv",
+   "shortName": "CV",
+   "description": "Knocks doors",
+   "scriptQuestion": "Can you knock doors with us?",
+   "status": "Active"
+  },
+  {
+   "activistCodeId": 4104,
+   "type": "Volunteer",
+   "name": "Event Host",
+   "mediumName": "Host",
+   "shortName": "EH",
+   "description": "Has hosted an event",
+   "scriptQuestion": "Would you host a house meeting?",
+   "status": "Active"
+  },
+  {
+   "activistCodeId": 4105,
+   "type": "Constituency",
+   "name": "Renter",
+   "mediumName": "Renter",
+   "shortName": "RN",
+   "description": "Self-identified renter",
+   "scriptQuestion": null,
+   "status": "Active"
+  },
+  {
+   "activistCodeId": 4099,
+   "type": "Volunteer",
+   "name": "Spring Petition Signer",
+   "mediumName": "SprPet",
+   "shortName": "SP",
+   "description": "Signed the spring petition",
+   "scriptQuestion": null,
+   "status": "Archived"
+  }
+ ],
+ "personActivistCodes": {
+  "100200101": [
+   {
+    "activistCodeId": 4105,
+    "activistCodeName": "Renter",
+    "dateCreated": "2026-08-07T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-25T15:00:00Z"
+   }
+  ],
+  "100200102": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-05-25T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-10-15T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4102,
+    "activistCodeName": "Phone Banker",
+    "dateCreated": "2026-07-23T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-04T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4104,
+    "activistCodeName": "Event Host",
+    "dateCreated": "2026-06-14T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-07T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4105,
+    "activistCodeName": "Renter",
+    "dateCreated": "2026-07-10T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-04-09T15:00:00Z"
+   }
+  ],
+  "100200103": [],
+  "100200104": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-04-07T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-22T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4102,
+    "activistCodeName": "Phone Banker",
+    "dateCreated": "2026-04-21T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-05-08T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4103,
+    "activistCodeName": "Canvasser",
+    "dateCreated": "2026-06-03T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-09-20T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4104,
+    "activistCodeName": "Event Host",
+    "dateCreated": "2026-07-01T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-28T15:00:00Z"
+   }
+  ],
+  "100200105": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-05-11T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-09-23T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4102,
+    "activistCodeName": "Phone Banker",
+    "dateCreated": "2026-10-17T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-07-12T15:00:00Z"
+   }
+  ],
+  "100200106": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-10-15T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-05T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4104,
+    "activistCodeName": "Event Host",
+    "dateCreated": "2026-05-19T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-09-12T15:00:00Z"
+   }
+  ],
+  "100200107": [],
+  "100200108": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-08-06T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-10-13T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4103,
+    "activistCodeName": "Canvasser",
+    "dateCreated": "2026-04-26T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-14T15:00:00Z"
+   }
+  ],
+  "100200109": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-09-03T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-09-20T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4104,
+    "activistCodeName": "Event Host",
+    "dateCreated": "2026-08-22T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-25T15:00:00Z"
+   }
+  ],
+  "100200110": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-08-14T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-07-16T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4102,
+    "activistCodeName": "Phone Banker",
+    "dateCreated": "2026-07-04T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-07-17T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4105,
+    "activistCodeName": "Renter",
+    "dateCreated": "2026-07-15T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-04-14T15:00:00Z"
+   }
+  ],
+  "100200111": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-06-07T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-05-05T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4104,
+    "activistCodeName": "Event Host",
+    "dateCreated": "2026-08-08T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-05-25T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4105,
+    "activistCodeName": "Renter",
+    "dateCreated": "2026-05-15T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-21T15:00:00Z"
+   }
+  ],
+  "100200112": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-07-02T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-04-17T15:00:00Z"
+   }
+  ],
+  "100200113": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-04-12T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-10T15:00:00Z"
+   }
+  ],
+  "100200114": [
+   {
+    "activistCodeId": 4105,
+    "activistCodeName": "Renter",
+    "dateCreated": "2026-07-23T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-05-26T15:00:00Z"
+   }
+  ],
+  "100200115": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-10-16T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-09-14T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4103,
+    "activistCodeName": "Canvasser",
+    "dateCreated": "2026-08-25T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-05-05T15:00:00Z"
+   }
+  ],
+  "100200116": [],
+  "100200117": [],
+  "100200118": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-04-13T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-01T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4102,
+    "activistCodeName": "Phone Banker",
+    "dateCreated": "2026-09-26T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-10-16T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4104,
+    "activistCodeName": "Event Host",
+    "dateCreated": "2026-10-03T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-04-16T15:00:00Z"
+   }
+  ],
+  "100200119": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-09-08T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-10T15:00:00Z"
+   }
+  ],
+  "100200120": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-04-27T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-05-24T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4105,
+    "activistCodeName": "Renter",
+    "dateCreated": "2026-04-28T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-10-06T15:00:00Z"
+   }
+  ],
+  "100200121": [],
+  "100200122": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-06-19T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-09-04T15:00:00Z"
+   }
+  ],
+  "100200123": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-04-13T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-10-15T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4103,
+    "activistCodeName": "Canvasser",
+    "dateCreated": "2026-10-27T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-07-13T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4104,
+    "activistCodeName": "Event Host",
+    "dateCreated": "2026-04-27T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-25T15:00:00Z"
+   }
+  ],
+  "100200124": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-07-05T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-04-09T15:00:00Z"
+   }
+  ],
+  "100200125": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-06-14T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-10-14T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4102,
+    "activistCodeName": "Phone Banker",
+    "dateCreated": "2026-10-08T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-04-10T15:00:00Z"
+   }
+  ],
+  "100200126": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-06-22T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-27T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4102,
+    "activistCodeName": "Phone Banker",
+    "dateCreated": "2026-07-16T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-07-10T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4103,
+    "activistCodeName": "Canvasser",
+    "dateCreated": "2026-05-20T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-05T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4104,
+    "activistCodeName": "Event Host",
+    "dateCreated": "2026-04-03T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-16T15:00:00Z"
+   }
+  ],
+  "100200127": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-06-10T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-05-16T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4105,
+    "activistCodeName": "Renter",
+    "dateCreated": "2026-09-19T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-08T15:00:00Z"
+   }
+  ],
+  "100200128": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-05-07T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-04T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4102,
+    "activistCodeName": "Phone Banker",
+    "dateCreated": "2026-07-11T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-04-18T15:00:00Z"
+   }
+  ],
+  "100200129": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-07-23T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-04-13T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4102,
+    "activistCodeName": "Phone Banker",
+    "dateCreated": "2026-06-24T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-09T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4103,
+    "activistCodeName": "Canvasser",
+    "dateCreated": "2026-08-02T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-18T15:00:00Z"
+   }
+  ],
+  "100200130": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-07-06T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-10-09T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4104,
+    "activistCodeName": "Event Host",
+    "dateCreated": "2026-04-24T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-09T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4105,
+    "activistCodeName": "Renter",
+    "dateCreated": "2026-04-01T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-17T15:00:00Z"
+   }
+  ],
+  "100200131": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-04-17T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-24T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4103,
+    "activistCodeName": "Canvasser",
+    "dateCreated": "2026-06-14T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-20T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4104,
+    "activistCodeName": "Event Host",
+    "dateCreated": "2026-05-02T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-22T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4105,
+    "activistCodeName": "Renter",
+    "dateCreated": "2026-06-25T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-15T15:00:00Z"
+   }
+  ],
+  "100200132": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-10-18T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-05-11T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4104,
+    "activistCodeName": "Event Host",
+    "dateCreated": "2026-05-19T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-09-13T15:00:00Z"
+   }
+  ],
+  "100200133": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-05-24T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-05-05T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4102,
+    "activistCodeName": "Phone Banker",
+    "dateCreated": "2026-09-26T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-07-20T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4103,
+    "activistCodeName": "Canvasser",
+    "dateCreated": "2026-08-11T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-08T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4104,
+    "activistCodeName": "Event Host",
+    "dateCreated": "2026-06-18T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-12T15:00:00Z"
+   }
+  ],
+  "100200134": [],
+  "100200135": [],
+  "100200136": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-05-14T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-10-07T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4103,
+    "activistCodeName": "Canvasser",
+    "dateCreated": "2026-04-24T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-11T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4105,
+    "activistCodeName": "Renter",
+    "dateCreated": "2026-06-25T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-07-12T15:00:00Z"
+   }
+  ],
+  "100200137": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-04-07T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-05-08T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4102,
+    "activistCodeName": "Phone Banker",
+    "dateCreated": "2026-08-10T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-07-06T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4103,
+    "activistCodeName": "Canvasser",
+    "dateCreated": "2026-07-05T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-24T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4105,
+    "activistCodeName": "Renter",
+    "dateCreated": "2026-04-02T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-10-12T15:00:00Z"
+   }
+  ],
+  "100200138": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-07-24T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-07-20T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4103,
+    "activistCodeName": "Canvasser",
+    "dateCreated": "2026-06-24T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-07-11T15:00:00Z"
+   }
+  ],
+  "100200139": [
+   {
+    "activistCodeId": 4105,
+    "activistCodeName": "Renter",
+    "dateCreated": "2026-08-02T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-09-03T15:00:00Z"
+   }
+  ],
+  "100200140": [
+   {
+    "activistCodeId": 4105,
+    "activistCodeName": "Renter",
+    "dateCreated": "2026-06-10T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-04-10T15:00:00Z"
+   }
+  ],
+  "100200141": [
+   {
+    "activistCodeId": 4105,
+    "activistCodeName": "Renter",
+    "dateCreated": "2026-08-19T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-21T15:00:00Z"
+   }
+  ],
+  "100200142": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-07-20T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-09-14T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4102,
+    "activistCodeName": "Phone Banker",
+    "dateCreated": "2026-07-05T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-08T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4104,
+    "activistCodeName": "Event Host",
+    "dateCreated": "2026-10-26T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-16T15:00:00Z"
+   }
+  ],
+  "100200143": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-09-01T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-18T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4102,
+    "activistCodeName": "Phone Banker",
+    "dateCreated": "2026-09-27T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-07-05T15:00:00Z"
+   }
+  ],
+  "100200144": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-05-27T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-09-02T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4103,
+    "activistCodeName": "Canvasser",
+    "dateCreated": "2026-07-10T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-08T15:00:00Z"
+   }
+  ],
+  "100200145": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-04-03T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-06T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4105,
+    "activistCodeName": "Renter",
+    "dateCreated": "2026-07-04T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-04-04T15:00:00Z"
+   }
+  ],
+  "100200146": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-09-25T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-05-16T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4104,
+    "activistCodeName": "Event Host",
+    "dateCreated": "2026-05-16T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-06-21T15:00:00Z"
+   }
+  ],
+  "100200147": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-10-10T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-08-12T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4104,
+    "activistCodeName": "Event Host",
+    "dateCreated": "2026-09-18T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-04-20T15:00:00Z"
+   }
+  ],
+  "100200148": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-10-24T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-04-25T15:00:00Z"
+   },
+   {
+    "activistCodeId": 4102,
+    "activistCodeName": "Phone Banker",
+    "dateCreated": "2026-09-14T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-05-08T15:00:00Z"
+   }
+  ]
+ },
+ "surveyQuestions": [
+  {
+   "surveyQuestionId": 5201,
+   "type": "Ballot Measure",
+   "cycle": 2026,
+   "name": "Measure 3 Support",
+   "mediumName": "M3",
+   "shortName": "M3",
+   "scriptQuestion": "Can we count on you to vote yes on Measure 3, the transit levy?",
+   "status": "Active",
+   "responses": [
+    {
+     "surveyResponseId": 52011,
+     "name": "1 Strong Yes",
+     "mediumName": "1",
+     "shortName": "1"
+    },
+    {
+     "surveyResponseId": 52012,
+     "name": "2 Lean Yes",
+     "mediumName": "2",
+     "shortName": "2"
+    },
+    {
+     "surveyResponseId": 52013,
+     "name": "3 Undecided",
+     "mediumName": "3",
+     "shortName": "3"
+    },
+    {
+     "surveyResponseId": 52014,
+     "name": "4 Lean No",
+     "mediumName": "4",
+     "shortName": "4"
+    },
+    {
+     "surveyResponseId": 52015,
+     "name": "5 Strong No",
+     "mediumName": "5",
+     "shortName": "5"
+    }
+   ]
+  },
+  {
+   "surveyQuestionId": 5202,
+   "type": "Volunteer",
+   "cycle": 2026,
+   "name": "Volunteer Ask",
+   "mediumName": "VolAsk",
+   "shortName": "VA",
+   "scriptQuestion": "Would you join us for a shift this month?",
+   "status": "Active",
+   "responses": [
+    {
+     "surveyResponseId": 52021,
+     "name": "Yes",
+     "mediumName": "Y",
+     "shortName": "Y"
+    },
+    {
+     "surveyResponseId": 52022,
+     "name": "Maybe",
+     "mediumName": "M",
+     "shortName": "M"
+    },
+    {
+     "surveyResponseId": 52023,
+     "name": "No",
+     "mediumName": "N",
+     "shortName": "N"
+    }
+   ]
+  },
+  {
+   "surveyQuestionId": 5203,
+   "type": "Issue",
+   "cycle": 2026,
+   "name": "Top Issue",
+   "mediumName": "Issue",
+   "shortName": "TI",
+   "scriptQuestion": "What issue matters most to you this year?",
+   "status": "Active",
+   "responses": [
+    {
+     "surveyResponseId": 52031,
+     "name": "Housing",
+     "mediumName": "Hous",
+     "shortName": "H"
+    },
+    {
+     "surveyResponseId": 52032,
+     "name": "Transit",
+     "mediumName": "Trans",
+     "shortName": "T"
+    },
+    {
+     "surveyResponseId": 52033,
+     "name": "Schools",
+     "mediumName": "Sch",
+     "shortName": "S"
+    },
+    {
+     "surveyResponseId": 52034,
+     "name": "Jobs",
+     "mediumName": "Jobs",
+     "shortName": "J"
+    }
+   ]
+  },
+  {
+   "surveyQuestionId": 5199,
+   "type": "Event",
+   "cycle": 2026,
+   "name": "Spring Town Hall RSVP",
+   "mediumName": "THRSVP",
+   "shortName": "TH",
+   "scriptQuestion": "Will you come to the spring town hall?",
+   "status": "Archived",
+   "responses": [
+    {
+     "surveyResponseId": 51991,
+     "name": "Yes",
+     "mediumName": "Y",
+     "shortName": "Y"
+    },
+    {
+     "surveyResponseId": 51992,
+     "name": "No",
+     "mediumName": "N",
+     "shortName": "N"
+    }
+   ]
+  }
+ ],
+ "canvassHistory": {
+  "100200101": [
+   {
+    "canvassResponseId": 910002,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-09"
+    },
+    "resultCodeId": 25,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910001,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-14"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52015
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52033
+     }
+    ]
+   }
+  ],
+  "100200102": [
+   {
+    "canvassResponseId": 910003,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-14"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52021
+     }
+    ]
+   }
+  ],
+  "100200103": [
+   {
+    "canvassResponseId": 910004,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-17"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52023
+     }
+    ]
+   }
+  ],
+  "100200104": [
+   {
+    "canvassResponseId": 910005,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-11"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     }
+    ]
+   }
+  ],
+  "100200105": [
+   {
+    "canvassResponseId": 910009,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-01"
+    },
+    "resultCodeId": 2,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910008,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-11"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52032
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910006,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-18"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52034
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910007,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-19"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52012
+     }
+    ]
+   }
+  ],
+  "100200106": [
+   {
+    "canvassResponseId": 910011,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-07"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52013
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52032
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910010,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-08"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52014
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52022
+     }
+    ]
+   }
+  ],
+  "100200107": [
+   {
+    "canvassResponseId": 910012,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-11"
+    },
+    "resultCodeId": 19,
+    "responses": []
+   }
+  ],
+  "100200108": [
+   {
+    "canvassResponseId": 910013,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-12"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52012
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52022
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910014,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-12"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52033
+     }
+    ]
+   }
+  ],
+  "100200109": [
+   {
+    "canvassResponseId": 910015,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-13"
+    },
+    "resultCodeId": 25,
+    "responses": []
+   }
+  ],
+  "100200110": [
+   {
+    "canvassResponseId": 910018,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-02"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52013
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910016,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-03"
+    },
+    "resultCodeId": 2,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910017,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-09"
+    },
+    "resultCodeId": 18,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910019,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-09"
+    },
+    "resultCodeId": 18,
+    "responses": []
+   }
+  ],
+  "100200111": [
+   {
+    "canvassResponseId": 910022,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-01"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52015
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910023,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-01"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52012
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910021,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-05"
+    },
+    "resultCodeId": 18,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910020,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-06"
+    },
+    "resultCodeId": 19,
+    "responses": []
+   }
+  ],
+  "100200112": [
+   {
+    "canvassResponseId": 910024,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-01"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910026,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-06"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52013
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910025,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-08"
+    },
+    "resultCodeId": 1,
+    "responses": []
+   }
+  ],
+  "100200113": [
+   {
+    "canvassResponseId": 910027,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-02"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910028,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-14"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910029,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-16"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52015
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52032
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910030,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-19"
+    },
+    "resultCodeId": 5,
+    "responses": []
+   }
+  ],
+  "100200114": [
+   {
+    "canvassResponseId": 910033,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-03"
+    },
+    "resultCodeId": 1,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910032,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-08"
+    },
+    "resultCodeId": 2,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910031,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-15"
+    },
+    "resultCodeId": 1,
+    "responses": []
+   }
+  ],
+  "100200115": [
+   {
+    "canvassResponseId": 910034,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-13"
+    },
+    "resultCodeId": 18,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910036,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-13"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910035,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-18"
+    },
+    "resultCodeId": 19,
+    "responses": []
+   }
+  ],
+  "100200116": [
+   {
+    "canvassResponseId": 910037,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-08"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52015
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52023
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52033
+     }
+    ]
+   }
+  ],
+  "100200117": [
+   {
+    "canvassResponseId": 910039,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-08"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52012
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910040,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-12"
+    },
+    "resultCodeId": 18,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910038,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-17"
+    },
+    "resultCodeId": 25,
+    "responses": []
+   }
+  ],
+  "100200118": [],
+  "100200119": [],
+  "100200120": [
+   {
+    "canvassResponseId": 910042,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-14"
+    },
+    "resultCodeId": 19,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910041,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-16"
+    },
+    "resultCodeId": 2,
+    "responses": []
+   }
+  ],
+  "100200121": [
+   {
+    "canvassResponseId": 910043,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-02"
+    },
+    "resultCodeId": 2,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910044,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-13"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     }
+    ]
+   }
+  ],
+  "100200122": [
+   {
+    "canvassResponseId": 910046,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-07"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52034
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910045,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-16"
+    },
+    "resultCodeId": 18,
+    "responses": []
+   }
+  ],
+  "100200123": [
+   {
+    "canvassResponseId": 910048,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-05"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52014
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52021
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52033
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910047,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-11"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52014
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52023
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910049,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-11"
+    },
+    "resultCodeId": 5,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910050,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-11"
+    },
+    "resultCodeId": 2,
+    "responses": []
+   }
+  ],
+  "100200124": [
+   {
+    "canvassResponseId": 910052,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-17"
+    },
+    "resultCodeId": 5,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910051,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-18"
+    },
+    "resultCodeId": 2,
+    "responses": []
+   }
+  ],
+  "100200125": [
+   {
+    "canvassResponseId": 910053,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-04"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910054,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-04"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52012
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52021
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910055,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-12"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52023
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910056,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-14"
+    },
+    "resultCodeId": 2,
+    "responses": []
+   }
+  ],
+  "100200126": [
+   {
+    "canvassResponseId": 910058,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-05"
+    },
+    "resultCodeId": 2,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910057,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-16"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52014
+     }
+    ]
+   }
+  ],
+  "100200127": [],
+  "100200128": [
+   {
+    "canvassResponseId": 910059,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-02"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52014
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52031
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910061,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-13"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52014
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52034
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910060,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-15"
+    },
+    "resultCodeId": 2,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910062,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-16"
+    },
+    "resultCodeId": 18,
+    "responses": []
+   }
+  ],
+  "100200129": [
+   {
+    "canvassResponseId": 910063,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-14"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52012
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52023
+     }
+    ]
+   }
+  ],
+  "100200130": [
+   {
+    "canvassResponseId": 910065,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-05"
+    },
+    "resultCodeId": 5,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910064,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-19"
+    },
+    "resultCodeId": 25,
+    "responses": []
+   }
+  ],
+  "100200131": [
+   {
+    "canvassResponseId": 910066,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-08"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52021
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52032
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910067,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-10"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910069,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-10"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910068,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-11"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52012
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52022
+     }
+    ]
+   }
+  ],
+  "100200132": [
+   {
+    "canvassResponseId": 910071,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-08"
+    },
+    "resultCodeId": 5,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910070,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-12"
+    },
+    "resultCodeId": 2,
+    "responses": []
+   }
+  ],
+  "100200133": [
+   {
+    "canvassResponseId": 910073,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-10"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52014
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910072,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-11"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52013
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52022
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910074,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-13"
+    },
+    "resultCodeId": 1,
+    "responses": []
+   }
+  ],
+  "100200134": [
+   {
+    "canvassResponseId": 910076,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-07"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52014
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52021
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910077,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-13"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52015
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910075,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-18"
+    },
+    "resultCodeId": 20,
+    "responses": []
+   }
+  ],
+  "100200135": [
+   {
+    "canvassResponseId": 910078,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-08"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52034
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910079,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-17"
+    },
+    "resultCodeId": 19,
+    "responses": []
+   }
+  ],
+  "100200136": [
+   {
+    "canvassResponseId": 910080,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-08"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52022
+     }
+    ]
+   }
+  ],
+  "100200137": [],
+  "100200138": [
+   {
+    "canvassResponseId": 910081,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-04"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52013
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52022
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52034
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910082,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-04"
+    },
+    "resultCodeId": 2,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910083,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-10"
+    },
+    "resultCodeId": 18,
+    "responses": []
+   }
+  ],
+  "100200139": [
+   {
+    "canvassResponseId": 910087,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-01"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52014
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52022
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910086,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-06"
+    },
+    "resultCodeId": 1,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910085,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-13"
+    },
+    "resultCodeId": 19,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910084,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-18"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52015
+     }
+    ]
+   }
+  ],
+  "100200140": [
+   {
+    "canvassResponseId": 910089,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-05"
+    },
+    "resultCodeId": 20,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910088,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-07"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52015
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52023
+     }
+    ]
+   }
+  ],
+  "100200141": [
+   {
+    "canvassResponseId": 910090,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-03"
+    },
+    "resultCodeId": 1,
+    "responses": []
+   }
+  ],
+  "100200142": [
+   {
+    "canvassResponseId": 910092,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-08"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52031
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910091,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-10"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52021
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910093,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-12"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52013
+     }
+    ]
+   }
+  ],
+  "100200143": [
+   {
+    "canvassResponseId": 910094,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-01"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52013
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52034
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910097,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-10"
+    },
+    "resultCodeId": 1,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910096,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-17"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910095,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-19"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52015
+     }
+    ]
+   }
+  ],
+  "100200144": [
+   {
+    "canvassResponseId": 910098,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-15"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52014
+     }
+    ]
+   }
+  ],
+  "100200145": [],
+  "100200146": [
+   {
+    "canvassResponseId": 910100,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-01"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52014
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52022
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52034
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910099,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-02"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52013
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52034
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910102,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-03"
+    },
+    "resultCodeId": 2,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910101,
+    "canvassContext": {
+     "contactTypeId": 37,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-18"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52014
+     }
+    ]
+   }
+  ],
+  "100200147": [],
+  "100200148": [
+   {
+    "canvassResponseId": 910104,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-04"
+    },
+    "resultCodeId": 5,
+    "responses": []
+   },
+   {
+    "canvassResponseId": 910105,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-14"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52014
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5202,
+      "surveyResponseId": 52023
+     },
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5203,
+      "surveyResponseId": 52032
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910103,
+    "canvassContext": {
+     "contactTypeId": 2,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-15"
+    },
+    "resultCodeId": null,
+    "responses": [
+     {
+      "type": "SurveyResponse",
+      "surveyQuestionId": 5201,
+      "surveyResponseId": 52011
+     }
+    ]
+   },
+   {
+    "canvassResponseId": 910106,
+    "canvassContext": {
+     "contactTypeId": 1,
+     "inputTypeId": 11,
+     "dateCanvassed": "2026-11-18"
+    },
+    "resultCodeId": 18,
+    "responses": []
+   }
+  ]
+ },
+ "resultCodes": [
+  {
+   "resultCodeId": 1,
+   "name": "Not Home",
+   "mediumName": "NH",
+   "shortName": "NH"
+  },
+  {
+   "resultCodeId": 2,
+   "name": "Refused",
+   "mediumName": "Ref",
+   "shortName": "RF"
+  },
+  {
+   "resultCodeId": 5,
+   "name": "Moved",
+   "mediumName": "Moved",
+   "shortName": "MV"
+  },
+  {
+   "resultCodeId": 18,
+   "name": "Busy",
+   "mediumName": "Busy",
+   "shortName": "BZ"
+  },
+  {
+   "resultCodeId": 19,
+   "name": "Left Message",
+   "mediumName": "LM",
+   "shortName": "LM"
+  },
+  {
+   "resultCodeId": 20,
+   "name": "Wrong Number",
+   "mediumName": "Wr#",
+   "shortName": "WN"
+  },
+  {
+   "resultCodeId": 25,
+   "name": "Disconnected",
+   "mediumName": "Disc",
+   "shortName": "WX"
+  }
+ ],
+ "contactTypes": [
+  {
+   "contactTypeId": 1,
+   "name": "Phone"
+  },
+  {
+   "contactTypeId": 2,
+   "name": "Walk"
+  },
+  {
+   "contactTypeId": 37,
+   "name": "SMS Text"
+  }
+ ],
+ "signupStatuses": [
+  {
+   "statusId": 1,
+   "name": "Scheduled"
+  },
+  {
+   "statusId": 11,
+   "name": "Confirmed"
+  },
+  {
+   "statusId": 2,
+   "name": "Completed"
+  },
+  {
+   "statusId": 3,
+   "name": "Declined"
+  },
+  {
+   "statusId": 4,
+   "name": "Invited"
+  },
+  {
+   "statusId": 6,
+   "name": "No Show"
+  },
+  {
+   "statusId": 15,
+   "name": "Walk In"
+  }
+ ],
+ "events": [
+  {
+   "eventId": 3001,
+   "name": "Northside Weekend Canvass",
+   "shortName": "NS Canv",
+   "description": "Meet at the Northside Office. Questions? Text Dana at (970) 555-0188.",
+   "startDate": "2026-11-21T09:00:00-07:00",
+   "endDate": "2026-11-21T16:00:00-07:00",
+   "eventType": {
+    "eventTypeId": 801,
+    "name": "Canvass"
+   },
+   "isOnlyEditableByCreatingUser": false,
+   "isPubliclyViewable": null,
+   "locations": [
+    {
+     "locationId": 601,
+     "name": "Northside Office",
+     "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    }
+   ],
+   "codes": null,
+   "notes": null,
+   "shifts": [
+    {
+     "eventShiftId": 7001,
+     "name": "Morning",
+     "startTime": "2026-11-21T09:00:00-07:00",
+     "endTime": "2026-11-21T12:00:00-07:00"
+    },
+    {
+     "eventShiftId": 7002,
+     "name": "Afternoon",
+     "startTime": "2026-11-21T13:00:00-07:00",
+     "endTime": "2026-11-21T16:00:00-07:00"
+    }
+   ],
+   "roles": [
+    {
+     "roleId": 901,
+     "name": "Volunteer"
+    },
+    {
+     "roleId": 902,
+     "name": "Host"
+    }
+   ],
+   "districtFieldValue": null,
+   "voterRegistrationBatches": null,
+   "createdDate": "2026-11-01T17:00:00Z",
+   "isActive": true,
+   "dotNetTimeZoneId": "Mountain Standard Time",
+   "_office": "Northside"
+  },
+  {
+   "eventId": 3002,
+   "name": "Eastgate Phone Bank",
+   "shortName": "EG PB",
+   "description": "Bring a charged phone and headphones.",
+   "startDate": "2026-11-21T17:00:00-07:00",
+   "endDate": "2026-11-21T20:00:00-07:00",
+   "eventType": {
+    "eventTypeId": 802,
+    "name": "Phone Bank"
+   },
+   "isOnlyEditableByCreatingUser": false,
+   "isPubliclyViewable": null,
+   "locations": [
+    {
+     "locationId": 602,
+     "name": "Eastgate Office",
+     "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    }
+   ],
+   "codes": null,
+   "notes": null,
+   "shifts": [
+    {
+     "eventShiftId": 7003,
+     "name": "Evening",
+     "startTime": "2026-11-21T17:00:00-07:00",
+     "endTime": "2026-11-21T20:00:00-07:00"
+    }
+   ],
+   "roles": [
+    {
+     "roleId": 901,
+     "name": "Volunteer"
+    },
+    {
+     "roleId": 902,
+     "name": "Host"
+    }
+   ],
+   "districtFieldValue": null,
+   "voterRegistrationBatches": null,
+   "createdDate": "2026-11-01T17:00:00Z",
+   "isActive": true,
+   "dotNetTimeZoneId": "Mountain Standard Time",
+   "_office": "Eastgate"
+  },
+  {
+   "eventId": 3003,
+   "name": "Harbor Canvass Launch",
+   "shortName": "HB Canv",
+   "description": "Launch at the Harbor Office, 12 Pier Rd. Host contact: harbor.lead@example.org.",
+   "startDate": "2026-11-22T10:00:00-07:00",
+   "endDate": "2026-11-22T17:00:00-07:00",
+   "eventType": {
+    "eventTypeId": 801,
+    "name": "Canvass"
+   },
+   "isOnlyEditableByCreatingUser": false,
+   "isPubliclyViewable": null,
+   "locations": [
+    {
+     "locationId": 603,
+     "name": "Harbor Office",
+     "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    }
+   ],
+   "codes": null,
+   "notes": null,
+   "shifts": [
+    {
+     "eventShiftId": 7004,
+     "name": "Morning",
+     "startTime": "2026-11-22T10:00:00-07:00",
+     "endTime": "2026-11-22T13:00:00-07:00"
+    },
+    {
+     "eventShiftId": 7005,
+     "name": "Afternoon",
+     "startTime": "2026-11-22T14:00:00-07:00",
+     "endTime": "2026-11-22T17:00:00-07:00"
+    }
+   ],
+   "roles": [
+    {
+     "roleId": 901,
+     "name": "Volunteer"
+    },
+    {
+     "roleId": 902,
+     "name": "Host"
+    }
+   ],
+   "districtFieldValue": null,
+   "voterRegistrationBatches": null,
+   "createdDate": "2026-11-01T17:00:00Z",
+   "isActive": true,
+   "dotNetTimeZoneId": "Mountain Standard Time",
+   "_office": "Harbor"
+  },
+  {
+   "eventId": 3004,
+   "name": "Volunteer Training",
+   "shortName": "Training",
+   "description": "New volunteer orientation.",
+   "startDate": "2026-11-19T18:00:00-07:00",
+   "endDate": "2026-11-19T20:00:00-07:00",
+   "eventType": {
+    "eventTypeId": 803,
+    "name": "Training"
+   },
+   "isOnlyEditableByCreatingUser": false,
+   "isPubliclyViewable": null,
+   "locations": [
+    {
+     "locationId": 601,
+     "name": "Northside Office",
+     "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    }
+   ],
+   "codes": null,
+   "notes": null,
+   "shifts": [
+    {
+     "eventShiftId": 7006,
+     "name": "Evening",
+     "startTime": "2026-11-19T18:00:00-07:00",
+     "endTime": "2026-11-19T20:00:00-07:00"
+    }
+   ],
+   "roles": [
+    {
+     "roleId": 901,
+     "name": "Volunteer"
+    },
+    {
+     "roleId": 902,
+     "name": "Host"
+    }
+   ],
+   "districtFieldValue": null,
+   "voterRegistrationBatches": null,
+   "createdDate": "2026-11-01T17:00:00Z",
+   "isActive": true,
+   "dotNetTimeZoneId": "Mountain Standard Time",
+   "_office": "Northside"
+  },
+  {
+   "eventId": 3005,
+   "name": "Eastgate Weekend Canvass",
+   "shortName": "EG Canv",
+   "description": "Turf packets ready at 9:15.",
+   "startDate": "2026-11-22T09:30:00-07:00",
+   "endDate": "2026-11-22T12:30:00-07:00",
+   "eventType": {
+    "eventTypeId": 801,
+    "name": "Canvass"
+   },
+   "isOnlyEditableByCreatingUser": false,
+   "isPubliclyViewable": null,
+   "locations": [
+    {
+     "locationId": 602,
+     "name": "Eastgate Office",
+     "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    }
+   ],
+   "codes": null,
+   "notes": null,
+   "shifts": [
+    {
+     "eventShiftId": 7007,
+     "name": "Morning",
+     "startTime": "2026-11-22T09:30:00-07:00",
+     "endTime": "2026-11-22T12:30:00-07:00"
+    }
+   ],
+   "roles": [
+    {
+     "roleId": 901,
+     "name": "Volunteer"
+    },
+    {
+     "roleId": 902,
+     "name": "Host"
+    }
+   ],
+   "districtFieldValue": null,
+   "voterRegistrationBatches": null,
+   "createdDate": "2026-11-01T17:00:00Z",
+   "isActive": true,
+   "dotNetTimeZoneId": "Mountain Standard Time",
+   "_office": "Eastgate"
+  },
+  {
+   "eventId": 3006,
+   "name": "Harbor Phone Bank",
+   "shortName": "HB PB",
+   "description": "Calls for the Measure 3 ID program.",
+   "startDate": "2026-11-24T17:30:00-07:00",
+   "endDate": "2026-11-24T20:30:00-07:00",
+   "eventType": {
+    "eventTypeId": 802,
+    "name": "Phone Bank"
+   },
+   "isOnlyEditableByCreatingUser": false,
+   "isPubliclyViewable": null,
+   "locations": [
+    {
+     "locationId": 603,
+     "name": "Harbor Office",
+     "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    }
+   ],
+   "codes": null,
+   "notes": null,
+   "shifts": [
+    {
+     "eventShiftId": 7008,
+     "name": "Evening",
+     "startTime": "2026-11-24T17:30:00-07:00",
+     "endTime": "2026-11-24T20:30:00-07:00"
+    }
+   ],
+   "roles": [
+    {
+     "roleId": 901,
+     "name": "Volunteer"
+    },
+    {
+     "roleId": 902,
+     "name": "Host"
+    }
+   ],
+   "districtFieldValue": null,
+   "voterRegistrationBatches": null,
+   "createdDate": "2026-11-01T17:00:00Z",
+   "isActive": true,
+   "dotNetTimeZoneId": "Mountain Standard Time",
+   "_office": "Harbor"
+  }
+ ],
+ "signups": [
+  {
+   "eventSignupId": 2450001,
+   "person": {
+    "vanId": 100200113,
+    "firstName": "Wren",
+    "middleName": "Ann",
+    "lastName": "Sorensen"
+   },
+   "event": {
+    "eventId": 3001,
+    "name": "Northside Weekend Canvass",
+    "shortName": "NS Canv"
+   },
+   "shift": {
+    "eventShiftId": 7001,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-21T09:00:00-07:00",
+   "endTimeOverride": "2026-11-21T12:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450002,
+   "person": {
+    "vanId": 100200131,
+    "firstName": "Keisha",
+    "middleName": "Ann",
+    "lastName": "Abernathy"
+   },
+   "event": {
+    "eventId": 3001,
+    "name": "Northside Weekend Canvass",
+    "shortName": "NS Canv"
+   },
+   "shift": {
+    "eventShiftId": 7001,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-21T09:00:00-07:00",
+   "endTimeOverride": "2026-11-21T12:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450003,
+   "person": {
+    "vanId": 100200125,
+    "firstName": "Jordan",
+    "middleName": null,
+    "lastName": "Abernathy"
+   },
+   "event": {
+    "eventId": 3001,
+    "name": "Northside Weekend Canvass",
+    "shortName": "NS Canv"
+   },
+   "shift": {
+    "eventShiftId": 7001,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-21T09:00:00-07:00",
+   "endTimeOverride": "2026-11-21T12:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450004,
+   "person": {
+    "vanId": 100200104,
+    "firstName": "Hannah",
+    "middleName": "Lee",
+    "lastName": "Whitfield"
+   },
+   "event": {
+    "eventId": 3001,
+    "name": "Northside Weekend Canvass",
+    "shortName": "NS Canv"
+   },
+   "shift": {
+    "eventShiftId": 7001,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-21T09:00:00-07:00",
+   "endTimeOverride": "2026-11-21T12:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450005,
+   "person": {
+    "vanId": 100200134,
+    "firstName": "Rowan",
+    "middleName": "Ann",
+    "lastName": "Ramirez"
+   },
+   "event": {
+    "eventId": 3001,
+    "name": "Northside Weekend Canvass",
+    "shortName": "NS Canv"
+   },
+   "shift": {
+    "eventShiftId": 7001,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-21T09:00:00-07:00",
+   "endTimeOverride": "2026-11-21T12:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450006,
+   "person": {
+    "vanId": 100200143,
+    "firstName": "Owen",
+    "middleName": null,
+    "lastName": "Vasquez"
+   },
+   "event": {
+    "eventId": 3001,
+    "name": "Northside Weekend Canvass",
+    "shortName": "NS Canv"
+   },
+   "shift": {
+    "eventShiftId": 7001,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-21T09:00:00-07:00",
+   "endTimeOverride": "2026-11-21T12:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450007,
+   "person": {
+    "vanId": 100200143,
+    "firstName": "Owen",
+    "middleName": null,
+    "lastName": "Vasquez"
+   },
+   "event": {
+    "eventId": 3001,
+    "name": "Northside Weekend Canvass",
+    "shortName": "NS Canv"
+   },
+   "shift": {
+    "eventShiftId": 7002,
+    "name": "Afternoon"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-21T13:00:00-07:00",
+   "endTimeOverride": "2026-11-21T16:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450008,
+   "person": {
+    "vanId": 100200113,
+    "firstName": "Wren",
+    "middleName": "Ann",
+    "lastName": "Sorensen"
+   },
+   "event": {
+    "eventId": 3001,
+    "name": "Northside Weekend Canvass",
+    "shortName": "NS Canv"
+   },
+   "shift": {
+    "eventShiftId": 7002,
+    "name": "Afternoon"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-21T13:00:00-07:00",
+   "endTimeOverride": "2026-11-21T16:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450009,
+   "person": {
+    "vanId": 100200134,
+    "firstName": "Rowan",
+    "middleName": "Ann",
+    "lastName": "Ramirez"
+   },
+   "event": {
+    "eventId": 3001,
+    "name": "Northside Weekend Canvass",
+    "shortName": "NS Canv"
+   },
+   "shift": {
+    "eventShiftId": 7002,
+    "name": "Afternoon"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 1,
+    "name": "Scheduled"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-21T13:00:00-07:00",
+   "endTimeOverride": "2026-11-21T16:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450010,
+   "person": {
+    "vanId": 100200101,
+    "firstName": "Malik",
+    "middleName": "J",
+    "lastName": "Vasquez"
+   },
+   "event": {
+    "eventId": 3001,
+    "name": "Northside Weekend Canvass",
+    "shortName": "NS Canv"
+   },
+   "shift": {
+    "eventShiftId": 7002,
+    "name": "Afternoon"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 4,
+    "name": "Invited"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-21T13:00:00-07:00",
+   "endTimeOverride": "2026-11-21T16:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450011,
+   "person": {
+    "vanId": 100200116,
+    "firstName": "Priya",
+    "middleName": "J",
+    "lastName": "Brennan"
+   },
+   "event": {
+    "eventId": 3001,
+    "name": "Northside Weekend Canvass",
+    "shortName": "NS Canv"
+   },
+   "shift": {
+    "eventShiftId": 7002,
+    "name": "Afternoon"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 1,
+    "name": "Scheduled"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-21T13:00:00-07:00",
+   "endTimeOverride": "2026-11-21T16:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450012,
+   "person": {
+    "vanId": 100200147,
+    "firstName": "Beatriz",
+    "middleName": "Ann",
+    "lastName": "Vasquez"
+   },
+   "event": {
+    "eventId": 3002,
+    "name": "Eastgate Phone Bank",
+    "shortName": "EG PB"
+   },
+   "shift": {
+    "eventShiftId": 7003,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 602,
+    "name": "Eastgate Office",
+    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+   },
+   "startTimeOverride": "2026-11-21T17:00:00-07:00",
+   "endTimeOverride": "2026-11-21T20:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450013,
+   "person": {
+    "vanId": 100200126,
+    "firstName": "Samir",
+    "middleName": "Lee",
+    "lastName": "Sorensen"
+   },
+   "event": {
+    "eventId": 3002,
+    "name": "Eastgate Phone Bank",
+    "shortName": "EG PB"
+   },
+   "shift": {
+    "eventShiftId": 7003,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 602,
+    "name": "Eastgate Office",
+    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+   },
+   "startTimeOverride": "2026-11-21T17:00:00-07:00",
+   "endTimeOverride": "2026-11-21T20:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450014,
+   "person": {
+    "vanId": 100200129,
+    "firstName": "Felix",
+    "middleName": "Ann",
+    "lastName": "Abernathy"
+   },
+   "event": {
+    "eventId": 3002,
+    "name": "Eastgate Phone Bank",
+    "shortName": "EG PB"
+   },
+   "shift": {
+    "eventShiftId": 7003,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 602,
+    "name": "Eastgate Office",
+    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+   },
+   "startTimeOverride": "2026-11-21T17:00:00-07:00",
+   "endTimeOverride": "2026-11-21T20:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450015,
+   "person": {
+    "vanId": 100200141,
+    "firstName": "Tobias",
+    "middleName": "J",
+    "lastName": "Nakamura"
+   },
+   "event": {
+    "eventId": 3002,
+    "name": "Eastgate Phone Bank",
+    "shortName": "EG PB"
+   },
+   "shift": {
+    "eventShiftId": 7003,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 902,
+    "name": "Host"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 602,
+    "name": "Eastgate Office",
+    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+   },
+   "startTimeOverride": "2026-11-21T17:00:00-07:00",
+   "endTimeOverride": "2026-11-21T20:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450016,
+   "person": {
+    "vanId": 100200123,
+    "firstName": "Dana",
+    "middleName": null,
+    "lastName": "Brennan"
+   },
+   "event": {
+    "eventId": 3002,
+    "name": "Eastgate Phone Bank",
+    "shortName": "EG PB"
+   },
+   "shift": {
+    "eventShiftId": 7003,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 4,
+    "name": "Invited"
+   },
+   "location": {
+    "locationId": 602,
+    "name": "Eastgate Office",
+    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+   },
+   "startTimeOverride": "2026-11-21T17:00:00-07:00",
+   "endTimeOverride": "2026-11-21T20:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450017,
+   "person": {
+    "vanId": 100200117,
+    "firstName": "Felix",
+    "middleName": null,
+    "lastName": "Ashdown"
+   },
+   "event": {
+    "eventId": 3002,
+    "name": "Eastgate Phone Bank",
+    "shortName": "EG PB"
+   },
+   "shift": {
+    "eventShiftId": 7003,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 1,
+    "name": "Scheduled"
+   },
+   "location": {
+    "locationId": 602,
+    "name": "Eastgate Office",
+    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+   },
+   "startTimeOverride": "2026-11-21T17:00:00-07:00",
+   "endTimeOverride": "2026-11-21T20:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450018,
+   "person": {
+    "vanId": 100200148,
+    "firstName": "Dana",
+    "middleName": "Ann",
+    "lastName": "Ashdown"
+   },
+   "event": {
+    "eventId": 3003,
+    "name": "Harbor Canvass Launch",
+    "shortName": "HB Canv"
+   },
+   "shift": {
+    "eventShiftId": 7004,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 902,
+    "name": "Host"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-22T10:00:00-07:00",
+   "endTimeOverride": "2026-11-22T13:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450019,
+   "person": {
+    "vanId": 100200112,
+    "firstName": "Samir",
+    "middleName": null,
+    "lastName": "Ashdown"
+   },
+   "event": {
+    "eventId": 3003,
+    "name": "Harbor Canvass Launch",
+    "shortName": "HB Canv"
+   },
+   "shift": {
+    "eventShiftId": 7004,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 3,
+    "name": "Declined"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-22T10:00:00-07:00",
+   "endTimeOverride": "2026-11-22T13:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450020,
+   "person": {
+    "vanId": 100200139,
+    "firstName": "Noor",
+    "middleName": null,
+    "lastName": "Marchetti"
+   },
+   "event": {
+    "eventId": 3003,
+    "name": "Harbor Canvass Launch",
+    "shortName": "HB Canv"
+   },
+   "shift": {
+    "eventShiftId": 7004,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-22T10:00:00-07:00",
+   "endTimeOverride": "2026-11-22T13:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450021,
+   "person": {
+    "vanId": 100200106,
+    "firstName": "Dana",
+    "middleName": "J",
+    "lastName": "Marchetti"
+   },
+   "event": {
+    "eventId": 3003,
+    "name": "Harbor Canvass Launch",
+    "shortName": "HB Canv"
+   },
+   "shift": {
+    "eventShiftId": 7004,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-22T10:00:00-07:00",
+   "endTimeOverride": "2026-11-22T13:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450022,
+   "person": {
+    "vanId": 100200115,
+    "firstName": "Yesenia",
+    "middleName": "Lee",
+    "lastName": "Achebe"
+   },
+   "event": {
+    "eventId": 3003,
+    "name": "Harbor Canvass Launch",
+    "shortName": "HB Canv"
+   },
+   "shift": {
+    "eventShiftId": 7004,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-22T10:00:00-07:00",
+   "endTimeOverride": "2026-11-22T13:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450023,
+   "person": {
+    "vanId": 100200118,
+    "firstName": "Aisha",
+    "middleName": null,
+    "lastName": "Marchetti"
+   },
+   "event": {
+    "eventId": 3003,
+    "name": "Harbor Canvass Launch",
+    "shortName": "HB Canv"
+   },
+   "shift": {
+    "eventShiftId": 7004,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 4,
+    "name": "Invited"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-22T10:00:00-07:00",
+   "endTimeOverride": "2026-11-22T13:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450024,
+   "person": {
+    "vanId": 100200109,
+    "firstName": "Hannah",
+    "middleName": null,
+    "lastName": "Ellery"
+   },
+   "event": {
+    "eventId": 3003,
+    "name": "Harbor Canvass Launch",
+    "shortName": "HB Canv"
+   },
+   "shift": {
+    "eventShiftId": 7004,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 4,
+    "name": "Invited"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-22T10:00:00-07:00",
+   "endTimeOverride": "2026-11-22T13:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450025,
+   "person": {
+    "vanId": 100200106,
+    "firstName": "Dana",
+    "middleName": "J",
+    "lastName": "Marchetti"
+   },
+   "event": {
+    "eventId": 3003,
+    "name": "Harbor Canvass Launch",
+    "shortName": "HB Canv"
+   },
+   "shift": {
+    "eventShiftId": 7005,
+    "name": "Afternoon"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-22T14:00:00-07:00",
+   "endTimeOverride": "2026-11-22T17:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450026,
+   "person": {
+    "vanId": 100200127,
+    "firstName": "Theo",
+    "middleName": "Ann",
+    "lastName": "Abernathy"
+   },
+   "event": {
+    "eventId": 3003,
+    "name": "Harbor Canvass Launch",
+    "shortName": "HB Canv"
+   },
+   "shift": {
+    "eventShiftId": 7005,
+    "name": "Afternoon"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-22T14:00:00-07:00",
+   "endTimeOverride": "2026-11-22T17:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450027,
+   "person": {
+    "vanId": 100200139,
+    "firstName": "Noor",
+    "middleName": null,
+    "lastName": "Marchetti"
+   },
+   "event": {
+    "eventId": 3003,
+    "name": "Harbor Canvass Launch",
+    "shortName": "HB Canv"
+   },
+   "shift": {
+    "eventShiftId": 7005,
+    "name": "Afternoon"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 3,
+    "name": "Declined"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-22T14:00:00-07:00",
+   "endTimeOverride": "2026-11-22T17:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450028,
+   "person": {
+    "vanId": 100200136,
+    "firstName": "Keisha",
+    "middleName": "J",
+    "lastName": "Okafor"
+   },
+   "event": {
+    "eventId": 3003,
+    "name": "Harbor Canvass Launch",
+    "shortName": "HB Canv"
+   },
+   "shift": {
+    "eventShiftId": 7005,
+    "name": "Afternoon"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 1,
+    "name": "Scheduled"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-22T14:00:00-07:00",
+   "endTimeOverride": "2026-11-22T17:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450029,
+   "person": {
+    "vanId": 100200148,
+    "firstName": "Dana",
+    "middleName": "Ann",
+    "lastName": "Ashdown"
+   },
+   "event": {
+    "eventId": 3003,
+    "name": "Harbor Canvass Launch",
+    "shortName": "HB Canv"
+   },
+   "shift": {
+    "eventShiftId": 7005,
+    "name": "Afternoon"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-22T14:00:00-07:00",
+   "endTimeOverride": "2026-11-22T17:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450030,
+   "person": {
+    "vanId": 100200133,
+    "firstName": "Dana",
+    "middleName": "J",
+    "lastName": "Abernathy"
+   },
+   "event": {
+    "eventId": 3003,
+    "name": "Harbor Canvass Launch",
+    "shortName": "HB Canv"
+   },
+   "shift": {
+    "eventShiftId": 7005,
+    "name": "Afternoon"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-22T14:00:00-07:00",
+   "endTimeOverride": "2026-11-22T17:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450031,
+   "person": {
+    "vanId": 100200130,
+    "firstName": "Lucia",
+    "middleName": "Ann",
+    "lastName": "Delacroix"
+   },
+   "event": {
+    "eventId": 3003,
+    "name": "Harbor Canvass Launch",
+    "shortName": "HB Canv"
+   },
+   "shift": {
+    "eventShiftId": 7005,
+    "name": "Afternoon"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 1,
+    "name": "Scheduled"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-22T14:00:00-07:00",
+   "endTimeOverride": "2026-11-22T17:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450032,
+   "person": {
+    "vanId": 100200143,
+    "firstName": "Owen",
+    "middleName": null,
+    "lastName": "Vasquez"
+   },
+   "event": {
+    "eventId": 3004,
+    "name": "Volunteer Training",
+    "shortName": "Training"
+   },
+   "shift": {
+    "eventShiftId": 7006,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 2,
+    "name": "Completed"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-19T18:00:00-07:00",
+   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450033,
+   "person": {
+    "vanId": 100200137,
+    "firstName": "Desmond",
+    "middleName": null,
+    "lastName": "Achebe"
+   },
+   "event": {
+    "eventId": 3004,
+    "name": "Volunteer Training",
+    "shortName": "Training"
+   },
+   "shift": {
+    "eventShiftId": 7006,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 15,
+    "name": "Walk In"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-19T18:00:00-07:00",
+   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450034,
+   "person": {
+    "vanId": 100200113,
+    "firstName": "Wren",
+    "middleName": "Ann",
+    "lastName": "Sorensen"
+   },
+   "event": {
+    "eventId": 3004,
+    "name": "Volunteer Training",
+    "shortName": "Training"
+   },
+   "shift": {
+    "eventShiftId": 7006,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 2,
+    "name": "Completed"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-19T18:00:00-07:00",
+   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450035,
+   "person": {
+    "vanId": 100200140,
+    "firstName": "Beatriz",
+    "middleName": null,
+    "lastName": "Whitfield"
+   },
+   "event": {
+    "eventId": 3004,
+    "name": "Volunteer Training",
+    "shortName": "Training"
+   },
+   "shift": {
+    "eventShiftId": 7006,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 6,
+    "name": "No Show"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-19T18:00:00-07:00",
+   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450036,
+   "person": {
+    "vanId": 100200110,
+    "firstName": "Noor",
+    "middleName": "Ann",
+    "lastName": "Brennan"
+   },
+   "event": {
+    "eventId": 3004,
+    "name": "Volunteer Training",
+    "shortName": "Training"
+   },
+   "shift": {
+    "eventShiftId": 7006,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 6,
+    "name": "No Show"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-19T18:00:00-07:00",
+   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450037,
+   "person": {
+    "vanId": 100200122,
+    "firstName": "Keisha",
+    "middleName": null,
+    "lastName": "Ellery"
+   },
+   "event": {
+    "eventId": 3004,
+    "name": "Volunteer Training",
+    "shortName": "Training"
+   },
+   "shift": {
+    "eventShiftId": 7006,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 2,
+    "name": "Completed"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-19T18:00:00-07:00",
+   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450038,
+   "person": {
+    "vanId": 100200125,
+    "firstName": "Jordan",
+    "middleName": null,
+    "lastName": "Abernathy"
+   },
+   "event": {
+    "eventId": 3004,
+    "name": "Volunteer Training",
+    "shortName": "Training"
+   },
+   "shift": {
+    "eventShiftId": 7006,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 902,
+    "name": "Host"
+   },
+   "status": {
+    "statusId": 15,
+    "name": "Walk In"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-19T18:00:00-07:00",
+   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450039,
+   "person": {
+    "vanId": 100200104,
+    "firstName": "Hannah",
+    "middleName": "Lee",
+    "lastName": "Whitfield"
+   },
+   "event": {
+    "eventId": 3004,
+    "name": "Volunteer Training",
+    "shortName": "Training"
+   },
+   "shift": {
+    "eventShiftId": 7006,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 2,
+    "name": "Completed"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-19T18:00:00-07:00",
+   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450040,
+   "person": {
+    "vanId": 100200131,
+    "firstName": "Keisha",
+    "middleName": "Ann",
+    "lastName": "Abernathy"
+   },
+   "event": {
+    "eventId": 3004,
+    "name": "Volunteer Training",
+    "shortName": "Training"
+   },
+   "shift": {
+    "eventShiftId": 7006,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 2,
+    "name": "Completed"
+   },
+   "location": {
+    "locationId": 601,
+    "name": "Northside Office",
+    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+   },
+   "startTimeOverride": "2026-11-19T18:00:00-07:00",
+   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+  },
+  {
+   "eventSignupId": 2450041,
+   "person": {
+    "vanId": 100200144,
+    "firstName": "Rowan",
+    "middleName": null,
+    "lastName": "Fairbanks"
+   },
+   "event": {
+    "eventId": 3005,
+    "name": "Eastgate Weekend Canvass",
+    "shortName": "EG Canv"
+   },
+   "shift": {
+    "eventShiftId": 7007,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 602,
+    "name": "Eastgate Office",
+    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+   },
+   "startTimeOverride": "2026-11-22T09:30:00-07:00",
+   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450042,
+   "person": {
+    "vanId": 100200138,
+    "firstName": "Tamsin",
+    "middleName": null,
+    "lastName": "Ramirez"
+   },
+   "event": {
+    "eventId": 3005,
+    "name": "Eastgate Weekend Canvass",
+    "shortName": "EG Canv"
+   },
+   "shift": {
+    "eventShiftId": 7007,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 602,
+    "name": "Eastgate Office",
+    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+   },
+   "startTimeOverride": "2026-11-22T09:30:00-07:00",
+   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450043,
+   "person": {
+    "vanId": 100200102,
+    "firstName": "Grace",
+    "middleName": "Lee",
+    "lastName": "Thornbury"
+   },
+   "event": {
+    "eventId": 3005,
+    "name": "Eastgate Weekend Canvass",
+    "shortName": "EG Canv"
+   },
+   "shift": {
+    "eventShiftId": 7007,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 4,
+    "name": "Invited"
+   },
+   "location": {
+    "locationId": 602,
+    "name": "Eastgate Office",
+    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+   },
+   "startTimeOverride": "2026-11-22T09:30:00-07:00",
+   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450044,
+   "person": {
+    "vanId": 100200120,
+    "firstName": "Calvin",
+    "middleName": null,
+    "lastName": "Lindqvist"
+   },
+   "event": {
+    "eventId": 3005,
+    "name": "Eastgate Weekend Canvass",
+    "shortName": "EG Canv"
+   },
+   "shift": {
+    "eventShiftId": 7007,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 602,
+    "name": "Eastgate Office",
+    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+   },
+   "startTimeOverride": "2026-11-22T09:30:00-07:00",
+   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450045,
+   "person": {
+    "vanId": 100200123,
+    "firstName": "Dana",
+    "middleName": null,
+    "lastName": "Brennan"
+   },
+   "event": {
+    "eventId": 3005,
+    "name": "Eastgate Weekend Canvass",
+    "shortName": "EG Canv"
+   },
+   "shift": {
+    "eventShiftId": 7007,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 4,
+    "name": "Invited"
+   },
+   "location": {
+    "locationId": 602,
+    "name": "Eastgate Office",
+    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+   },
+   "startTimeOverride": "2026-11-22T09:30:00-07:00",
+   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450046,
+   "person": {
+    "vanId": 100200105,
+    "firstName": "Malik",
+    "middleName": "Ann",
+    "lastName": "Ashdown"
+   },
+   "event": {
+    "eventId": 3005,
+    "name": "Eastgate Weekend Canvass",
+    "shortName": "EG Canv"
+   },
+   "shift": {
+    "eventShiftId": 7007,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 1,
+    "name": "Scheduled"
+   },
+   "location": {
+    "locationId": 602,
+    "name": "Eastgate Office",
+    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+   },
+   "startTimeOverride": "2026-11-22T09:30:00-07:00",
+   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450047,
+   "person": {
+    "vanId": 100200117,
+    "firstName": "Felix",
+    "middleName": null,
+    "lastName": "Ashdown"
+   },
+   "event": {
+    "eventId": 3005,
+    "name": "Eastgate Weekend Canvass",
+    "shortName": "EG Canv"
+   },
+   "shift": {
+    "eventShiftId": 7007,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 902,
+    "name": "Host"
+   },
+   "status": {
+    "statusId": 1,
+    "name": "Scheduled"
+   },
+   "location": {
+    "locationId": 602,
+    "name": "Eastgate Office",
+    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+   },
+   "startTimeOverride": "2026-11-22T09:30:00-07:00",
+   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450048,
+   "person": {
+    "vanId": 100200108,
+    "firstName": "Elena",
+    "middleName": "Ann",
+    "lastName": "Fairbanks"
+   },
+   "event": {
+    "eventId": 3005,
+    "name": "Eastgate Weekend Canvass",
+    "shortName": "EG Canv"
+   },
+   "shift": {
+    "eventShiftId": 7007,
+    "name": "Morning"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 4,
+    "name": "Invited"
+   },
+   "location": {
+    "locationId": 602,
+    "name": "Eastgate Office",
+    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+   },
+   "startTimeOverride": "2026-11-22T09:30:00-07:00",
+   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450049,
+   "person": {
+    "vanId": 100200145,
+    "firstName": "Malik",
+    "middleName": "Ann",
+    "lastName": "Ellery"
+   },
+   "event": {
+    "eventId": 3006,
+    "name": "Harbor Phone Bank",
+    "shortName": "HB PB"
+   },
+   "shift": {
+    "eventShiftId": 7008,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 3,
+    "name": "Declined"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-24T17:30:00-07:00",
+   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450050,
+   "person": {
+    "vanId": 100200121,
+    "firstName": "Samir",
+    "middleName": null,
+    "lastName": "Holloway"
+   },
+   "event": {
+    "eventId": 3006,
+    "name": "Harbor Phone Bank",
+    "shortName": "HB PB"
+   },
+   "shift": {
+    "eventShiftId": 7008,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 1,
+    "name": "Scheduled"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-24T17:30:00-07:00",
+   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450051,
+   "person": {
+    "vanId": 100200112,
+    "firstName": "Samir",
+    "middleName": null,
+    "lastName": "Ashdown"
+   },
+   "event": {
+    "eventId": 3006,
+    "name": "Harbor Phone Bank",
+    "shortName": "HB PB"
+   },
+   "shift": {
+    "eventShiftId": 7008,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 902,
+    "name": "Host"
+   },
+   "status": {
+    "statusId": 11,
+    "name": "Confirmed"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-24T17:30:00-07:00",
+   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450052,
+   "person": {
+    "vanId": 100200127,
+    "firstName": "Theo",
+    "middleName": "Ann",
+    "lastName": "Abernathy"
+   },
+   "event": {
+    "eventId": 3006,
+    "name": "Harbor Phone Bank",
+    "shortName": "HB PB"
+   },
+   "shift": {
+    "eventShiftId": 7008,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 1,
+    "name": "Scheduled"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-24T17:30:00-07:00",
+   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450053,
+   "person": {
+    "vanId": 100200106,
+    "firstName": "Dana",
+    "middleName": "J",
+    "lastName": "Marchetti"
+   },
+   "event": {
+    "eventId": 3006,
+    "name": "Harbor Phone Bank",
+    "shortName": "HB PB"
+   },
+   "shift": {
+    "eventShiftId": 7008,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 902,
+    "name": "Host"
+   },
+   "status": {
+    "statusId": 1,
+    "name": "Scheduled"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-24T17:30:00-07:00",
+   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450054,
+   "person": {
+    "vanId": 100200136,
+    "firstName": "Keisha",
+    "middleName": "J",
+    "lastName": "Okafor"
+   },
+   "event": {
+    "eventId": 3006,
+    "name": "Harbor Phone Bank",
+    "shortName": "HB PB"
+   },
+   "shift": {
+    "eventShiftId": 7008,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 902,
+    "name": "Host"
+   },
+   "status": {
+    "statusId": 1,
+    "name": "Scheduled"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-24T17:30:00-07:00",
+   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450055,
+   "person": {
+    "vanId": 100200124,
+    "firstName": "Noor",
+    "middleName": null,
+    "lastName": "Thornbury"
+   },
+   "event": {
+    "eventId": 3006,
+    "name": "Harbor Phone Bank",
+    "shortName": "HB PB"
+   },
+   "shift": {
+    "eventShiftId": 7008,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 1,
+    "name": "Scheduled"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-24T17:30:00-07:00",
+   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450056,
+   "person": {
+    "vanId": 100200103,
+    "firstName": "Lucia",
+    "middleName": null,
+    "lastName": "Okafor"
+   },
+   "event": {
+    "eventId": 3006,
+    "name": "Harbor Phone Bank",
+    "shortName": "HB PB"
+   },
+   "shift": {
+    "eventShiftId": 7008,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 4,
+    "name": "Invited"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-24T17:30:00-07:00",
+   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+  },
+  {
+   "eventSignupId": 2450057,
+   "person": {
+    "vanId": 100200130,
+    "firstName": "Lucia",
+    "middleName": "Ann",
+    "lastName": "Delacroix"
+   },
+   "event": {
+    "eventId": 3006,
+    "name": "Harbor Phone Bank",
+    "shortName": "HB PB"
+   },
+   "shift": {
+    "eventShiftId": 7008,
+    "name": "Evening"
+   },
+   "role": {
+    "roleId": 901,
+    "name": "Volunteer"
+   },
+   "status": {
+    "statusId": 3,
+    "name": "Declined"
+   },
+   "location": {
+    "locationId": 603,
+    "name": "Harbor Office",
+    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+   },
+   "startTimeOverride": "2026-11-24T17:30:00-07:00",
+   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+  }
+ ],
+ "folders": [
+  {
+   "folderId": 44,
+   "name": "Northside Turfs"
+  },
+  {
+   "folderId": 45,
+   "name": "Eastgate Turfs"
+  },
+  {
+   "folderId": 46,
+   "name": "Harbor Turfs"
+  },
+  {
+   "folderId": 47,
+   "name": "Phone Bank Lists"
+  },
+  {
+   "folderId": 48,
+   "name": "Archive"
+  }
+ ],
+ "savedLists": [
+  {
+   "savedListId": 990100,
+   "name": "NS Turf 01 Maple",
+   "description": "Weekend canvass turf 1",
+   "listCount": 116,
+   "doorCount": 74,
+   "_folderId": 44
+  },
+  {
+   "savedListId": 990101,
+   "name": "NS Turf 02 Juniper",
+   "description": "Weekend canvass turf 2",
+   "listCount": 152,
+   "doorCount": 88,
+   "_folderId": 44
+  },
+  {
+   "savedListId": 990102,
+   "name": "NS Turf 03 Willow",
+   "description": "Weekend canvass turf 3",
+   "listCount": 147,
+   "doorCount": 103,
+   "_folderId": 44
+  },
+  {
+   "savedListId": 990103,
+   "name": "NS Turf 04 Cedar",
+   "description": "Weekend canvass turf 4",
+   "listCount": 120,
+   "doorCount": 92,
+   "_folderId": 44
+  },
+  {
+   "savedListId": 990104,
+   "name": "NS Turf 05 Maple",
+   "description": "Weekend canvass turf 5",
+   "listCount": 106,
+   "doorCount": 80,
+   "_folderId": 44
+  },
+  {
+   "savedListId": 990105,
+   "name": "EG Turf 01 Larkspur",
+   "description": "Weekend canvass turf 1",
+   "listCount": 150,
+   "doorCount": 93,
+   "_folderId": 45
+  },
+  {
+   "savedListId": 990106,
+   "name": "EG Turf 02 Foundry",
+   "description": "Weekend canvass turf 2",
+   "listCount": 150,
+   "doorCount": 104,
+   "_folderId": 45
+  },
+  {
+   "savedListId": 990107,
+   "name": "EG Turf 03 Quarry",
+   "description": "Weekend canvass turf 3",
+   "listCount": 134,
+   "doorCount": 100,
+   "_folderId": 45
+  },
+  {
+   "savedListId": 990108,
+   "name": "EG Turf 04 Larkspur",
+   "description": "Weekend canvass turf 4",
+   "listCount": 92,
+   "doorCount": 69,
+   "_folderId": 45
+  },
+  {
+   "savedListId": 990109,
+   "name": "HB Turf 01 Ferry",
+   "description": "Weekend canvass turf 1",
+   "listCount": 170,
+   "doorCount": 96,
+   "_folderId": 46
+  },
+  {
+   "savedListId": 990110,
+   "name": "HB Turf 02 Pier",
+   "description": "Weekend canvass turf 2",
+   "listCount": 96,
+   "doorCount": 62,
+   "_folderId": 46
+  },
+  {
+   "savedListId": 990111,
+   "name": "HB Turf 03 Beacon",
+   "description": "Weekend canvass turf 3",
+   "listCount": 123,
+   "doorCount": 97,
+   "_folderId": 46
+  },
+  {
+   "savedListId": 990112,
+   "name": "HB Turf 04 Ferry",
+   "description": "Weekend canvass turf 4",
+   "listCount": 169,
+   "doorCount": 123,
+   "_folderId": 46
+  },
+  {
+   "savedListId": 990113,
+   "name": "EG Phone Bank Measure 3 IDs",
+   "description": "Undecided and lean voters with a phone",
+   "listCount": 640,
+   "doorCount": 448,
+   "_folderId": 47
+  },
+  {
+   "savedListId": 990114,
+   "name": "HB Phone Bank Measure 3 IDs",
+   "description": "Undecided and lean voters with a phone",
+   "listCount": 410,
+   "doorCount": 287,
+   "_folderId": 47
+  },
+  {
+   "savedListId": 990115,
+   "name": "Spring Petition Followup",
+   "description": "Old list",
+   "listCount": 220,
+   "doorCount": 150,
+   "_folderId": 48
+  }
+ ]
+}
