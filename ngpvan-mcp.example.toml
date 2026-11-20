@@ -1,0 +1,32 @@
+# ngpvan-mcp settings. Copy to ngpvan-mcp.toml and adjust.
+# The API key never goes in this file: set VAN_API_KEY (or VAN_API_KEY_SECRET
+# for Google Secret Manager) in the environment.
+
+[van]
+app_name = "ngpvan-mcp"        # your Application Name; VAN_APP_NAME overrides it
+database_mode = 1              # 0 = My Voters, 1 = My Campaign
+base_url = "https://api.securevan.com/v4"
+
+[privacy]
+# How people's names reach the model:
+#   "initial"  first name and last initial (Maria G.), the default
+#   "full"     full names
+#   "none"     VAN IDs only; name search is turned off
+names = "initial"
+
+[writes]
+# Every write tool is off unless listed here as true. When on, the tool
+# must be run as a dry run first, and the real call needs the dry run's token.
+apply_canvass_response = false
+
+[limits]
+requests_per_second = 5.0      # stay well under the key's VAN rate limit profile
+burst = 5
+max_retries = 4                # for 429s, and 5xx on reads only
+max_items = 25                 # longest list a tool returns
+max_result_chars = 20000
+max_people_per_history_call = 25
+timeout_seconds = 30.0
+
+[audit]
+path = "ngpvan-mcp-audit.jsonl"   # JSON Lines, one entry per tool call
