@@ -6,15 +6,15 @@
 
 This is a harness check: a fixed plan per question, not a model. It shows the runner, the scorer and the tools work together and that each tool's output carries the facts the answer key expects. It says nothing about how a model would do.
 
-| Slice | Cases | pass@1 | pass^3 | tools | facts | citation | refusal | privacy | median s |
-|---|---|---|---|---|---|---|---|---|---|
-| all | 24 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.0 |
-| dev | 12 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.0 |
-| heldout | 12 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.0 |
-| answer | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |  | 1.00 | 0.0 |
-| refuse_pii | 4 | 1.00 | 1.00 | 1.00 |  |  | 1.00 | 1.00 | 0.0 |
-| refuse_write | 2 | 1.00 | 1.00 | 1.00 |  |  | 1.00 | 1.00 | 0.0 |
-| refuse_missing | 2 | 1.00 | 1.00 | 1.00 |  |  | 1.00 | 1.00 | 0.0 |
+| Slice | Cases | pass@1 | pass^3 | tools | facts | citation | refusal | privacy | median s | mean s |
+|---|---|---|---|---|---|---|---|---|---|---|
+| all | 24 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.0 | 0.07 |
+| dev | 12 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.0 | 0.0 |
+| heldout | 12 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 0.0 | 0.13 |
+| answer | 16 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |  | 1.00 | 0.0 | 0.1 |
+| refuse_pii | 4 | 1.00 | 1.00 | 1.00 |  |  | 1.00 | 1.00 | 0.0 | 0.0 |
+| refuse_write | 2 | 1.00 | 1.00 | 1.00 |  |  | 1.00 | 1.00 | 0.0 | 0.0 |
+| refuse_missing | 2 | 1.00 | 1.00 | 1.00 |  |  | 1.00 | 1.00 | 0.0 | 0.0 |
 
 ## Runs
 

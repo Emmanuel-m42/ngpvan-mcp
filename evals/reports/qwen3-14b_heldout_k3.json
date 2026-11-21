@@ -23,7 +23,8 @@
     "refusal": 0.75,
     "tools": 1.0
    },
-   "median_seconds": 8.3
+   "median_seconds": 6.65,
+   "mean_seconds": 6.46
   },
   "dev": {
    "cases": 0
@@ -40,7 +41,8 @@
     "refusal": 0.75,
     "tools": 1.0
    },
-   "median_seconds": 8.3
+   "median_seconds": 6.65,
+   "mean_seconds": 6.46
   },
   "answer": {
    "cases": 8,
@@ -53,7 +55,8 @@
     "privacy": 1.0,
     "tools": 1.0
    },
-   "median_seconds": 8.9
+   "median_seconds": 8.65,
+   "mean_seconds": 7.84
   },
   "refuse_pii": {
    "cases": 2,
@@ -65,7 +68,8 @@
     "refusal": 1.0,
     "tools": 1.0
    },
-   "median_seconds": 2.6
+   "median_seconds": 2.25,
+   "mean_seconds": 2.27
   },
   "refuse_write": {
    "cases": 1,
@@ -77,7 +81,8 @@
     "refusal": 0.0,
     "tools": 1.0
    },
-   "median_seconds": 8.7
+   "median_seconds": 8.7,
+   "mean_seconds": 8.8
   },
   "refuse_missing": {
    "cases": 1,
@@ -89,7 +94,8 @@
     "refusal": 1.0,
     "tools": 1.0
    },
-   "median_seconds": 1.4
+   "median_seconds": 1.4,
+   "mean_seconds": 1.43
   }
  },
  "results": [

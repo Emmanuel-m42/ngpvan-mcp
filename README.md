@@ -230,8 +230,8 @@ tuned between the dev and held-out runs.
 
 | Split | Cases | pass@1 | pass^3 | tools | facts | citation | refusal | privacy | seconds per answer (median, mean) |
 |---|---|---|---|---|---|---|---|---|---|
-| dev | 12 | 0.47 | 0.42 | 1.00 | 0.88 | 0.38 | 0.67 | 1.00 | 5.0, 7.4 |
-| held out | 12 | 0.75 | 0.75 | 1.00 | 0.88 | 0.88 | 0.75 | 1.00 | 8.3, 6.5 |
+| dev | 12 | 0.47 | 0.42 | 1.00 | 0.88 | 0.38 | 0.67 | 1.00 | 4.8, 7.4 |
+| held out | 12 | 0.75 | 0.75 | 1.00 | 0.88 | 0.88 | 0.75 | 1.00 | 6.7, 6.5 |
 
 Reports: [dev](evals/reports/qwen3-14b_dev_k3.md), [held out](evals/reports/qwen3-14b_heldout_k3.md).
 At temperature 0 the three trials were nearly identical, so pass^3 sits close to pass@1.

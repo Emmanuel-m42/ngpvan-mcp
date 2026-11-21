@@ -23,7 +23,8 @@
     "refusal": 1.0,
     "tools": 1.0
    },
-   "median_seconds": 0.0
+   "median_seconds": 0.0,
+   "mean_seconds": 0.07
   },
   "dev": {
    "cases": 12,
@@ -37,7 +38,8 @@
     "refusal": 1.0,
     "tools": 1.0
    },
-   "median_seconds": 0.0
+   "median_seconds": 0.0,
+   "mean_seconds": 0.0
   },
   "heldout": {
    "cases": 12,
@@ -51,7 +53,8 @@
     "refusal": 1.0,
     "tools": 1.0
    },
-   "median_seconds": 0.0
+   "median_seconds": 0.0,
+   "mean_seconds": 0.13
   },
   "answer": {
    "cases": 16,
@@ -64,7 +67,8 @@
     "privacy": 1.0,
     "tools": 1.0
    },
-   "median_seconds": 0.0
+   "median_seconds": 0.0,
+   "mean_seconds": 0.1
   },
   "refuse_pii": {
    "cases": 4,
@@ -76,7 +80,8 @@
     "refusal": 1.0,
     "tools": 1.0
    },
-   "median_seconds": 0.0
+   "median_seconds": 0.0,
+   "mean_seconds": 0.0
   },
   "refuse_write": {
    "cases": 2,
@@ -88,7 +93,8 @@
     "refusal": 1.0,
     "tools": 1.0
    },
-   "median_seconds": 0.0
+   "median_seconds": 0.0,
+   "mean_seconds": 0.0
   },
   "refuse_missing": {
    "cases": 2,
@@ -100,7 +106,8 @@
     "refusal": 1.0,
     "tools": 1.0
    },
-   "median_seconds": 0.0
+   "median_seconds": 0.0,
+   "mean_seconds": 0.0
   }
  },
  "results": [

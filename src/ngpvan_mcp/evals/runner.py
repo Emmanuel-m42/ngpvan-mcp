@@ -13,6 +13,8 @@ from __future__ import annotations
 import argparse
 import json
 import platform
+import statistics
+import sys
 import time
 from datetime import UTC, datetime
 from importlib import resources
@@ -56,7 +58,8 @@ def summarize(results: list[dict[str, Any]], k: int) -> dict[str, Any]:
             "pass_at_1": round(sum(r["passed"] for r in runs) / len(runs), 3),
             f"pass_hat_{k}": round(sum(all(r["passed"] for r in by_case[c]) for c in case_ids) / len(case_ids), 3),
             "checks": {n: round(sum(v) / len(v), 3) for n, v in sorted(checks.items())},
-            "median_seconds": sorted(r["seconds"] for r in runs)[len(runs) // 2],
+            "median_seconds": round(statistics.median(r["seconds"] for r in runs), 2),
+            "mean_seconds": round(statistics.mean(r["seconds"] for r in runs), 2),
         }
 
     ids = list(by_case)
@@ -83,8 +86,8 @@ def markdown(report: dict[str, Any]) -> str:
                   "scorer and the tools work together and that each tool's output carries the facts the answer "
                   "key expects. It says nothing about how a model would do.", ""]
     lines += [
-        f"| Slice | Cases | pass@1 | pass^{k} | tools | facts | citation | refusal | privacy | median s |",
-        "|---|---|---|---|---|---|---|---|---|---|",
+        f"| Slice | Cases | pass@1 | pass^{k} | tools | facts | citation | refusal | privacy | median s | mean s |",
+        "|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for name, b in report["summary"].items():
         if not b.get("cases"):
@@ -92,7 +95,8 @@ def markdown(report: dict[str, Any]) -> str:
         c = b["checks"]
         cell = lambda key: f"{c[key]:.2f}" if key in c else ""  # noqa: E731
         lines.append(f"| {name} | {b['cases']} | {b['pass_at_1']:.2f} | {b[f'pass_hat_{k}']:.2f} | {cell('tools')} | "
-                     f"{cell('facts')} | {cell('citation')} | {cell('refusal')} | {cell('privacy')} | {b['median_seconds']} |")
+                     f"{cell('facts')} | {cell('citation')} | {cell('refusal')} | {cell('privacy')} | {b['median_seconds']} | "
+                     f"{b.get('mean_seconds', '')} |")
     lines += ["", "## Runs", "", "| Case | Split | Pass | Failed checks | Tools called | Seconds |", "|---|---|---|---|---|---|"]
     for r in report["results"]:
         failed = ", ".join(n for n, ok in r["checks"].items() if not ok) or ""
@@ -133,7 +137,21 @@ async def run(model: ChatModel, split: str, k: int, out_dir: Path, label: str, m
     return report
 
 
+def rebuild(path: Path) -> None:
+    """Recompute a saved report's summary and markdown from its results (no model run)."""
+    report = json.loads(path.read_text())
+    report["summary"] = summarize(report["results"], report["meta"]["k"])
+    path.write_text(json.dumps(report, indent=1) + "\n")
+    path.with_suffix(".md").write_text(markdown(report))
+
+
 def main(argv: list[str] | None = None) -> int:
+    if argv is None:
+        argv = sys.argv[1:]
+    if argv[:1] == ["rebuild"]:
+        for name in argv[1:]:
+            rebuild(Path(name))
+        return 0
     p = argparse.ArgumentParser(prog="ngpvan-mcp-evals")
     p.add_argument("--provider", choices=["ollama", "anthropic", "vertex", "scripted"], default="ollama",
                    help="scripted: a fixed plan per question, for testing the harness (not a model)")
