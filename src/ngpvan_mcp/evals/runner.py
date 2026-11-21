@@ -31,6 +31,7 @@ from ..demo.fake_van import load_demo_data
 from ..server import INSTRUCTIONS, build_server
 from .agent import (AnthropicChat, ChatModel, OllamaChat, add_openai_args, make_openai, mcp_tools, openai_meta,
                     run_case)
+from .agent_trace import AGENT_LABEL, TraceChat, add_trace_args, trace_runs
 from .scoring import score
 from .scripted import PLANS, ScriptedChat
 from .truth import TRUTHS, pii_values
@@ -98,6 +99,11 @@ def markdown(report: dict[str, Any]) -> str:
         lines += ["This is a harness check: a fixed plan per question, not a model. It shows the runner, the "
                   "scorer and the tools work together and that each tool's output carries the facts the answer "
                   "key expects. It says nothing about how a model would do.", ""]
+    if m["provider"] == "agent-trace":
+        lines += ["The agent ran its own loop and called the real tools "
+                  "through `ngpvan-agent-tool`; its calls were replayed here through a fresh demo server, in order, "
+                  "and every replayed result matched what it had been shown (a mismatch fails the case). The "
+                  "6-step cap doesn't apply in this mode, and seconds are replay time, not model time.", ""]
     lines += [
         f"| Slice | Cases | pass@1 | pass^{k} | tools | facts | citation | refusal | privacy | median s | mean s |",
         "|---|---|---|---|---|---|---|---|---|---|---|",
@@ -121,7 +127,7 @@ def markdown(report: dict[str, Any]) -> str:
 
 
 async def run(model: ChatModel, split: str, k: int, out_dir: Path, label: str, meta: dict[str, Any],
-              case_ids: list[str] | None = None) -> dict[str, Any]:
+              case_ids: list[str] | None = None, max_steps: int = 6) -> dict[str, Any]:
     spec = load_cases()
     data = load_demo_data()
     pii = pii_values(data)
@@ -137,7 +143,8 @@ async def run(model: ChatModel, split: str, k: int, out_dir: Path, label: str, m
             async with Client(server) as client:
                 tools = await mcp_tools(client)
                 instructions = client.instructions or INSTRUCTIONS
-                outcome = await run_case(model, client, tools, instructions, case["question"], spec["today"])
+                outcome = await run_case(model, client, tools, instructions, case["question"], spec["today"],
+                                         max_steps=max_steps)
             result = score(case, outcome, facts, pii) | {"trial": trial}
             results.append(result)
             print(f"{case['id']} trial {trial}: {'pass' if result['passed'] else 'FAIL'} "
@@ -166,9 +173,12 @@ def main(argv: list[str] | None = None) -> int:
             rebuild(Path(name))
         return 0
     p = argparse.ArgumentParser(prog="ngpvan-mcp-evals")
-    p.add_argument("--provider", choices=["ollama", "openai", "anthropic", "vertex", "scripted"], default="ollama",
-                   help="openai: any OpenAI-compatible API; scripted: a fixed plan per question (not a model)")
+    p.add_argument("--provider", choices=["ollama", "openai", "anthropic", "vertex", "scripted", "agent-trace"],
+                   default="ollama",
+                   help="openai: any OpenAI-compatible API; scripted: a fixed plan per question (not a model); "
+                        "agent-trace: replay an outside agent's tool calls and answers (see evals/agent_trace.py)")
     add_openai_args(p)
+    add_trace_args(p)
     p.add_argument("--model", default="scripted-oracle")
     p.add_argument("--ollama-host", default="http://127.0.0.1:11434")
     p.add_argument("--split", choices=["dev", "heldout", "all"], default="dev")
@@ -187,6 +197,15 @@ def main(argv: list[str] | None = None) -> int:
         questions = {c["id"]: c["question"] for c in load_cases()["cases"]}
         model: ChatModel = ScriptedChat(PLANS, questions)
         a.hardware = "no model (scripted plan)"
+    elif a.provider == "agent-trace":
+        questions = {c["id"]: c["question"] for c in load_cases()["cases"]}
+        if a.model == "scripted-oracle":
+            a.model = "claude-opus-5-5"
+        model = TraceChat(trace_runs(a.trace, a.answers), questions, a.model)
+        a.k = len(model.runs)
+        a.temperature = None
+        a.model_label = a.model_label or AGENT_LABEL
+        a.hardware = "replayed trace (the model ran elsewhere)"
     elif a.provider == "ollama":
         model = OllamaChat(a.model, a.ollama_host, a.temperature, a.num_ctx)
     elif a.provider == "openai":
@@ -200,8 +219,12 @@ def main(argv: list[str] | None = None) -> int:
             "started": datetime.now(UTC).isoformat(timespec="seconds")}
     if a.provider == "openai":
         meta |= openai_meta(a)
+    max_steps = 6
+    if a.provider == "agent-trace":
+        meta |= {"label": a.model_label, "traces": a.trace or [], "answers": a.answers}
+        max_steps = model.max_steps()
     ids = a.cases.split(",") if a.cases else None
-    report = anyio.run(run, model, a.split, a.k, Path(a.out), label, meta, ids)
+    report = anyio.run(run, model, a.split, a.k, Path(a.out), label, meta, ids, max_steps)
     print(json.dumps(report["summary"]["all"], indent=1))
     return 0
 

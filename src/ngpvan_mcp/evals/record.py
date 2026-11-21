@@ -35,6 +35,7 @@ from ..secrets import ApiKey
 from ..server import INSTRUCTIONS, build_server
 from .agent import (AnthropicChat, ChatModel, OllamaChat, add_openai_args, make_openai, mcp_tools, openai_meta,
                     run_case)
+from .agent_trace import AGENT_LABEL, TraceChat, add_trace_args, trace_runs
 from .scripted import Plan, ScriptedChat
 
 TODAY = "Sunday, October 18, 2026"
@@ -283,12 +284,12 @@ def _sum_usage(entries: list[dict[str, Any]]) -> dict[str, int]:
 
 
 async def record(model: ChatModel, model_info: dict[str, Any], hardware: str, prompts: list[dict[str, Any]],
-                 out: Path, before_each=None) -> dict[str, Any]:
+                 out: Path, before_each=None, max_steps: int = 8) -> dict[str, Any]:
     entries = []
     for prompt in prompts:
         if before_each:
             before_each(prompt)
-        entry = await record_prompt(model, prompt)
+        entry = await record_prompt(model, prompt, max_steps)
         entries.append(entry)
         print(f"{prompt['id']}: {len(entry['tool_calls'])} tool calls, {entry['latency_ms']} ms"
               f"{', error: ' + entry['error'] if entry['error'] else ''}", flush=True)
@@ -403,9 +404,11 @@ def ollama_model_info(host: str, tag: str) -> dict[str, Any]:
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="ngpvan-mcp-record")
-    p.add_argument("--provider", choices=["scripted", "ollama", "openai", "anthropic", "vertex"], default="scripted")
+    p.add_argument("--provider", choices=["scripted", "ollama", "openai", "anthropic", "vertex", "agent-trace"],
+                   default="scripted")
     p.add_argument("--temperature", type=float, default=0.0)
     add_openai_args(p)
+    add_trace_args(p)
     p.add_argument("--model", default="scripted")
     p.add_argument("--ollama-host", default="http://127.0.0.1:11434")
     p.add_argument("--num-ctx", type=int, default=8192)
@@ -416,7 +419,20 @@ def main(argv: list[str] | None = None) -> int:
     a = p.parse_args(argv)
     out = Path(a.out)
     before_each = None
-    if a.provider == "scripted":
+    max_steps = 8
+    if a.provider == "agent-trace":
+        runs = trace_runs(a.trace, a.answers)[:1]
+        tag = "claude-opus-5-5" if a.model == "scripted" else a.model
+        traced = TraceChat(runs, {p["id"]: p["question"] for p in PROMPTS}, tag)
+        model: ChatModel = traced
+        info: dict[str, Any] = {"tag": tag, "provider": "agent-trace", "label": a.model_label or AGENT_LABEL,
+                                "note": "The agent ran its own loop through ngpvan-agent-tool; its tool calls were "
+                                        "replayed here through the real server to record what VAN returned and "
+                                        "what the model saw. Latency is replay time, not model time."}
+        hardware = "replayed trace (the model ran elsewhere)"
+        before_each = lambda prompt: traced.use(prompt["id"])  # noqa: E731
+        max_steps = traced.max_steps()
+    elif a.provider == "scripted":
         scripted = ScriptedRecorder()
         model: ChatModel = scripted
         info: dict[str, Any] = SCRIPTED_INFO
@@ -436,7 +452,7 @@ def main(argv: list[str] | None = None) -> int:
         model = AnthropicChat(a.model, vertex=a.provider == "vertex", region=a.vertex_region, project=a.vertex_project)
         info = {"tag": a.model, "provider": a.provider, "temperature": 0.0}
         hardware = a.hardware
-    doc = anyio.run(record, model, info, hardware, PROMPTS, out, before_each)
+    doc = anyio.run(record, model, info, hardware, PROMPTS, out, before_each, max_steps)
     print(f"wrote {out} ({len(doc['questions'])} questions)")
     return 0
 
