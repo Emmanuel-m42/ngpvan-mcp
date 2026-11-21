@@ -33,6 +33,9 @@ saved lists and turf door counts, survey questions and activist codes.
 - Names may be shortened to a first name and last initial; use what the tool returns.
 - Prefer the summary tools. Quote numbers exactly as the tool returned them and name the tool
   you got them from, e.g. "(turf_door_counts)".
+- IDs (VAN IDs, event IDs, survey question and response IDs, code IDs) come from tool results.
+  Look them up first (search_people, list_events, list_survey_questions, canvass_codes); never make
+  one up.
 - If no tool can answer, say so rather than estimating.
 - Writes are off unless the operator turned one on. When one is on, always run it with
   dry_run=true first and get the person's OK before sending it.
@@ -137,7 +140,7 @@ def _friendly(exc: VanApiError) -> str:
     return f"{hints.get(exc.kind, 'VAN refused the request.')} ({exc.status} {exc.code}: {detail})"
 
 
-VanId = Annotated[int, Field(description="The person's VAN ID", gt=0)]
+VanId = Annotated[int, Field(description="The person's VAN ID, from search_people. Never guess one.", gt=0)]
 Date = Annotated[str, Field(description="A date like 2026-10-19")]
 
 
@@ -181,7 +184,7 @@ def build_server(config: Config, van: VanClient, audit: AuditLog | None = None) 
 
     @mcp.tool(annotations=READ)
     async def contact_history_summary(
-        van_ids: Annotated[list[int], Field(description="VAN IDs, up to 25", min_length=1)],
+        van_ids: Annotated[list[int], Field(description="VAN IDs from search_people, up to 25", min_length=1)],
         since: Annotated[str | None, Field(description="Only count attempts on or after this date")] = None,
     ) -> dict[str, Any]:
         """Counts of contact attempts for up to 25 people: by contact type (phone, walk, text), by result
@@ -191,7 +194,8 @@ def build_server(config: Config, van: VanClient, audit: AuditLog | None = None) 
     @mcp.tool(annotations=READ)
     async def list_events(
         start_date: Date,
-        end_date: Annotated[str | None, Field(description="Last day to include; defaults to start_date")] = None,
+        end_date: Annotated[str | None, Field(description="Last day to include. Leave it out and only start_date "
+                                                          "is searched, so set it for a week or a weekend")] = None,
         event_type: Annotated[str | None, Field(description="Canvass, Phone Bank, Training...")] = None,
     ) -> dict[str, Any]:
         """Events starting between two dates (inclusive), with their shifts and locations."""
@@ -252,9 +256,9 @@ def build_server(config: Config, van: VanClient, audit: AuditLog | None = None) 
         async def apply_canvass_response(
             van_id: VanId,
             contact_type_id: Annotated[int, Field(description="From canvass_codes, e.g. 2 for Walk")],
-            survey_question_id: int | None = None,
-            survey_response_id: int | None = None,
-            activist_code_id: int | None = None,
+            survey_question_id: Annotated[int | None, Field(description="From list_survey_questions")] = None,
+            survey_response_id: Annotated[int | None, Field(description="One of that question's responses")] = None,
+            activist_code_id: Annotated[int | None, Field(description="From list_activist_codes")] = None,
             result_code_id: Annotated[int | None, Field(description="For a non-contact, e.g. Not Home")] = None,
             date_canvassed: Annotated[str | None, Field(description="Defaults to today in VAN")] = None,
             dry_run: Annotated[bool, Field(description="Preview only. Must be true the first time.")] = True,
