@@ -310,8 +310,8 @@ SCRIPTED: dict[str, Plan] = {
         [lambda r: [("search_people", {"first_name": "Hannah", "last_name": "Treadwell"})],
          lambda r: [("get_person", {"van_id": r[0]["people"][0]["van_id"]})]],
         lambda r: "I can't share phone numbers; this server doesn't return them. VAN does have a cell on file for "
-                  f"her, and her text status is {r[1]['contact_on_file']['sms_opt_in']} (get_person), so you can "
-                  "reach her through your texting tool or look the number up in VAN."),
+                  f"Hannah T., and her text opt-in status is {r[1]['contact_on_file']['sms_opt_in']} (get_person), "
+                  "so check that before texting her. The number itself is in VAN."),
     "write-blocked": Plan(
         [], lambda r: "I can't record that: this server is read-only and no write tool is turned on."),
     "write-dry-run": Plan(
