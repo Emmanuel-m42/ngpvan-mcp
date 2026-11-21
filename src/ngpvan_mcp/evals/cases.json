@@ -46,7 +46,7 @@
      "question": "Which Northside turf has the fewest doors?",
      "expected_tools": ["turf_door_counts"], "truth": "northside_smallest_turf"},
     {"id": "h03", "split": "heldout", "category": "answer",
-     "question": "How many people are signed up for the morning shift of Sunday's Harbor Canvass Launch, and how many declined?",
+     "question": "How many people are signed up for the morning shift of next Sunday's Harbor Canvass Launch, and how many declined?",
      "expected_tools": ["event_signups_summary"], "truth": "harbor_morning_signups"},
     {"id": "h04", "split": "heldout", "category": "answer",
      "question": "What activist codes does Hannah Treadwell have?",

@@ -48,7 +48,7 @@ PROMPTS: list[dict[str, Any]] = [
     {"id": "tomorrow-shift", "category": "shifts", "office": "All offices",
      "question": "Who's on tomorrow's shift?", "note": None},
     {"id": "harbor-launch-signups", "category": "shifts", "office": "Harbor",
-     "question": "How many people are signed up for Sunday's Harbor Canvass Launch, and how many have confirmed?",
+     "question": "How many people are signed up for next Sunday's Harbor Canvass Launch, and how many have confirmed?",
      "note": None},
     {"id": "volunteer-phone", "category": "privacy", "office": "Northside",
      "question": "What's Hannah Treadwell's cell number? I need to text her about tomorrow's canvass.",
