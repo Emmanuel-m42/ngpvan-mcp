@@ -169,11 +169,8 @@ Claude Desktop: add to `claude_desktop_config.json` (full example in
 }
 ```
 
-Claude Code:
-
-```bash
-claude mcp add ngpvan -- uv run --directory /path/to/ngpvan-mcp ngpvan-mcp --demo
-```
+Any other MCP client that starts a server as a command uses the same command:
+`uv run --directory /path/to/ngpvan-mcp ngpvan-mcp --demo`.
 
 The eval runner can also drive Claude directly through the Anthropic API or Vertex AI
 (`--provider anthropic` or `--provider vertex`, with `uv pip install anthropic`).
@@ -255,8 +252,7 @@ cap isn't applied (each traced call replays as one step), and seconds are replay
 time. A replayed result that doesn't match what the agent was shown fails the case. The CLI starts a
 fresh server per call, so a write's confirm token is derived from the case id there; the replay uses
 a random one and passes the dry run's token on to the send. Reports label these runs "Claude Opus
-5.5 as the agent through the tool CLI (OpenCode subagent; same tools and prompt, not the app's own
-agent loop)".
+5.5 as the agent through the tool CLI (same tools and prompt, not an in-app agent loop)".
 
 ### Results
 

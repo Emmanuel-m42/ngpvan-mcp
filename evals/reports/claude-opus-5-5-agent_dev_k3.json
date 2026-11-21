@@ -7,8 +7,8 @@
   "k": 3,
   "temperature": null,
   "num_ctx": 8192,
-  "started": "2026-11-21T03:11:17+00:00",
-  "label": "Claude Opus 5.5 as the agent through the tool CLI (OpenCode subagent; same tools and prompt, not the app's own agent loop)",
+  "started": "2026-11-21T03:21:45+00:00",
+  "label": "Claude Opus 5.5 as the agent through the tool CLI (same tools and prompt, not an in-app agent loop)",
   "traces": [
    "/home/ebot/agent-evals/ngpvan-mcp/runs/dev-1.jsonl",
    "/home/ebot/agent-evals/ngpvan-mcp/runs/dev-2.jsonl",
@@ -19,7 +19,7 @@
    "/home/ebot/agent-evals/ngpvan-mcp/runs/dev-2.json",
    "/home/ebot/agent-evals/ngpvan-mcp/runs/dev-3.json"
   ],
-  "finished": "2026-11-21T03:11:18+00:00"
+  "finished": "2026-11-21T03:21:47+00:00"
  },
  "summary": {
   "all": {

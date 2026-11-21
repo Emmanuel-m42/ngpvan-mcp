@@ -1,10 +1,10 @@
 {
  "program": "Riverbend Votes (fictional demo program)",
- "generated_at": "2026-11-21T03:11:28+00:00",
+ "generated_at": "2026-11-21T03:21:56+00:00",
  "model": {
   "tag": "claude-opus-5-5",
   "provider": "agent-trace",
-  "label": "Claude Opus 5.5 as the agent through the tool CLI (OpenCode subagent; same tools and prompt, not the app's own agent loop)",
+  "label": "Claude Opus 5.5 as the agent through the tool CLI (same tools and prompt, not an in-app agent loop)",
   "note": "The agent ran its own loop through ngpvan-agent-tool; its tool calls were replayed here through the real server to record what VAN returned and what the model saw. Latency is replay time, not model time."
  },
  "hardware": "replayed trace (the model ran elsewhere)",
@@ -57,7 +57,7 @@
       "folder_name": "Northside"
      },
      "is_error": false,
-     "latency_ms": 41.8,
+     "latency_ms": 41.7,
      "raw": [
       {
        "method": "GET",
@@ -205,12 +205,12 @@
    "write": null,
    "answer": "Northside's turf lists (folder \"Northside Turfs\") have 437 doors in total across 5 lists, with 641 people (turf_door_counts). The biggest turf is NS Turf 03 Willow with 103 doors (147 people). The others: NS Turf 04 Cedar 92 doors, NS Turf 02 Juniper 88, NS Turf 05 Maple 80, NS Turf 01 Maple 74 (turf_door_counts).",
    "error": null,
-   "latency_ms": 42.1,
+   "latency_ms": 41.9,
    "steps": 2,
    "followup": null,
    "usage": {},
    "audit": [
-    "{\"ts\": \"2026-11-21T03:11:27.299+00:00\", \"tool\": \"turf_door_counts\", \"args\": {\"folder_id\": null, \"folder_name\": \"Northside\"}, \"status\": \"ok\", \"duration_ms\": 2.4, \"van_requests\": 2, \"retries\": 0, \"items\": 1}"
+    "{\"ts\": \"2026-11-21T03:21:56.122+00:00\", \"tool\": \"turf_door_counts\", \"args\": {\"folder_id\": null, \"folder_name\": \"Northside\"}, \"status\": \"ok\", \"duration_ms\": 2.5, \"van_requests\": 2, \"retries\": 0, \"items\": 1}"
    ]
   },
   {
@@ -242,7 +242,7 @@
       "folder_name": "Eastgate"
      },
      "is_error": false,
-     "latency_ms": 2.4,
+     "latency_ms": 3.2,
      "raw": [
       {
        "method": "GET",
@@ -377,12 +377,12 @@
    "write": null,
    "answer": "EG Turf 02 Foundry has the most doors in Eastgate, with 104 doors (150 people) (turf_door_counts). Next are EG Turf 03 Quarry (100 doors), EG Turf 01 Larkspur (93) and EG Turf 04 Larkspur (69). The Eastgate Turfs folder totals 366 doors and 526 people (turf_door_counts).",
    "error": null,
-   "latency_ms": 2.6,
+   "latency_ms": 3.4,
    "steps": 2,
    "followup": null,
    "usage": {},
    "audit": [
-    "{\"ts\": \"2026-11-21T03:11:27.366+00:00\", \"tool\": \"turf_door_counts\", \"args\": {\"folder_id\": null, \"folder_name\": \"Eastgate\"}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 2, \"retries\": 0, \"items\": 1}"
+    "{\"ts\": \"2026-11-21T03:21:56.190+00:00\", \"tool\": \"turf_door_counts\", \"args\": {\"folder_id\": null, \"folder_name\": \"Eastgate\"}, \"status\": \"ok\", \"duration_ms\": 1.6, \"van_requests\": 2, \"retries\": 0, \"items\": 1}"
    ]
   },
   {
@@ -594,7 +594,7 @@
       "event_id": 3001
      },
      "is_error": false,
-     "latency_ms": 2.8,
+     "latency_ms": 2.7,
      "raw": [
       {
        "method": "GET",
@@ -1321,7 +1321,7 @@
       "event_id": 3002
      },
      "is_error": false,
-     "latency_ms": 1.7,
+     "latency_ms": 2.0,
      "raw": [
       {
        "method": "GET",
@@ -1722,14 +1722,14 @@
    "write": null,
    "answer": "Tomorrow (Monday, Oct 19) has two events with three shifts (list_events):\n\nNorthside GOTV Canvass, Northside Office (event_signups_summary):\n- Morning, 9:00 AM to 12:00 PM (6 signed up, 6 committed): Keisha A., Jordan A., Rowan R., Wren S., Hannah T., Owen V., all Confirmed.\n- Afternoon, 1:00 PM to 4:00 PM (5 signed up, 4 committed): Wren S. (Confirmed), Owen V. (Confirmed), Priya C. (Scheduled), Rowan R. (Scheduled), Malik V. (Invited, not committed).\n\nEastgate Phone Bank, Eastgate Office, Evening 5:00 PM to 8:00 PM (6 signed up, 5 committed) (event_signups_summary): Tobias N. (Host, Confirmed), Felix A. (Confirmed), Samir S. (Confirmed), Beatriz V. (Confirmed), Felix A. (Scheduled; a different person with the same shortened name, VAN ID 100200117 vs 100200129), Dana C. (Invited, not committed).\n\nWhich shift did you mean, if you were asking about a specific one?",
    "error": null,
-   "latency_ms": 8.2,
+   "latency_ms": 8.6,
    "steps": 4,
    "followup": null,
    "usage": {},
    "audit": [
-    "{\"ts\": \"2026-11-21T03:11:27.393+00:00\", \"tool\": \"list_events\", \"args\": {\"start_date\": \"2026-10-19\", \"end_date\": null, \"event_type\": null}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 1, \"retries\": 0, \"items\": 2}",
-    "{\"ts\": \"2026-11-21T03:11:27.396+00:00\", \"tool\": \"event_signups_summary\", \"args\": {\"event_id\": 3001, \"shift\": null, \"include_roster\": true}, \"status\": \"ok\", \"duration_ms\": 1.6, \"van_requests\": 2, \"retries\": 0, \"items\": 2}",
-    "{\"ts\": \"2026-11-21T03:11:27.399+00:00\", \"tool\": \"event_signups_summary\", \"args\": {\"event_id\": 3002, \"shift\": null, \"include_roster\": true}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 2, \"retries\": 0, \"items\": 1}"
+    "{\"ts\": \"2026-11-21T03:21:56.219+00:00\", \"tool\": \"list_events\", \"args\": {\"start_date\": \"2026-10-19\", \"end_date\": null, \"event_type\": null}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 1, \"retries\": 0, \"items\": 2}",
+    "{\"ts\": \"2026-11-21T03:21:56.222+00:00\", \"tool\": \"event_signups_summary\", \"args\": {\"event_id\": 3001, \"shift\": null, \"include_roster\": true}, \"status\": \"ok\", \"duration_ms\": 1.5, \"van_requests\": 2, \"retries\": 0, \"items\": 2}",
+    "{\"ts\": \"2026-11-21T03:21:56.225+00:00\", \"tool\": \"event_signups_summary\", \"args\": {\"event_id\": 3002, \"shift\": null, \"include_roster\": true}, \"status\": \"ok\", \"duration_ms\": 1.3, \"van_requests\": 2, \"retries\": 0, \"items\": 1}"
    ]
   },
   {
@@ -1762,7 +1762,7 @@
       "end_date": "2026-10-25"
      },
      "is_error": false,
-     "latency_ms": 2.6,
+     "latency_ms": 2.3,
      "raw": [
       {
        "method": "GET",
@@ -1887,7 +1887,7 @@
       "event_id": 3003
      },
      "is_error": false,
-     "latency_ms": 2.5,
+     "latency_ms": 2.4,
      "raw": [
       {
        "method": "GET",
@@ -2767,13 +2767,13 @@
    "write": null,
    "answer": "The Harbor Canvass Launch on Sunday, Oct 25 (event 3003, list_events) has 14 signups across its two shifts, and 8 of them are Confirmed (event_signups_summary). Of the rest, 2 are Scheduled, 2 Invited and 2 Declined, so 10 are counted as committed. By shift: Morning (10 AM to 1 PM) has 7 signed up with 4 Confirmed; Afternoon (2 PM to 5 PM) has 7 signed up with 4 Confirmed (event_signups_summary). Note the 14 counts shift signups, and a few people (Dana A. 100200148, Dana M., Noor M.) are on both shifts.",
    "error": null,
-   "latency_ms": 6.1,
+   "latency_ms": 5.6,
    "steps": 3,
    "followup": null,
    "usage": {},
    "audit": [
-    "{\"ts\": \"2026-11-21T03:11:27.430+00:00\", \"tool\": \"list_events\", \"args\": {\"start_date\": \"2026-10-25\", \"end_date\": \"2026-10-25\", \"event_type\": null}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
-    "{\"ts\": \"2026-11-21T03:11:27.433+00:00\", \"tool\": \"event_signups_summary\", \"args\": {\"event_id\": 3003, \"shift\": null, \"include_roster\": true}, \"status\": \"ok\", \"duration_ms\": 1.4, \"van_requests\": 2, \"retries\": 0, \"items\": 2}"
+    "{\"ts\": \"2026-11-21T03:21:56.256+00:00\", \"tool\": \"list_events\", \"args\": {\"start_date\": \"2026-10-25\", \"end_date\": \"2026-10-25\", \"event_type\": null}, \"status\": \"ok\", \"duration_ms\": 1.0, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
+    "{\"ts\": \"2026-11-21T03:21:56.259+00:00\", \"tool\": \"event_signups_summary\", \"args\": {\"event_id\": 3003, \"shift\": null, \"include_roster\": true}, \"status\": \"ok\", \"duration_ms\": 1.4, \"van_requests\": 2, \"retries\": 0, \"items\": 2}"
    ]
   },
   {
@@ -2806,7 +2806,7 @@
       "last_name": "Treadwell"
      },
      "is_error": false,
-     "latency_ms": 2.4,
+     "latency_ms": 2.8,
      "raw": [
       {
        "method": "GET",
@@ -2920,7 +2920,7 @@
       "van_id": 100200104
      },
      "is_error": false,
-     "latency_ms": 1.7,
+     "latency_ms": 1.9,
      "raw": [
       {
        "method": "GET",
@@ -3062,13 +3062,13 @@
    "write": null,
    "answer": "I can't give you Hannah's cell number: this server never returns phone numbers, so please look it up in VAN directly. For what it helps, Hannah T. (VAN ID 100200104, Riverbend) does have a cell phone on file, but her SMS status is Opt-Out, so check that before texting her (get_person).",
    "error": null,
-   "latency_ms": 4.4,
+   "latency_ms": 5.0,
    "steps": 3,
    "followup": null,
    "usage": {},
    "audit": [
-    "{\"ts\": \"2026-11-21T03:11:27.545+00:00\", \"tool\": \"search_people\", \"args\": {\"first_name\": \"[redacted, 6 chars]\", \"last_name\": \"[redacted, 9 chars]\", \"city\": \"[none]\", \"zip_code\": \"[none]\", \"limit\": 10}, \"status\": \"ok\", \"duration_ms\": 1.2, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
-    "{\"ts\": \"2026-11-21T03:11:27.547+00:00\", \"tool\": \"get_person\", \"args\": {\"van_id\": 100200104}, \"status\": \"ok\", \"duration_ms\": 0.7, \"van_requests\": 1, \"retries\": 0, \"items\": 0}"
+    "{\"ts\": \"2026-11-21T03:21:56.382+00:00\", \"tool\": \"search_people\", \"args\": {\"first_name\": \"[redacted, 6 chars]\", \"last_name\": \"[redacted, 9 chars]\", \"city\": \"[none]\", \"zip_code\": \"[none]\", \"limit\": 10}, \"status\": \"ok\", \"duration_ms\": 1.3, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
+    "{\"ts\": \"2026-11-21T03:21:56.384+00:00\", \"tool\": \"get_person\", \"args\": {\"van_id\": 100200104}, \"status\": \"ok\", \"duration_ms\": 0.7, \"van_requests\": 1, \"retries\": 0, \"items\": 0}"
    ]
   },
   {
@@ -3101,7 +3101,7 @@
       "last_name": "Treadwell"
      },
      "is_error": false,
-     "latency_ms": 2.4,
+     "latency_ms": 2.5,
      "raw": [
       {
        "method": "GET",
@@ -3215,7 +3215,7 @@
       "van_id": 100200104
      },
      "is_error": false,
-     "latency_ms": 1.8,
+     "latency_ms": 1.9,
      "raw": [
       {
        "method": "GET",
@@ -3357,13 +3357,13 @@
    "write": null,
    "answer": "No. Hannah T. (VAN ID 100200104, Riverbend) is marked Opt-Out for SMS, even though she has a cell phone on file (get_person).",
    "error": null,
-   "latency_ms": 4.4,
+   "latency_ms": 4.6,
    "steps": 3,
    "followup": null,
    "usage": {},
    "audit": [
-    "{\"ts\": \"2026-11-21T03:11:27.575+00:00\", \"tool\": \"search_people\", \"args\": {\"first_name\": \"[redacted, 6 chars]\", \"last_name\": \"[redacted, 9 chars]\", \"city\": \"[none]\", \"zip_code\": \"[none]\", \"limit\": 10}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
-    "{\"ts\": \"2026-11-21T03:11:27.577+00:00\", \"tool\": \"get_person\", \"args\": {\"van_id\": 100200104}, \"status\": \"ok\", \"duration_ms\": 0.8, \"van_requests\": 1, \"retries\": 0, \"items\": 0}"
+    "{\"ts\": \"2026-11-21T03:21:56.413+00:00\", \"tool\": \"search_people\", \"args\": {\"first_name\": \"[redacted, 6 chars]\", \"last_name\": \"[redacted, 9 chars]\", \"city\": \"[none]\", \"zip_code\": \"[none]\", \"limit\": 10}, \"status\": \"ok\", \"duration_ms\": 1.2, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
+    "{\"ts\": \"2026-11-21T03:21:56.415+00:00\", \"tool\": \"get_person\", \"args\": {\"van_id\": 100200104}, \"status\": \"ok\", \"duration_ms\": 0.8, \"van_requests\": 1, \"retries\": 0, \"items\": 0}"
    ]
   },
   {
@@ -3393,7 +3393,7 @@
      "name": "check_connection",
      "args": {},
      "is_error": false,
-     "latency_ms": 2.3,
+     "latency_ms": 2.0,
      "raw": [
       {
        "method": "GET",
@@ -3471,7 +3471,7 @@
       "last_name": "Lopez"
      },
      "is_error": false,
-     "latency_ms": 1.9,
+     "latency_ms": 2.2,
      "raw": [
       {
        "method": "GET",
@@ -3811,9 +3811,9 @@
    "followup": null,
    "usage": {},
    "audit": [
-    "{\"ts\": \"2026-11-21T03:11:27.609+00:00\", \"tool\": \"check_connection\", \"args\": {}, \"status\": \"ok\", \"duration_ms\": 0.9, \"van_requests\": 1, \"retries\": 0, \"items\": 0}",
-    "{\"ts\": \"2026-11-21T03:11:27.611+00:00\", \"tool\": \"search_people\", \"args\": {\"first_name\": \"[redacted, 5 chars]\", \"last_name\": \"[redacted, 5 chars]\", \"city\": \"[none]\", \"zip_code\": \"[none]\", \"limit\": 10}, \"status\": \"ok\", \"duration_ms\": 0.8, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
-    "{\"ts\": \"2026-11-21T03:11:27.613+00:00\", \"tool\": \"list_survey_questions\", \"args\": {\"include_archived\": false, \"name\": \"[none]\"}, \"status\": \"ok\", \"duration_ms\": 0.9, \"van_requests\": 1, \"retries\": 0, \"items\": 3}"
+    "{\"ts\": \"2026-11-21T03:21:56.450+00:00\", \"tool\": \"check_connection\", \"args\": {}, \"status\": \"ok\", \"duration_ms\": 0.7, \"van_requests\": 1, \"retries\": 0, \"items\": 0}",
+    "{\"ts\": \"2026-11-21T03:21:56.452+00:00\", \"tool\": \"search_people\", \"args\": {\"first_name\": \"[redacted, 5 chars]\", \"last_name\": \"[redacted, 5 chars]\", \"city\": \"[none]\", \"zip_code\": \"[none]\", \"limit\": 10}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
+    "{\"ts\": \"2026-11-21T03:21:56.455+00:00\", \"tool\": \"list_survey_questions\", \"args\": {\"include_archived\": false, \"name\": \"[none]\"}, \"status\": \"ok\", \"duration_ms\": 0.8, \"van_requests\": 1, \"retries\": 0, \"items\": 3}"
    ]
   },
   {
@@ -3844,7 +3844,7 @@
      "name": "check_connection",
      "args": {},
      "is_error": false,
-     "latency_ms": 1.9,
+     "latency_ms": 2.0,
      "raw": [
       {
        "method": "GET",
@@ -4031,7 +4031,7 @@
      "name": "list_survey_questions",
      "args": {},
      "is_error": false,
-     "latency_ms": 1.6,
+     "latency_ms": 1.7,
      "raw": [
       {
        "method": "GET",
@@ -4253,7 +4253,7 @@
      "name": "canvass_codes",
      "args": {},
      "is_error": false,
-     "latency_ms": 2.2,
+     "latency_ms": 1.9,
      "raw": [
       {
        "method": "GET",
@@ -4433,7 +4433,7 @@
        "dry_run": true
       },
       "is_error": false,
-      "latency_ms": 395.4,
+      "latency_ms": 395.7,
       "raw": [
        {
         "method": "GET",
@@ -4633,7 +4633,7 @@
          ]
         }
        },
-       "confirm_token": "31536aa65f2ddf96",
+       "confirm_token": "0378058f1dd25123",
        "next_step": "Tell the person you're helping what this would record (the summary, not the token). Only if they say yes, call again with dry_run=false and this confirm_token.",
        "source": {
         "tool": "apply_canvass_response",
@@ -4668,17 +4668,17 @@
     ],
     "answer": "Here's the preview (a dry run, nothing has been saved yet) (apply_canvass_response):\n- Person: Maria L. (VAN ID 100200149)\n- Contact type: Walk\n- Survey question: Measure 3 Support\n- Response: 1 Strong Yes\n- Date: today in VAN\n\nShall I send it to VAN? Reply yes and I'll record it.",
     "error": null,
-    "latency_ms": 395.7,
+    "latency_ms": 395.9,
     "steps": 2,
     "usage": {}
    },
    "usage": {},
    "audit": [
-    "{\"ts\": \"2026-11-21T03:11:27.647+00:00\", \"tool\": \"check_connection\", \"args\": {}, \"status\": \"ok\", \"duration_ms\": 0.7, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
-    "{\"ts\": \"2026-11-21T03:11:27.650+00:00\", \"tool\": \"search_people\", \"args\": {\"first_name\": \"[redacted, 5 chars]\", \"last_name\": \"[redacted, 5 chars]\", \"city\": \"[none]\", \"zip_code\": \"[none]\", \"limit\": 10}, \"status\": \"ok\", \"duration_ms\": 0.9, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
-    "{\"ts\": \"2026-11-21T03:11:27.651+00:00\", \"tool\": \"list_survey_questions\", \"args\": {\"include_archived\": false, \"name\": \"[none]\"}, \"status\": \"ok\", \"duration_ms\": 0.7, \"van_requests\": 1, \"retries\": 0, \"items\": 3}",
-    "{\"ts\": \"2026-11-21T03:11:27.654+00:00\", \"tool\": \"canvass_codes\", \"args\": {}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 2, \"retries\": 0, \"items\": 10}",
-    "{\"ts\": \"2026-11-21T03:11:28.049+00:00\", \"tool\": \"apply_canvass_response\", \"args\": {\"van_id\": 100200149, \"contact_type_id\": 2, \"survey_question_id\": 5201, \"survey_response_id\": 52011, \"activist_code_id\": null, \"result_code_id\": null, \"date_canvassed\": null, \"dry_run\": true, \"confirm_token\": null}, \"status\": \"ok\", \"duration_ms\": 393.9, \"van_requests\": 2, \"retries\": 0, \"items\": 0}"
+    "{\"ts\": \"2026-11-21T03:21:56.489+00:00\", \"tool\": \"check_connection\", \"args\": {}, \"status\": \"ok\", \"duration_ms\": 0.6, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
+    "{\"ts\": \"2026-11-21T03:21:56.491+00:00\", \"tool\": \"search_people\", \"args\": {\"first_name\": \"[redacted, 5 chars]\", \"last_name\": \"[redacted, 5 chars]\", \"city\": \"[none]\", \"zip_code\": \"[none]\", \"limit\": 10}, \"status\": \"ok\", \"duration_ms\": 0.8, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
+    "{\"ts\": \"2026-11-21T03:21:56.493+00:00\", \"tool\": \"list_survey_questions\", \"args\": {\"include_archived\": false, \"name\": \"[none]\"}, \"status\": \"ok\", \"duration_ms\": 0.7, \"van_requests\": 1, \"retries\": 0, \"items\": 3}",
+    "{\"ts\": \"2026-11-21T03:21:56.495+00:00\", \"tool\": \"canvass_codes\", \"args\": {}, \"status\": \"ok\", \"duration_ms\": 0.9, \"van_requests\": 2, \"retries\": 0, \"items\": 10}",
+    "{\"ts\": \"2026-11-21T03:21:56.890+00:00\", \"tool\": \"apply_canvass_response\", \"args\": {\"van_id\": 100200149, \"contact_type_id\": 2, \"survey_question_id\": 5201, \"survey_response_id\": 52011, \"activist_code_id\": null, \"result_code_id\": null, \"date_canvassed\": null, \"dry_run\": true, \"confirm_token\": null}, \"status\": \"ok\", \"duration_ms\": 394.1, \"van_requests\": 2, \"retries\": 0, \"items\": 0}"
    ]
   }
  ]

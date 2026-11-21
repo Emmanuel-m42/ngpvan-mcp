@@ -1,8 +1,8 @@
 # Eval run: claude-opus-5-5
 
-- Model: Claude Opus 5.5 as the agent through the tool CLI (OpenCode subagent; same tools and prompt, not the app's own agent loop)
+- Model: Claude Opus 5.5 as the agent through the tool CLI (same tools and prompt, not an in-app agent loop)
 - Provider: agent-trace; hardware: replayed trace (the model ran elsewhere)
-- Split: dev; k = 3; temperature None; started 2026-11-21T03:11:17+00:00
+- Split: dev; k = 3; temperature None; started 2026-11-21T03:21:45+00:00
 - Server: demo data, writes off, names as initials
 
 The agent ran its own loop and called the real tools through `ngpvan-agent-tool`; its calls were replayed here through a fresh demo server, in order, and every replayed result matched what it had been shown (a mismatch fails the case). The 6-step cap doesn't apply in this mode, and seconds are replay time, not model time.

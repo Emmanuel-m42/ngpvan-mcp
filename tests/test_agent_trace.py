@@ -52,7 +52,7 @@ def test_scoring_from_traces_gives_pass_hat_k(tmp_path, capsys):
     assert report["meta"]["k"] == 2 and report["meta"]["label"] == AGENT_LABEL
     s = report["summary"]["all"]
     assert s["pass_at_1"] == 0.75 and s["pass_hat_2"] == 0.5
-    assert "not the app's own agent loop" in (out / "x.md").read_text()
+    assert "not an in-app agent loop" in (out / "x.md").read_text()
 
 
 def test_a_tampered_trace_fails_the_case(tmp_path, capsys):

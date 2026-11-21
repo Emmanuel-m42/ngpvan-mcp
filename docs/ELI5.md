@@ -140,7 +140,7 @@ number, no tool, leaked phone number, agreed to a write) each fail the check the
 ## Likely interview questions
 
 **Why MCP instead of a custom API for the AI?** One server works with any MCP client: Claude
-Desktop, Claude Code, an agent framework, or a local open model. The tool list and its rules travel
+Desktop, an agent framework, or a local open model. The tool list and its rules travel
 with the server.
 
 **Why mask in code instead of telling the model "don't share phone numbers"?** A prompt is a

@@ -40,8 +40,8 @@ from ..config import Config
 from ..server import INSTRUCTIONS, build_server
 from .agent import SYSTEM, mcp_tools
 
-AGENT_LABEL = ("Claude Opus 5.5 as the agent through the tool CLI (OpenCode subagent; same tools and prompt, "
-               "not the app's own agent loop)")
+AGENT_LABEL = ("Claude Opus 5.5 as the agent through the tool CLI (same tools and prompt, "
+               "not an in-app agent loop)")
 
 
 def _contexts() -> dict[str, dict[str, Any]]:
