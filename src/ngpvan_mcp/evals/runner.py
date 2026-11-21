@@ -113,7 +113,8 @@ async def run(model: ChatModel, split: str, k: int, out_dir: Path, label: str, m
             server = build_server(config, make_client(config, demo=True), AuditLog(None))
             async with Client(server) as client:
                 tools = await mcp_tools(client)
-                outcome = await run_case(model, client, tools, INSTRUCTIONS, case["question"], spec["today"])
+                instructions = client.instructions or INSTRUCTIONS
+                outcome = await run_case(model, client, tools, instructions, case["question"], spec["today"])
             result = score(case, outcome, facts, pii) | {"trial": trial}
             results.append(result)
             print(f"{case['id']} trial {trial}: {'pass' if result['passed'] else 'FAIL'} "

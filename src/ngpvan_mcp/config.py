@@ -36,7 +36,7 @@ class Config:
     base_url: str = "https://api.securevan.com/v4"
     names: NamePolicy = "initial"
     writes: dict[str, bool] = field(default_factory=dict)
-    audit_log: str | None = "ngpvan-mcp-audit.jsonl"
+    audit_log: str | None = "~/.local/state/ngpvan-mcp/audit.jsonl"
     limits: Limits = field(default_factory=Limits)
 
     def write_enabled(self, tool: str) -> bool:
@@ -59,7 +59,7 @@ class Config:
         if "api_key" in van or "api_key" in data:
             raise ConfigError("put the API key in VAN_API_KEY or Secret Manager, not in the config file")
         limits = Limits(**data.get("limits", {}))
-        audit = data.get("audit", {}).get("path", "ngpvan-mcp-audit.jsonl")
+        audit = data.get("audit", {}).get("path", cls.audit_log)
         return cls(
             app_name=van.get("app_name", cls.app_name),
             database_mode=mode,

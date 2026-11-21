@@ -63,10 +63,13 @@ def main(argv: list[str] | None = None) -> int:
     try:
         config = Config.load(args.config)
         client = make_client(config, args.demo)
+        audit = AuditLog(config.audit_log)
     except (ConfigError, MissingKeyError) as exc:
         print(f"ngpvan-mcp: {exc}", file=sys.stderr)
         return 2
-    audit = AuditLog(config.audit_log, stream=None)
+    except OSError as exc:
+        print(f"ngpvan-mcp: can't write the audit log ({exc}); not starting without one", file=sys.stderr)
+        return 2
     server = build_server(config, client, audit)
 
     if args.transport == "stdio":

@@ -29,4 +29,4 @@ max_people_per_history_call = 25
 timeout_seconds = 30.0
 
 [audit]
-path = "ngpvan-mcp-audit.jsonl"   # JSON Lines, one entry per tool call
+path = "~/.local/state/ngpvan-mcp/audit.jsonl"   # JSON Lines, one entry per tool call

@@ -19,13 +19,21 @@ import anyio
 from .privacy import mask_args, mask_text
 
 
+DEFAULT_PATH = Path("~/.local/state/ngpvan-mcp/audit.jsonl")
+
+
 class AuditLog:
+    """Raises at construction if the file can't be written, so the server
+    never starts in a state where calls would go unrecorded."""
+
     def __init__(self, path: str | Path | None = None, stream: TextIO | None = None) -> None:
-        self.path = Path(path) if path else None
+        self.path = Path(path).expanduser() if path else None
         self.stream = stream
         self._lock = anyio.Lock()
         if self.path:
             self.path.parent.mkdir(parents=True, exist_ok=True)
+            with self.path.open("a", encoding="utf-8"):
+                pass
 
     async def record(
         self,

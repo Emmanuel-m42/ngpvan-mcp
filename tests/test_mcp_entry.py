@@ -121,9 +121,22 @@ async def test_http_transport_requires_the_bearer_token(header, status):
     assert resp.status_code == status
 
 
-def test_http_refuses_to_start_without_a_token(monkeypatch, capsys):
+def test_http_refuses_to_start_without_a_token(monkeypatch, capsys, tmp_path):
     from ngpvan_mcp.cli import main
 
+    config = tmp_path / "cfg.toml"
+    config.write_text(f'[audit]\npath = "{tmp_path / "audit.jsonl"}"\n')
     monkeypatch.delenv("NGPVAN_MCP_HTTP_TOKEN", raising=False)
-    assert main(["--demo", "--transport", "http"]) == 2
+    assert main(["--demo", "--config", str(config), "--transport", "http"]) == 2
     assert "NGPVAN_MCP_HTTP_TOKEN" in capsys.readouterr().err
+
+
+def test_refuses_to_start_without_a_writable_audit_log(capsys, tmp_path):
+    from ngpvan_mcp.cli import main
+
+    blocker = tmp_path / "not-a-dir"
+    blocker.write_text("")
+    config = tmp_path / "cfg.toml"
+    config.write_text(f'[audit]\npath = "{blocker / "audit.jsonl"}"\n')
+    assert main(["--demo", "--config", str(config)]) == 2
+    assert "audit log" in capsys.readouterr().err
