@@ -141,7 +141,7 @@ def _friendly(exc: VanApiError) -> str:
 
 
 VanId = Annotated[int, Field(description="The person's VAN ID, from search_people. Never guess one.", gt=0)]
-Date = Annotated[str, Field(description="A date like 2026-10-19")]
+Date = Annotated[str, Field(description="A date in YYYY-MM-DD form")]
 
 
 def build_server(config: Config, van: VanClient, audit: AuditLog | None = None) -> MCPServer:
@@ -196,7 +196,8 @@ def build_server(config: Config, van: VanClient, audit: AuditLog | None = None) 
         start_date: Date,
         end_date: Annotated[str | None, Field(description="Last day to include. Leave it out and only start_date "
                                                           "is searched, so set it for a week or a weekend")] = None,
-        event_type: Annotated[str | None, Field(description="Canvass, Phone Bank, Training...")] = None,
+        event_type: Annotated[str | None, Field(description="Optional. An event type name such as Canvass or "
+                                                            "Phone Bank; leave it out for all types")] = None,
     ) -> dict[str, Any]:
         """Events starting between two dates (inclusive), with their shifts and locations."""
         args = {"start_date": start_date, "end_date": end_date, "event_type": event_type}
@@ -205,7 +206,8 @@ def build_server(config: Config, van: VanClient, audit: AuditLog | None = None) 
     @mcp.tool(annotations=READ)
     async def event_signups_summary(
         event_id: Annotated[int, Field(description="The event's ID from list_events", gt=0)],
-        shift: Annotated[str | None, Field(description="Shift name (e.g. Morning) or shift ID")] = None,
+        shift: Annotated[str | None, Field(description="Optional. A shift name or shift ID from the event's "
+                                                       "shift list; leave it out for every shift")] = None,
         include_roster: bool = True,
     ) -> dict[str, Any]:
         """Who is signed up for an event or one of its shifts: counts by status, how many are committed,
@@ -221,7 +223,7 @@ def build_server(config: Config, van: VanClient, audit: AuditLog | None = None) 
     @mcp.tool(annotations=READ)
     async def turf_door_counts(
         folder_id: Annotated[int | None, Field(description="Folder ID from list_folders")] = None,
-        folder_name: Annotated[str | None, Field(description="Part of a folder name, e.g. Northside")] = None,
+        folder_name: Annotated[str | None, Field(description="Optional. Any part of a folder's name, such as an office name")] = None,
     ) -> dict[str, Any]:
         """Doors and people per saved list (turf) in a folder, with folder totals. With no folder, every folder."""
         return await guard("turf_door_counts", {"folder_id": folder_id, "folder_name": folder_name}, t.turf_door_counts)
@@ -238,7 +240,8 @@ def build_server(config: Config, van: VanClient, audit: AuditLog | None = None) 
     @mcp.tool(annotations=READ)
     async def list_activist_codes(
         include_archived: bool = False,
-        code_type: Annotated[str | None, Field(description="e.g. Volunteer")] = None,
+        code_type: Annotated[str | None, Field(description="Optional. A code type such as Volunteer or "
+                                                           "Constituency; leave it out for all types")] = None,
         name: Annotated[str | None, Field(description="Start of the code name")] = None,
     ) -> dict[str, Any]:
         """Activist codes available in this committee."""
@@ -255,11 +258,13 @@ def build_server(config: Config, van: VanClient, audit: AuditLog | None = None) 
         @mcp.tool(annotations=WRITE)
         async def apply_canvass_response(
             van_id: VanId,
-            contact_type_id: Annotated[int, Field(description="From canvass_codes, e.g. 2 for Walk")],
+            contact_type_id: Annotated[int, Field(description="A contact type ID from canvass_codes")],
             survey_question_id: Annotated[int | None, Field(description="From list_survey_questions")] = None,
             survey_response_id: Annotated[int | None, Field(description="One of that question's responses")] = None,
             activist_code_id: Annotated[int | None, Field(description="From list_activist_codes")] = None,
-            result_code_id: Annotated[int | None, Field(description="For a non-contact, e.g. Not Home")] = None,
+            result_code_id: Annotated[int | None, Field(description="Optional. A result code ID from "
+                                                                    "canvass_codes, for an attempt that didn't "
+                                                                    "reach the person")] = None,
             date_canvassed: Annotated[str | None, Field(description="Defaults to today in VAN")] = None,
             dry_run: Annotated[bool, Field(description="Preview only. Must be true the first time.")] = True,
             confirm_token: Annotated[str | None, Field(description="From the dry run, to send it for real")] = None,

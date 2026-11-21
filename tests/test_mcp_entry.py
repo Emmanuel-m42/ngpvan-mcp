@@ -32,6 +32,17 @@ async def test_lists_the_tools_with_schemas(server_factory):
     assert "phone" not in json.dumps(tools["search_people"].input_schema["properties"]).lower()
 
 
+async def test_parameter_descriptions_have_no_bare_examples(server_factory):
+    """A bare example ("e.g. Volunteer") was once copied by a model as the literal value.
+    Examples must read as examples: "such as ...", never "e.g." or a trailing list."""
+    cfg = Config(audit_log=None, writes={"apply_canvass_response": True})
+    async with Client(server_factory(cfg)) as c:
+        for tool in (await c.list_tools()).tools:
+            for name, prop in tool.input_schema.get("properties", {}).items():
+                text = prop.get("description", "")
+                assert "e.g." not in text and "..." not in text, f"{tool.name}.{name}: {text}"
+
+
 async def test_call_returns_structured_and_text_content(server_factory):
     async with Client(server_factory()) as c:
         result = await c.call_tool("turf_door_counts", {"folder_name": "Northside"})

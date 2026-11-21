@@ -234,6 +234,12 @@ tuned between the dev and held-out runs.
 | held out | 12 | 0.75 | 0.75 | 1.00 | 0.88 | 0.88 | 0.75 | 1.00 | 6.7, 6.5 |
 
 Reports: [dev](evals/reports/qwen3-14b_dev_k3.md), [held out](evals/reports/qwen3-14b_heldout_k3.md).
+
+Change after these runs: parameter descriptions no longer carry bare examples. In another project
+that uses this server as an MCP client, a model copied "e.g. Volunteer" from `list_activist_codes`
+as the literal value, so every example now reads as one ("Optional. A code type such as Volunteer
+or Constituency") and a test keeps it that way. The finding came from that project's runs, not
+from this repo's held-out results.
 At temperature 0 the three trials were nearly identical, so pass^3 sits close to pass@1.
 
 What the failures were:
