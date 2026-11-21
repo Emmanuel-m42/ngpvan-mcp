@@ -6,3 +6,6 @@ __pycache__/
 audit/
 evals/reports/tmp/
 .env
+.terraform/
+*.tfstate*
+.terraform.lock.hcl

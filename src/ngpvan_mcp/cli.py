@@ -63,7 +63,9 @@ def main(argv: list[str] | None = None) -> int:
     try:
         config = Config.load(args.config)
         client = make_client(config, args.demo)
-        audit = AuditLog(config.audit_log)
+        # "stderr" sends audit lines to the platform's log collector (Cloud Run,
+        # systemd). stdout is never used: on stdio it carries the protocol.
+        audit = AuditLog(stream=sys.stderr) if config.audit_log == "stderr" else AuditLog(config.audit_log)
     except (ConfigError, MissingKeyError) as exc:
         print(f"ngpvan-mcp: {exc}", file=sys.stderr)
         return 2

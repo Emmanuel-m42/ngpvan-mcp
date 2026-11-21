@@ -1,0 +1,16 @@
+# Settings baked into the container image. Credentials come from Secret
+# Manager through environment variables set by Cloud Run (see infra/).
+[van]
+database_mode = 1
+
+[privacy]
+names = "initial"
+
+[writes]
+apply_canvass_response = false
+
+[limits]
+requests_per_second = 5.0
+
+[audit]
+path = "stderr"   # Cloud Run sends stderr to Cloud Logging
