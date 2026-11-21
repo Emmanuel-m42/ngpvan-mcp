@@ -1,7 +1,7 @@
 # Eval run: scripted-oracle
 
 - Provider: scripted; hardware: no model (scripted plan)
-- Split: all; k = 3; temperature 0.0; started 2026-11-21T00:08:07+00:00
+- Split: all; k = 3; temperature 0.0; started 2026-11-21T01:30:57+00:00
 - Server: demo data, writes off, names as initials
 
 This is a harness check: a fixed plan per question, not a model. It shows the runner, the scorer and the tools work together and that each tool's output carries the facts the answer key expects. It says nothing about how a model would do.
@@ -20,7 +20,7 @@ This is a harness check: a fixed plan per question, not a model. It shows the ru
 
 | Case | Split | Pass | Failed checks | Tools called | Seconds |
 |---|---|---|---|---|---|
-| d01 | dev | yes |  | turf_door_counts | 0.1 |
+| d01 | dev | yes |  | turf_door_counts | 0.0 |
 | d01 | dev | yes |  | turf_door_counts | 0.0 |
 | d01 | dev | yes |  | turf_door_counts | 0.0 |
 | d02 | dev | yes |  | turf_door_counts | 0.0 |

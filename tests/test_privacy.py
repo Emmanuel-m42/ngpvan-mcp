@@ -48,16 +48,16 @@ def test_mask_text_email_address_and_dob():
 
 
 def test_mask_text_leaves_ordinary_numbers():
-    text = "Turf 03 has 103 doors and 147 people; shift starts 2026-11-21T09:00:00-07:00"
+    text = "Turf 03 has 103 doors and 147 people; shift starts 2026-10-19T09:00:00-06:00"
     assert mask_text(text) == text
 
 
 @pytest.mark.parametrize(
     "policy,expected",
-    [("full", "Maria Galloway"), ("initial", "Maria G."), ("none", None)],
+    [("full", "Maria Marlowe"), ("initial", "Maria M."), ("none", None)],
 )
 def test_display_name_policies(policy, expected):
-    assert display_name("Maria", "Galloway", policy) == expected
+    assert display_name("Maria", "Marlowe", policy) == expected
 
 
 def test_mask_args_redacts_names_but_keeps_ids():
@@ -86,7 +86,7 @@ async def _all_tool_outputs(tb, data) -> list[dict]:
         await t.check_connection(tb),
         await t.search_people(tb, city="Riverbend", limit=25),
         await t.search_people(tb, last_name="O"),
-        await t.list_events(tb, "2026-11-01", "2026-11-30"),
+        await t.list_events(tb, "2026-10-01", "2026-10-31"),
         await t.list_folders(tb),
         await t.turf_door_counts(tb),
         await t.list_survey_questions(tb, include_archived=True),
@@ -133,7 +133,7 @@ async def test_scrub_keeps_the_fields_tools_mean_to_return(tb):
 
 
 async def test_free_text_in_event_descriptions_is_masked(tb):
-    out = await t.list_events(tb, "2026-11-21", "2026-11-22")
+    out = await t.list_events(tb, "2026-10-19", "2026-10-25")
     text = json.dumps(out)
     assert "555-0188" not in text
     assert "harbor.lead@example.org" not in text

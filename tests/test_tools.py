@@ -107,8 +107,9 @@ async def test_contact_history_summary_matches_fixture(tb, demo_data):
 async def test_contact_history_since_filters(tb, demo_data):
     ids = [p["vanId"] for p in demo_data["people"][:25]]
     expected = sum(1 for v in ids for i in demo_data["canvassHistory"][str(v)]
-                   if i["canvassContext"]["dateCanvassed"] >= "2026-11-15")
-    out = await t.contact_history_summary(tb, ids, since="2026-11-15")
+                   if i["canvassContext"]["dateCanvassed"] >= "2026-10-10")
+    assert 0 < expected
+    out = await t.contact_history_summary(tb, ids, since="2026-10-10")
     assert out["total_attempts"] == expected
 
 
@@ -118,14 +119,15 @@ async def test_contact_history_caps_people(tb):
 
 
 async def test_list_events_is_inclusive_of_both_dates(tb, demo_data):
-    expected = {e["eventId"] for e in demo_data["events"] if "2026-11-21" <= e["startDate"][:10] <= "2026-11-22"}
-    out = await t.list_events(tb, "2026-11-21", "2026-11-22")
+    expected = {e["eventId"] for e in demo_data["events"] if "2026-10-19" <= e["startDate"][:10] <= "2026-10-20"}
+    assert len(expected) == 3
+    out = await t.list_events(tb, "2026-10-19", "2026-10-20")
     assert {e["event_id"] for e in out["events"]} == expected
     assert all(e["shifts"] for e in out["events"])
 
 
 async def test_list_events_type_filter(tb):
-    out = await t.list_events(tb, "2026-11-01", "2026-11-30", event_type="phone bank")
+    out = await t.list_events(tb, "2026-10-01", "2026-10-31", event_type="phone bank")
     assert {e["type"] for e in out["events"]} == {"Phone Bank"}
 
 
@@ -133,7 +135,7 @@ async def test_list_events_bad_dates(tb):
     with pytest.raises(t.ToolInputError):
         await t.list_events(tb, "tomorrow")
     with pytest.raises(t.ToolInputError):
-        await t.list_events(tb, "2026-11-22", "2026-11-21")
+        await t.list_events(tb, "2026-10-22", "2026-10-21")
 
 
 async def test_event_signups_summary_by_shift(tb, demo_data):

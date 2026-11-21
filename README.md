@@ -239,7 +239,7 @@ real client code runs end to end, including Basic auth, paging and 429s.
   formats and labelled birth dates; it won't catch every way a person can write an address in a
   note. That's why tools return as little free text as they can.
 - Names as initials can collide: two "Felix A." on one shift roster are told apart only by VAN ID.
-- Prefix search matches VAN's behaviour (`Ok` finds Okafor), so a name search returns candidates,
+- Prefix search matches VAN's behaviour (`Ok` finds Okonjo), so a name search returns candidates,
   not an identity.
 - One process per API key: the rate limiter isn't shared across instances.
 

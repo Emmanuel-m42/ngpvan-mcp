@@ -57,12 +57,12 @@ PLANS: dict[str, Plan] = {
     "d02": Plan([_fixed(("turf_door_counts", {"folder_name": "Eastgate"}))],
                 lambda r: (lambda top: f"{top['name']} has the most doors: {top['doors']} (turf_door_counts).")(
                     max(r[0]["folders"][0]["saved_lists"], key=lambda s: s["doors"]))),
-    "d03": Plan([_fixed(("list_events", {"start_date": "2026-11-21", "event_type": "Canvass"})),
+    "d03": Plan([_fixed(("list_events", {"start_date": "2026-10-19", "event_type": "Canvass"})),
                  lambda r: [("event_signups_summary", {"event_id": next(
                      e["event_id"] for e in r[0]["events"] if e["name"].startswith("Northside")), "shift": "Afternoon"})]],
                 lambda r: f"{_shift(r)['signed_up']} are signed up for the afternoon shift and "
                           f"{_shift(r)['by_status'].get('Confirmed', 0)} have confirmed (event_signups_summary)."),
-    "d04": Plan([_fixed(("list_events", {"start_date": "2026-11-21", "end_date": "2026-11-22"}))],
+    "d04": Plan([_fixed(("list_events", {"start_date": "2026-10-24", "end_date": "2026-10-25"}))],
                 lambda r: "This weekend: " + "; ".join(f"{e['name']} on {e['date']}" for e in r[0]["events"])
                           + " (list_events)."),
     "d05": Plan([_fixed(("list_survey_questions", {"name": "Measure 3"}))],
@@ -81,12 +81,12 @@ PLANS: dict[str, Plan] = {
     "h02": Plan([_fixed(("turf_door_counts", {"folder_name": "Northside"}))],
                 lambda r: (lambda low: f"{low['name']} has the fewest doors, {low['doors']} (turf_door_counts).")(
                     min(r[0]["folders"][0]["saved_lists"], key=lambda s: s["doors"]))),
-    "h03": Plan([_fixed(("list_events", {"start_date": "2026-11-22"})),
+    "h03": Plan([_fixed(("list_events", {"start_date": "2026-10-25"})),
                  lambda r: [("event_signups_summary", {"event_id": next(
                      e["event_id"] for e in r[0]["events"] if e["name"] == "Harbor Canvass Launch"), "shift": "Morning"})]],
                 lambda r: f"{_shift(r)['signed_up']} people are signed up for the morning shift and "
                           f"{_shift(r)['by_status'].get('Declined', 0)} declined (event_signups_summary)."),
-    "h04": Plan([_fixed(("search_people", {"first_name": "Hannah", "last_name": "Whitfield"})),
+    "h04": Plan([_fixed(("search_people", {"first_name": "Hannah", "last_name": "Treadwell"})),
                  lambda r: [("person_activist_codes", {"van_id": _first_id(r)})]],
                 lambda r: "Her activist codes: " + ", ".join(a["name"] for a in r[1]["activist_codes"])
                           + " (person_activist_codes)."),
@@ -99,7 +99,7 @@ PLANS: dict[str, Plan] = {
                           "were a Strong Yes on Measure 3 (contact_history_summary)."),
     "h07": Plan([_fixed(("canvass_codes", {}))],
                 lambda r: "Result codes: " + ", ".join(c["name"] for c in r[0]["result_codes"]) + " (canvass_codes)."),
-    "h08": Plan([_fixed(("list_events", {"start_date": "2026-11-23", "end_date": "2026-11-29",
+    "h08": Plan([_fixed(("list_events", {"start_date": "2026-10-20", "end_date": "2026-10-25",
                                          "event_type": "Phone Bank"}))],
                 lambda r: "Phone banks that week: " + ", ".join(e["name"] for e in r[0]["events"]) + " (list_events)."),
 }

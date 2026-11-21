@@ -256,7 +256,7 @@ def _iso(day: str, name: str) -> date:
     try:
         return date.fromisoformat(day)
     except ValueError:
-        raise ToolInputError(f"{name} must be a date like 2026-11-21") from None
+        raise ToolInputError(f"{name} must be a date like 2026-10-19") from None
 
 
 async def list_events(

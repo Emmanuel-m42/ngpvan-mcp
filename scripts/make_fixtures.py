@@ -12,20 +12,27 @@ from __future__ import annotations
 
 import json
 import random
+from datetime import date, timedelta
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parents[1] / "src" / "ngpvan_mcp" / "demo" / "riverbend.json"
 rng = random.Random(20261120)
+
+# The same fictional program as program-data-assistant, whose data runs to
+# Sunday, October 18, 2026, with Election Day on November 3. Events fall in
+# the GOTV stretch that follows; contact history comes before.
+TODAY = "2026-10-18"
 
 FIRST = [
     "Maria", "Dana", "Jordan", "Priya", "Marcus", "Elena", "Tobias", "Keisha", "Owen", "Lucia",
     "Samir", "Hannah", "Diego", "Grace", "Malik", "Ingrid", "Theo", "Aisha", "Rowan", "Beatriz",
     "Felix", "Noor", "Calvin", "Yesenia", "Arjun", "Wren", "Desmond", "Tamsin", "Ezra", "Lena",
 ]
+# No surname here is shared with program-data-assistant's staff or registrants.
 LAST = [
-    "Galloway", "Okafor", "Lindqvist", "Ramirez", "Thornbury", "Achebe", "Castellanos", "Whitfield",
-    "Nakamura", "Brennan", "Oduya", "Haverford", "Delacroix", "Pemberton", "Quintero", "Ashdown",
-    "Marchetti", "Ellery", "Vasquez", "Holloway", "Kowalczyk", "Sorensen", "Abernathy", "Fairbanks",
+    "Marlowe", "Okonjo", "Lachance", "Ramirez", "Thornbury", "Achebe", "Castellanos", "Treadwell",
+    "Nakamura", "Calloway", "Oduya", "Haverford", "Delacroix", "Penhallow", "Quintero", "Ashdown",
+    "Marchetti", "Ellery", "Varga", "Holloway", "Szabo", "Sorensen", "Abernathy", "Ferrante",
 ]
 STREETS = ["Maple", "Juniper", "Willow", "Cedar", "Larkspur", "Foundry", "Quarry", "Ferry", "Pier", "Beacon"]
 OFFICES = {
@@ -107,13 +114,14 @@ EVENT_TYPES = {
     "Training": {"eventTypeId": 803, "name": "Training"},
 }
 ROLES = {"Volunteer": {"roleId": 901, "name": "Volunteer"}, "Host": {"roleId": 902, "name": "Host"}}
+# Office addresses as in program-data-assistant's data/csv/offices.csv.
 LOCATIONS = {
     "Northside": {"locationId": 601, "name": "Northside Office",
-                  "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "},
+                  "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "},
     "Eastgate": {"locationId": 602, "name": "Eastgate Office",
-                 "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "},
+                 "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "},
     "Harbor": {"locationId": 603, "name": "Harbor Office",
-               "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "},
+               "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "},
 }
 
 
@@ -186,11 +194,13 @@ def make_activist_code_links(people: list[dict]) -> dict[str, list[dict]]:
         chosen = [c for c in (4101, 4102, 4103, 4104, 4105) if rng.random() < 0.3]
         if 4102 in chosen or 4103 in chosen or 4104 in chosen:
             chosen = sorted(set(chosen) | {4101})
+        # Months 3 to 9, all before "today". (Drawn as 4 to 10 and shifted, so
+        # the random sequence, and everything generated after it, stays put.)
         links[str(p["vanId"])] = [
             {"activistCodeId": c, "activistCodeName": names[c],
-             "dateCreated": f"2026-{rng.randint(4, 10):02d}-{rng.randint(1, 28):02d}T15:00:00Z",
+             "dateCreated": f"2026-{rng.randint(4, 10) - 1:02d}-{rng.randint(1, 28):02d}T15:00:00Z",
              "canvassedBy": None,
-             "dateCanvassed": f"2026-{rng.randint(4, 10):02d}-{rng.randint(1, 28):02d}T15:00:00Z"}
+             "dateCanvassed": f"2026-{rng.randint(4, 10) - 1:02d}-{rng.randint(1, 28):02d}T15:00:00Z"}
             for c in chosen
         ]
     return links
@@ -224,9 +234,11 @@ def make_canvass_history(people: list[dict]) -> dict[str, list[dict]]:
                 if rng.random() < 0.3:
                     responses.append({"type": "SurveyResponse", "surveyQuestionId": 5203,
                                       "surveyResponseId": rng.choice([52031, 52032, 52033, 52034])})
+            # September 29 to October 17, the 19 days before "today".
+            canvassed = date(2026, 9, 28) + timedelta(days=day)
             items.append({"canvassResponseId": next_id,
                           "canvassContext": {"contactTypeId": ctype, "inputTypeId": 11,
-                                             "dateCanvassed": f"2026-11-{day:02d}"},
+                                             "dateCanvassed": canvassed.isoformat()},
                           "resultCodeId": result, "responses": responses})
             next_id += 1
         items.sort(key=lambda r: r["canvassContext"]["dateCanvassed"])
@@ -235,24 +247,26 @@ def make_canvass_history(people: list[dict]) -> dict[str, list[dict]]:
 
 
 def shift(sid: int, name: str, day: str, start: str, end: str) -> dict:
-    return {"eventShiftId": sid, "name": name, "startTime": f"{day}T{start}:00-07:00", "endTime": f"{day}T{end}:00-07:00"}
+    # Mountain Daylight Time in October.
+    return {"eventShiftId": sid, "name": name, "startTime": f"{day}T{start}:00-06:00", "endTime": f"{day}T{end}:00-06:00"}
 
 
 def make_events() -> list[dict]:
+    # Today is Sunday, October 18: one training just past, then the GOTV stretch.
     spec = [
-        (3001, "Northside Weekend Canvass", "NS Canv", "Canvass", "Northside", "2026-11-21",
+        (3001, "Northside GOTV Canvass", "NS Canv", "Canvass", "Northside", "2026-10-19",
          [(7001, "Morning", "09:00", "12:00"), (7002, "Afternoon", "13:00", "16:00")],
          "Meet at the Northside Office. Questions? Text Dana at (970) 555-0188."),
-        (3002, "Eastgate Phone Bank", "EG PB", "Phone Bank", "Eastgate", "2026-11-21",
+        (3002, "Eastgate Phone Bank", "EG PB", "Phone Bank", "Eastgate", "2026-10-19",
          [(7003, "Evening", "17:00", "20:00")], "Bring a charged phone and headphones."),
-        (3003, "Harbor Canvass Launch", "HB Canv", "Canvass", "Harbor", "2026-11-22",
+        (3003, "Harbor Canvass Launch", "HB Canv", "Canvass", "Harbor", "2026-10-25",
          [(7004, "Morning", "10:00", "13:00"), (7005, "Afternoon", "14:00", "17:00")],
-         "Launch at the Harbor Office, 12 Pier Rd. Host contact: harbor.lead@example.org."),
-        (3004, "Volunteer Training", "Training", "Training", "Northside", "2026-11-19",
+         "Launch at the Harbor Office, 1200 Harbor Rd. Host contact: harbor.lead@example.org."),
+        (3004, "Volunteer Training", "Training", "Training", "Northside", "2026-10-17",
          [(7006, "Evening", "18:00", "20:00")], "New volunteer orientation."),
-        (3005, "Eastgate Weekend Canvass", "EG Canv", "Canvass", "Eastgate", "2026-11-22",
+        (3005, "Eastgate Weekend Canvass", "EG Canv", "Canvass", "Eastgate", "2026-10-24",
          [(7007, "Morning", "09:30", "12:30")], "Turf packets ready at 9:15."),
-        (3006, "Harbor Phone Bank", "HB PB", "Phone Bank", "Harbor", "2026-11-24",
+        (3006, "Harbor Phone Bank", "HB PB", "Phone Bank", "Harbor", "2026-10-20",
          [(7008, "Evening", "17:30", "20:30")], "Calls for the Measure 3 ID program."),
     ]
     events = []
@@ -264,7 +278,7 @@ def make_events() -> list[dict]:
             "eventType": EVENT_TYPES[etype], "isOnlyEditableByCreatingUser": False,
             "isPubliclyViewable": None, "locations": [LOCATIONS[office]], "codes": None, "notes": None,
             "shifts": sh, "roles": list(ROLES.values()), "districtFieldValue": None,
-            "voterRegistrationBatches": None, "createdDate": "2026-11-01T17:00:00Z",
+            "voterRegistrationBatches": None, "createdDate": "2026-10-01T17:00:00Z",
             "isActive": True, "dotNetTimeZoneId": "Mountain Standard Time", "_office": office,
         })
     return events
@@ -278,7 +292,7 @@ def make_signups(events: list[dict], people: list[dict]) -> list[dict]:
     sid = 2450001
     for ev in events:
         office_people = [p for p in people if p["_office"] == ev["_office"]]
-        is_past = ev["startDate"] < "2026-11-20"
+        is_past = ev["startDate"] < TODAY
         for sh in ev["shifts"]:
             n = rng.randint(4, 9)
             for p in rng.sample(office_people, n):
@@ -318,7 +332,7 @@ def make_lists() -> tuple[list[dict], list[dict]]:
             people_count = doors + rng.randint(20, 80)
             street = turf_streets[fid][(t - 1) % len(turf_streets[fid])]
             lists.append({"savedListId": lid, "name": f"{prefixes[fid]} Turf {t:02d} {street}",
-                          "description": f"Weekend canvass turf {t}", "listCount": people_count,
+                          "description": f"GOTV canvass turf {t}", "listCount": people_count,
                           "doorCount": doors, "_folderId": fid})
             lid += 1
     for name, count in (("EG Phone Bank Measure 3 IDs", 640), ("HB Phone Bank Measure 3 IDs", 410)):
@@ -330,13 +344,46 @@ def make_lists() -> tuple[list[dict], list[dict]]:
     return folders, lists
 
 
+def add_demo_volunteer(data: dict) -> None:
+    """A fixed person for the recorded demo's write prompt.
+
+    Added after everything seeded is generated, so the rest of the data is
+    the same with or without her. No signups, so shift counts don't move.
+    """
+    van_id = data["people"][-1]["vanId"] + 1
+    data["people"].append({
+        "vanId": van_id, "firstName": "Maria", "middleName": None, "lastName": "Lopez", "suffix": None,
+        "dateOfBirth": "1991-06-09T00:00:00Z", "contactSource": "Demo", "contactMode": "Person",
+        "salutation": "Maria", "envelopeName": "Maria Lopez", "isDeceased": False,
+        "dateCreated": "2026-03-02T16:00:00Z", "emails": None, "phones": None, "addresses": None,
+        "_contact": {
+            "emails": [{"type": "P", "email": "maria.lopez@example.org", "dateCreated": "2026-03-02T16:00:00Z",
+                        "isPreferred": True, "isSubscribed": True, "subscriptionStatus": "S"}],
+            "phones": [{"phoneId": 700099, "phoneNumber": "9705550199", "dialingPrefix": "1", "countryCode": "US",
+                        "ext": None, "dateCreated": "2026-03-02T16:00:00Z", "phoneType": "Cell",
+                        "deviceType": "Cell", "isPreferred": True, "isBest": True, "isDisclosure": False,
+                        "smsOptInStatus": "Opt-In", "phoneOptInStatus": "Unknown", "isCellStatus": None}],
+            "addresses": [{"addressId": 800099, "addressLine1": "1450 Juniper St", "addressLine2": None,
+                           "addressLine3": None, "unitNo": None, "city": "Riverbend", "stateOrProvince": "ZZ",
+                           "zipOrPostalCode": "80901", "geoLocation": None, "countryCode": "US",
+                           "preview": "1450 Juniper St", "type": "Voting", "isPreferred": True, "isBest": True,
+                           "streetAddress": None, "displayMode": "Standardized"}],
+        },
+        "_office": "Northside",
+    })
+    data["personActivistCodes"][str(van_id)] = [
+        {"activistCodeId": 4101, "activistCodeName": "Volunteer", "dateCreated": "2026-09-12T15:00:00Z",
+         "canvassedBy": None, "dateCanvassed": "2026-09-12T15:00:00Z"}]
+    data["canvassHistory"][str(van_id)] = []
+
+
 def main() -> None:
     people = make_people()
     events = make_events()
     folders, lists = make_lists()
     data = {
         "_note": "Fictional demo data for ngpvan-mcp. No real people, programs or organizations.",
-        "today": "2026-11-20",
+        "today": TODAY,
         "apiKeyProfile": {"databaseName": "Demo VAN (fake data)", "hasMyVoters": False, "hasMyCampaign": True,
                           "committeeName": "Riverbend Votes (demo)", "apiKeyTypeName": "Custom Integration",
                           "keyReference": "0000", "userFirstName": "riverbend", "userLastName": "api",
@@ -354,6 +401,7 @@ def main() -> None:
         "folders": folders,
         "savedLists": lists,
     }
+    add_demo_volunteer(data)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(data, indent=1) + "\n")
     print(f"wrote {OUT} ({len(people)} people, {len(data['signups'])} signups, {len(lists)} saved lists)")

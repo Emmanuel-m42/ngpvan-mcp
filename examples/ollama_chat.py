@@ -33,7 +33,7 @@ async def main() -> None:
 
     args = ["-m", "ngpvan_mcp.cli"] + (["--demo"] if a.demo else []) + (["--config", a.config] if a.config else [])
     server = StdioServerParameters(command=sys.executable, args=args, env=dict(os.environ))
-    today = "Friday, November 20, 2026" if a.demo else date.today().strftime("%A, %B %d, %Y")
+    today = "Sunday, October 18, 2026" if a.demo else date.today().strftime("%A, %B %d, %Y")
     model = OllamaChat(a.model, a.ollama_host)
     async with Client(server) as client:
         tools = await mcp_tools(client)

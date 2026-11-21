@@ -1,6 +1,6 @@
 {
  "_note": "Fictional demo data for ngpvan-mcp. No real people, programs or organizations.",
- "today": "2026-11-20",
+ "today": "2026-10-18",
  "apiKeyProfile": {
   "databaseName": "Demo VAN (fake data)",
   "hasMyVoters": false,
@@ -18,13 +18,13 @@
    "vanId": 100200101,
    "firstName": "Malik",
    "middleName": "J",
-   "lastName": "Vasquez",
+   "lastName": "Varga",
    "suffix": null,
    "dateOfBirth": "1968-12-05T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Malik",
-   "envelopeName": "Malik Vasquez",
+   "envelopeName": "Malik Varga",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -34,7 +34,7 @@
     "emails": [
      {
       "type": "P",
-      "email": "malik.vasquez@example.org",
+      "email": "malik.varga@example.org",
       "dateCreated": "2026-03-02T16:00:00Z",
       "isPreferred": true,
       "isSubscribed": true,
@@ -137,13 +137,13 @@
    "vanId": 100200103,
    "firstName": "Lucia",
    "middleName": null,
-   "lastName": "Okafor",
+   "lastName": "Okonjo",
    "suffix": null,
    "dateOfBirth": "1972-07-12T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Lucia",
-   "envelopeName": "Lucia Okafor",
+   "envelopeName": "Lucia Okonjo",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -153,7 +153,7 @@
     "emails": [
      {
       "type": "P",
-      "email": "lucia.okafor@example.org",
+      "email": "lucia.okonjo@example.org",
       "dateCreated": "2026-03-02T16:00:00Z",
       "isPreferred": true,
       "isSubscribed": true,
@@ -205,13 +205,13 @@
    "vanId": 100200104,
    "firstName": "Hannah",
    "middleName": "Lee",
-   "lastName": "Whitfield",
+   "lastName": "Treadwell",
    "suffix": null,
    "dateOfBirth": "1953-06-02T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Hannah",
-   "envelopeName": "Hannah Whitfield",
+   "envelopeName": "Hannah Treadwell",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -221,7 +221,7 @@
     "emails": [
      {
       "type": "P",
-      "email": "hannah.whitfield@example.org",
+      "email": "hannah.treadwell@example.org",
       "dateCreated": "2026-03-02T16:00:00Z",
       "isPreferred": true,
       "isSubscribed": true,
@@ -383,13 +383,13 @@
    "vanId": 100200107,
    "firstName": "Samir",
    "middleName": "J",
-   "lastName": "Brennan",
+   "lastName": "Calloway",
    "suffix": null,
    "dateOfBirth": "1977-01-02T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Samir",
-   "envelopeName": "Samir Brennan",
+   "envelopeName": "Samir Calloway",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -442,13 +442,13 @@
    "vanId": 100200108,
    "firstName": "Elena",
    "middleName": "Ann",
-   "lastName": "Fairbanks",
+   "lastName": "Ferrante",
    "suffix": null,
    "dateOfBirth": "1953-07-08T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Elena",
-   "envelopeName": "Elena Fairbanks",
+   "envelopeName": "Elena Ferrante",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -552,13 +552,13 @@
    "vanId": 100200110,
    "firstName": "Noor",
    "middleName": "Ann",
-   "lastName": "Brennan",
+   "lastName": "Calloway",
    "suffix": null,
    "dateOfBirth": "1985-06-19T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Noor",
-   "envelopeName": "Noor Brennan",
+   "envelopeName": "Noor Calloway",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -568,7 +568,7 @@
     "emails": [
      {
       "type": "P",
-      "email": "noor.brennan@example.org",
+      "email": "noor.calloway@example.org",
       "dateCreated": "2026-03-02T16:00:00Z",
       "isPreferred": true,
       "isSubscribed": true,
@@ -934,13 +934,13 @@
    "vanId": 100200116,
    "firstName": "Priya",
    "middleName": "J",
-   "lastName": "Brennan",
+   "lastName": "Calloway",
    "suffix": null,
    "dateOfBirth": "1992-01-06T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Priya",
-   "envelopeName": "Priya Brennan",
+   "envelopeName": "Priya Calloway",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -950,7 +950,7 @@
     "emails": [
      {
       "type": "P",
-      "email": "priya.brennan@example.org",
+      "email": "priya.calloway@example.org",
       "dateCreated": "2026-03-02T16:00:00Z",
       "isPreferred": true,
       "isSubscribed": true,
@@ -1104,13 +1104,13 @@
    "vanId": 100200119,
    "firstName": "Tobias",
    "middleName": "Lee",
-   "lastName": "Vasquez",
+   "lastName": "Varga",
    "suffix": null,
    "dateOfBirth": "1955-01-22T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Tobias",
-   "envelopeName": "Tobias Vasquez",
+   "envelopeName": "Tobias Varga",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -1120,7 +1120,7 @@
     "emails": [
      {
       "type": "P",
-      "email": "tobias.vasquez@example.org",
+      "email": "tobias.varga@example.org",
       "dateCreated": "2026-03-02T16:00:00Z",
       "isPreferred": true,
       "isSubscribed": true,
@@ -1172,13 +1172,13 @@
    "vanId": 100200120,
    "firstName": "Calvin",
    "middleName": null,
-   "lastName": "Lindqvist",
+   "lastName": "Lachance",
    "suffix": null,
    "dateOfBirth": "1971-05-02T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Calvin",
-   "envelopeName": "Calvin Lindqvist",
+   "envelopeName": "Calvin Lachance",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -1188,7 +1188,7 @@
     "emails": [
      {
       "type": "P",
-      "email": "calvin.lindqvist@example.org",
+      "email": "calvin.lachance@example.org",
       "dateCreated": "2026-03-02T16:00:00Z",
       "isPreferred": true,
       "isSubscribed": true,
@@ -1367,13 +1367,13 @@
    "vanId": 100200123,
    "firstName": "Dana",
    "middleName": null,
-   "lastName": "Brennan",
+   "lastName": "Calloway",
    "suffix": null,
    "dateOfBirth": "2001-05-07T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Dana",
-   "envelopeName": "Dana Brennan",
+   "envelopeName": "Dana Calloway",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -1383,7 +1383,7 @@
     "emails": [
      {
       "type": "P",
-      "email": "dana.brennan@example.org",
+      "email": "dana.calloway@example.org",
       "dateCreated": "2026-03-02T16:00:00Z",
       "isPreferred": true,
       "isSubscribed": true,
@@ -1672,13 +1672,13 @@
    "vanId": 100200128,
    "firstName": "Samir",
    "middleName": "J",
-   "lastName": "Lindqvist",
+   "lastName": "Lachance",
    "suffix": null,
    "dateOfBirth": "1950-10-14T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Samir",
-   "envelopeName": "Samir Lindqvist",
+   "envelopeName": "Samir Lachance",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -1909,13 +1909,13 @@
    "vanId": 100200132,
    "firstName": "Rowan",
    "middleName": "Ann",
-   "lastName": "Lindqvist",
+   "lastName": "Lachance",
    "suffix": null,
    "dateOfBirth": "1978-05-05T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Rowan",
-   "envelopeName": "Rowan Lindqvist",
+   "envelopeName": "Rowan Lachance",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -1925,7 +1925,7 @@
     "emails": [
      {
       "type": "P",
-      "email": "rowan.lindqvist@example.org",
+      "email": "rowan.lachance@example.org",
       "dateCreated": "2026-03-02T16:00:00Z",
       "isPreferred": true,
       "isSubscribed": true,
@@ -2181,13 +2181,13 @@
    "vanId": 100200136,
    "firstName": "Keisha",
    "middleName": "J",
-   "lastName": "Okafor",
+   "lastName": "Okonjo",
    "suffix": null,
    "dateOfBirth": "1951-09-08T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Keisha",
-   "envelopeName": "Keisha Okafor",
+   "envelopeName": "Keisha Okonjo",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -2418,13 +2418,13 @@
    "vanId": 100200140,
    "firstName": "Beatriz",
    "middleName": null,
-   "lastName": "Whitfield",
+   "lastName": "Treadwell",
    "suffix": null,
    "dateOfBirth": "2002-03-11T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Beatriz",
-   "envelopeName": "Beatriz Whitfield",
+   "envelopeName": "Beatriz Treadwell",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -2434,7 +2434,7 @@
     "emails": [
      {
       "type": "P",
-      "email": "beatriz.whitfield@example.org",
+      "email": "beatriz.treadwell@example.org",
       "dateCreated": "2026-03-02T16:00:00Z",
       "isPreferred": true,
       "isSubscribed": true,
@@ -2554,13 +2554,13 @@
    "vanId": 100200142,
    "firstName": "Calvin",
    "middleName": null,
-   "lastName": "Kowalczyk",
+   "lastName": "Szabo",
    "suffix": null,
    "dateOfBirth": "1970-03-28T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Calvin",
-   "envelopeName": "Calvin Kowalczyk",
+   "envelopeName": "Calvin Szabo",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -2596,13 +2596,13 @@
    "vanId": 100200143,
    "firstName": "Owen",
    "middleName": null,
-   "lastName": "Vasquez",
+   "lastName": "Varga",
    "suffix": null,
    "dateOfBirth": "2002-05-23T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Owen",
-   "envelopeName": "Owen Vasquez",
+   "envelopeName": "Owen Varga",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -2612,7 +2612,7 @@
     "emails": [
      {
       "type": "P",
-      "email": "owen.vasquez@example.org",
+      "email": "owen.varga@example.org",
       "dateCreated": "2026-03-02T16:00:00Z",
       "isPreferred": true,
       "isSubscribed": true,
@@ -2647,13 +2647,13 @@
    "vanId": 100200144,
    "firstName": "Rowan",
    "middleName": null,
-   "lastName": "Fairbanks",
+   "lastName": "Ferrante",
    "suffix": null,
    "dateOfBirth": "1956-05-08T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Rowan",
-   "envelopeName": "Rowan Fairbanks",
+   "envelopeName": "Rowan Ferrante",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -2663,7 +2663,7 @@
     "emails": [
      {
       "type": "P",
-      "email": "rowan.fairbanks@example.org",
+      "email": "rowan.ferrante@example.org",
       "dateCreated": "2026-03-02T16:00:00Z",
       "isPreferred": true,
       "isSubscribed": true,
@@ -2834,13 +2834,13 @@
    "vanId": 100200147,
    "firstName": "Beatriz",
    "middleName": "Ann",
-   "lastName": "Vasquez",
+   "lastName": "Varga",
    "suffix": null,
    "dateOfBirth": "1978-04-09T00:00:00Z",
    "contactSource": "Demo",
    "contactMode": "Person",
    "salutation": "Beatriz",
-   "envelopeName": "Beatriz Vasquez",
+   "envelopeName": "Beatriz Varga",
    "isDeceased": false,
    "dateCreated": "2026-03-02T16:00:00Z",
    "emails": null,
@@ -2956,6 +2956,74 @@
     ]
    },
    "_office": "Harbor"
+  },
+  {
+   "vanId": 100200149,
+   "firstName": "Maria",
+   "middleName": null,
+   "lastName": "Lopez",
+   "suffix": null,
+   "dateOfBirth": "1991-06-09T00:00:00Z",
+   "contactSource": "Demo",
+   "contactMode": "Person",
+   "salutation": "Maria",
+   "envelopeName": "Maria Lopez",
+   "isDeceased": false,
+   "dateCreated": "2026-03-02T16:00:00Z",
+   "emails": null,
+   "phones": null,
+   "addresses": null,
+   "_contact": {
+    "emails": [
+     {
+      "type": "P",
+      "email": "maria.lopez@example.org",
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "isPreferred": true,
+      "isSubscribed": true,
+      "subscriptionStatus": "S"
+     }
+    ],
+    "phones": [
+     {
+      "phoneId": 700099,
+      "phoneNumber": "9705550199",
+      "dialingPrefix": "1",
+      "countryCode": "US",
+      "ext": null,
+      "dateCreated": "2026-03-02T16:00:00Z",
+      "phoneType": "Cell",
+      "deviceType": "Cell",
+      "isPreferred": true,
+      "isBest": true,
+      "isDisclosure": false,
+      "smsOptInStatus": "Opt-In",
+      "phoneOptInStatus": "Unknown",
+      "isCellStatus": null
+     }
+    ],
+    "addresses": [
+     {
+      "addressId": 800099,
+      "addressLine1": "1450 Juniper St",
+      "addressLine2": null,
+      "addressLine3": null,
+      "unitNo": null,
+      "city": "Riverbend",
+      "stateOrProvince": "ZZ",
+      "zipOrPostalCode": "80901",
+      "geoLocation": null,
+      "countryCode": "US",
+      "preview": "1450 Juniper St",
+      "type": "Voting",
+      "isPreferred": true,
+      "isBest": true,
+      "streetAddress": null,
+      "displayMode": "Standardized"
+     }
+    ]
+   },
+   "_office": "Northside"
   }
  ],
  "activistCodes": [
@@ -3025,39 +3093,39 @@
    {
     "activistCodeId": 4105,
     "activistCodeName": "Renter",
-    "dateCreated": "2026-08-07T15:00:00Z",
+    "dateCreated": "2026-07-07T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-25T15:00:00Z"
+    "dateCanvassed": "2026-05-25T15:00:00Z"
    }
   ],
   "100200102": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-05-25T15:00:00Z",
+    "dateCreated": "2026-04-25T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-10-15T15:00:00Z"
+    "dateCanvassed": "2026-09-15T15:00:00Z"
    },
    {
     "activistCodeId": 4102,
     "activistCodeName": "Phone Banker",
-    "dateCreated": "2026-07-23T15:00:00Z",
+    "dateCreated": "2026-06-23T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-04T15:00:00Z"
+    "dateCanvassed": "2026-05-04T15:00:00Z"
    },
    {
     "activistCodeId": 4104,
     "activistCodeName": "Event Host",
-    "dateCreated": "2026-06-14T15:00:00Z",
+    "dateCreated": "2026-05-14T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-07T15:00:00Z"
+    "dateCanvassed": "2026-05-07T15:00:00Z"
    },
    {
     "activistCodeId": 4105,
     "activistCodeName": "Renter",
-    "dateCreated": "2026-07-10T15:00:00Z",
+    "dateCreated": "2026-06-10T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-04-09T15:00:00Z"
+    "dateCanvassed": "2026-03-09T15:00:00Z"
    }
   ],
   "100200103": [],
@@ -3065,62 +3133,62 @@
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-04-07T15:00:00Z",
+    "dateCreated": "2026-03-07T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-22T15:00:00Z"
+    "dateCanvassed": "2026-05-22T15:00:00Z"
    },
    {
     "activistCodeId": 4102,
     "activistCodeName": "Phone Banker",
-    "dateCreated": "2026-04-21T15:00:00Z",
+    "dateCreated": "2026-03-21T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-05-08T15:00:00Z"
+    "dateCanvassed": "2026-04-08T15:00:00Z"
    },
    {
     "activistCodeId": 4103,
     "activistCodeName": "Canvasser",
-    "dateCreated": "2026-06-03T15:00:00Z",
+    "dateCreated": "2026-05-03T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-09-20T15:00:00Z"
+    "dateCanvassed": "2026-08-20T15:00:00Z"
    },
    {
     "activistCodeId": 4104,
     "activistCodeName": "Event Host",
-    "dateCreated": "2026-07-01T15:00:00Z",
+    "dateCreated": "2026-06-01T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-28T15:00:00Z"
+    "dateCanvassed": "2026-05-28T15:00:00Z"
    }
   ],
   "100200105": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-05-11T15:00:00Z",
+    "dateCreated": "2026-04-11T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-09-23T15:00:00Z"
+    "dateCanvassed": "2026-08-23T15:00:00Z"
    },
    {
     "activistCodeId": 4102,
     "activistCodeName": "Phone Banker",
-    "dateCreated": "2026-10-17T15:00:00Z",
+    "dateCreated": "2026-09-17T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-07-12T15:00:00Z"
+    "dateCanvassed": "2026-06-12T15:00:00Z"
    }
   ],
   "100200106": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-10-15T15:00:00Z",
+    "dateCreated": "2026-09-15T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-05T15:00:00Z"
+    "dateCanvassed": "2026-05-05T15:00:00Z"
    },
    {
     "activistCodeId": 4104,
     "activistCodeName": "Event Host",
-    "dateCreated": "2026-05-19T15:00:00Z",
+    "dateCreated": "2026-04-19T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-09-12T15:00:00Z"
+    "dateCanvassed": "2026-08-12T15:00:00Z"
    }
   ],
   "100200107": [],
@@ -3128,121 +3196,121 @@
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-08-06T15:00:00Z",
+    "dateCreated": "2026-07-06T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-10-13T15:00:00Z"
+    "dateCanvassed": "2026-09-13T15:00:00Z"
    },
    {
     "activistCodeId": 4103,
     "activistCodeName": "Canvasser",
-    "dateCreated": "2026-04-26T15:00:00Z",
+    "dateCreated": "2026-03-26T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-14T15:00:00Z"
+    "dateCanvassed": "2026-05-14T15:00:00Z"
    }
   ],
   "100200109": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-09-03T15:00:00Z",
+    "dateCreated": "2026-08-03T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-09-20T15:00:00Z"
+    "dateCanvassed": "2026-08-20T15:00:00Z"
    },
    {
     "activistCodeId": 4104,
     "activistCodeName": "Event Host",
-    "dateCreated": "2026-08-22T15:00:00Z",
+    "dateCreated": "2026-07-22T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-25T15:00:00Z"
+    "dateCanvassed": "2026-05-25T15:00:00Z"
    }
   ],
   "100200110": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-08-14T15:00:00Z",
+    "dateCreated": "2026-07-14T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-07-16T15:00:00Z"
+    "dateCanvassed": "2026-06-16T15:00:00Z"
    },
    {
     "activistCodeId": 4102,
     "activistCodeName": "Phone Banker",
-    "dateCreated": "2026-07-04T15:00:00Z",
+    "dateCreated": "2026-06-04T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-07-17T15:00:00Z"
+    "dateCanvassed": "2026-06-17T15:00:00Z"
    },
    {
     "activistCodeId": 4105,
     "activistCodeName": "Renter",
-    "dateCreated": "2026-07-15T15:00:00Z",
+    "dateCreated": "2026-06-15T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-04-14T15:00:00Z"
+    "dateCanvassed": "2026-03-14T15:00:00Z"
    }
   ],
   "100200111": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-06-07T15:00:00Z",
+    "dateCreated": "2026-05-07T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-05-05T15:00:00Z"
+    "dateCanvassed": "2026-04-05T15:00:00Z"
    },
    {
     "activistCodeId": 4104,
     "activistCodeName": "Event Host",
-    "dateCreated": "2026-08-08T15:00:00Z",
+    "dateCreated": "2026-07-08T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-05-25T15:00:00Z"
+    "dateCanvassed": "2026-04-25T15:00:00Z"
    },
    {
     "activistCodeId": 4105,
     "activistCodeName": "Renter",
-    "dateCreated": "2026-05-15T15:00:00Z",
+    "dateCreated": "2026-04-15T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-21T15:00:00Z"
+    "dateCanvassed": "2026-07-21T15:00:00Z"
    }
   ],
   "100200112": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-07-02T15:00:00Z",
+    "dateCreated": "2026-06-02T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-04-17T15:00:00Z"
+    "dateCanvassed": "2026-03-17T15:00:00Z"
    }
   ],
   "100200113": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-04-12T15:00:00Z",
+    "dateCreated": "2026-03-12T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-10T15:00:00Z"
+    "dateCanvassed": "2026-05-10T15:00:00Z"
    }
   ],
   "100200114": [
    {
     "activistCodeId": 4105,
     "activistCodeName": "Renter",
-    "dateCreated": "2026-07-23T15:00:00Z",
+    "dateCreated": "2026-06-23T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-05-26T15:00:00Z"
+    "dateCanvassed": "2026-04-26T15:00:00Z"
    }
   ],
   "100200115": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-10-16T15:00:00Z",
+    "dateCreated": "2026-09-16T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-09-14T15:00:00Z"
+    "dateCanvassed": "2026-08-14T15:00:00Z"
    },
    {
     "activistCodeId": 4103,
     "activistCodeName": "Canvasser",
-    "dateCreated": "2026-08-25T15:00:00Z",
+    "dateCreated": "2026-07-25T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-05-05T15:00:00Z"
+    "dateCanvassed": "2026-04-05T15:00:00Z"
    }
   ],
   "100200116": [],
@@ -3251,48 +3319,48 @@
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-04-13T15:00:00Z",
+    "dateCreated": "2026-03-13T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-01T15:00:00Z"
+    "dateCanvassed": "2026-07-01T15:00:00Z"
    },
    {
     "activistCodeId": 4102,
     "activistCodeName": "Phone Banker",
-    "dateCreated": "2026-09-26T15:00:00Z",
+    "dateCreated": "2026-08-26T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-10-16T15:00:00Z"
+    "dateCanvassed": "2026-09-16T15:00:00Z"
    },
    {
     "activistCodeId": 4104,
     "activistCodeName": "Event Host",
-    "dateCreated": "2026-10-03T15:00:00Z",
+    "dateCreated": "2026-09-03T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-04-16T15:00:00Z"
+    "dateCanvassed": "2026-03-16T15:00:00Z"
    }
   ],
   "100200119": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-09-08T15:00:00Z",
+    "dateCreated": "2026-08-08T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-10T15:00:00Z"
+    "dateCanvassed": "2026-05-10T15:00:00Z"
    }
   ],
   "100200120": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-04-27T15:00:00Z",
+    "dateCreated": "2026-03-27T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-05-24T15:00:00Z"
+    "dateCanvassed": "2026-04-24T15:00:00Z"
    },
    {
     "activistCodeId": 4105,
     "activistCodeName": "Renter",
-    "dateCreated": "2026-04-28T15:00:00Z",
+    "dateCreated": "2026-03-28T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-10-06T15:00:00Z"
+    "dateCanvassed": "2026-09-06T15:00:00Z"
    }
   ],
   "100200121": [],
@@ -3300,241 +3368,241 @@
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-06-19T15:00:00Z",
+    "dateCreated": "2026-05-19T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-09-04T15:00:00Z"
+    "dateCanvassed": "2026-08-04T15:00:00Z"
    }
   ],
   "100200123": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-04-13T15:00:00Z",
+    "dateCreated": "2026-03-13T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-10-15T15:00:00Z"
+    "dateCanvassed": "2026-09-15T15:00:00Z"
    },
    {
     "activistCodeId": 4103,
     "activistCodeName": "Canvasser",
-    "dateCreated": "2026-10-27T15:00:00Z",
+    "dateCreated": "2026-09-27T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-07-13T15:00:00Z"
+    "dateCanvassed": "2026-06-13T15:00:00Z"
    },
    {
     "activistCodeId": 4104,
     "activistCodeName": "Event Host",
-    "dateCreated": "2026-04-27T15:00:00Z",
+    "dateCreated": "2026-03-27T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-25T15:00:00Z"
+    "dateCanvassed": "2026-07-25T15:00:00Z"
    }
   ],
   "100200124": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-07-05T15:00:00Z",
+    "dateCreated": "2026-06-05T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-04-09T15:00:00Z"
+    "dateCanvassed": "2026-03-09T15:00:00Z"
    }
   ],
   "100200125": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-06-14T15:00:00Z",
+    "dateCreated": "2026-05-14T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-10-14T15:00:00Z"
+    "dateCanvassed": "2026-09-14T15:00:00Z"
    },
    {
     "activistCodeId": 4102,
     "activistCodeName": "Phone Banker",
-    "dateCreated": "2026-10-08T15:00:00Z",
+    "dateCreated": "2026-09-08T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-04-10T15:00:00Z"
+    "dateCanvassed": "2026-03-10T15:00:00Z"
    }
   ],
   "100200126": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-06-22T15:00:00Z",
+    "dateCreated": "2026-05-22T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-27T15:00:00Z"
+    "dateCanvassed": "2026-07-27T15:00:00Z"
    },
    {
     "activistCodeId": 4102,
     "activistCodeName": "Phone Banker",
-    "dateCreated": "2026-07-16T15:00:00Z",
+    "dateCreated": "2026-06-16T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-07-10T15:00:00Z"
+    "dateCanvassed": "2026-06-10T15:00:00Z"
    },
    {
     "activistCodeId": 4103,
     "activistCodeName": "Canvasser",
-    "dateCreated": "2026-05-20T15:00:00Z",
+    "dateCreated": "2026-04-20T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-05T15:00:00Z"
+    "dateCanvassed": "2026-05-05T15:00:00Z"
    },
    {
     "activistCodeId": 4104,
     "activistCodeName": "Event Host",
-    "dateCreated": "2026-04-03T15:00:00Z",
+    "dateCreated": "2026-03-03T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-16T15:00:00Z"
+    "dateCanvassed": "2026-05-16T15:00:00Z"
    }
   ],
   "100200127": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-06-10T15:00:00Z",
+    "dateCreated": "2026-05-10T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-05-16T15:00:00Z"
+    "dateCanvassed": "2026-04-16T15:00:00Z"
    },
    {
     "activistCodeId": 4105,
     "activistCodeName": "Renter",
-    "dateCreated": "2026-09-19T15:00:00Z",
+    "dateCreated": "2026-08-19T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-08T15:00:00Z"
+    "dateCanvassed": "2026-07-08T15:00:00Z"
    }
   ],
   "100200128": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-05-07T15:00:00Z",
+    "dateCreated": "2026-04-07T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-04T15:00:00Z"
+    "dateCanvassed": "2026-07-04T15:00:00Z"
    },
    {
     "activistCodeId": 4102,
     "activistCodeName": "Phone Banker",
-    "dateCreated": "2026-07-11T15:00:00Z",
+    "dateCreated": "2026-06-11T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-04-18T15:00:00Z"
+    "dateCanvassed": "2026-03-18T15:00:00Z"
    }
   ],
   "100200129": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-07-23T15:00:00Z",
+    "dateCreated": "2026-06-23T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-04-13T15:00:00Z"
+    "dateCanvassed": "2026-03-13T15:00:00Z"
    },
    {
     "activistCodeId": 4102,
     "activistCodeName": "Phone Banker",
-    "dateCreated": "2026-06-24T15:00:00Z",
+    "dateCreated": "2026-05-24T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-09T15:00:00Z"
+    "dateCanvassed": "2026-07-09T15:00:00Z"
    },
    {
     "activistCodeId": 4103,
     "activistCodeName": "Canvasser",
-    "dateCreated": "2026-08-02T15:00:00Z",
+    "dateCreated": "2026-07-02T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-18T15:00:00Z"
+    "dateCanvassed": "2026-05-18T15:00:00Z"
    }
   ],
   "100200130": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-07-06T15:00:00Z",
+    "dateCreated": "2026-06-06T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-10-09T15:00:00Z"
+    "dateCanvassed": "2026-09-09T15:00:00Z"
    },
    {
     "activistCodeId": 4104,
     "activistCodeName": "Event Host",
-    "dateCreated": "2026-04-24T15:00:00Z",
+    "dateCreated": "2026-03-24T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-09T15:00:00Z"
+    "dateCanvassed": "2026-07-09T15:00:00Z"
    },
    {
     "activistCodeId": 4105,
     "activistCodeName": "Renter",
-    "dateCreated": "2026-04-01T15:00:00Z",
+    "dateCreated": "2026-03-01T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-17T15:00:00Z"
+    "dateCanvassed": "2026-05-17T15:00:00Z"
    }
   ],
   "100200131": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-04-17T15:00:00Z",
+    "dateCreated": "2026-03-17T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-24T15:00:00Z"
+    "dateCanvassed": "2026-07-24T15:00:00Z"
    },
    {
     "activistCodeId": 4103,
     "activistCodeName": "Canvasser",
-    "dateCreated": "2026-06-14T15:00:00Z",
+    "dateCreated": "2026-05-14T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-20T15:00:00Z"
+    "dateCanvassed": "2026-05-20T15:00:00Z"
    },
    {
     "activistCodeId": 4104,
     "activistCodeName": "Event Host",
-    "dateCreated": "2026-05-02T15:00:00Z",
+    "dateCreated": "2026-04-02T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-22T15:00:00Z"
+    "dateCanvassed": "2026-05-22T15:00:00Z"
    },
    {
     "activistCodeId": 4105,
     "activistCodeName": "Renter",
-    "dateCreated": "2026-06-25T15:00:00Z",
+    "dateCreated": "2026-05-25T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-15T15:00:00Z"
+    "dateCanvassed": "2026-07-15T15:00:00Z"
    }
   ],
   "100200132": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-10-18T15:00:00Z",
+    "dateCreated": "2026-09-18T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-05-11T15:00:00Z"
+    "dateCanvassed": "2026-04-11T15:00:00Z"
    },
    {
     "activistCodeId": 4104,
     "activistCodeName": "Event Host",
-    "dateCreated": "2026-05-19T15:00:00Z",
+    "dateCreated": "2026-04-19T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-09-13T15:00:00Z"
+    "dateCanvassed": "2026-08-13T15:00:00Z"
    }
   ],
   "100200133": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-05-24T15:00:00Z",
+    "dateCreated": "2026-04-24T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-05-05T15:00:00Z"
+    "dateCanvassed": "2026-04-05T15:00:00Z"
    },
    {
     "activistCodeId": 4102,
     "activistCodeName": "Phone Banker",
-    "dateCreated": "2026-09-26T15:00:00Z",
+    "dateCreated": "2026-08-26T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-07-20T15:00:00Z"
+    "dateCanvassed": "2026-06-20T15:00:00Z"
    },
    {
     "activistCodeId": 4103,
     "activistCodeName": "Canvasser",
-    "dateCreated": "2026-08-11T15:00:00Z",
+    "dateCreated": "2026-07-11T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-08T15:00:00Z"
+    "dateCanvassed": "2026-05-08T15:00:00Z"
    },
    {
     "activistCodeId": 4104,
     "activistCodeName": "Event Host",
-    "dateCreated": "2026-06-18T15:00:00Z",
+    "dateCreated": "2026-05-18T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-12T15:00:00Z"
+    "dateCanvassed": "2026-05-12T15:00:00Z"
    }
   ],
   "100200134": [],
@@ -3543,215 +3611,224 @@
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-05-14T15:00:00Z",
+    "dateCreated": "2026-04-14T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-10-07T15:00:00Z"
+    "dateCanvassed": "2026-09-07T15:00:00Z"
    },
    {
     "activistCodeId": 4103,
     "activistCodeName": "Canvasser",
-    "dateCreated": "2026-04-24T15:00:00Z",
+    "dateCreated": "2026-03-24T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-11T15:00:00Z"
+    "dateCanvassed": "2026-07-11T15:00:00Z"
    },
    {
     "activistCodeId": 4105,
     "activistCodeName": "Renter",
-    "dateCreated": "2026-06-25T15:00:00Z",
+    "dateCreated": "2026-05-25T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-07-12T15:00:00Z"
+    "dateCanvassed": "2026-06-12T15:00:00Z"
    }
   ],
   "100200137": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-04-07T15:00:00Z",
+    "dateCreated": "2026-03-07T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-05-08T15:00:00Z"
+    "dateCanvassed": "2026-04-08T15:00:00Z"
    },
    {
     "activistCodeId": 4102,
     "activistCodeName": "Phone Banker",
-    "dateCreated": "2026-08-10T15:00:00Z",
+    "dateCreated": "2026-07-10T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-07-06T15:00:00Z"
+    "dateCanvassed": "2026-06-06T15:00:00Z"
    },
    {
     "activistCodeId": 4103,
     "activistCodeName": "Canvasser",
-    "dateCreated": "2026-07-05T15:00:00Z",
+    "dateCreated": "2026-06-05T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-24T15:00:00Z"
+    "dateCanvassed": "2026-07-24T15:00:00Z"
    },
    {
     "activistCodeId": 4105,
     "activistCodeName": "Renter",
-    "dateCreated": "2026-04-02T15:00:00Z",
+    "dateCreated": "2026-03-02T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-10-12T15:00:00Z"
+    "dateCanvassed": "2026-09-12T15:00:00Z"
    }
   ],
   "100200138": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-07-24T15:00:00Z",
+    "dateCreated": "2026-06-24T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-07-20T15:00:00Z"
+    "dateCanvassed": "2026-06-20T15:00:00Z"
    },
    {
     "activistCodeId": 4103,
     "activistCodeName": "Canvasser",
-    "dateCreated": "2026-06-24T15:00:00Z",
+    "dateCreated": "2026-05-24T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-07-11T15:00:00Z"
+    "dateCanvassed": "2026-06-11T15:00:00Z"
    }
   ],
   "100200139": [
    {
     "activistCodeId": 4105,
     "activistCodeName": "Renter",
-    "dateCreated": "2026-08-02T15:00:00Z",
+    "dateCreated": "2026-07-02T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-09-03T15:00:00Z"
+    "dateCanvassed": "2026-08-03T15:00:00Z"
    }
   ],
   "100200140": [
    {
     "activistCodeId": 4105,
     "activistCodeName": "Renter",
-    "dateCreated": "2026-06-10T15:00:00Z",
+    "dateCreated": "2026-05-10T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-04-10T15:00:00Z"
+    "dateCanvassed": "2026-03-10T15:00:00Z"
    }
   ],
   "100200141": [
    {
     "activistCodeId": 4105,
     "activistCodeName": "Renter",
-    "dateCreated": "2026-08-19T15:00:00Z",
+    "dateCreated": "2026-07-19T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-21T15:00:00Z"
+    "dateCanvassed": "2026-07-21T15:00:00Z"
    }
   ],
   "100200142": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-07-20T15:00:00Z",
+    "dateCreated": "2026-06-20T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-09-14T15:00:00Z"
+    "dateCanvassed": "2026-08-14T15:00:00Z"
    },
    {
     "activistCodeId": 4102,
     "activistCodeName": "Phone Banker",
-    "dateCreated": "2026-07-05T15:00:00Z",
+    "dateCreated": "2026-06-05T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-08T15:00:00Z"
+    "dateCanvassed": "2026-05-08T15:00:00Z"
    },
    {
     "activistCodeId": 4104,
     "activistCodeName": "Event Host",
-    "dateCreated": "2026-10-26T15:00:00Z",
+    "dateCreated": "2026-09-26T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-16T15:00:00Z"
+    "dateCanvassed": "2026-07-16T15:00:00Z"
    }
   ],
   "100200143": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-09-01T15:00:00Z",
+    "dateCreated": "2026-08-01T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-18T15:00:00Z"
+    "dateCanvassed": "2026-07-18T15:00:00Z"
    },
    {
     "activistCodeId": 4102,
     "activistCodeName": "Phone Banker",
-    "dateCreated": "2026-09-27T15:00:00Z",
+    "dateCreated": "2026-08-27T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-07-05T15:00:00Z"
+    "dateCanvassed": "2026-06-05T15:00:00Z"
    }
   ],
   "100200144": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-05-27T15:00:00Z",
+    "dateCreated": "2026-04-27T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-09-02T15:00:00Z"
+    "dateCanvassed": "2026-08-02T15:00:00Z"
    },
    {
     "activistCodeId": 4103,
     "activistCodeName": "Canvasser",
-    "dateCreated": "2026-07-10T15:00:00Z",
+    "dateCreated": "2026-06-10T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-08T15:00:00Z"
+    "dateCanvassed": "2026-07-08T15:00:00Z"
    }
   ],
   "100200145": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-04-03T15:00:00Z",
+    "dateCreated": "2026-03-03T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-06T15:00:00Z"
+    "dateCanvassed": "2026-07-06T15:00:00Z"
    },
    {
     "activistCodeId": 4105,
     "activistCodeName": "Renter",
-    "dateCreated": "2026-07-04T15:00:00Z",
+    "dateCreated": "2026-06-04T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-04-04T15:00:00Z"
+    "dateCanvassed": "2026-03-04T15:00:00Z"
    }
   ],
   "100200146": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-09-25T15:00:00Z",
+    "dateCreated": "2026-08-25T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-05-16T15:00:00Z"
+    "dateCanvassed": "2026-04-16T15:00:00Z"
    },
    {
     "activistCodeId": 4104,
     "activistCodeName": "Event Host",
-    "dateCreated": "2026-05-16T15:00:00Z",
+    "dateCreated": "2026-04-16T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-06-21T15:00:00Z"
+    "dateCanvassed": "2026-05-21T15:00:00Z"
    }
   ],
   "100200147": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-10-10T15:00:00Z",
+    "dateCreated": "2026-09-10T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-08-12T15:00:00Z"
+    "dateCanvassed": "2026-07-12T15:00:00Z"
    },
    {
     "activistCodeId": 4104,
     "activistCodeName": "Event Host",
-    "dateCreated": "2026-09-18T15:00:00Z",
+    "dateCreated": "2026-08-18T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-04-20T15:00:00Z"
+    "dateCanvassed": "2026-03-20T15:00:00Z"
    }
   ],
   "100200148": [
    {
     "activistCodeId": 4101,
     "activistCodeName": "Volunteer",
-    "dateCreated": "2026-10-24T15:00:00Z",
+    "dateCreated": "2026-09-24T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-04-25T15:00:00Z"
+    "dateCanvassed": "2026-03-25T15:00:00Z"
    },
    {
     "activistCodeId": 4102,
     "activistCodeName": "Phone Banker",
-    "dateCreated": "2026-09-14T15:00:00Z",
+    "dateCreated": "2026-08-14T15:00:00Z",
     "canvassedBy": null,
-    "dateCanvassed": "2026-05-08T15:00:00Z"
+    "dateCanvassed": "2026-04-08T15:00:00Z"
+   }
+  ],
+  "100200149": [
+   {
+    "activistCodeId": 4101,
+    "activistCodeName": "Volunteer",
+    "dateCreated": "2026-09-12T15:00:00Z",
+    "canvassedBy": null,
+    "dateCanvassed": "2026-09-12T15:00:00Z"
    }
   ]
  },
@@ -3896,7 +3973,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-09"
+     "dateCanvassed": "2026-10-07"
     },
     "resultCodeId": 25,
     "responses": []
@@ -3906,7 +3983,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-14"
+     "dateCanvassed": "2026-10-12"
     },
     "resultCodeId": null,
     "responses": [
@@ -3929,7 +4006,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-14"
+     "dateCanvassed": "2026-10-12"
     },
     "resultCodeId": null,
     "responses": [
@@ -3952,7 +4029,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-17"
+     "dateCanvassed": "2026-10-15"
     },
     "resultCodeId": null,
     "responses": [
@@ -3975,7 +4052,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-11"
+     "dateCanvassed": "2026-10-09"
     },
     "resultCodeId": null,
     "responses": [
@@ -3993,7 +4070,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-01"
+     "dateCanvassed": "2026-09-29"
     },
     "resultCodeId": 2,
     "responses": []
@@ -4003,7 +4080,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-11"
+     "dateCanvassed": "2026-10-09"
     },
     "resultCodeId": null,
     "responses": [
@@ -4024,7 +4101,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-18"
+     "dateCanvassed": "2026-10-16"
     },
     "resultCodeId": null,
     "responses": [
@@ -4045,7 +4122,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-19"
+     "dateCanvassed": "2026-10-17"
     },
     "resultCodeId": null,
     "responses": [
@@ -4063,7 +4140,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-07"
+     "dateCanvassed": "2026-10-05"
     },
     "resultCodeId": null,
     "responses": [
@@ -4084,7 +4161,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-08"
+     "dateCanvassed": "2026-10-06"
     },
     "resultCodeId": null,
     "responses": [
@@ -4107,7 +4184,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-11"
+     "dateCanvassed": "2026-10-09"
     },
     "resultCodeId": 19,
     "responses": []
@@ -4119,7 +4196,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-12"
+     "dateCanvassed": "2026-10-10"
     },
     "resultCodeId": null,
     "responses": [
@@ -4140,7 +4217,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-12"
+     "dateCanvassed": "2026-10-10"
     },
     "resultCodeId": null,
     "responses": [
@@ -4163,7 +4240,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-13"
+     "dateCanvassed": "2026-10-11"
     },
     "resultCodeId": 25,
     "responses": []
@@ -4175,7 +4252,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-02"
+     "dateCanvassed": "2026-09-30"
     },
     "resultCodeId": null,
     "responses": [
@@ -4191,7 +4268,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-03"
+     "dateCanvassed": "2026-10-01"
     },
     "resultCodeId": 2,
     "responses": []
@@ -4201,7 +4278,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-09"
+     "dateCanvassed": "2026-10-07"
     },
     "resultCodeId": 18,
     "responses": []
@@ -4211,7 +4288,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-09"
+     "dateCanvassed": "2026-10-07"
     },
     "resultCodeId": 18,
     "responses": []
@@ -4223,7 +4300,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-01"
+     "dateCanvassed": "2026-09-29"
     },
     "resultCodeId": null,
     "responses": [
@@ -4239,7 +4316,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-01"
+     "dateCanvassed": "2026-09-29"
     },
     "resultCodeId": null,
     "responses": [
@@ -4255,7 +4332,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-05"
+     "dateCanvassed": "2026-10-03"
     },
     "resultCodeId": 18,
     "responses": []
@@ -4265,7 +4342,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-06"
+     "dateCanvassed": "2026-10-04"
     },
     "resultCodeId": 19,
     "responses": []
@@ -4277,7 +4354,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-01"
+     "dateCanvassed": "2026-09-29"
     },
     "resultCodeId": null,
     "responses": [
@@ -4293,7 +4370,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-06"
+     "dateCanvassed": "2026-10-04"
     },
     "resultCodeId": null,
     "responses": [
@@ -4309,7 +4386,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-08"
+     "dateCanvassed": "2026-10-06"
     },
     "resultCodeId": 1,
     "responses": []
@@ -4321,7 +4398,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-02"
+     "dateCanvassed": "2026-09-30"
     },
     "resultCodeId": null,
     "responses": [
@@ -4337,7 +4414,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-14"
+     "dateCanvassed": "2026-10-12"
     },
     "resultCodeId": null,
     "responses": [
@@ -4353,7 +4430,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-16"
+     "dateCanvassed": "2026-10-14"
     },
     "resultCodeId": null,
     "responses": [
@@ -4374,7 +4451,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-19"
+     "dateCanvassed": "2026-10-17"
     },
     "resultCodeId": 5,
     "responses": []
@@ -4386,7 +4463,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-03"
+     "dateCanvassed": "2026-10-01"
     },
     "resultCodeId": 1,
     "responses": []
@@ -4396,7 +4473,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-08"
+     "dateCanvassed": "2026-10-06"
     },
     "resultCodeId": 2,
     "responses": []
@@ -4406,7 +4483,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-15"
+     "dateCanvassed": "2026-10-13"
     },
     "resultCodeId": 1,
     "responses": []
@@ -4418,7 +4495,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-13"
+     "dateCanvassed": "2026-10-11"
     },
     "resultCodeId": 18,
     "responses": []
@@ -4428,7 +4505,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-13"
+     "dateCanvassed": "2026-10-11"
     },
     "resultCodeId": null,
     "responses": [
@@ -4444,7 +4521,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-18"
+     "dateCanvassed": "2026-10-16"
     },
     "resultCodeId": 19,
     "responses": []
@@ -4456,7 +4533,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-08"
+     "dateCanvassed": "2026-10-06"
     },
     "resultCodeId": null,
     "responses": [
@@ -4484,7 +4561,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-08"
+     "dateCanvassed": "2026-10-06"
     },
     "resultCodeId": null,
     "responses": [
@@ -4500,7 +4577,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-12"
+     "dateCanvassed": "2026-10-10"
     },
     "resultCodeId": 18,
     "responses": []
@@ -4510,7 +4587,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-17"
+     "dateCanvassed": "2026-10-15"
     },
     "resultCodeId": 25,
     "responses": []
@@ -4524,7 +4601,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-14"
+     "dateCanvassed": "2026-10-12"
     },
     "resultCodeId": 19,
     "responses": []
@@ -4534,7 +4611,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-16"
+     "dateCanvassed": "2026-10-14"
     },
     "resultCodeId": 2,
     "responses": []
@@ -4546,7 +4623,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-02"
+     "dateCanvassed": "2026-09-30"
     },
     "resultCodeId": 2,
     "responses": []
@@ -4556,7 +4633,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-13"
+     "dateCanvassed": "2026-10-11"
     },
     "resultCodeId": null,
     "responses": [
@@ -4574,7 +4651,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-07"
+     "dateCanvassed": "2026-10-05"
     },
     "resultCodeId": null,
     "responses": [
@@ -4595,7 +4672,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-16"
+     "dateCanvassed": "2026-10-14"
     },
     "resultCodeId": 18,
     "responses": []
@@ -4607,7 +4684,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-05"
+     "dateCanvassed": "2026-10-03"
     },
     "resultCodeId": null,
     "responses": [
@@ -4633,7 +4710,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-11"
+     "dateCanvassed": "2026-10-09"
     },
     "resultCodeId": null,
     "responses": [
@@ -4654,7 +4731,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-11"
+     "dateCanvassed": "2026-10-09"
     },
     "resultCodeId": 5,
     "responses": []
@@ -4664,7 +4741,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-11"
+     "dateCanvassed": "2026-10-09"
     },
     "resultCodeId": 2,
     "responses": []
@@ -4676,7 +4753,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-17"
+     "dateCanvassed": "2026-10-15"
     },
     "resultCodeId": 5,
     "responses": []
@@ -4686,7 +4763,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-18"
+     "dateCanvassed": "2026-10-16"
     },
     "resultCodeId": 2,
     "responses": []
@@ -4698,7 +4775,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-04"
+     "dateCanvassed": "2026-10-02"
     },
     "resultCodeId": null,
     "responses": [
@@ -4714,7 +4791,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-04"
+     "dateCanvassed": "2026-10-02"
     },
     "resultCodeId": null,
     "responses": [
@@ -4735,7 +4812,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-12"
+     "dateCanvassed": "2026-10-10"
     },
     "resultCodeId": null,
     "responses": [
@@ -4756,7 +4833,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-14"
+     "dateCanvassed": "2026-10-12"
     },
     "resultCodeId": 2,
     "responses": []
@@ -4768,7 +4845,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-05"
+     "dateCanvassed": "2026-10-03"
     },
     "resultCodeId": 2,
     "responses": []
@@ -4778,7 +4855,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-16"
+     "dateCanvassed": "2026-10-14"
     },
     "resultCodeId": null,
     "responses": [
@@ -4797,7 +4874,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-02"
+     "dateCanvassed": "2026-09-30"
     },
     "resultCodeId": null,
     "responses": [
@@ -4818,7 +4895,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-13"
+     "dateCanvassed": "2026-10-11"
     },
     "resultCodeId": null,
     "responses": [
@@ -4839,7 +4916,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-15"
+     "dateCanvassed": "2026-10-13"
     },
     "resultCodeId": 2,
     "responses": []
@@ -4849,7 +4926,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-16"
+     "dateCanvassed": "2026-10-14"
     },
     "resultCodeId": 18,
     "responses": []
@@ -4861,7 +4938,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-14"
+     "dateCanvassed": "2026-10-12"
     },
     "resultCodeId": null,
     "responses": [
@@ -4884,7 +4961,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-05"
+     "dateCanvassed": "2026-10-03"
     },
     "resultCodeId": 5,
     "responses": []
@@ -4894,7 +4971,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-19"
+     "dateCanvassed": "2026-10-17"
     },
     "resultCodeId": 25,
     "responses": []
@@ -4906,7 +4983,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-08"
+     "dateCanvassed": "2026-10-06"
     },
     "resultCodeId": null,
     "responses": [
@@ -4932,7 +5009,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-10"
+     "dateCanvassed": "2026-10-08"
     },
     "resultCodeId": null,
     "responses": [
@@ -4948,7 +5025,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-10"
+     "dateCanvassed": "2026-10-08"
     },
     "resultCodeId": null,
     "responses": [
@@ -4964,7 +5041,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-11"
+     "dateCanvassed": "2026-10-09"
     },
     "resultCodeId": null,
     "responses": [
@@ -4987,7 +5064,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-08"
+     "dateCanvassed": "2026-10-06"
     },
     "resultCodeId": 5,
     "responses": []
@@ -4997,7 +5074,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-12"
+     "dateCanvassed": "2026-10-10"
     },
     "resultCodeId": 2,
     "responses": []
@@ -5009,7 +5086,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-10"
+     "dateCanvassed": "2026-10-08"
     },
     "resultCodeId": null,
     "responses": [
@@ -5025,7 +5102,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-11"
+     "dateCanvassed": "2026-10-09"
     },
     "resultCodeId": null,
     "responses": [
@@ -5046,7 +5123,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-13"
+     "dateCanvassed": "2026-10-11"
     },
     "resultCodeId": 1,
     "responses": []
@@ -5058,7 +5135,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-07"
+     "dateCanvassed": "2026-10-05"
     },
     "resultCodeId": null,
     "responses": [
@@ -5079,7 +5156,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-13"
+     "dateCanvassed": "2026-10-11"
     },
     "resultCodeId": null,
     "responses": [
@@ -5095,7 +5172,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-18"
+     "dateCanvassed": "2026-10-16"
     },
     "resultCodeId": 20,
     "responses": []
@@ -5107,7 +5184,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-08"
+     "dateCanvassed": "2026-10-06"
     },
     "resultCodeId": null,
     "responses": [
@@ -5128,7 +5205,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-17"
+     "dateCanvassed": "2026-10-15"
     },
     "resultCodeId": 19,
     "responses": []
@@ -5140,7 +5217,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-08"
+     "dateCanvassed": "2026-10-06"
     },
     "resultCodeId": null,
     "responses": [
@@ -5164,7 +5241,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-04"
+     "dateCanvassed": "2026-10-02"
     },
     "resultCodeId": null,
     "responses": [
@@ -5190,7 +5267,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-04"
+     "dateCanvassed": "2026-10-02"
     },
     "resultCodeId": 2,
     "responses": []
@@ -5200,7 +5277,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-10"
+     "dateCanvassed": "2026-10-08"
     },
     "resultCodeId": 18,
     "responses": []
@@ -5212,7 +5289,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-01"
+     "dateCanvassed": "2026-09-29"
     },
     "resultCodeId": null,
     "responses": [
@@ -5233,7 +5310,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-06"
+     "dateCanvassed": "2026-10-04"
     },
     "resultCodeId": 1,
     "responses": []
@@ -5243,7 +5320,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-13"
+     "dateCanvassed": "2026-10-11"
     },
     "resultCodeId": 19,
     "responses": []
@@ -5253,7 +5330,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-18"
+     "dateCanvassed": "2026-10-16"
     },
     "resultCodeId": null,
     "responses": [
@@ -5271,7 +5348,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-05"
+     "dateCanvassed": "2026-10-03"
     },
     "resultCodeId": 20,
     "responses": []
@@ -5281,7 +5358,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-07"
+     "dateCanvassed": "2026-10-05"
     },
     "resultCodeId": null,
     "responses": [
@@ -5304,7 +5381,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-03"
+     "dateCanvassed": "2026-10-01"
     },
     "resultCodeId": 1,
     "responses": []
@@ -5316,7 +5393,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-08"
+     "dateCanvassed": "2026-10-06"
     },
     "resultCodeId": null,
     "responses": [
@@ -5337,7 +5414,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-10"
+     "dateCanvassed": "2026-10-08"
     },
     "resultCodeId": null,
     "responses": [
@@ -5358,7 +5435,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-12"
+     "dateCanvassed": "2026-10-10"
     },
     "resultCodeId": null,
     "responses": [
@@ -5376,7 +5453,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-01"
+     "dateCanvassed": "2026-09-29"
     },
     "resultCodeId": null,
     "responses": [
@@ -5397,7 +5474,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-10"
+     "dateCanvassed": "2026-10-08"
     },
     "resultCodeId": 1,
     "responses": []
@@ -5407,7 +5484,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-17"
+     "dateCanvassed": "2026-10-15"
     },
     "resultCodeId": null,
     "responses": [
@@ -5423,7 +5500,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-19"
+     "dateCanvassed": "2026-10-17"
     },
     "resultCodeId": null,
     "responses": [
@@ -5441,7 +5518,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-15"
+     "dateCanvassed": "2026-10-13"
     },
     "resultCodeId": null,
     "responses": [
@@ -5460,7 +5537,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-01"
+     "dateCanvassed": "2026-09-29"
     },
     "resultCodeId": null,
     "responses": [
@@ -5486,7 +5563,7 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-02"
+     "dateCanvassed": "2026-09-30"
     },
     "resultCodeId": null,
     "responses": [
@@ -5507,7 +5584,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-03"
+     "dateCanvassed": "2026-10-01"
     },
     "resultCodeId": 2,
     "responses": []
@@ -5517,7 +5594,7 @@
     "canvassContext": {
      "contactTypeId": 37,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-18"
+     "dateCanvassed": "2026-10-16"
     },
     "resultCodeId": null,
     "responses": [
@@ -5536,7 +5613,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-04"
+     "dateCanvassed": "2026-10-02"
     },
     "resultCodeId": 5,
     "responses": []
@@ -5546,7 +5623,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-14"
+     "dateCanvassed": "2026-10-12"
     },
     "resultCodeId": null,
     "responses": [
@@ -5572,7 +5649,7 @@
     "canvassContext": {
      "contactTypeId": 2,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-15"
+     "dateCanvassed": "2026-10-13"
     },
     "resultCodeId": null,
     "responses": [
@@ -5588,12 +5665,13 @@
     "canvassContext": {
      "contactTypeId": 1,
      "inputTypeId": 11,
-     "dateCanvassed": "2026-11-18"
+     "dateCanvassed": "2026-10-16"
     },
     "resultCodeId": 18,
     "responses": []
    }
-  ]
+  ],
+  "100200149": []
  },
  "resultCodes": [
   {
@@ -5686,11 +5764,11 @@
  "events": [
   {
    "eventId": 3001,
-   "name": "Northside Weekend Canvass",
+   "name": "Northside GOTV Canvass",
    "shortName": "NS Canv",
    "description": "Meet at the Northside Office. Questions? Text Dana at (970) 555-0188.",
-   "startDate": "2026-11-21T09:00:00-07:00",
-   "endDate": "2026-11-21T16:00:00-07:00",
+   "startDate": "2026-10-19T09:00:00-06:00",
+   "endDate": "2026-10-19T16:00:00-06:00",
    "eventType": {
     "eventTypeId": 801,
     "name": "Canvass"
@@ -5701,7 +5779,7 @@
     {
      "locationId": 601,
      "name": "Northside Office",
-     "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+     "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
     }
    ],
    "codes": null,
@@ -5710,14 +5788,14 @@
     {
      "eventShiftId": 7001,
      "name": "Morning",
-     "startTime": "2026-11-21T09:00:00-07:00",
-     "endTime": "2026-11-21T12:00:00-07:00"
+     "startTime": "2026-10-19T09:00:00-06:00",
+     "endTime": "2026-10-19T12:00:00-06:00"
     },
     {
      "eventShiftId": 7002,
      "name": "Afternoon",
-     "startTime": "2026-11-21T13:00:00-07:00",
-     "endTime": "2026-11-21T16:00:00-07:00"
+     "startTime": "2026-10-19T13:00:00-06:00",
+     "endTime": "2026-10-19T16:00:00-06:00"
     }
    ],
    "roles": [
@@ -5732,7 +5810,7 @@
    ],
    "districtFieldValue": null,
    "voterRegistrationBatches": null,
-   "createdDate": "2026-11-01T17:00:00Z",
+   "createdDate": "2026-10-01T17:00:00Z",
    "isActive": true,
    "dotNetTimeZoneId": "Mountain Standard Time",
    "_office": "Northside"
@@ -5742,8 +5820,8 @@
    "name": "Eastgate Phone Bank",
    "shortName": "EG PB",
    "description": "Bring a charged phone and headphones.",
-   "startDate": "2026-11-21T17:00:00-07:00",
-   "endDate": "2026-11-21T20:00:00-07:00",
+   "startDate": "2026-10-19T17:00:00-06:00",
+   "endDate": "2026-10-19T20:00:00-06:00",
    "eventType": {
     "eventTypeId": 802,
     "name": "Phone Bank"
@@ -5754,7 +5832,7 @@
     {
      "locationId": 602,
      "name": "Eastgate Office",
-     "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+     "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
     }
    ],
    "codes": null,
@@ -5763,8 +5841,8 @@
     {
      "eventShiftId": 7003,
      "name": "Evening",
-     "startTime": "2026-11-21T17:00:00-07:00",
-     "endTime": "2026-11-21T20:00:00-07:00"
+     "startTime": "2026-10-19T17:00:00-06:00",
+     "endTime": "2026-10-19T20:00:00-06:00"
     }
    ],
    "roles": [
@@ -5779,7 +5857,7 @@
    ],
    "districtFieldValue": null,
    "voterRegistrationBatches": null,
-   "createdDate": "2026-11-01T17:00:00Z",
+   "createdDate": "2026-10-01T17:00:00Z",
    "isActive": true,
    "dotNetTimeZoneId": "Mountain Standard Time",
    "_office": "Eastgate"
@@ -5788,9 +5866,9 @@
    "eventId": 3003,
    "name": "Harbor Canvass Launch",
    "shortName": "HB Canv",
-   "description": "Launch at the Harbor Office, 12 Pier Rd. Host contact: harbor.lead@example.org.",
-   "startDate": "2026-11-22T10:00:00-07:00",
-   "endDate": "2026-11-22T17:00:00-07:00",
+   "description": "Launch at the Harbor Office, 1200 Harbor Rd. Host contact: harbor.lead@example.org.",
+   "startDate": "2026-10-25T10:00:00-06:00",
+   "endDate": "2026-10-25T17:00:00-06:00",
    "eventType": {
     "eventTypeId": 801,
     "name": "Canvass"
@@ -5801,7 +5879,7 @@
     {
      "locationId": 603,
      "name": "Harbor Office",
-     "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+     "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
     }
    ],
    "codes": null,
@@ -5810,14 +5888,14 @@
     {
      "eventShiftId": 7004,
      "name": "Morning",
-     "startTime": "2026-11-22T10:00:00-07:00",
-     "endTime": "2026-11-22T13:00:00-07:00"
+     "startTime": "2026-10-25T10:00:00-06:00",
+     "endTime": "2026-10-25T13:00:00-06:00"
     },
     {
      "eventShiftId": 7005,
      "name": "Afternoon",
-     "startTime": "2026-11-22T14:00:00-07:00",
-     "endTime": "2026-11-22T17:00:00-07:00"
+     "startTime": "2026-10-25T14:00:00-06:00",
+     "endTime": "2026-10-25T17:00:00-06:00"
     }
    ],
    "roles": [
@@ -5832,7 +5910,7 @@
    ],
    "districtFieldValue": null,
    "voterRegistrationBatches": null,
-   "createdDate": "2026-11-01T17:00:00Z",
+   "createdDate": "2026-10-01T17:00:00Z",
    "isActive": true,
    "dotNetTimeZoneId": "Mountain Standard Time",
    "_office": "Harbor"
@@ -5842,8 +5920,8 @@
    "name": "Volunteer Training",
    "shortName": "Training",
    "description": "New volunteer orientation.",
-   "startDate": "2026-11-19T18:00:00-07:00",
-   "endDate": "2026-11-19T20:00:00-07:00",
+   "startDate": "2026-10-17T18:00:00-06:00",
+   "endDate": "2026-10-17T20:00:00-06:00",
    "eventType": {
     "eventTypeId": 803,
     "name": "Training"
@@ -5854,7 +5932,7 @@
     {
      "locationId": 601,
      "name": "Northside Office",
-     "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+     "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
     }
    ],
    "codes": null,
@@ -5863,8 +5941,8 @@
     {
      "eventShiftId": 7006,
      "name": "Evening",
-     "startTime": "2026-11-19T18:00:00-07:00",
-     "endTime": "2026-11-19T20:00:00-07:00"
+     "startTime": "2026-10-17T18:00:00-06:00",
+     "endTime": "2026-10-17T20:00:00-06:00"
     }
    ],
    "roles": [
@@ -5879,7 +5957,7 @@
    ],
    "districtFieldValue": null,
    "voterRegistrationBatches": null,
-   "createdDate": "2026-11-01T17:00:00Z",
+   "createdDate": "2026-10-01T17:00:00Z",
    "isActive": true,
    "dotNetTimeZoneId": "Mountain Standard Time",
    "_office": "Northside"
@@ -5889,8 +5967,8 @@
    "name": "Eastgate Weekend Canvass",
    "shortName": "EG Canv",
    "description": "Turf packets ready at 9:15.",
-   "startDate": "2026-11-22T09:30:00-07:00",
-   "endDate": "2026-11-22T12:30:00-07:00",
+   "startDate": "2026-10-24T09:30:00-06:00",
+   "endDate": "2026-10-24T12:30:00-06:00",
    "eventType": {
     "eventTypeId": 801,
     "name": "Canvass"
@@ -5901,7 +5979,7 @@
     {
      "locationId": 602,
      "name": "Eastgate Office",
-     "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+     "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
     }
    ],
    "codes": null,
@@ -5910,8 +5988,8 @@
     {
      "eventShiftId": 7007,
      "name": "Morning",
-     "startTime": "2026-11-22T09:30:00-07:00",
-     "endTime": "2026-11-22T12:30:00-07:00"
+     "startTime": "2026-10-24T09:30:00-06:00",
+     "endTime": "2026-10-24T12:30:00-06:00"
     }
    ],
    "roles": [
@@ -5926,7 +6004,7 @@
    ],
    "districtFieldValue": null,
    "voterRegistrationBatches": null,
-   "createdDate": "2026-11-01T17:00:00Z",
+   "createdDate": "2026-10-01T17:00:00Z",
    "isActive": true,
    "dotNetTimeZoneId": "Mountain Standard Time",
    "_office": "Eastgate"
@@ -5936,8 +6014,8 @@
    "name": "Harbor Phone Bank",
    "shortName": "HB PB",
    "description": "Calls for the Measure 3 ID program.",
-   "startDate": "2026-11-24T17:30:00-07:00",
-   "endDate": "2026-11-24T20:30:00-07:00",
+   "startDate": "2026-10-20T17:30:00-06:00",
+   "endDate": "2026-10-20T20:30:00-06:00",
    "eventType": {
     "eventTypeId": 802,
     "name": "Phone Bank"
@@ -5948,7 +6026,7 @@
     {
      "locationId": 603,
      "name": "Harbor Office",
-     "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+     "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
     }
    ],
    "codes": null,
@@ -5957,8 +6035,8 @@
     {
      "eventShiftId": 7008,
      "name": "Evening",
-     "startTime": "2026-11-24T17:30:00-07:00",
-     "endTime": "2026-11-24T20:30:00-07:00"
+     "startTime": "2026-10-20T17:30:00-06:00",
+     "endTime": "2026-10-20T20:30:00-06:00"
     }
    ],
    "roles": [
@@ -5973,7 +6051,7 @@
    ],
    "districtFieldValue": null,
    "voterRegistrationBatches": null,
-   "createdDate": "2026-11-01T17:00:00Z",
+   "createdDate": "2026-10-01T17:00:00Z",
    "isActive": true,
    "dotNetTimeZoneId": "Mountain Standard Time",
    "_office": "Harbor"
@@ -5990,7 +6068,7 @@
    },
    "event": {
     "eventId": 3001,
-    "name": "Northside Weekend Canvass",
+    "name": "Northside GOTV Canvass",
     "shortName": "NS Canv"
    },
    "shift": {
@@ -6008,10 +6086,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-21T09:00:00-07:00",
-   "endTimeOverride": "2026-11-21T12:00:00-07:00"
+   "startTimeOverride": "2026-10-19T09:00:00-06:00",
+   "endTimeOverride": "2026-10-19T12:00:00-06:00"
   },
   {
    "eventSignupId": 2450002,
@@ -6023,7 +6101,7 @@
    },
    "event": {
     "eventId": 3001,
-    "name": "Northside Weekend Canvass",
+    "name": "Northside GOTV Canvass",
     "shortName": "NS Canv"
    },
    "shift": {
@@ -6041,10 +6119,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-21T09:00:00-07:00",
-   "endTimeOverride": "2026-11-21T12:00:00-07:00"
+   "startTimeOverride": "2026-10-19T09:00:00-06:00",
+   "endTimeOverride": "2026-10-19T12:00:00-06:00"
   },
   {
    "eventSignupId": 2450003,
@@ -6056,7 +6134,7 @@
    },
    "event": {
     "eventId": 3001,
-    "name": "Northside Weekend Canvass",
+    "name": "Northside GOTV Canvass",
     "shortName": "NS Canv"
    },
    "shift": {
@@ -6074,10 +6152,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-21T09:00:00-07:00",
-   "endTimeOverride": "2026-11-21T12:00:00-07:00"
+   "startTimeOverride": "2026-10-19T09:00:00-06:00",
+   "endTimeOverride": "2026-10-19T12:00:00-06:00"
   },
   {
    "eventSignupId": 2450004,
@@ -6085,11 +6163,11 @@
     "vanId": 100200104,
     "firstName": "Hannah",
     "middleName": "Lee",
-    "lastName": "Whitfield"
+    "lastName": "Treadwell"
    },
    "event": {
     "eventId": 3001,
-    "name": "Northside Weekend Canvass",
+    "name": "Northside GOTV Canvass",
     "shortName": "NS Canv"
    },
    "shift": {
@@ -6107,10 +6185,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-21T09:00:00-07:00",
-   "endTimeOverride": "2026-11-21T12:00:00-07:00"
+   "startTimeOverride": "2026-10-19T09:00:00-06:00",
+   "endTimeOverride": "2026-10-19T12:00:00-06:00"
   },
   {
    "eventSignupId": 2450005,
@@ -6122,7 +6200,7 @@
    },
    "event": {
     "eventId": 3001,
-    "name": "Northside Weekend Canvass",
+    "name": "Northside GOTV Canvass",
     "shortName": "NS Canv"
    },
    "shift": {
@@ -6140,10 +6218,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-21T09:00:00-07:00",
-   "endTimeOverride": "2026-11-21T12:00:00-07:00"
+   "startTimeOverride": "2026-10-19T09:00:00-06:00",
+   "endTimeOverride": "2026-10-19T12:00:00-06:00"
   },
   {
    "eventSignupId": 2450006,
@@ -6151,11 +6229,11 @@
     "vanId": 100200143,
     "firstName": "Owen",
     "middleName": null,
-    "lastName": "Vasquez"
+    "lastName": "Varga"
    },
    "event": {
     "eventId": 3001,
-    "name": "Northside Weekend Canvass",
+    "name": "Northside GOTV Canvass",
     "shortName": "NS Canv"
    },
    "shift": {
@@ -6173,10 +6251,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-21T09:00:00-07:00",
-   "endTimeOverride": "2026-11-21T12:00:00-07:00"
+   "startTimeOverride": "2026-10-19T09:00:00-06:00",
+   "endTimeOverride": "2026-10-19T12:00:00-06:00"
   },
   {
    "eventSignupId": 2450007,
@@ -6184,11 +6262,11 @@
     "vanId": 100200143,
     "firstName": "Owen",
     "middleName": null,
-    "lastName": "Vasquez"
+    "lastName": "Varga"
    },
    "event": {
     "eventId": 3001,
-    "name": "Northside Weekend Canvass",
+    "name": "Northside GOTV Canvass",
     "shortName": "NS Canv"
    },
    "shift": {
@@ -6206,10 +6284,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-21T13:00:00-07:00",
-   "endTimeOverride": "2026-11-21T16:00:00-07:00"
+   "startTimeOverride": "2026-10-19T13:00:00-06:00",
+   "endTimeOverride": "2026-10-19T16:00:00-06:00"
   },
   {
    "eventSignupId": 2450008,
@@ -6221,7 +6299,7 @@
    },
    "event": {
     "eventId": 3001,
-    "name": "Northside Weekend Canvass",
+    "name": "Northside GOTV Canvass",
     "shortName": "NS Canv"
    },
    "shift": {
@@ -6239,10 +6317,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-21T13:00:00-07:00",
-   "endTimeOverride": "2026-11-21T16:00:00-07:00"
+   "startTimeOverride": "2026-10-19T13:00:00-06:00",
+   "endTimeOverride": "2026-10-19T16:00:00-06:00"
   },
   {
    "eventSignupId": 2450009,
@@ -6254,7 +6332,7 @@
    },
    "event": {
     "eventId": 3001,
-    "name": "Northside Weekend Canvass",
+    "name": "Northside GOTV Canvass",
     "shortName": "NS Canv"
    },
    "shift": {
@@ -6272,10 +6350,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-21T13:00:00-07:00",
-   "endTimeOverride": "2026-11-21T16:00:00-07:00"
+   "startTimeOverride": "2026-10-19T13:00:00-06:00",
+   "endTimeOverride": "2026-10-19T16:00:00-06:00"
   },
   {
    "eventSignupId": 2450010,
@@ -6283,11 +6361,11 @@
     "vanId": 100200101,
     "firstName": "Malik",
     "middleName": "J",
-    "lastName": "Vasquez"
+    "lastName": "Varga"
    },
    "event": {
     "eventId": 3001,
-    "name": "Northside Weekend Canvass",
+    "name": "Northside GOTV Canvass",
     "shortName": "NS Canv"
    },
    "shift": {
@@ -6305,10 +6383,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-21T13:00:00-07:00",
-   "endTimeOverride": "2026-11-21T16:00:00-07:00"
+   "startTimeOverride": "2026-10-19T13:00:00-06:00",
+   "endTimeOverride": "2026-10-19T16:00:00-06:00"
   },
   {
    "eventSignupId": 2450011,
@@ -6316,11 +6394,11 @@
     "vanId": 100200116,
     "firstName": "Priya",
     "middleName": "J",
-    "lastName": "Brennan"
+    "lastName": "Calloway"
    },
    "event": {
     "eventId": 3001,
-    "name": "Northside Weekend Canvass",
+    "name": "Northside GOTV Canvass",
     "shortName": "NS Canv"
    },
    "shift": {
@@ -6338,10 +6416,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-21T13:00:00-07:00",
-   "endTimeOverride": "2026-11-21T16:00:00-07:00"
+   "startTimeOverride": "2026-10-19T13:00:00-06:00",
+   "endTimeOverride": "2026-10-19T16:00:00-06:00"
   },
   {
    "eventSignupId": 2450012,
@@ -6349,7 +6427,7 @@
     "vanId": 100200147,
     "firstName": "Beatriz",
     "middleName": "Ann",
-    "lastName": "Vasquez"
+    "lastName": "Varga"
    },
    "event": {
     "eventId": 3002,
@@ -6371,10 +6449,10 @@
    "location": {
     "locationId": 602,
     "name": "Eastgate Office",
-    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
    },
-   "startTimeOverride": "2026-11-21T17:00:00-07:00",
-   "endTimeOverride": "2026-11-21T20:00:00-07:00"
+   "startTimeOverride": "2026-10-19T17:00:00-06:00",
+   "endTimeOverride": "2026-10-19T20:00:00-06:00"
   },
   {
    "eventSignupId": 2450013,
@@ -6404,10 +6482,10 @@
    "location": {
     "locationId": 602,
     "name": "Eastgate Office",
-    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
    },
-   "startTimeOverride": "2026-11-21T17:00:00-07:00",
-   "endTimeOverride": "2026-11-21T20:00:00-07:00"
+   "startTimeOverride": "2026-10-19T17:00:00-06:00",
+   "endTimeOverride": "2026-10-19T20:00:00-06:00"
   },
   {
    "eventSignupId": 2450014,
@@ -6437,10 +6515,10 @@
    "location": {
     "locationId": 602,
     "name": "Eastgate Office",
-    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
    },
-   "startTimeOverride": "2026-11-21T17:00:00-07:00",
-   "endTimeOverride": "2026-11-21T20:00:00-07:00"
+   "startTimeOverride": "2026-10-19T17:00:00-06:00",
+   "endTimeOverride": "2026-10-19T20:00:00-06:00"
   },
   {
    "eventSignupId": 2450015,
@@ -6470,10 +6548,10 @@
    "location": {
     "locationId": 602,
     "name": "Eastgate Office",
-    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
    },
-   "startTimeOverride": "2026-11-21T17:00:00-07:00",
-   "endTimeOverride": "2026-11-21T20:00:00-07:00"
+   "startTimeOverride": "2026-10-19T17:00:00-06:00",
+   "endTimeOverride": "2026-10-19T20:00:00-06:00"
   },
   {
    "eventSignupId": 2450016,
@@ -6481,7 +6559,7 @@
     "vanId": 100200123,
     "firstName": "Dana",
     "middleName": null,
-    "lastName": "Brennan"
+    "lastName": "Calloway"
    },
    "event": {
     "eventId": 3002,
@@ -6503,10 +6581,10 @@
    "location": {
     "locationId": 602,
     "name": "Eastgate Office",
-    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
    },
-   "startTimeOverride": "2026-11-21T17:00:00-07:00",
-   "endTimeOverride": "2026-11-21T20:00:00-07:00"
+   "startTimeOverride": "2026-10-19T17:00:00-06:00",
+   "endTimeOverride": "2026-10-19T20:00:00-06:00"
   },
   {
    "eventSignupId": 2450017,
@@ -6536,10 +6614,10 @@
    "location": {
     "locationId": 602,
     "name": "Eastgate Office",
-    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
    },
-   "startTimeOverride": "2026-11-21T17:00:00-07:00",
-   "endTimeOverride": "2026-11-21T20:00:00-07:00"
+   "startTimeOverride": "2026-10-19T17:00:00-06:00",
+   "endTimeOverride": "2026-10-19T20:00:00-06:00"
   },
   {
    "eventSignupId": 2450018,
@@ -6569,10 +6647,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-22T10:00:00-07:00",
-   "endTimeOverride": "2026-11-22T13:00:00-07:00"
+   "startTimeOverride": "2026-10-25T10:00:00-06:00",
+   "endTimeOverride": "2026-10-25T13:00:00-06:00"
   },
   {
    "eventSignupId": 2450019,
@@ -6602,10 +6680,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-22T10:00:00-07:00",
-   "endTimeOverride": "2026-11-22T13:00:00-07:00"
+   "startTimeOverride": "2026-10-25T10:00:00-06:00",
+   "endTimeOverride": "2026-10-25T13:00:00-06:00"
   },
   {
    "eventSignupId": 2450020,
@@ -6635,10 +6713,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-22T10:00:00-07:00",
-   "endTimeOverride": "2026-11-22T13:00:00-07:00"
+   "startTimeOverride": "2026-10-25T10:00:00-06:00",
+   "endTimeOverride": "2026-10-25T13:00:00-06:00"
   },
   {
    "eventSignupId": 2450021,
@@ -6668,10 +6746,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-22T10:00:00-07:00",
-   "endTimeOverride": "2026-11-22T13:00:00-07:00"
+   "startTimeOverride": "2026-10-25T10:00:00-06:00",
+   "endTimeOverride": "2026-10-25T13:00:00-06:00"
   },
   {
    "eventSignupId": 2450022,
@@ -6701,10 +6779,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-22T10:00:00-07:00",
-   "endTimeOverride": "2026-11-22T13:00:00-07:00"
+   "startTimeOverride": "2026-10-25T10:00:00-06:00",
+   "endTimeOverride": "2026-10-25T13:00:00-06:00"
   },
   {
    "eventSignupId": 2450023,
@@ -6734,10 +6812,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-22T10:00:00-07:00",
-   "endTimeOverride": "2026-11-22T13:00:00-07:00"
+   "startTimeOverride": "2026-10-25T10:00:00-06:00",
+   "endTimeOverride": "2026-10-25T13:00:00-06:00"
   },
   {
    "eventSignupId": 2450024,
@@ -6767,10 +6845,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-22T10:00:00-07:00",
-   "endTimeOverride": "2026-11-22T13:00:00-07:00"
+   "startTimeOverride": "2026-10-25T10:00:00-06:00",
+   "endTimeOverride": "2026-10-25T13:00:00-06:00"
   },
   {
    "eventSignupId": 2450025,
@@ -6800,10 +6878,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-22T14:00:00-07:00",
-   "endTimeOverride": "2026-11-22T17:00:00-07:00"
+   "startTimeOverride": "2026-10-25T14:00:00-06:00",
+   "endTimeOverride": "2026-10-25T17:00:00-06:00"
   },
   {
    "eventSignupId": 2450026,
@@ -6833,10 +6911,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-22T14:00:00-07:00",
-   "endTimeOverride": "2026-11-22T17:00:00-07:00"
+   "startTimeOverride": "2026-10-25T14:00:00-06:00",
+   "endTimeOverride": "2026-10-25T17:00:00-06:00"
   },
   {
    "eventSignupId": 2450027,
@@ -6866,10 +6944,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-22T14:00:00-07:00",
-   "endTimeOverride": "2026-11-22T17:00:00-07:00"
+   "startTimeOverride": "2026-10-25T14:00:00-06:00",
+   "endTimeOverride": "2026-10-25T17:00:00-06:00"
   },
   {
    "eventSignupId": 2450028,
@@ -6877,7 +6955,7 @@
     "vanId": 100200136,
     "firstName": "Keisha",
     "middleName": "J",
-    "lastName": "Okafor"
+    "lastName": "Okonjo"
    },
    "event": {
     "eventId": 3003,
@@ -6899,10 +6977,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-22T14:00:00-07:00",
-   "endTimeOverride": "2026-11-22T17:00:00-07:00"
+   "startTimeOverride": "2026-10-25T14:00:00-06:00",
+   "endTimeOverride": "2026-10-25T17:00:00-06:00"
   },
   {
    "eventSignupId": 2450029,
@@ -6932,10 +7010,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-22T14:00:00-07:00",
-   "endTimeOverride": "2026-11-22T17:00:00-07:00"
+   "startTimeOverride": "2026-10-25T14:00:00-06:00",
+   "endTimeOverride": "2026-10-25T17:00:00-06:00"
   },
   {
    "eventSignupId": 2450030,
@@ -6965,10 +7043,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-22T14:00:00-07:00",
-   "endTimeOverride": "2026-11-22T17:00:00-07:00"
+   "startTimeOverride": "2026-10-25T14:00:00-06:00",
+   "endTimeOverride": "2026-10-25T17:00:00-06:00"
   },
   {
    "eventSignupId": 2450031,
@@ -6998,10 +7076,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-22T14:00:00-07:00",
-   "endTimeOverride": "2026-11-22T17:00:00-07:00"
+   "startTimeOverride": "2026-10-25T14:00:00-06:00",
+   "endTimeOverride": "2026-10-25T17:00:00-06:00"
   },
   {
    "eventSignupId": 2450032,
@@ -7009,7 +7087,7 @@
     "vanId": 100200143,
     "firstName": "Owen",
     "middleName": null,
-    "lastName": "Vasquez"
+    "lastName": "Varga"
    },
    "event": {
     "eventId": 3004,
@@ -7031,10 +7109,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-19T18:00:00-07:00",
-   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+   "startTimeOverride": "2026-10-17T18:00:00-06:00",
+   "endTimeOverride": "2026-10-17T20:00:00-06:00"
   },
   {
    "eventSignupId": 2450033,
@@ -7064,10 +7142,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-19T18:00:00-07:00",
-   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+   "startTimeOverride": "2026-10-17T18:00:00-06:00",
+   "endTimeOverride": "2026-10-17T20:00:00-06:00"
   },
   {
    "eventSignupId": 2450034,
@@ -7097,10 +7175,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-19T18:00:00-07:00",
-   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+   "startTimeOverride": "2026-10-17T18:00:00-06:00",
+   "endTimeOverride": "2026-10-17T20:00:00-06:00"
   },
   {
    "eventSignupId": 2450035,
@@ -7108,7 +7186,7 @@
     "vanId": 100200140,
     "firstName": "Beatriz",
     "middleName": null,
-    "lastName": "Whitfield"
+    "lastName": "Treadwell"
    },
    "event": {
     "eventId": 3004,
@@ -7130,10 +7208,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-19T18:00:00-07:00",
-   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+   "startTimeOverride": "2026-10-17T18:00:00-06:00",
+   "endTimeOverride": "2026-10-17T20:00:00-06:00"
   },
   {
    "eventSignupId": 2450036,
@@ -7141,7 +7219,7 @@
     "vanId": 100200110,
     "firstName": "Noor",
     "middleName": "Ann",
-    "lastName": "Brennan"
+    "lastName": "Calloway"
    },
    "event": {
     "eventId": 3004,
@@ -7163,10 +7241,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-19T18:00:00-07:00",
-   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+   "startTimeOverride": "2026-10-17T18:00:00-06:00",
+   "endTimeOverride": "2026-10-17T20:00:00-06:00"
   },
   {
    "eventSignupId": 2450037,
@@ -7196,10 +7274,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-19T18:00:00-07:00",
-   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+   "startTimeOverride": "2026-10-17T18:00:00-06:00",
+   "endTimeOverride": "2026-10-17T20:00:00-06:00"
   },
   {
    "eventSignupId": 2450038,
@@ -7229,10 +7307,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-19T18:00:00-07:00",
-   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+   "startTimeOverride": "2026-10-17T18:00:00-06:00",
+   "endTimeOverride": "2026-10-17T20:00:00-06:00"
   },
   {
    "eventSignupId": 2450039,
@@ -7240,7 +7318,7 @@
     "vanId": 100200104,
     "firstName": "Hannah",
     "middleName": "Lee",
-    "lastName": "Whitfield"
+    "lastName": "Treadwell"
    },
    "event": {
     "eventId": 3004,
@@ -7262,10 +7340,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-19T18:00:00-07:00",
-   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+   "startTimeOverride": "2026-10-17T18:00:00-06:00",
+   "endTimeOverride": "2026-10-17T20:00:00-06:00"
   },
   {
    "eventSignupId": 2450040,
@@ -7295,10 +7373,10 @@
    "location": {
     "locationId": 601,
     "name": "Northside Office",
-    "displayName": "Northside Office, 410 Maple St Riverbend, ZZ 80901 "
+    "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
    },
-   "startTimeOverride": "2026-11-19T18:00:00-07:00",
-   "endTimeOverride": "2026-11-19T20:00:00-07:00"
+   "startTimeOverride": "2026-10-17T18:00:00-06:00",
+   "endTimeOverride": "2026-10-17T20:00:00-06:00"
   },
   {
    "eventSignupId": 2450041,
@@ -7306,7 +7384,7 @@
     "vanId": 100200144,
     "firstName": "Rowan",
     "middleName": null,
-    "lastName": "Fairbanks"
+    "lastName": "Ferrante"
    },
    "event": {
     "eventId": 3005,
@@ -7328,10 +7406,10 @@
    "location": {
     "locationId": 602,
     "name": "Eastgate Office",
-    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
    },
-   "startTimeOverride": "2026-11-22T09:30:00-07:00",
-   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+   "startTimeOverride": "2026-10-24T09:30:00-06:00",
+   "endTimeOverride": "2026-10-24T12:30:00-06:00"
   },
   {
    "eventSignupId": 2450042,
@@ -7361,10 +7439,10 @@
    "location": {
     "locationId": 602,
     "name": "Eastgate Office",
-    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
    },
-   "startTimeOverride": "2026-11-22T09:30:00-07:00",
-   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+   "startTimeOverride": "2026-10-24T09:30:00-06:00",
+   "endTimeOverride": "2026-10-24T12:30:00-06:00"
   },
   {
    "eventSignupId": 2450043,
@@ -7394,10 +7472,10 @@
    "location": {
     "locationId": 602,
     "name": "Eastgate Office",
-    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
    },
-   "startTimeOverride": "2026-11-22T09:30:00-07:00",
-   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+   "startTimeOverride": "2026-10-24T09:30:00-06:00",
+   "endTimeOverride": "2026-10-24T12:30:00-06:00"
   },
   {
    "eventSignupId": 2450044,
@@ -7405,7 +7483,7 @@
     "vanId": 100200120,
     "firstName": "Calvin",
     "middleName": null,
-    "lastName": "Lindqvist"
+    "lastName": "Lachance"
    },
    "event": {
     "eventId": 3005,
@@ -7427,10 +7505,10 @@
    "location": {
     "locationId": 602,
     "name": "Eastgate Office",
-    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
    },
-   "startTimeOverride": "2026-11-22T09:30:00-07:00",
-   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+   "startTimeOverride": "2026-10-24T09:30:00-06:00",
+   "endTimeOverride": "2026-10-24T12:30:00-06:00"
   },
   {
    "eventSignupId": 2450045,
@@ -7438,7 +7516,7 @@
     "vanId": 100200123,
     "firstName": "Dana",
     "middleName": null,
-    "lastName": "Brennan"
+    "lastName": "Calloway"
    },
    "event": {
     "eventId": 3005,
@@ -7460,10 +7538,10 @@
    "location": {
     "locationId": 602,
     "name": "Eastgate Office",
-    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
    },
-   "startTimeOverride": "2026-11-22T09:30:00-07:00",
-   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+   "startTimeOverride": "2026-10-24T09:30:00-06:00",
+   "endTimeOverride": "2026-10-24T12:30:00-06:00"
   },
   {
    "eventSignupId": 2450046,
@@ -7493,10 +7571,10 @@
    "location": {
     "locationId": 602,
     "name": "Eastgate Office",
-    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
    },
-   "startTimeOverride": "2026-11-22T09:30:00-07:00",
-   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+   "startTimeOverride": "2026-10-24T09:30:00-06:00",
+   "endTimeOverride": "2026-10-24T12:30:00-06:00"
   },
   {
    "eventSignupId": 2450047,
@@ -7526,10 +7604,10 @@
    "location": {
     "locationId": 602,
     "name": "Eastgate Office",
-    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
    },
-   "startTimeOverride": "2026-11-22T09:30:00-07:00",
-   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+   "startTimeOverride": "2026-10-24T09:30:00-06:00",
+   "endTimeOverride": "2026-10-24T12:30:00-06:00"
   },
   {
    "eventSignupId": 2450048,
@@ -7537,7 +7615,7 @@
     "vanId": 100200108,
     "firstName": "Elena",
     "middleName": "Ann",
-    "lastName": "Fairbanks"
+    "lastName": "Ferrante"
    },
    "event": {
     "eventId": 3005,
@@ -7559,10 +7637,10 @@
    "location": {
     "locationId": 602,
     "name": "Eastgate Office",
-    "displayName": "Eastgate Office, 88 Foundry Ave Eastgate, ZZ 80902 "
+    "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
    },
-   "startTimeOverride": "2026-11-22T09:30:00-07:00",
-   "endTimeOverride": "2026-11-22T12:30:00-07:00"
+   "startTimeOverride": "2026-10-24T09:30:00-06:00",
+   "endTimeOverride": "2026-10-24T12:30:00-06:00"
   },
   {
    "eventSignupId": 2450049,
@@ -7592,10 +7670,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-24T17:30:00-07:00",
-   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+   "startTimeOverride": "2026-10-20T17:30:00-06:00",
+   "endTimeOverride": "2026-10-20T20:30:00-06:00"
   },
   {
    "eventSignupId": 2450050,
@@ -7625,10 +7703,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-24T17:30:00-07:00",
-   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+   "startTimeOverride": "2026-10-20T17:30:00-06:00",
+   "endTimeOverride": "2026-10-20T20:30:00-06:00"
   },
   {
    "eventSignupId": 2450051,
@@ -7658,10 +7736,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-24T17:30:00-07:00",
-   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+   "startTimeOverride": "2026-10-20T17:30:00-06:00",
+   "endTimeOverride": "2026-10-20T20:30:00-06:00"
   },
   {
    "eventSignupId": 2450052,
@@ -7691,10 +7769,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-24T17:30:00-07:00",
-   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+   "startTimeOverride": "2026-10-20T17:30:00-06:00",
+   "endTimeOverride": "2026-10-20T20:30:00-06:00"
   },
   {
    "eventSignupId": 2450053,
@@ -7724,10 +7802,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-24T17:30:00-07:00",
-   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+   "startTimeOverride": "2026-10-20T17:30:00-06:00",
+   "endTimeOverride": "2026-10-20T20:30:00-06:00"
   },
   {
    "eventSignupId": 2450054,
@@ -7735,7 +7813,7 @@
     "vanId": 100200136,
     "firstName": "Keisha",
     "middleName": "J",
-    "lastName": "Okafor"
+    "lastName": "Okonjo"
    },
    "event": {
     "eventId": 3006,
@@ -7757,10 +7835,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-24T17:30:00-07:00",
-   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+   "startTimeOverride": "2026-10-20T17:30:00-06:00",
+   "endTimeOverride": "2026-10-20T20:30:00-06:00"
   },
   {
    "eventSignupId": 2450055,
@@ -7790,10 +7868,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-24T17:30:00-07:00",
-   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+   "startTimeOverride": "2026-10-20T17:30:00-06:00",
+   "endTimeOverride": "2026-10-20T20:30:00-06:00"
   },
   {
    "eventSignupId": 2450056,
@@ -7801,7 +7879,7 @@
     "vanId": 100200103,
     "firstName": "Lucia",
     "middleName": null,
-    "lastName": "Okafor"
+    "lastName": "Okonjo"
    },
    "event": {
     "eventId": 3006,
@@ -7823,10 +7901,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-24T17:30:00-07:00",
-   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+   "startTimeOverride": "2026-10-20T17:30:00-06:00",
+   "endTimeOverride": "2026-10-20T20:30:00-06:00"
   },
   {
    "eventSignupId": 2450057,
@@ -7856,10 +7934,10 @@
    "location": {
     "locationId": 603,
     "name": "Harbor Office",
-    "displayName": "Harbor Office, 12 Pier Rd Harbor Point, ZZ 80903 "
+    "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
    },
-   "startTimeOverride": "2026-11-24T17:30:00-07:00",
-   "endTimeOverride": "2026-11-24T20:30:00-07:00"
+   "startTimeOverride": "2026-10-20T17:30:00-06:00",
+   "endTimeOverride": "2026-10-20T20:30:00-06:00"
   }
  ],
  "folders": [
@@ -7888,7 +7966,7 @@
   {
    "savedListId": 990100,
    "name": "NS Turf 01 Maple",
-   "description": "Weekend canvass turf 1",
+   "description": "GOTV canvass turf 1",
    "listCount": 116,
    "doorCount": 74,
    "_folderId": 44
@@ -7896,7 +7974,7 @@
   {
    "savedListId": 990101,
    "name": "NS Turf 02 Juniper",
-   "description": "Weekend canvass turf 2",
+   "description": "GOTV canvass turf 2",
    "listCount": 152,
    "doorCount": 88,
    "_folderId": 44
@@ -7904,7 +7982,7 @@
   {
    "savedListId": 990102,
    "name": "NS Turf 03 Willow",
-   "description": "Weekend canvass turf 3",
+   "description": "GOTV canvass turf 3",
    "listCount": 147,
    "doorCount": 103,
    "_folderId": 44
@@ -7912,7 +7990,7 @@
   {
    "savedListId": 990103,
    "name": "NS Turf 04 Cedar",
-   "description": "Weekend canvass turf 4",
+   "description": "GOTV canvass turf 4",
    "listCount": 120,
    "doorCount": 92,
    "_folderId": 44
@@ -7920,7 +7998,7 @@
   {
    "savedListId": 990104,
    "name": "NS Turf 05 Maple",
-   "description": "Weekend canvass turf 5",
+   "description": "GOTV canvass turf 5",
    "listCount": 106,
    "doorCount": 80,
    "_folderId": 44
@@ -7928,7 +8006,7 @@
   {
    "savedListId": 990105,
    "name": "EG Turf 01 Larkspur",
-   "description": "Weekend canvass turf 1",
+   "description": "GOTV canvass turf 1",
    "listCount": 150,
    "doorCount": 93,
    "_folderId": 45
@@ -7936,7 +8014,7 @@
   {
    "savedListId": 990106,
    "name": "EG Turf 02 Foundry",
-   "description": "Weekend canvass turf 2",
+   "description": "GOTV canvass turf 2",
    "listCount": 150,
    "doorCount": 104,
    "_folderId": 45
@@ -7944,7 +8022,7 @@
   {
    "savedListId": 990107,
    "name": "EG Turf 03 Quarry",
-   "description": "Weekend canvass turf 3",
+   "description": "GOTV canvass turf 3",
    "listCount": 134,
    "doorCount": 100,
    "_folderId": 45
@@ -7952,7 +8030,7 @@
   {
    "savedListId": 990108,
    "name": "EG Turf 04 Larkspur",
-   "description": "Weekend canvass turf 4",
+   "description": "GOTV canvass turf 4",
    "listCount": 92,
    "doorCount": 69,
    "_folderId": 45
@@ -7960,7 +8038,7 @@
   {
    "savedListId": 990109,
    "name": "HB Turf 01 Ferry",
-   "description": "Weekend canvass turf 1",
+   "description": "GOTV canvass turf 1",
    "listCount": 170,
    "doorCount": 96,
    "_folderId": 46
@@ -7968,7 +8046,7 @@
   {
    "savedListId": 990110,
    "name": "HB Turf 02 Pier",
-   "description": "Weekend canvass turf 2",
+   "description": "GOTV canvass turf 2",
    "listCount": 96,
    "doorCount": 62,
    "_folderId": 46
@@ -7976,7 +8054,7 @@
   {
    "savedListId": 990111,
    "name": "HB Turf 03 Beacon",
-   "description": "Weekend canvass turf 3",
+   "description": "GOTV canvass turf 3",
    "listCount": 123,
    "doorCount": 97,
    "_folderId": 46
@@ -7984,7 +8062,7 @@
   {
    "savedListId": 990112,
    "name": "HB Turf 04 Ferry",
-   "description": "Weekend canvass turf 4",
+   "description": "GOTV canvass turf 4",
    "listCount": 169,
    "doorCount": 123,
    "_folderId": 46

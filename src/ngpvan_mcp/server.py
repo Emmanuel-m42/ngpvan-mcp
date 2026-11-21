@@ -138,7 +138,7 @@ def _friendly(exc: VanApiError) -> str:
 
 
 VanId = Annotated[int, Field(description="The person's VAN ID", gt=0)]
-Date = Annotated[str, Field(description="A date like 2026-11-21")]
+Date = Annotated[str, Field(description="A date like 2026-10-19")]
 
 
 def build_server(config: Config, van: VanClient, audit: AuditLog | None = None) -> MCPServer:

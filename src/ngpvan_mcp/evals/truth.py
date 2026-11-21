@@ -50,14 +50,15 @@ def eastgate_biggest_turf(d):
 
 @truth
 def northside_afternoon_signups(d):
-    rows = _shift_rows(d, "Northside Weekend Canvass", "Afternoon")
+    rows = _shift_rows(d, "Northside GOTV Canvass", "Afternoon")
     confirmed = sum(1 for r in rows if r["status"]["name"] == "Confirmed")
     return [[str(len(rows))], [str(confirmed)]]
 
 
 @truth
 def weekend_events(d):
-    names = sorted({e["name"] for e in d["events"] if e["startDate"][:10] in ("2026-11-21", "2026-11-22")})
+    # "Next weekend" from Sunday, October 18 is Saturday 24 and Sunday 25.
+    names = sorted({e["name"] for e in d["events"] if e["startDate"][:10] in ("2026-10-24", "2026-10-25")})
     return [[n] for n in names]
 
 
@@ -108,7 +109,7 @@ def harbor_morning_signups(d):
 
 @truth
 def hannah_codes(d):
-    p = _person(d, "Hannah", "Whitfield")
+    p = _person(d, "Hannah", "Treadwell")
     return [[a["activistCodeName"]] for a in d["personActivistCodes"][str(p["vanId"])]]
 
 
@@ -136,7 +137,7 @@ def result_codes(d):
 @truth
 def next_week_phone_banks(d):
     return [[e["name"]] for e in d["events"]
-            if e["eventType"]["name"] == "Phone Bank" and "2026-11-23" <= e["startDate"][:10] <= "2026-11-29"]
+            if e["eventType"]["name"] == "Phone Bank" and "2026-10-20" <= e["startDate"][:10] <= "2026-10-25"]
 
 
 def pii_values(d: dict[str, Any]) -> list[str]:
