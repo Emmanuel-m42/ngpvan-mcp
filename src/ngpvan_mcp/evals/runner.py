@@ -29,7 +29,8 @@ from ..cli import make_client
 from ..config import Config
 from ..demo.fake_van import load_demo_data
 from ..server import INSTRUCTIONS, build_server
-from .agent import AnthropicChat, ChatModel, OllamaChat, mcp_tools, run_case
+from .agent import (AnthropicChat, ChatModel, OllamaChat, add_openai_args, make_openai, mcp_tools, openai_meta,
+                    run_case)
 from .scoring import score
 from .scripted import PLANS, ScriptedChat
 from .truth import TRUTHS, pii_values
@@ -49,10 +50,14 @@ def summarize(results: list[dict[str, Any]], k: int) -> dict[str, Any]:
         if not runs:
             return {"cases": 0}
         checks: dict[str, list[bool]] = {}
+        tokens: dict[str, int] = {}
         for r in runs:
             for name, ok in r["checks"].items():
                 checks.setdefault(name, []).append(ok)
-        return {
+            for key, value in (r.get("usage") or {}).items():
+                tokens[key] = tokens.get(key, 0) + value
+        extra = {"tokens": tokens} if tokens else {}
+        return extra | {
             "cases": len(case_ids),
             "runs": len(runs),
             "pass_at_1": round(sum(r["passed"] for r in runs) / len(runs), 3),
@@ -79,8 +84,16 @@ def markdown(report: dict[str, Any]) -> str:
         f"- Provider: {m['provider']}; hardware: {m['hardware']}",
         f"- Split: {m['split']}; k = {k}; temperature {m['temperature']}; started {m['started']}",
         "- Server: demo data, writes off, names as initials",
-        "",
     ]
+    if m.get("label"):
+        lines.insert(2, f"- Model: {m['label']}")
+    if m["provider"] == "openai":
+        lines.append(f"- API: {m.get('base_url')}; thinking {m.get('thinking') or 'default'}; "
+                     f"reasoning effort {m.get('reasoning_effort') or 'default'}")
+    tokens = report["summary"].get("all", {}).get("tokens")
+    if tokens:
+        lines.append("- Tokens (all runs): " + ", ".join(f"{k} {v:,}" for k, v in tokens.items()))
+    lines.append("")
     if m["provider"] == "scripted":
         lines += ["This is a harness check: a fixed plan per question, not a model. It shows the runner, the "
                   "scorer and the tools work together and that each tool's output carries the facts the answer "
@@ -153,8 +166,9 @@ def main(argv: list[str] | None = None) -> int:
             rebuild(Path(name))
         return 0
     p = argparse.ArgumentParser(prog="ngpvan-mcp-evals")
-    p.add_argument("--provider", choices=["ollama", "anthropic", "vertex", "scripted"], default="ollama",
-                   help="scripted: a fixed plan per question, for testing the harness (not a model)")
+    p.add_argument("--provider", choices=["ollama", "openai", "anthropic", "vertex", "scripted"], default="ollama",
+                   help="openai: any OpenAI-compatible API; scripted: a fixed plan per question (not a model)")
+    add_openai_args(p)
     p.add_argument("--model", default="scripted-oracle")
     p.add_argument("--ollama-host", default="http://127.0.0.1:11434")
     p.add_argument("--split", choices=["dev", "heldout", "all"], default="dev")
@@ -175,6 +189,8 @@ def main(argv: list[str] | None = None) -> int:
         a.hardware = "no model (scripted plan)"
     elif a.provider == "ollama":
         model = OllamaChat(a.model, a.ollama_host, a.temperature, a.num_ctx)
+    elif a.provider == "openai":
+        model = make_openai(a)
     else:
         model = AnthropicChat(a.model, vertex=a.provider == "vertex", region=a.vertex_region,
                               project=a.vertex_project, temperature=a.temperature)
@@ -182,6 +198,8 @@ def main(argv: list[str] | None = None) -> int:
     meta = {"model": a.model, "provider": a.provider, "hardware": a.hardware, "split": a.split, "k": a.k,
             "temperature": a.temperature, "num_ctx": a.num_ctx,
             "started": datetime.now(UTC).isoformat(timespec="seconds")}
+    if a.provider == "openai":
+        meta |= openai_meta(a)
     ids = a.cases.split(",") if a.cases else None
     report = anyio.run(run, model, a.split, a.k, Path(a.out), label, meta, ids)
     print(json.dumps(report["summary"]["all"], indent=1))

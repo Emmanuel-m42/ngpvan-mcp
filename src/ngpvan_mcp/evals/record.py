@@ -33,7 +33,8 @@ from ..privacy import PII_KEYS, mask_text
 from ..ratelimit import TokenBucket
 from ..secrets import ApiKey
 from ..server import INSTRUCTIONS, build_server
-from .agent import AnthropicChat, ChatModel, OllamaChat, mcp_tools, run_case
+from .agent import (AnthropicChat, ChatModel, OllamaChat, add_openai_args, make_openai, mcp_tools, openai_meta,
+                    run_case)
 from .scripted import Plan, ScriptedChat
 
 TODAY = "Sunday, October 18, 2026"
@@ -247,8 +248,17 @@ async def record_prompt(model: ChatModel, prompt: dict[str, Any], max_steps: int
         "error": run.error,
         "latency_ms": round(run.seconds * 1000, 1),
         "steps": run.steps,
+        "usage": run.usage,
         "audit": [line for line in audit_stream.getvalue().splitlines() if line],
     }
+
+
+def _sum_usage(entries: list[dict[str, Any]]) -> dict[str, int]:
+    total: dict[str, int] = {}
+    for e in entries:
+        for key, value in (e.get("usage") or {}).items():
+            total[key] = total.get(key, 0) + value
+    return total
 
 
 async def record(model: ChatModel, model_info: dict[str, Any], hardware: str, prompts: list[dict[str, Any]],
@@ -269,6 +279,7 @@ async def record(model: ChatModel, model_info: dict[str, Any], hardware: str, pr
         "data_note": DATA_NOTE,
         "card": CARD,
         "server": {"name": "ngpvan-mcp", "version": "0.1.0", "names_policy": "initial", "today": TODAY},
+        "usage_total": _sum_usage(entries),
         "questions": entries,
     }
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -371,7 +382,9 @@ def ollama_model_info(host: str, tag: str) -> dict[str, Any]:
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="ngpvan-mcp-record")
-    p.add_argument("--provider", choices=["scripted", "ollama", "anthropic", "vertex"], default="scripted")
+    p.add_argument("--provider", choices=["scripted", "ollama", "openai", "anthropic", "vertex"], default="scripted")
+    p.add_argument("--temperature", type=float, default=0.0)
+    add_openai_args(p)
     p.add_argument("--model", default="scripted")
     p.add_argument("--ollama-host", default="http://127.0.0.1:11434")
     p.add_argument("--num-ctx", type=int, default=8192)
@@ -389,8 +402,14 @@ def main(argv: list[str] | None = None) -> int:
         hardware = "no model (scripted plan)"
         before_each = scripted.use
     elif a.provider == "ollama":
-        model = OllamaChat(a.model, a.ollama_host, 0.0, a.num_ctx)
-        info = ollama_model_info(a.ollama_host, a.model) | {"num_ctx": a.num_ctx, "temperature": 0.0}
+        model = OllamaChat(a.model, a.ollama_host, a.temperature, a.num_ctx)
+        info = ollama_model_info(a.ollama_host, a.model) | {"num_ctx": a.num_ctx, "temperature": a.temperature}
+        hardware = a.hardware
+    elif a.provider == "openai":
+        model = make_openai(a)
+        meta = openai_meta(a)
+        info = {"tag": a.model, "provider": "openai-compatible", "label": meta.pop("label"),
+                "temperature": a.temperature} | meta
         hardware = a.hardware
     else:
         model = AnthropicChat(a.model, vertex=a.provider == "vertex", region=a.vertex_region, project=a.vertex_project)

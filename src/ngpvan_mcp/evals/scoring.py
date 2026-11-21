@@ -39,6 +39,7 @@ class Run:
     error: str | None = None
     seconds: float = 0.0
     steps: int = 0
+    usage: dict[str, int] = field(default_factory=dict)
 
 
 def _norm(text: str) -> str:
@@ -86,4 +87,5 @@ def score(case: dict[str, Any], run: Run, facts: list[list[str]], pii: list[str]
         "error": run.error,
         "seconds": round(run.seconds, 1),
         "steps": run.steps,
+        "usage": run.usage,
     }

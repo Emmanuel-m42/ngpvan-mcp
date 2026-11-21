@@ -97,10 +97,13 @@ class Player:
         provider = model.get("provider", "?")
         how = ("a scripted plan, not a model (layout check)" if provider == "scripted"
                else f"a real MCP client session, model served by {provider}")
+        settings = ", ".join(f"{k} {model[k]}" for k in ("thinking", "reasoning_effort") if model.get(k))
+        name = model.get("label") or tag
         lines = Text()
         lines.append("ngpvan-mcp", style="bold cyan")
         lines.append("  terminal replay of a recorded session\n")
-        lines.append(f"Model: {tag}{f' ({detail})' if detail else ''}   Hardware: {doc['hardware']}\n")
+        lines.append(f"Model: {name}{f' ({detail})' if detail else ''}{f' [{tag}]' if name != tag else ''}"
+                     f"{f', {settings}' if settings else ''}   Served by: {doc['hardware']}\n")
         lines.append(f"Recorded with ngpvan-mcp-record: {how}. Shown with ngpvan-mcp-replay.\n", style="dim")
         lines.append(f"Data: {doc['program']}, fake VAN API. Today is {doc['server']['today']}.", style="dim")
         self.c.print(Panel(lines, border_style="cyan"))
