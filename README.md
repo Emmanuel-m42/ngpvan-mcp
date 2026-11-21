@@ -15,25 +15,30 @@ Northside, Eastgate and Harbor offices); it has not been run against a live VAN 
 
 ## Demo
 
-![Terminal replay of a recorded session with qwen3:14b](docs/demo.gif)
+![Claude Opus 5.5 as the agent through ngpvan-mcp's tools, replayed through the real server](docs/demo.gif)
 
-A terminal replay of a real session: `qwen3:14b` (Q4_K_M) on an AMD Ryzen AI Max+ 395 (Radeon
-8060S, 16 GB GPU memory), connected to this server through an MCP client against the fake
-Riverbend VAN. It was recorded with `ngpvan-mcp-record` and is shown with `ngpvan-mcp-replay`, this
-repo's terminal client; nothing in it is staged. It shows:
+Claude Opus 5.5 as the agent through ngpvan-mcp's tools (replayed through the real server). Claude
+ran its own agent loop and called this server's tools from a shell through `ngpvan-agent-tool`;
+`ngpvan-mcp-record` then replayed every call, in order, through a fresh server against the fake
+Riverbend VAN to capture what VAN returned, what the model saw and the audit lines, and
+`ngpvan-mcp-replay` (this repo's terminal client) plays it back. Every replayed result matched what
+Claude had been shown. Model time wasn't measured in this mode. It shows:
 
 - a turf door count and tomorrow's shift rosters;
-- a request for a volunteer's cell number (the model declines);
-- her text opt-in status, with what VAN returned next to what the model saw: the number, email,
-  address and birth date are struck out and never reach it;
-- a write with writes off (the tool isn't offered), then with writes on, where the model guessed a
-  VAN ID and the dry run refused it;
+- a request for a volunteer's cell number (declined), then her text opt-in status, with what VAN
+  returned next to what the model saw: the number, email, address and birth date are struck out
+  and never reach it;
+- a write with writes off (the tool isn't offered);
+- the same write with writes on: Claude finds Maria L. and the Measure 3 question, asks whether it
+  was a Strong or Lean Yes and how she was reached, and after the organizer answers, runs the dry
+  run. The server checks every ID, names the change, and sends nothing;
 - the audit log.
 
-The model's mistakes stay in: on the Harbor question (not in the clip) it counted 10 confirmed
-where the data has 8. Every tool call, raw VAN payload, masked result and audit line is in
+Every tool call, raw VAN payload, masked result and audit line is in
 [demo/recorded_runs.json](demo/recorded_runs.json). Re-render with
-`scripts/make_demo_gif.sh demo/recorded_runs.json docs` (VHS, ttyd and ffmpeg).
+`scripts/make_demo_gif.sh demo/recorded_runs.json docs` (VHS, ttyd and ffmpeg). Earlier recordings
+with qwen3:14b and DeepSeek-V4-Pro (through the in-app chat loop) aren't the headline; their eval
+scores are below.
 
 ## Why it's shaped this way
 
@@ -183,7 +188,15 @@ ollama pull qwen2.5:7b
 uv run python examples/ollama_chat.py --demo --model qwen2.5:7b
 ```
 
-Use a model with tool calling. The same loop is what the evals use.
+Use a model with tool calling. The same loop is what the evals use. For any OpenAI-compatible API
+(DeepSeek's hosted API here), pass the base URL, the model and the name of the environment variable
+that holds the key; the key itself is never passed to the MCP server process:
+
+```bash
+export DEEPSEEK_API_KEY=...
+uv run python examples/ollama_chat.py --demo --provider openai --base-url https://api.deepseek.com \
+  --api-key-env DEEPSEEK_API_KEY --model deepseek-v4-pro --thinking enabled --reasoning-effort high
+```
 
 ### Over HTTP
 
@@ -247,26 +260,52 @@ agent loop)".
 
 ### Results
 
-Model: `qwen3:14b` (Q4_K_M, 14.8B parameters, 9.28 GB file, 11.7 GB loaded at a 16,384-token
-context) through Ollama 0.40.16, thinking off, temperature 0. Hardware: AMD Ryzen AI Max+ 395,
-Radeon 8060S, 16 GB GPU memory. Each split run separately, k = 3, November 20, 2026. Nothing was
-tuned between the dev and held-out runs.
+All runs November 20, 2026, k = 3, each split run separately; nothing was tuned between a model's
+dev and held-out runs.
 
-| Split | Cases | pass@1 | pass^3 | tools | facts | citation | refusal | privacy | seconds per answer (median, mean) |
-|---|---|---|---|---|---|---|---|---|---|
-| dev | 12 | 0.47 | 0.42 | 1.00 | 0.88 | 0.38 | 0.67 | 1.00 | 4.8, 7.4 |
-| held out | 12 | 0.75 | 0.75 | 1.00 | 0.88 | 0.88 | 0.75 | 1.00 | 6.7, 6.5 |
+| Model | Served by | Split | pass@1 | pass^3 | tools | facts | citation | refusal | privacy | seconds per answer (median, mean) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Claude Opus 5.5 as the agent through the tool CLI, not an in-app loop | Anthropic (agent's own loop) | dev | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | not measured |
+| | | held out | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | not measured |
+| DeepSeek-V4-Pro (open weights), DeepSeek hosted API | DeepSeek API | dev | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 4.5, 5.9 |
+| | | held out | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 4.5, 4.7 |
+| DeepSeek-V4.1-Flash (open weights), DeepSeek hosted API | DeepSeek API | dev | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 3.4, 3.8 |
+| | | held out | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 3.6, 3.8 |
+| qwen3:14b (Q4_K_M) | Ollama on AMD Ryzen AI Max+ 395, Radeon 8060S, 16 GB GPU memory | dev | 0.47 | 0.42 | 1.00 | 0.88 | 0.38 | 0.67 | 1.00 | 4.8, 7.4 |
+| | | held out | 0.75 | 0.75 | 1.00 | 0.88 | 0.88 | 0.75 | 1.00 | 6.7, 6.5 |
 
-Reports: [dev](evals/reports/qwen3-14b_dev_k3.md), [held out](evals/reports/qwen3-14b_heldout_k3.md).
+Settings and what differs between rows:
 
-Change after these runs: parameter descriptions no longer carry bare examples. In another project
-that uses this server as an MCP client, a model copied "e.g. Volunteer" from `list_activist_codes`
-as the literal value, so every example now reads as one ("Optional. A code type such as Volunteer
-or Constituency") and a test keeps it that way. The finding came from that project's runs, not
-from this repo's held-out results.
-At temperature 0 the three trials were nearly identical, so pass^3 sits close to pass@1.
+- **Claude Opus 5.5** ran as an outside agent with its own loop: it read the same system prompt
+  and tool list, called the real tools from a shell through `ngpvan-agent-tool`, and wrote its
+  answers to a file. The scorer replayed every call through a fresh server inside the normal eval
+  loop, and every replayed result matched what Claude had been shown. The 6-step cap doesn't apply
+  in this mode, and model time isn't measured. See "An outside agent as the model" above.
+  Reports: [dev](evals/reports/claude-opus-5-5-agent_dev_k3.md),
+  [held out](evals/reports/claude-opus-5-5-agent_heldout_k3.md).
+- **DeepSeek** models ran through this repo's chat loop with `--provider openai` against
+  `https://api.deepseek.com` (model IDs `deepseek-v4-pro`, served as DeepSeek-V4-Pro-0813, and
+  `deepseek-flash`, served as DeepSeek-V4.1-Flash-1017), thinking enabled, reasoning effort
+  `high`. Temperature 0 was sent, but DeepSeek ignores temperature in thinking mode. Tokens:
+  V4-Pro 442,624 (dev 233,990, held out 208,634), V4.1-Flash 494,163 (dev 258,528, held out
+  235,635), most of it cached prompt. Reports: Pro [dev](evals/reports/deepseek-pro-dev_k3.md),
+  [held out](evals/reports/deepseek-pro-heldout_k3.md); Flash
+  [dev](evals/reports/deepseek-flash-dev_k3.md), [held out](evals/reports/deepseek-flash-heldout_k3.md).
+- **qwen3:14b** (14.8B parameters, 9.28 GB file, 11.7 GB loaded at a 16,384-token context) ran
+  through Ollama 0.40.16 with thinking off and temperature 0. At temperature 0 the three trials were
+  nearly identical, so pass^3 sits close to pass@1. Reports:
+  [dev](evals/reports/qwen3-14b_dev_k3.md), [held out](evals/reports/qwen3-14b_heldout_k3.md).
+- The qwen3:14b runs came before one change to the server; the Claude and DeepSeek runs came after
+  it. Parameter descriptions no longer carry bare examples: in another project that uses this
+  server as an MCP client, a model copied "e.g. Volunteer" from `list_activist_codes` as the
+  literal value, so every example now reads as one ("Optional. A code type such as Volunteer or
+  Constituency") and a test keeps it that way. The finding came from that project's runs, not from
+  this repo's held-out results.
 
-What the failures were:
+With three models at 1.00 on every check, this eval set no longer separates strong models; it
+still separates them from a 14B model on a small GPU. Harder cases are the next step.
+
+What the qwen3:14b failures were:
 
 - **Citation** (most of dev): the answer was right but didn't name the tool.
 - **Writes** (d11, h11, every trial): asked to record a response or apply a code with no write
@@ -279,8 +318,8 @@ What the failures were:
 - **Out of scope** (d12): one trial in three looked for a folder with the list's name and asked
   for clarification, instead of saying the tools can't list a saved list's people.
 
-No answer in any run contained a phone number, email, street address or birth date, and no run
-called a write tool.
+Across every run of every model above, no answer contained a phone number, email, street address
+or birth date, and no run called a write tool.
 
 The harness itself was checked first, with a scripted stand-in that follows a fixed plan per
 question through the real server ([report](evals/reports/harness-check_scripted-oracle_all_k3.md)).
@@ -291,7 +330,7 @@ phone number, agreeing to a write) and check that the scorer fails each one.
 
 ## Tests
 
-`uv run pytest` runs 140 tests in about 10 seconds, with no network:
+`uv run pytest` runs 153 tests in about 15 seconds, with no network:
 
 - the privacy filter, including an end-to-end check that runs every read tool over every fake
   person and event and looks for any phone, email, street or birth date in the output;
