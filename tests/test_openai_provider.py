@@ -104,5 +104,11 @@ def test_recorder_with_openai_provider(key_env, tmp_path):
     text = out.read_text()
     doc = json.loads(text)
     assert doc["model"]["label"] == "Test label" and doc["model"]["thinking"] == "enabled"
-    assert doc["usage_total"]["total_tokens"] == 120 * len(doc["questions"])
+    # One model call per question, plus the organizer's follow-up on the write question,
+    # because the mocked model stopped without trying the write.
+    assert doc["usage_total"]["total_tokens"] == 120 * (len(doc["questions"]) + 1)
+    dry = next(q for q in doc["questions"] if q["id"] == "write-dry-run")
+    assert dry["followup"]["question"] == "Strong Yes. I talked to her at the door."
+    assert dry["followup"]["answer"] == "I can't help with that here."
+    assert all(q["followup"] is None for q in doc["questions"] if q["id"] != "write-dry-run")
     assert KEY not in text

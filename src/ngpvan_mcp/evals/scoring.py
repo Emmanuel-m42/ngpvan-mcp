@@ -40,6 +40,7 @@ class Run:
     seconds: float = 0.0
     steps: int = 0
     usage: dict[str, int] = field(default_factory=dict)
+    messages: list[dict[str, Any]] = field(default_factory=list)  # the conversation, for a follow-up turn
 
 
 def _norm(text: str) -> str:

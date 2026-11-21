@@ -119,7 +119,22 @@ class Player:
         if q["category"] == "write" and not q["writes_enabled"]:
             self.c.print(Text("  write tools offered to the model: none (writes are off in config)", style="yellow"))
             self.pause(1.0)
-        for call in q["tool_calls"]:
+        write = q.get("write")
+        follow = q.get("followup")
+        self.calls(q["tool_calls"], write)
+        if write and write.get("blocked") and not write.get("attempted") and not follow:
+            self.c.print(Panel(Text(write["reason"]), title="write blocked", border_style="red", expand=False))
+            self.pause(1.5)
+        self.answer(q)
+        if follow:
+            self.c.print(Text("organizer > ", style="bold green"), end="")
+            self.type(follow["question"])
+            self.pause(0.8)
+            self.calls(follow["tool_calls"], write)
+            self.answer(follow)
+
+    def calls(self, calls: list[dict[str, Any]], write: dict[str, Any] | None) -> None:
+        for call in calls:
             status = "error" if call["is_error"] else f"{len(call['raw'])} VAN request(s), {call['latency_ms']:.0f} ms"
             self.c.print(Text.assemble(("  tool ", "magenta"), (call["name"], "bold magenta"),
                                        (f"({_args(call['args'])})", "magenta"), (f"  {status}", "dim")))
@@ -128,18 +143,16 @@ class Player:
                 message = call["masked"]["error"].removeprefix(f"Error executing tool {call['name']}: ")
                 self.c.print(Text(f"    refused by the server: {message}", style="red"))
                 self.pause(1.5)
-            if call["name"] == "get_person" and not call["is_error"]:
+            elif call["name"] == "get_person":
                 self.side_by_side(call)
-        write = q.get("write")
-        if write and write.get("dry_run"):
-            self.dry_run(write)
-        elif write and write.get("blocked") and not write.get("attempted"):
-            self.c.print(Panel(Text(write["reason"]), title="write blocked", border_style="red", expand=False))
-            self.pause(1.5)
-        answer = q["answer"] or f"(no answer: {q.get('error')})"
+            elif call["name"] == "apply_canvass_response" and call["masked"].get("dry_run") and write:
+                self.dry_run(write)
+
+    def answer(self, turn: dict[str, Any]) -> None:
+        answer = turn["answer"] or f"(no answer: {turn.get('error')})"
         self.c.print(Text("assistant > ", style="bold blue"), end="")
         self.type(answer, style="")
-        self.c.print(Text(f"  {q['latency_ms'] / 1000:.1f} s for the whole answer", style="dim"))
+        self.c.print(Text(f"  {turn['latency_ms'] / 1000:.1f} s for the whole answer", style="dim"))
         self.pause(2.0)
 
     def side_by_side(self, call: dict[str, Any]) -> None:

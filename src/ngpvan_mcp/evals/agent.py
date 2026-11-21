@@ -244,11 +244,12 @@ async def mcp_tools(client: Client) -> list[dict[str, Any]]:
 
 
 async def run_case(model: ChatModel, client: Client, tools: list[dict[str, Any]], instructions: str,
-                   question: str, today: str, max_steps: int = 6) -> Run:
-    messages: list[dict[str, Any]] = [
-        {"role": "system", "content": SYSTEM.format(today=today, instructions=instructions)},
-        {"role": "user", "content": question},
-    ]
+                   question: str, today: str, max_steps: int = 6,
+                   history: list[dict[str, Any]] | None = None) -> Run:
+    """One user turn. Pass a previous run's `messages` as `history` to continue that conversation."""
+    messages: list[dict[str, Any]] = list(history) if history else [
+        {"role": "system", "content": SYSTEM.format(today=today, instructions=instructions)}]
+    messages.append({"role": "user", "content": question})
     calls: list[dict[str, Any]] = []
     usage: dict[str, int] = {}
     started = time.monotonic()
@@ -258,8 +259,11 @@ async def run_case(model: ChatModel, client: Client, tools: list[dict[str, Any]]
             for key, value in (reply.get("usage") or {}).items():
                 usage[key] = usage.get(key, 0) + int(value)
             if not reply["tool_calls"]:
+                final = {"role": "assistant", "content": reply["content"]}
+                if reply.get("reasoning_content") is not None:
+                    final["reasoning_content"] = reply["reasoning_content"]
                 return Run(answer=reply["content"], tool_calls=calls, seconds=time.monotonic() - started, steps=step,
-                           usage=usage)
+                           usage=usage, messages=messages + [final])
             assistant = {"role": "assistant", "content": reply["content"], "tool_calls": reply["tool_calls"]}
             if reply.get("reasoning_content") is not None:
                 # Thinking-mode APIs (DeepSeek) want this sent back on every later tool turn.
