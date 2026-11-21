@@ -75,8 +75,14 @@ def markdown(report: dict[str, Any]) -> str:
         "",
         f"- Provider: {m['provider']}; hardware: {m['hardware']}",
         f"- Split: {m['split']}; k = {k}; temperature {m['temperature']}; started {m['started']}",
-        f"- Server: demo data, writes off, names as initials",
+        "- Server: demo data, writes off, names as initials",
         "",
+    ]
+    if m["provider"] == "scripted":
+        lines += ["This is a harness check: a fixed plan per question, not a model. It shows the runner, the "
+                  "scorer and the tools work together and that each tool's output carries the facts the answer "
+                  "key expects. It says nothing about how a model would do.", ""]
+    lines += [
         f"| Slice | Cases | pass@1 | pass^{k} | tools | facts | citation | refusal | privacy | median s |",
         "|---|---|---|---|---|---|---|---|---|---|",
     ]
