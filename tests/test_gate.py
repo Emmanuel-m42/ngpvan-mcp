@@ -78,6 +78,31 @@ async def test_enabled_write_needs_the_dry_run_token(server_factory, fake):
          "resultCodeId": 1, "responses": None}]
 
 
+async def test_dry_run_names_the_change(van):
+    tb = t.Toolbox(van=van, config=writes_on())
+    out = await t.apply_canvass_response(tb, 100200149, contact_type_id=2, survey_question_id=5201,
+                                         survey_response_id=52011)
+    assert out["summary"] == {"van_id": 100200149, "person": "Maria L.", "contact_type": "Walk",
+                              "survey_question": "Measure 3 Support", "survey_response": "1 Strong Yes"}
+
+
+@pytest.mark.parametrize("args,message", [
+    ({"van_id": 12345, "contact_type_id": 2, "result_code_id": 1}, "no person with VAN ID 12345"),
+    ({"contact_type_id": 99, "result_code_id": 1}, "no contact type 99"),
+    ({"contact_type_id": 2, "result_code_id": 777}, "no result code 777"),
+    ({"contact_type_id": 2, "survey_question_id": 67890, "survey_response_id": 1}, "no survey question 67890"),
+    ({"contact_type_id": 2, "survey_question_id": 5201, "survey_response_id": 52021}, "isn't a response to"),
+    ({"contact_type_id": 2, "activist_code_id": 4099}, "no active activist code 4099"),
+])
+async def test_dry_run_refuses_ids_that_dont_exist(van, fake, args, message):
+    """A model can invent plausible IDs; the dry run must not hand out a token for them."""
+    tb = t.Toolbox(van=van, config=writes_on())
+    args = {"van_id": 100200101, **args}
+    with pytest.raises(t.ToolInputError, match=message):
+        await t.apply_canvass_response(tb, **args)
+    assert not [r for r in fake.requests if r.method == "POST"]
+
+
 @pytest.mark.parametrize("args,message", [
     ({"contact_type_id": 2}, "give a result_code_id"),
     ({"contact_type_id": 2, "result_code_id": 1, "activist_code_id": 4101}, "not both"),

@@ -510,16 +510,18 @@ async def apply_canvass_response(
         raise WriteDisabledError("apply_canvass_response is turned off in this server's config")
     body = _canvass_body(survey_question_id, survey_response_id, activist_code_id, result_code_id,
                          contact_type_id, date_canvassed)
+    summary = await _describe_change(tb, int(van_id), body)
     path = f"/people/{int(van_id)}/canvassResponses"
     digest = hmac.new(tb._confirm_secret, json.dumps([path, body], sort_keys=True).encode(), hashlib.sha256)
     token = digest.hexdigest()[:16]
     if dry_run:
         return {
             "dry_run": True,
+            "summary": summary,
             "would_send": {"method": "POST", "path": path, "body": body},
             "confirm_token": token,
-            "next_step": "Show this to the person you're helping. If they approve, call again with "
-                         "dry_run=false and this confirm_token.",
+            "next_step": "Tell the person you're helping what this would record (the summary, not the token). "
+                         "Only if they say yes, call again with dry_run=false and this confirm_token.",
             "source": _src("apply_canvass_response", f"POST {path} (not sent)"),
         }
     if not confirm_token or not hmac.compare_digest(confirm_token, token):
@@ -528,6 +530,59 @@ async def apply_canvass_response(
     return {
         "dry_run": False,
         "applied": True,
+        "summary": summary,
         "sent": {"method": "POST", "path": path, "body": body},
         "source": _src("apply_canvass_response", f"POST {path}"),
     }
+
+
+async def _describe_change(tb: Toolbox, van_id: int, body: dict[str, Any]) -> dict[str, Any]:
+    """Check every ID in a canvass response against VAN and name each one.
+
+    A model can make up plausible IDs; a dry run that accepted them would hand
+    out a confirm token for a change nobody could check. So unknown IDs fail
+    here, with a pointer to the tool that lists the real ones.
+    """
+    from .client import VanApiError
+
+    try:
+        person = await tb.van.get(f"/people/{van_id}")
+    except VanApiError as exc:
+        if exc.kind == "not_found":
+            raise ToolInputError(f"no person with VAN ID {van_id}; find them with search_people first") from None
+        raise
+    result_names, contact_names = await _code_lookup(tb)
+    ctype = body["canvassContext"]["contactTypeId"]
+    if ctype not in contact_names:
+        raise ToolInputError(f"no contact type {ctype}; canvass_codes lists them")
+    summary: dict[str, Any] = {
+        "van_id": van_id,
+        "person": tb.name(person.get("firstName"), person.get("lastName")),
+        "contact_type": contact_names[ctype],
+    }
+    if body.get("resultCodeId") is not None:
+        rc = body["resultCodeId"]
+        if rc not in result_names:
+            raise ToolInputError(f"no result code {rc}; canvass_codes lists them")
+        summary["result_code"] = result_names[rc]
+    for r in body.get("responses") or []:
+        if r["type"] == "SurveyResponse":
+            page = await tb.cached("sq", "/surveyQuestions", statuses="Active,Archived,Inactive", **{"$top": 200})
+            question = next((q for q in page.get("items") or [] if q["surveyQuestionId"] == r["surveyQuestionId"]), None)
+            if question is None:
+                raise ToolInputError(f"no survey question {r['surveyQuestionId']}; list_survey_questions lists them")
+            response = next((x for x in question.get("responses") or []
+                             if x["surveyResponseId"] == r["surveyResponseId"]), None)
+            if response is None:
+                options = ", ".join(f"{x['name']} ({x['surveyResponseId']})" for x in question.get("responses") or [])
+                raise ToolInputError(f"{r['surveyResponseId']} isn't a response to {question['name']}; "
+                                     f"its responses are: {options}")
+            summary["survey_question"] = question.get("name")
+            summary["survey_response"] = response.get("name")
+        elif r["type"] == "ActivistCode":
+            page = await tb.cached("ac", "/activistCodes", **{"$top": 200})
+            code = next((a for a in page.get("items") or [] if a["activistCodeId"] == r["activistCodeId"]), None)
+            if code is None:
+                raise ToolInputError(f"no active activist code {r['activistCodeId']}; list_activist_codes lists them")
+            summary["activist_code"] = code.get("name")
+    return summary

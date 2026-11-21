@@ -23,7 +23,8 @@ from rich.rule import Rule
 from rich.table import Table
 from rich.text import Text
 
-DEFAULT_IDS = ["northside-turf-doors", "tomorrow-shift", "volunteer-phone", "write-blocked", "write-dry-run"]
+DEFAULT_IDS = ["northside-turf-doors", "tomorrow-shift", "volunteer-phone", "volunteer-text-status",
+               "write-blocked", "write-dry-run"]
 SHOWN_RAW_KEYS = ["firstName", "middleName", "lastName", "dateOfBirth", "phones", "emails", "addresses"]
 
 
@@ -120,6 +121,10 @@ class Player:
             self.c.print(Text.assemble(("  tool ", "magenta"), (call["name"], "bold magenta"),
                                        (f"({_args(call['args'])})", "magenta"), (f"  {status}", "dim")))
             self.pause(0.6)
+            if call["is_error"]:
+                message = call["masked"]["error"].removeprefix(f"Error executing tool {call['name']}: ")
+                self.c.print(Text(f"    refused by the server: {message}", style="red"))
+                self.pause(1.5)
             if call["name"] == "get_person" and not call["is_error"]:
                 self.side_by_side(call)
         write = q.get("write")
@@ -150,7 +155,9 @@ class Player:
     def dry_run(self, write: dict[str, Any]) -> None:
         send = write["dry_run"]["would_send"]
         body = send["body"]
-        lines = [Text(f"{send['method']} {send['path']}", style="bold")]
+        summary = write["dry_run"].get("summary") or {}
+        lines = [Text(", ".join(f"{k}: {v}" for k, v in summary.items()), style="bold")] if summary else []
+        lines.append(Text(f"{send['method']} {send['path']}", style="bold"))
         lines += [Text(f"  {k}: {json.dumps(v, separators=(', ', ': '))}") for k, v in body.items() if v is not None]
         text = Group(*lines, Text(""), Text(write["reason"], style="yellow"))
         self.c.print(Panel(text, title="dry run: nothing sent", border_style="yellow", expand=False))
