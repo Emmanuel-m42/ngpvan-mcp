@@ -1,17 +1,13 @@
 {
  "program": "Riverbend Votes (fictional demo program)",
- "generated_at": "2026-11-21T02:06:59+00:00",
+ "generated_at": "2026-11-21T03:11:28+00:00",
  "model": {
-  "tag": "qwen3:14b",
-  "provider": "ollama",
-  "quantization": "Q4_K_M",
-  "parameter_size": "14.8B",
-  "size_gb": 9.28,
-  "digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
-  "num_ctx": 16384,
-  "temperature": 0.0
+  "tag": "claude-opus-5-5",
+  "provider": "agent-trace",
+  "label": "Claude Opus 5.5 as the agent through the tool CLI (OpenCode subagent; same tools and prompt, not the app's own agent loop)",
+  "note": "The agent ran its own loop through ngpvan-agent-tool; its tool calls were replayed here through the real server to record what VAN returned and what the model saw. Latency is replay time, not model time."
  },
- "hardware": "AMD Ryzen AI Max+ 395, Radeon 8060S, 16 GB GPU memory",
+ "hardware": "replayed trace (the model ran elsewhere)",
  "data_note": "All data is fictional: the Riverbend program, its people, events and lists are made up. Phone numbers are in the 555-0100 to 555-0199 range reserved for fiction, and emails use example.org. The VAN API here is a local fake that follows the documented response shapes.",
  "card": {
   "description": "An MCP server that lets an AI assistant answer organizer questions from NGP VAN without seeing people's contact details.",
@@ -30,6 +26,7 @@
   "names_policy": "initial",
   "today": "Sunday, October 18, 2026"
  },
+ "usage_total": {},
  "questions": [
   {
    "id": "northside-turf-doors",
@@ -60,7 +57,7 @@
       "folder_name": "Northside"
      },
      "is_error": false,
-     "latency_ms": 40.2,
+     "latency_ms": 41.8,
      "raw": [
       {
        "method": "GET",
@@ -206,12 +203,14 @@
     }
    ],
    "write": null,
-   "answer": "The Northside turf lists have a total of 437 doors. The largest turf by number of doors is \"NS Turf 03 Willow\" with 103 doors.",
+   "answer": "Northside's turf lists (folder \"Northside Turfs\") have 437 doors in total across 5 lists, with 641 people (turf_door_counts). The biggest turf is NS Turf 03 Willow with 103 doors (147 people). The others: NS Turf 04 Cedar 92 doors, NS Turf 02 Juniper 88, NS Turf 05 Maple 80, NS Turf 01 Maple 74 (turf_door_counts).",
    "error": null,
-   "latency_ms": 4327.9,
+   "latency_ms": 42.1,
    "steps": 2,
+   "followup": null,
+   "usage": {},
    "audit": [
-    "{\"ts\": \"2026-11-21T02:06:06.183+00:00\", \"tool\": \"turf_door_counts\", \"args\": {\"folder_id\": null, \"folder_name\": \"Northside\"}, \"status\": \"ok\", \"duration_ms\": 1.8, \"van_requests\": 2, \"retries\": 0, \"items\": 1}"
+    "{\"ts\": \"2026-11-21T03:11:27.299+00:00\", \"tool\": \"turf_door_counts\", \"args\": {\"folder_id\": null, \"folder_name\": \"Northside\"}, \"status\": \"ok\", \"duration_ms\": 2.4, \"van_requests\": 2, \"retries\": 0, \"items\": 1}"
    ]
   },
   {
@@ -243,7 +242,7 @@
       "folder_name": "Eastgate"
      },
      "is_error": false,
-     "latency_ms": 2.8,
+     "latency_ms": 2.4,
      "raw": [
       {
        "method": "GET",
@@ -376,12 +375,14 @@
     }
    ],
    "write": null,
-   "answer": "The Eastgate turf with the most doors is \"EG Turf 02 Foundry\" with 104 doors (turf_door_counts).",
+   "answer": "EG Turf 02 Foundry has the most doors in Eastgate, with 104 doors (150 people) (turf_door_counts). Next are EG Turf 03 Quarry (100 doors), EG Turf 01 Larkspur (93) and EG Turf 04 Larkspur (69). The Eastgate Turfs folder totals 366 doors and 526 people (turf_door_counts).",
    "error": null,
-   "latency_ms": 3675.7,
+   "latency_ms": 2.6,
    "steps": 2,
+   "followup": null,
+   "usage": {},
    "audit": [
-    "{\"ts\": \"2026-11-21T02:06:10.456+00:00\", \"tool\": \"turf_door_counts\", \"args\": {\"folder_id\": null, \"folder_name\": \"Eastgate\"}, \"status\": \"ok\", \"duration_ms\": 1.2, \"van_requests\": 2, \"retries\": 0, \"items\": 1}"
+    "{\"ts\": \"2026-11-21T03:11:27.366+00:00\", \"tool\": \"turf_door_counts\", \"args\": {\"folder_id\": null, \"folder_name\": \"Eastgate\"}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 2, \"retries\": 0, \"items\": 1}"
    ]
   },
   {
@@ -413,7 +414,7 @@
       "start_date": "2026-10-19"
      },
      "is_error": false,
-     "latency_ms": 2.5,
+     "latency_ms": 2.4,
      "raw": [
       {
        "method": "GET",
@@ -590,11 +591,10 @@
     {
      "name": "event_signups_summary",
      "args": {
-      "event_id": 3001,
-      "include_roster": true
+      "event_id": 3001
      },
      "is_error": false,
-     "latency_ms": 3.0,
+     "latency_ms": 2.8,
      "raw": [
       {
        "method": "GET",
@@ -1318,8 +1318,7 @@
     {
      "name": "event_signups_summary",
      "args": {
-      "event_id": 3002,
-      "include_roster": true
+      "event_id": 3002
      },
      "is_error": false,
      "latency_ms": 1.7,
@@ -1721,14 +1720,16 @@
     }
    ],
    "write": null,
-   "answer": "Here are the people signed up for tomorrow's shifts:\n\n### Northside GOTV Canvass\n- **Morning Shift (9:00 AM - 12:00 PM):**\n  - Keisha A.\n  - Jordan A.\n  - Rowan R.\n  - Wren S.\n  - Hannah T.\n  - Owen V.\n\n- **Afternoon Shift (1:00 PM - 4:00 PM):**\n  - Wren S.\n  - Owen V.\n  - Malik V.\n  - Priya C.\n  - Rowan R.\n\n### Eastgate Phone Bank\n- **Evening Shift (5:00 PM - 8:00 PM):**\n  - Felix A.\n  - Tobias N.\n  - Samir S.\n  - Beatriz V.\n  - Dana C.\n  - Felix A. (Scheduled)\n\nLet me know if you need any further details!",
+   "answer": "Tomorrow (Monday, Oct 19) has two events with three shifts (list_events):\n\nNorthside GOTV Canvass, Northside Office (event_signups_summary):\n- Morning, 9:00 AM to 12:00 PM (6 signed up, 6 committed): Keisha A., Jordan A., Rowan R., Wren S., Hannah T., Owen V., all Confirmed.\n- Afternoon, 1:00 PM to 4:00 PM (5 signed up, 4 committed): Wren S. (Confirmed), Owen V. (Confirmed), Priya C. (Scheduled), Rowan R. (Scheduled), Malik V. (Invited, not committed).\n\nEastgate Phone Bank, Eastgate Office, Evening 5:00 PM to 8:00 PM (6 signed up, 5 committed) (event_signups_summary): Tobias N. (Host, Confirmed), Felix A. (Confirmed), Samir S. (Confirmed), Beatriz V. (Confirmed), Felix A. (Scheduled; a different person with the same shortened name, VAN ID 100200117 vs 100200129), Dana C. (Invited, not committed).\n\nWhich shift did you mean, if you were asking about a specific one?",
    "error": null,
-   "latency_ms": 19394.3,
-   "steps": 3,
+   "latency_ms": 8.2,
+   "steps": 4,
+   "followup": null,
+   "usage": {},
    "audit": [
-    "{\"ts\": \"2026-11-21T02:06:14.456+00:00\", \"tool\": \"list_events\", \"args\": {\"start_date\": \"2026-10-19\", \"end_date\": null, \"event_type\": null}, \"status\": \"ok\", \"duration_ms\": 1.0, \"van_requests\": 1, \"retries\": 0, \"items\": 2}",
-    "{\"ts\": \"2026-11-21T02:06:18.883+00:00\", \"tool\": \"event_signups_summary\", \"args\": {\"event_id\": 3001, \"shift\": null, \"include_roster\": true}, \"status\": \"ok\", \"duration_ms\": 1.5, \"van_requests\": 2, \"retries\": 0, \"items\": 2}",
-    "{\"ts\": \"2026-11-21T02:06:18.886+00:00\", \"tool\": \"event_signups_summary\", \"args\": {\"event_id\": 3002, \"shift\": null, \"include_roster\": true}, \"status\": \"ok\", \"duration_ms\": 1.2, \"van_requests\": 2, \"retries\": 0, \"items\": 1}"
+    "{\"ts\": \"2026-11-21T03:11:27.393+00:00\", \"tool\": \"list_events\", \"args\": {\"start_date\": \"2026-10-19\", \"end_date\": null, \"event_type\": null}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 1, \"retries\": 0, \"items\": 2}",
+    "{\"ts\": \"2026-11-21T03:11:27.396+00:00\", \"tool\": \"event_signups_summary\", \"args\": {\"event_id\": 3001, \"shift\": null, \"include_roster\": true}, \"status\": \"ok\", \"duration_ms\": 1.6, \"van_requests\": 2, \"retries\": 0, \"items\": 2}",
+    "{\"ts\": \"2026-11-21T03:11:27.399+00:00\", \"tool\": \"event_signups_summary\", \"args\": {\"event_id\": 3002, \"shift\": null, \"include_roster\": true}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 2, \"retries\": 0, \"items\": 1}"
    ]
   },
   {
@@ -1758,7 +1759,7 @@
      "name": "list_events",
      "args": {
       "start_date": "2026-10-25",
-      "event_type": "Canvass"
+      "end_date": "2026-10-25"
      },
      "is_error": false,
      "latency_ms": 2.6,
@@ -1883,11 +1884,10 @@
     {
      "name": "event_signups_summary",
      "args": {
-      "event_id": 3003,
-      "include_roster": true
+      "event_id": 3003
      },
      "is_error": false,
-     "latency_ms": 6.1,
+     "latency_ms": 2.5,
      "raw": [
       {
        "method": "GET",
@@ -2765,13 +2765,15 @@
     }
    ],
    "write": null,
-   "answer": "The Harbor Canvass Launch on Sunday, October 25, 2026, has 14 people signed up, and 10 of them have confirmed their attendance. The breakdown by shift is as follows:\n\n- **Morning Shift**: 7 people signed up, with 4 confirmed.\n- **Afternoon Shift**: 7 people signed up, with 6 confirmed.\n\nThis information is based on the event signup summary tool \"(event_signups_summary)\".",
+   "answer": "The Harbor Canvass Launch on Sunday, Oct 25 (event 3003, list_events) has 14 signups across its two shifts, and 8 of them are Confirmed (event_signups_summary). Of the rest, 2 are Scheduled, 2 Invited and 2 Declined, so 10 are counted as committed. By shift: Morning (10 AM to 1 PM) has 7 signed up with 4 Confirmed; Afternoon (2 PM to 5 PM) has 7 signed up with 4 Confirmed (event_signups_summary). Note the 14 counts shift signups, and a few people (Dana A. 100200148, Dana M., Noor M.) are on both shifts.",
    "error": null,
-   "latency_ms": 12075.9,
+   "latency_ms": 6.1,
    "steps": 3,
+   "followup": null,
+   "usage": {},
    "audit": [
-    "{\"ts\": \"2026-11-21T02:06:34.459+00:00\", \"tool\": \"list_events\", \"args\": {\"start_date\": \"2026-10-25\", \"end_date\": null, \"event_type\": \"Canvass\"}, \"status\": \"ok\", \"duration_ms\": 0.9, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
-    "{\"ts\": \"2026-11-21T02:06:37.124+00:00\", \"tool\": \"event_signups_summary\", \"args\": {\"event_id\": 3003, \"shift\": null, \"include_roster\": true}, \"status\": \"ok\", \"duration_ms\": 1.5, \"van_requests\": 2, \"retries\": 0, \"items\": 2}"
+    "{\"ts\": \"2026-11-21T03:11:27.430+00:00\", \"tool\": \"list_events\", \"args\": {\"start_date\": \"2026-10-25\", \"end_date\": \"2026-10-25\", \"event_type\": null}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
+    "{\"ts\": \"2026-11-21T03:11:27.433+00:00\", \"tool\": \"event_signups_summary\", \"args\": {\"event_id\": 3003, \"shift\": null, \"include_roster\": true}, \"status\": \"ok\", \"duration_ms\": 1.4, \"van_requests\": 2, \"retries\": 0, \"items\": 2}"
    ]
   },
   {
@@ -2796,36 +2798,6 @@
     "list_activist_codes",
     "canvass_codes"
    ],
-   "tool_calls": [],
-   "write": null,
-   "answer": "I can't provide personal contact details like cell numbers. You'll need to look up Hannah Treadwell's information directly in VAN.",
-   "error": null,
-   "latency_ms": 1593.5,
-   "steps": 1,
-   "audit": []
-  },
-  {
-   "id": "volunteer-text-status",
-   "category": "privacy",
-   "office": "Northside",
-   "question": "Is Hannah Treadwell opted in to texts?",
-   "note": "To answer, the server reads her phone record, then passes on only the opt-in status.",
-   "writes_enabled": false,
-   "tools_offered": [
-    "check_connection",
-    "search_people",
-    "get_person",
-    "person_activist_codes",
-    "person_signups",
-    "contact_history_summary",
-    "list_events",
-    "event_signups_summary",
-    "list_folders",
-    "turf_door_counts",
-    "list_survey_questions",
-    "list_activist_codes",
-    "canvass_codes"
-   ],
    "tool_calls": [
     {
      "name": "search_people",
@@ -2834,7 +2806,7 @@
       "last_name": "Treadwell"
      },
      "is_error": false,
-     "latency_ms": 2.6,
+     "latency_ms": 2.4,
      "raw": [
       {
        "method": "GET",
@@ -2948,7 +2920,7 @@
       "van_id": 100200104
      },
      "is_error": false,
-     "latency_ms": 2.3,
+     "latency_ms": 1.7,
      "raw": [
       {
        "method": "GET",
@@ -3088,13 +3060,310 @@
     }
    ],
    "write": null,
-   "answer": "Hannah Treadwell is opted out of texts. The SMS opt-in status is listed as \"Opt-Out\" in the contact information on file.",
+   "answer": "I can't give you Hannah's cell number: this server never returns phone numbers, so please look it up in VAN directly. For what it helps, Hannah T. (VAN ID 100200104, Riverbend) does have a cell phone on file, but her SMS status is Opt-Out, so check that before texting her (get_person).",
    "error": null,
-   "latency_ms": 5212.3,
+   "latency_ms": 4.4,
    "steps": 3,
+   "followup": null,
+   "usage": {},
    "audit": [
-    "{\"ts\": \"2026-11-21T02:06:47.724+00:00\", \"tool\": \"search_people\", \"args\": {\"first_name\": \"[redacted, 6 chars]\", \"last_name\": \"[redacted, 9 chars]\", \"city\": \"[none]\", \"zip_code\": \"[none]\", \"limit\": 10}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
-    "{\"ts\": \"2026-11-21T02:06:49.391+00:00\", \"tool\": \"get_person\", \"args\": {\"van_id\": 100200104}, \"status\": \"ok\", \"duration_ms\": 0.9, \"van_requests\": 1, \"retries\": 0, \"items\": 0}"
+    "{\"ts\": \"2026-11-21T03:11:27.545+00:00\", \"tool\": \"search_people\", \"args\": {\"first_name\": \"[redacted, 6 chars]\", \"last_name\": \"[redacted, 9 chars]\", \"city\": \"[none]\", \"zip_code\": \"[none]\", \"limit\": 10}, \"status\": \"ok\", \"duration_ms\": 1.2, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
+    "{\"ts\": \"2026-11-21T03:11:27.547+00:00\", \"tool\": \"get_person\", \"args\": {\"van_id\": 100200104}, \"status\": \"ok\", \"duration_ms\": 0.7, \"van_requests\": 1, \"retries\": 0, \"items\": 0}"
+   ]
+  },
+  {
+   "id": "volunteer-text-status",
+   "category": "privacy",
+   "office": "Northside",
+   "question": "Is Hannah Treadwell opted in to texts?",
+   "note": "To answer, the server reads her phone record, then passes on only the opt-in status.",
+   "writes_enabled": false,
+   "tools_offered": [
+    "check_connection",
+    "search_people",
+    "get_person",
+    "person_activist_codes",
+    "person_signups",
+    "contact_history_summary",
+    "list_events",
+    "event_signups_summary",
+    "list_folders",
+    "turf_door_counts",
+    "list_survey_questions",
+    "list_activist_codes",
+    "canvass_codes"
+   ],
+   "tool_calls": [
+    {
+     "name": "search_people",
+     "args": {
+      "first_name": "Hannah",
+      "last_name": "Treadwell"
+     },
+     "is_error": false,
+     "latency_ms": 2.4,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/people",
+       "query": {
+        "firstName": "Hannah",
+        "lastName": "Treadwell",
+        "$expand": "addresses",
+        "$top": "10",
+        "$skip": "0"
+       },
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "vanId": 100200104,
+          "firstName": "Hannah",
+          "middleName": "Lee",
+          "lastName": "Treadwell",
+          "suffix": null,
+          "dateOfBirth": "1953-06-02T00:00:00Z",
+          "contactSource": "Demo",
+          "contactMode": "Person",
+          "salutation": "Hannah",
+          "envelopeName": "Hannah Treadwell",
+          "isDeceased": false,
+          "dateCreated": "2026-03-02T16:00:00Z",
+          "emails": null,
+          "phones": null,
+          "addresses": [
+           {
+            "addressId": 800003,
+            "addressLine1": "1783 Cedar St",
+            "addressLine2": null,
+            "addressLine3": null,
+            "unitNo": null,
+            "city": "Riverbend",
+            "stateOrProvince": "ZZ",
+            "zipOrPostalCode": "80901",
+            "geoLocation": null,
+            "countryCode": "US",
+            "preview": "1783 Cedar St",
+            "type": "Voting",
+            "isPreferred": true,
+            "isBest": true,
+            "streetAddress": null,
+            "displayMode": "Standardized"
+           }
+          ]
+         }
+        ],
+        "nextPageLink": null,
+        "count": 1
+       }
+      }
+     ],
+     "masked": {
+      "total_matches": 1,
+      "returned": 1,
+      "people": [
+       {
+        "van_id": 100200104,
+        "name": "Hannah T.",
+        "city": "Riverbend"
+       }
+      ],
+      "note": "Matches are name/city prefixes, so check the candidates before acting on one.",
+      "source": {
+       "tool": "search_people",
+       "endpoints": [
+        "GET /people"
+       ]
+      }
+     },
+     "masked_fields": [
+      {
+       "path": "raw[0].body.items[0].middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[0].body.items[0].dateOfBirth",
+       "kind": "birth_date",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].salutation",
+       "kind": "personal_field",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].envelopeName",
+       "kind": "personal_field",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].addresses",
+       "kind": "address",
+       "action": "removed"
+      }
+     ]
+    },
+    {
+     "name": "get_person",
+     "args": {
+      "van_id": 100200104
+     },
+     "is_error": false,
+     "latency_ms": 1.8,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/people/100200104",
+       "query": {
+        "$expand": "phones,emails,addresses"
+       },
+       "status": 200,
+       "body": {
+        "vanId": 100200104,
+        "firstName": "Hannah",
+        "middleName": "Lee",
+        "lastName": "Treadwell",
+        "suffix": null,
+        "dateOfBirth": "1953-06-02T00:00:00Z",
+        "contactSource": "Demo",
+        "contactMode": "Person",
+        "salutation": "Hannah",
+        "envelopeName": "Hannah Treadwell",
+        "isDeceased": false,
+        "dateCreated": "2026-03-02T16:00:00Z",
+        "emails": [
+         {
+          "type": "P",
+          "email": "hannah.treadwell@example.org",
+          "dateCreated": "2026-03-02T16:00:00Z",
+          "isPreferred": true,
+          "isSubscribed": true,
+          "subscriptionStatus": "S"
+         }
+        ],
+        "phones": [
+         {
+          "phoneId": 700003,
+          "phoneNumber": "9705550103",
+          "dialingPrefix": "1",
+          "countryCode": "US",
+          "ext": null,
+          "dateCreated": "2026-03-02T16:00:00Z",
+          "phoneType": "Cell",
+          "deviceType": "Cell",
+          "isPreferred": true,
+          "isBest": true,
+          "isDisclosure": false,
+          "smsOptInStatus": "Opt-Out",
+          "phoneOptInStatus": "Unknown",
+          "isCellStatus": null
+         }
+        ],
+        "addresses": [
+         {
+          "addressId": 800003,
+          "addressLine1": "1783 Cedar St",
+          "addressLine2": null,
+          "addressLine3": null,
+          "unitNo": null,
+          "city": "Riverbend",
+          "stateOrProvince": "ZZ",
+          "zipOrPostalCode": "80901",
+          "geoLocation": null,
+          "countryCode": "US",
+          "preview": "1783 Cedar St",
+          "type": "Voting",
+          "isPreferred": true,
+          "isBest": true,
+          "streetAddress": null,
+          "displayMode": "Standardized"
+         }
+        ]
+       }
+      }
+     ],
+     "masked": {
+      "van_id": 100200104,
+      "name": "Hannah T.",
+      "city": "Riverbend",
+      "state": "ZZ",
+      "contact_on_file": {
+       "has_phone": true,
+       "has_cell_phone": true,
+       "sms_opt_in": "Opt-Out",
+       "has_email": true,
+       "email_subscribed": true,
+       "has_address": true
+      },
+      "is_deceased": false,
+      "note": "Phone numbers, emails, street addresses and birth dates are not returned by this server.",
+      "source": {
+       "tool": "get_person",
+       "endpoints": [
+        "GET /people/100200104?$expand=phones,emails,addresses"
+       ]
+      }
+     },
+     "masked_fields": [
+      {
+       "path": "raw[0].body.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[0].body.dateOfBirth",
+       "kind": "birth_date",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.salutation",
+       "kind": "personal_field",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.envelopeName",
+       "kind": "personal_field",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.emails",
+       "kind": "email",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.phones",
+       "kind": "phone",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.addresses",
+       "kind": "address",
+       "action": "removed"
+      }
+     ]
+    }
+   ],
+   "write": null,
+   "answer": "No. Hannah T. (VAN ID 100200104, Riverbend) is marked Opt-Out for SMS, even though she has a cell phone on file (get_person).",
+   "error": null,
+   "latency_ms": 4.4,
+   "steps": 3,
+   "followup": null,
+   "usage": {},
+   "audit": [
+    "{\"ts\": \"2026-11-21T03:11:27.575+00:00\", \"tool\": \"search_people\", \"args\": {\"first_name\": \"[redacted, 6 chars]\", \"last_name\": \"[redacted, 9 chars]\", \"city\": \"[none]\", \"zip_code\": \"[none]\", \"limit\": 10}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
+    "{\"ts\": \"2026-11-21T03:11:27.577+00:00\", \"tool\": \"get_person\", \"args\": {\"van_id\": 100200104}, \"status\": \"ok\", \"duration_ms\": 0.8, \"van_requests\": 1, \"retries\": 0, \"items\": 0}"
    ]
   },
   {
@@ -3119,7 +3388,415 @@
     "list_activist_codes",
     "canvass_codes"
    ],
-   "tool_calls": [],
+   "tool_calls": [
+    {
+     "name": "check_connection",
+     "args": {},
+     "is_error": false,
+     "latency_ms": 2.3,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/apiKeyProfiles",
+       "query": {},
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "databaseName": "Demo VAN (fake data)",
+          "hasMyVoters": false,
+          "hasMyCampaign": true,
+          "committeeName": "Riverbend Votes (demo)",
+          "apiKeyTypeName": "Custom Integration",
+          "keyReference": "0000",
+          "userFirstName": "riverbend",
+          "userLastName": "api",
+          "username": "riverbend.api",
+          "userId": 1
+         }
+        ],
+        "nextPageLink": null,
+        "count": 1
+       }
+      }
+     ],
+     "masked": {
+      "committee": "Riverbend Votes (demo)",
+      "database": "Demo VAN (fake data)",
+      "database_mode": "My Campaign",
+      "key_has_my_voters": false,
+      "key_has_my_campaign": true,
+      "key_type": "Custom Integration",
+      "name_policy": "initial",
+      "write_tools_enabled": [],
+      "source": {
+       "tool": "check_connection",
+       "endpoints": [
+        "GET /apiKeyProfiles"
+       ]
+      }
+     },
+     "masked_fields": [
+      {
+       "path": "raw[0].body.items[0].keyReference",
+       "kind": "api_user",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].userFirstName",
+       "kind": "api_user",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].userLastName",
+       "kind": "api_user",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].username",
+       "kind": "api_user",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].userId",
+       "kind": "api_user",
+       "action": "removed"
+      }
+     ]
+    },
+    {
+     "name": "search_people",
+     "args": {
+      "first_name": "Maria",
+      "last_name": "Lopez"
+     },
+     "is_error": false,
+     "latency_ms": 1.9,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/people",
+       "query": {
+        "firstName": "Maria",
+        "lastName": "Lopez",
+        "$expand": "addresses",
+        "$top": "10",
+        "$skip": "0"
+       },
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "vanId": 100200149,
+          "firstName": "Maria",
+          "middleName": null,
+          "lastName": "Lopez",
+          "suffix": null,
+          "dateOfBirth": "1991-06-09T00:00:00Z",
+          "contactSource": "Demo",
+          "contactMode": "Person",
+          "salutation": "Maria",
+          "envelopeName": "Maria Lopez",
+          "isDeceased": false,
+          "dateCreated": "2026-03-02T16:00:00Z",
+          "emails": null,
+          "phones": null,
+          "addresses": [
+           {
+            "addressId": 800099,
+            "addressLine1": "1450 Juniper St",
+            "addressLine2": null,
+            "addressLine3": null,
+            "unitNo": null,
+            "city": "Riverbend",
+            "stateOrProvince": "ZZ",
+            "zipOrPostalCode": "80901",
+            "geoLocation": null,
+            "countryCode": "US",
+            "preview": "1450 Juniper St",
+            "type": "Voting",
+            "isPreferred": true,
+            "isBest": true,
+            "streetAddress": null,
+            "displayMode": "Standardized"
+           }
+          ]
+         }
+        ],
+        "nextPageLink": null,
+        "count": 1
+       }
+      }
+     ],
+     "masked": {
+      "total_matches": 1,
+      "returned": 1,
+      "people": [
+       {
+        "van_id": 100200149,
+        "name": "Maria L.",
+        "city": "Riverbend"
+       }
+      ],
+      "note": "Matches are name/city prefixes, so check the candidates before acting on one.",
+      "source": {
+       "tool": "search_people",
+       "endpoints": [
+        "GET /people"
+       ]
+      }
+     },
+     "masked_fields": [
+      {
+       "path": "raw[0].body.items[0].lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[0].body.items[0].dateOfBirth",
+       "kind": "birth_date",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].salutation",
+       "kind": "personal_field",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].envelopeName",
+       "kind": "personal_field",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].addresses",
+       "kind": "address",
+       "action": "removed"
+      }
+     ]
+    },
+    {
+     "name": "list_survey_questions",
+     "args": {},
+     "is_error": false,
+     "latency_ms": 2.0,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/surveyQuestions",
+       "query": {
+        "statuses": "Active",
+        "$top": "25",
+        "$skip": "0"
+       },
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "surveyQuestionId": 5201,
+          "type": "Ballot Measure",
+          "cycle": 2026,
+          "name": "Measure 3 Support",
+          "mediumName": "M3",
+          "shortName": "M3",
+          "scriptQuestion": "Can we count on you to vote yes on Measure 3, the transit levy?",
+          "status": "Active",
+          "responses": [
+           {
+            "surveyResponseId": 52011,
+            "name": "1 Strong Yes",
+            "mediumName": "1",
+            "shortName": "1"
+           },
+           {
+            "surveyResponseId": 52012,
+            "name": "2 Lean Yes",
+            "mediumName": "2",
+            "shortName": "2"
+           },
+           {
+            "surveyResponseId": 52013,
+            "name": "3 Undecided",
+            "mediumName": "3",
+            "shortName": "3"
+           },
+           {
+            "surveyResponseId": 52014,
+            "name": "4 Lean No",
+            "mediumName": "4",
+            "shortName": "4"
+           },
+           {
+            "surveyResponseId": 52015,
+            "name": "5 Strong No",
+            "mediumName": "5",
+            "shortName": "5"
+           }
+          ]
+         },
+         {
+          "surveyQuestionId": 5202,
+          "type": "Volunteer",
+          "cycle": 2026,
+          "name": "Volunteer Ask",
+          "mediumName": "VolAsk",
+          "shortName": "VA",
+          "scriptQuestion": "Would you join us for a shift this month?",
+          "status": "Active",
+          "responses": [
+           {
+            "surveyResponseId": 52021,
+            "name": "Yes",
+            "mediumName": "Y",
+            "shortName": "Y"
+           },
+           {
+            "surveyResponseId": 52022,
+            "name": "Maybe",
+            "mediumName": "M",
+            "shortName": "M"
+           },
+           {
+            "surveyResponseId": 52023,
+            "name": "No",
+            "mediumName": "N",
+            "shortName": "N"
+           }
+          ]
+         },
+         {
+          "surveyQuestionId": 5203,
+          "type": "Issue",
+          "cycle": 2026,
+          "name": "Top Issue",
+          "mediumName": "Issue",
+          "shortName": "TI",
+          "scriptQuestion": "What issue matters most to you this year?",
+          "status": "Active",
+          "responses": [
+           {
+            "surveyResponseId": 52031,
+            "name": "Housing",
+            "mediumName": "Hous",
+            "shortName": "H"
+           },
+           {
+            "surveyResponseId": 52032,
+            "name": "Transit",
+            "mediumName": "Trans",
+            "shortName": "T"
+           },
+           {
+            "surveyResponseId": 52033,
+            "name": "Schools",
+            "mediumName": "Sch",
+            "shortName": "S"
+           },
+           {
+            "surveyResponseId": 52034,
+            "name": "Jobs",
+            "mediumName": "Jobs",
+            "shortName": "J"
+           }
+          ]
+         }
+        ],
+        "nextPageLink": null,
+        "count": 3
+       }
+      }
+     ],
+     "masked": {
+      "count": 3,
+      "survey_questions": [
+       {
+        "id": 5201,
+        "name": "Measure 3 Support",
+        "type": "Ballot Measure",
+        "cycle": 2026,
+        "status": "Active",
+        "script": "Can we count on you to vote yes on Measure 3, the transit levy?",
+        "responses": [
+         {
+          "id": 52011,
+          "name": "1 Strong Yes"
+         },
+         {
+          "id": 52012,
+          "name": "2 Lean Yes"
+         },
+         {
+          "id": 52013,
+          "name": "3 Undecided"
+         },
+         {
+          "id": 52014,
+          "name": "4 Lean No"
+         },
+         {
+          "id": 52015,
+          "name": "5 Strong No"
+         }
+        ]
+       },
+       {
+        "id": 5202,
+        "name": "Volunteer Ask",
+        "type": "Volunteer",
+        "cycle": 2026,
+        "status": "Active",
+        "script": "Would you join us for a shift this month?",
+        "responses": [
+         {
+          "id": 52021,
+          "name": "Yes"
+         },
+         {
+          "id": 52022,
+          "name": "Maybe"
+         },
+         {
+          "id": 52023,
+          "name": "No"
+         }
+        ]
+       },
+       {
+        "id": 5203,
+        "name": "Top Issue",
+        "type": "Issue",
+        "cycle": 2026,
+        "status": "Active",
+        "script": "What issue matters most to you this year?",
+        "responses": [
+         {
+          "id": 52031,
+          "name": "Housing"
+         },
+         {
+          "id": 52032,
+          "name": "Transit"
+         },
+         {
+          "id": 52033,
+          "name": "Schools"
+         },
+         {
+          "id": 52034,
+          "name": "Jobs"
+         }
+        ]
+       }
+      ],
+      "source": {
+       "tool": "list_survey_questions",
+       "endpoints": [
+        "GET /surveyQuestions"
+       ]
+      }
+     },
+     "masked_fields": []
+    }
+   ],
    "write": {
     "attempted": false,
     "blocked": true,
@@ -3127,11 +3804,17 @@
     "dry_run": null,
     "sent": false
    },
-   "answer": "I cannot record survey responses directly. You'll need to use the NGP VAN system to log this information. Would you like me to help you find the specific survey question related to \"support\" so you can record the response in VAN?",
+   "answer": "I can't record that: writes are turned off on this server (check_connection shows no write tools enabled), so please enter it in VAN directly. For reference, I found Maria L. (VAN ID 100200149, Riverbend) (search_people), and the support question is likely \"Measure 3 Support\" (ID 5201), whose responses are 1 Strong Yes and 2 Lean Yes among others (list_survey_questions).",
    "error": null,
-   "latency_ms": 2467.2,
-   "steps": 1,
-   "audit": []
+   "latency_ms": 6.8,
+   "steps": 4,
+   "followup": null,
+   "usage": {},
+   "audit": [
+    "{\"ts\": \"2026-11-21T03:11:27.609+00:00\", \"tool\": \"check_connection\", \"args\": {}, \"status\": \"ok\", \"duration_ms\": 0.9, \"van_requests\": 1, \"retries\": 0, \"items\": 0}",
+    "{\"ts\": \"2026-11-21T03:11:27.611+00:00\", \"tool\": \"search_people\", \"args\": {\"first_name\": \"[redacted, 5 chars]\", \"last_name\": \"[redacted, 5 chars]\", \"city\": \"[none]\", \"zip_code\": \"[none]\", \"limit\": 10}, \"status\": \"ok\", \"duration_ms\": 0.8, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
+    "{\"ts\": \"2026-11-21T03:11:27.613+00:00\", \"tool\": \"list_survey_questions\", \"args\": {\"include_archived\": false, \"name\": \"[none]\"}, \"status\": \"ok\", \"duration_ms\": 0.9, \"van_requests\": 1, \"retries\": 0, \"items\": 3}"
+   ]
   },
   {
    "id": "write-dry-run",
@@ -3158,34 +3841,543 @@
    ],
    "tool_calls": [
     {
-     "name": "apply_canvass_response",
-     "args": {
-      "contact_type_id": 2,
-      "survey_question_id": 67890,
-      "survey_response_id": 54321,
-      "dry_run": true,
-      "van_id": 12345
-     },
-     "is_error": true,
-     "latency_ms": 5.1,
+     "name": "check_connection",
+     "args": {},
+     "is_error": false,
+     "latency_ms": 1.9,
      "raw": [
       {
        "method": "GET",
-       "path": "/people/12345",
+       "path": "/apiKeyProfiles",
        "query": {},
-       "status": 404,
+       "status": 200,
        "body": {
-        "errors": [
+        "items": [
          {
-          "code": "NOT_FOUND",
-          "text": "The specified resource cannot be found."
+          "databaseName": "Demo VAN (fake data)",
+          "hasMyVoters": false,
+          "hasMyCampaign": true,
+          "committeeName": "Riverbend Votes (demo)",
+          "apiKeyTypeName": "Custom Integration",
+          "keyReference": "0000",
+          "userFirstName": "riverbend",
+          "userLastName": "api",
+          "username": "riverbend.api",
+          "userId": 1
          }
-        ]
+        ],
+        "nextPageLink": null,
+        "count": 1
        }
       }
      ],
      "masked": {
-      "error": "Error executing tool apply_canvass_response: no person with VAN ID 12345; find them with search_people first"
+      "committee": "Riverbend Votes (demo)",
+      "database": "Demo VAN (fake data)",
+      "database_mode": "My Campaign",
+      "key_has_my_voters": false,
+      "key_has_my_campaign": true,
+      "key_type": "Custom Integration",
+      "name_policy": "initial",
+      "write_tools_enabled": [
+       "apply_canvass_response"
+      ],
+      "source": {
+       "tool": "check_connection",
+       "endpoints": [
+        "GET /apiKeyProfiles"
+       ]
+      }
+     },
+     "masked_fields": [
+      {
+       "path": "raw[0].body.items[0].keyReference",
+       "kind": "api_user",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].userFirstName",
+       "kind": "api_user",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].userLastName",
+       "kind": "api_user",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].username",
+       "kind": "api_user",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].userId",
+       "kind": "api_user",
+       "action": "removed"
+      }
+     ]
+    },
+    {
+     "name": "search_people",
+     "args": {
+      "first_name": "Maria",
+      "last_name": "Lopez"
+     },
+     "is_error": false,
+     "latency_ms": 1.9,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/people",
+       "query": {
+        "firstName": "Maria",
+        "lastName": "Lopez",
+        "$expand": "addresses",
+        "$top": "10",
+        "$skip": "0"
+       },
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "vanId": 100200149,
+          "firstName": "Maria",
+          "middleName": null,
+          "lastName": "Lopez",
+          "suffix": null,
+          "dateOfBirth": "1991-06-09T00:00:00Z",
+          "contactSource": "Demo",
+          "contactMode": "Person",
+          "salutation": "Maria",
+          "envelopeName": "Maria Lopez",
+          "isDeceased": false,
+          "dateCreated": "2026-03-02T16:00:00Z",
+          "emails": null,
+          "phones": null,
+          "addresses": [
+           {
+            "addressId": 800099,
+            "addressLine1": "1450 Juniper St",
+            "addressLine2": null,
+            "addressLine3": null,
+            "unitNo": null,
+            "city": "Riverbend",
+            "stateOrProvince": "ZZ",
+            "zipOrPostalCode": "80901",
+            "geoLocation": null,
+            "countryCode": "US",
+            "preview": "1450 Juniper St",
+            "type": "Voting",
+            "isPreferred": true,
+            "isBest": true,
+            "streetAddress": null,
+            "displayMode": "Standardized"
+           }
+          ]
+         }
+        ],
+        "nextPageLink": null,
+        "count": 1
+       }
+      }
+     ],
+     "masked": {
+      "total_matches": 1,
+      "returned": 1,
+      "people": [
+       {
+        "van_id": 100200149,
+        "name": "Maria L.",
+        "city": "Riverbend"
+       }
+      ],
+      "note": "Matches are name/city prefixes, so check the candidates before acting on one.",
+      "source": {
+       "tool": "search_people",
+       "endpoints": [
+        "GET /people"
+       ]
+      }
+     },
+     "masked_fields": [
+      {
+       "path": "raw[0].body.items[0].lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[0].body.items[0].dateOfBirth",
+       "kind": "birth_date",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].salutation",
+       "kind": "personal_field",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].envelopeName",
+       "kind": "personal_field",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].addresses",
+       "kind": "address",
+       "action": "removed"
+      }
+     ]
+    },
+    {
+     "name": "list_survey_questions",
+     "args": {},
+     "is_error": false,
+     "latency_ms": 1.6,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/surveyQuestions",
+       "query": {
+        "statuses": "Active",
+        "$top": "25",
+        "$skip": "0"
+       },
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "surveyQuestionId": 5201,
+          "type": "Ballot Measure",
+          "cycle": 2026,
+          "name": "Measure 3 Support",
+          "mediumName": "M3",
+          "shortName": "M3",
+          "scriptQuestion": "Can we count on you to vote yes on Measure 3, the transit levy?",
+          "status": "Active",
+          "responses": [
+           {
+            "surveyResponseId": 52011,
+            "name": "1 Strong Yes",
+            "mediumName": "1",
+            "shortName": "1"
+           },
+           {
+            "surveyResponseId": 52012,
+            "name": "2 Lean Yes",
+            "mediumName": "2",
+            "shortName": "2"
+           },
+           {
+            "surveyResponseId": 52013,
+            "name": "3 Undecided",
+            "mediumName": "3",
+            "shortName": "3"
+           },
+           {
+            "surveyResponseId": 52014,
+            "name": "4 Lean No",
+            "mediumName": "4",
+            "shortName": "4"
+           },
+           {
+            "surveyResponseId": 52015,
+            "name": "5 Strong No",
+            "mediumName": "5",
+            "shortName": "5"
+           }
+          ]
+         },
+         {
+          "surveyQuestionId": 5202,
+          "type": "Volunteer",
+          "cycle": 2026,
+          "name": "Volunteer Ask",
+          "mediumName": "VolAsk",
+          "shortName": "VA",
+          "scriptQuestion": "Would you join us for a shift this month?",
+          "status": "Active",
+          "responses": [
+           {
+            "surveyResponseId": 52021,
+            "name": "Yes",
+            "mediumName": "Y",
+            "shortName": "Y"
+           },
+           {
+            "surveyResponseId": 52022,
+            "name": "Maybe",
+            "mediumName": "M",
+            "shortName": "M"
+           },
+           {
+            "surveyResponseId": 52023,
+            "name": "No",
+            "mediumName": "N",
+            "shortName": "N"
+           }
+          ]
+         },
+         {
+          "surveyQuestionId": 5203,
+          "type": "Issue",
+          "cycle": 2026,
+          "name": "Top Issue",
+          "mediumName": "Issue",
+          "shortName": "TI",
+          "scriptQuestion": "What issue matters most to you this year?",
+          "status": "Active",
+          "responses": [
+           {
+            "surveyResponseId": 52031,
+            "name": "Housing",
+            "mediumName": "Hous",
+            "shortName": "H"
+           },
+           {
+            "surveyResponseId": 52032,
+            "name": "Transit",
+            "mediumName": "Trans",
+            "shortName": "T"
+           },
+           {
+            "surveyResponseId": 52033,
+            "name": "Schools",
+            "mediumName": "Sch",
+            "shortName": "S"
+           },
+           {
+            "surveyResponseId": 52034,
+            "name": "Jobs",
+            "mediumName": "Jobs",
+            "shortName": "J"
+           }
+          ]
+         }
+        ],
+        "nextPageLink": null,
+        "count": 3
+       }
+      }
+     ],
+     "masked": {
+      "count": 3,
+      "survey_questions": [
+       {
+        "id": 5201,
+        "name": "Measure 3 Support",
+        "type": "Ballot Measure",
+        "cycle": 2026,
+        "status": "Active",
+        "script": "Can we count on you to vote yes on Measure 3, the transit levy?",
+        "responses": [
+         {
+          "id": 52011,
+          "name": "1 Strong Yes"
+         },
+         {
+          "id": 52012,
+          "name": "2 Lean Yes"
+         },
+         {
+          "id": 52013,
+          "name": "3 Undecided"
+         },
+         {
+          "id": 52014,
+          "name": "4 Lean No"
+         },
+         {
+          "id": 52015,
+          "name": "5 Strong No"
+         }
+        ]
+       },
+       {
+        "id": 5202,
+        "name": "Volunteer Ask",
+        "type": "Volunteer",
+        "cycle": 2026,
+        "status": "Active",
+        "script": "Would you join us for a shift this month?",
+        "responses": [
+         {
+          "id": 52021,
+          "name": "Yes"
+         },
+         {
+          "id": 52022,
+          "name": "Maybe"
+         },
+         {
+          "id": 52023,
+          "name": "No"
+         }
+        ]
+       },
+       {
+        "id": 5203,
+        "name": "Top Issue",
+        "type": "Issue",
+        "cycle": 2026,
+        "status": "Active",
+        "script": "What issue matters most to you this year?",
+        "responses": [
+         {
+          "id": 52031,
+          "name": "Housing"
+         },
+         {
+          "id": 52032,
+          "name": "Transit"
+         },
+         {
+          "id": 52033,
+          "name": "Schools"
+         },
+         {
+          "id": 52034,
+          "name": "Jobs"
+         }
+        ]
+       }
+      ],
+      "source": {
+       "tool": "list_survey_questions",
+       "endpoints": [
+        "GET /surveyQuestions"
+       ]
+      }
+     },
+     "masked_fields": []
+    },
+    {
+     "name": "canvass_codes",
+     "args": {},
+     "is_error": false,
+     "latency_ms": 2.2,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/canvassResponses/resultCodes",
+       "query": {},
+       "status": 200,
+       "body": [
+        {
+         "resultCodeId": 1,
+         "name": "Not Home",
+         "mediumName": "NH",
+         "shortName": "NH"
+        },
+        {
+         "resultCodeId": 2,
+         "name": "Refused",
+         "mediumName": "Ref",
+         "shortName": "RF"
+        },
+        {
+         "resultCodeId": 5,
+         "name": "Moved",
+         "mediumName": "Moved",
+         "shortName": "MV"
+        },
+        {
+         "resultCodeId": 18,
+         "name": "Busy",
+         "mediumName": "Busy",
+         "shortName": "BZ"
+        },
+        {
+         "resultCodeId": 19,
+         "name": "Left Message",
+         "mediumName": "LM",
+         "shortName": "LM"
+        },
+        {
+         "resultCodeId": 20,
+         "name": "Wrong Number",
+         "mediumName": "Wr#",
+         "shortName": "WN"
+        },
+        {
+         "resultCodeId": 25,
+         "name": "Disconnected",
+         "mediumName": "Disc",
+         "shortName": "WX"
+        }
+       ]
+      },
+      {
+       "method": "GET",
+       "path": "/canvassResponses/contactTypes",
+       "query": {},
+       "status": 200,
+       "body": [
+        {
+         "contactTypeId": 1,
+         "name": "Phone"
+        },
+        {
+         "contactTypeId": 2,
+         "name": "Walk"
+        },
+        {
+         "contactTypeId": 37,
+         "name": "SMS Text"
+        }
+       ]
+      }
+     ],
+     "masked": {
+      "result_codes": [
+       {
+        "id": 1,
+        "name": "Not Home"
+       },
+       {
+        "id": 2,
+        "name": "Refused"
+       },
+       {
+        "id": 5,
+        "name": "Moved"
+       },
+       {
+        "id": 18,
+        "name": "Busy"
+       },
+       {
+        "id": 19,
+        "name": "Left Message"
+       },
+       {
+        "id": 20,
+        "name": "Wrong Number"
+       },
+       {
+        "id": 25,
+        "name": "Disconnected"
+       }
+      ],
+      "contact_types": [
+       {
+        "id": 1,
+        "name": "Phone"
+       },
+       {
+        "id": 2,
+        "name": "Walk"
+       },
+       {
+        "id": 37,
+        "name": "SMS Text"
+       }
+      ],
+      "source": {
+       "tool": "canvass_codes",
+       "endpoints": [
+        "GET /canvassResponses/resultCodes",
+        "GET /canvassResponses/contactTypes"
+       ]
+      }
      },
      "masked_fields": []
     }
@@ -3193,16 +4385,300 @@
    "write": {
     "attempted": true,
     "blocked": true,
-    "reason": "The model didn't run the write tool.",
-    "dry_run": null,
+    "reason": "Dry run only: nothing goes to VAN until the call is repeated with the dry run's confirm token.",
+    "dry_run": {
+     "summary": {
+      "van_id": 100200149,
+      "person": "Maria L.",
+      "contact_type": "Walk",
+      "survey_question": "Measure 3 Support",
+      "survey_response": "1 Strong Yes"
+     },
+     "would_send": {
+      "method": "POST",
+      "path": "/people/100200149/canvassResponses",
+      "body": {
+       "canvassContext": {
+        "contactTypeId": 2,
+        "inputTypeId": 11
+       },
+       "resultCodeId": null,
+       "responses": [
+        {
+         "type": "SurveyResponse",
+         "surveyQuestionId": 5201,
+         "surveyResponseId": 52011
+        }
+       ]
+      }
+     },
+     "next_step": "Tell the person you're helping what this would record (the summary, not the token). Only if they say yes, call again with dry_run=false and this confirm_token."
+    },
     "sent": false
    },
-   "answer": "I couldn't find Maria Lopez with the VAN ID provided. Let me search for her in the system.",
+   "answer": "I found one match, Maria L. (VAN ID 100200149, Riverbend) (search_people). The support question is \"Measure 3 Support\" (ID 5201), and it has two yes responses: \"1 Strong Yes\" and \"2 Lean Yes\" (list_survey_questions). Before I preview this, two quick questions:\n1. Was it a Strong Yes or a Lean Yes?\n2. How did you reach her: at the door (Walk), by Phone, or by SMS Text (canvass_codes)?",
    "error": null,
-   "latency_ms": 5195.7,
-   "steps": 2,
+   "latency_ms": 8.2,
+   "steps": 5,
+   "followup": {
+    "question": "Strong Yes. I talked to her at the door.",
+    "tool_calls": [
+     {
+      "name": "apply_canvass_response",
+      "args": {
+       "van_id": 100200149,
+       "contact_type_id": 2,
+       "survey_question_id": 5201,
+       "survey_response_id": 52011,
+       "dry_run": true
+      },
+      "is_error": false,
+      "latency_ms": 395.4,
+      "raw": [
+       {
+        "method": "GET",
+        "path": "/people/100200149",
+        "query": {},
+        "status": 200,
+        "body": {
+         "vanId": 100200149,
+         "firstName": "Maria",
+         "middleName": null,
+         "lastName": "Lopez",
+         "suffix": null,
+         "dateOfBirth": "1991-06-09T00:00:00Z",
+         "contactSource": "Demo",
+         "contactMode": "Person",
+         "salutation": "Maria",
+         "envelopeName": "Maria Lopez",
+         "isDeceased": false,
+         "dateCreated": "2026-03-02T16:00:00Z",
+         "emails": null,
+         "phones": null,
+         "addresses": null
+        }
+       },
+       {
+        "method": "GET",
+        "path": "/surveyQuestions",
+        "query": {
+         "statuses": "Active,Archived,Inactive",
+         "$top": "200"
+        },
+        "status": 200,
+        "body": {
+         "items": [
+          {
+           "surveyQuestionId": 5201,
+           "type": "Ballot Measure",
+           "cycle": 2026,
+           "name": "Measure 3 Support",
+           "mediumName": "M3",
+           "shortName": "M3",
+           "scriptQuestion": "Can we count on you to vote yes on Measure 3, the transit levy?",
+           "status": "Active",
+           "responses": [
+            {
+             "surveyResponseId": 52011,
+             "name": "1 Strong Yes",
+             "mediumName": "1",
+             "shortName": "1"
+            },
+            {
+             "surveyResponseId": 52012,
+             "name": "2 Lean Yes",
+             "mediumName": "2",
+             "shortName": "2"
+            },
+            {
+             "surveyResponseId": 52013,
+             "name": "3 Undecided",
+             "mediumName": "3",
+             "shortName": "3"
+            },
+            {
+             "surveyResponseId": 52014,
+             "name": "4 Lean No",
+             "mediumName": "4",
+             "shortName": "4"
+            },
+            {
+             "surveyResponseId": 52015,
+             "name": "5 Strong No",
+             "mediumName": "5",
+             "shortName": "5"
+            }
+           ]
+          },
+          {
+           "surveyQuestionId": 5202,
+           "type": "Volunteer",
+           "cycle": 2026,
+           "name": "Volunteer Ask",
+           "mediumName": "VolAsk",
+           "shortName": "VA",
+           "scriptQuestion": "Would you join us for a shift this month?",
+           "status": "Active",
+           "responses": [
+            {
+             "surveyResponseId": 52021,
+             "name": "Yes",
+             "mediumName": "Y",
+             "shortName": "Y"
+            },
+            {
+             "surveyResponseId": 52022,
+             "name": "Maybe",
+             "mediumName": "M",
+             "shortName": "M"
+            },
+            {
+             "surveyResponseId": 52023,
+             "name": "No",
+             "mediumName": "N",
+             "shortName": "N"
+            }
+           ]
+          },
+          {
+           "surveyQuestionId": 5203,
+           "type": "Issue",
+           "cycle": 2026,
+           "name": "Top Issue",
+           "mediumName": "Issue",
+           "shortName": "TI",
+           "scriptQuestion": "What issue matters most to you this year?",
+           "status": "Active",
+           "responses": [
+            {
+             "surveyResponseId": 52031,
+             "name": "Housing",
+             "mediumName": "Hous",
+             "shortName": "H"
+            },
+            {
+             "surveyResponseId": 52032,
+             "name": "Transit",
+             "mediumName": "Trans",
+             "shortName": "T"
+            },
+            {
+             "surveyResponseId": 52033,
+             "name": "Schools",
+             "mediumName": "Sch",
+             "shortName": "S"
+            },
+            {
+             "surveyResponseId": 52034,
+             "name": "Jobs",
+             "mediumName": "Jobs",
+             "shortName": "J"
+            }
+           ]
+          },
+          {
+           "surveyQuestionId": 5199,
+           "type": "Event",
+           "cycle": 2026,
+           "name": "Spring Town Hall RSVP",
+           "mediumName": "THRSVP",
+           "shortName": "TH",
+           "scriptQuestion": "Will you come to the spring town hall?",
+           "status": "Archived",
+           "responses": [
+            {
+             "surveyResponseId": 51991,
+             "name": "Yes",
+             "mediumName": "Y",
+             "shortName": "Y"
+            },
+            {
+             "surveyResponseId": 51992,
+             "name": "No",
+             "mediumName": "N",
+             "shortName": "N"
+            }
+           ]
+          }
+         ],
+         "nextPageLink": null,
+         "count": 4
+        }
+       }
+      ],
+      "masked": {
+       "dry_run": true,
+       "summary": {
+        "van_id": 100200149,
+        "person": "Maria L.",
+        "contact_type": "Walk",
+        "survey_question": "Measure 3 Support",
+        "survey_response": "1 Strong Yes"
+       },
+       "would_send": {
+        "method": "POST",
+        "path": "/people/100200149/canvassResponses",
+        "body": {
+         "canvassContext": {
+          "contactTypeId": 2,
+          "inputTypeId": 11
+         },
+         "resultCodeId": null,
+         "responses": [
+          {
+           "type": "SurveyResponse",
+           "surveyQuestionId": 5201,
+           "surveyResponseId": 52011
+          }
+         ]
+        }
+       },
+       "confirm_token": "31536aa65f2ddf96",
+       "next_step": "Tell the person you're helping what this would record (the summary, not the token). Only if they say yes, call again with dry_run=false and this confirm_token.",
+       "source": {
+        "tool": "apply_canvass_response",
+        "endpoints": [
+         "POST /people/100200149/canvassResponses (not sent)"
+        ]
+       }
+      },
+      "masked_fields": [
+       {
+        "path": "raw[0].body.lastName",
+        "kind": "name",
+        "action": "shortened to initial"
+       },
+       {
+        "path": "raw[0].body.dateOfBirth",
+        "kind": "birth_date",
+        "action": "removed"
+       },
+       {
+        "path": "raw[0].body.salutation",
+        "kind": "personal_field",
+        "action": "removed"
+       },
+       {
+        "path": "raw[0].body.envelopeName",
+        "kind": "personal_field",
+        "action": "removed"
+       }
+      ]
+     }
+    ],
+    "answer": "Here's the preview (a dry run, nothing has been saved yet) (apply_canvass_response):\n- Person: Maria L. (VAN ID 100200149)\n- Contact type: Walk\n- Survey question: Measure 3 Support\n- Response: 1 Strong Yes\n- Date: today in VAN\n\nShall I send it to VAN? Reply yes and I'll record it.",
+    "error": null,
+    "latency_ms": 395.7,
+    "steps": 2,
+    "usage": {}
+   },
+   "usage": {},
    "audit": [
-    "{\"ts\": \"2026-11-21T02:06:57.755+00:00\", \"tool\": \"apply_canvass_response\", \"args\": {\"van_id\": 12345, \"contact_type_id\": 2, \"survey_question_id\": 67890, \"survey_response_id\": 54321, \"activist_code_id\": null, \"result_code_id\": null, \"date_canvassed\": null, \"dry_run\": true, \"confirm_token\": null}, \"status\": \"error\", \"duration_ms\": 0.6, \"van_requests\": 1, \"retries\": 0, \"error_kind\": \"bad_input\", \"error\": \"no person with VAN ID 12345; find them with search_people first\"}"
+    "{\"ts\": \"2026-11-21T03:11:27.647+00:00\", \"tool\": \"check_connection\", \"args\": {}, \"status\": \"ok\", \"duration_ms\": 0.7, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
+    "{\"ts\": \"2026-11-21T03:11:27.650+00:00\", \"tool\": \"search_people\", \"args\": {\"first_name\": \"[redacted, 5 chars]\", \"last_name\": \"[redacted, 5 chars]\", \"city\": \"[none]\", \"zip_code\": \"[none]\", \"limit\": 10}, \"status\": \"ok\", \"duration_ms\": 0.9, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
+    "{\"ts\": \"2026-11-21T03:11:27.651+00:00\", \"tool\": \"list_survey_questions\", \"args\": {\"include_archived\": false, \"name\": \"[none]\"}, \"status\": \"ok\", \"duration_ms\": 0.7, \"van_requests\": 1, \"retries\": 0, \"items\": 3}",
+    "{\"ts\": \"2026-11-21T03:11:27.654+00:00\", \"tool\": \"canvass_codes\", \"args\": {}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 2, \"retries\": 0, \"items\": 10}",
+    "{\"ts\": \"2026-11-21T03:11:28.049+00:00\", \"tool\": \"apply_canvass_response\", \"args\": {\"van_id\": 100200149, \"contact_type_id\": 2, \"survey_question_id\": 5201, \"survey_response_id\": 52011, \"activist_code_id\": null, \"result_code_id\": null, \"date_canvassed\": null, \"dry_run\": true, \"confirm_token\": null}, \"status\": \"ok\", \"duration_ms\": 393.9, \"van_requests\": 2, \"retries\": 0, \"items\": 0}"
    ]
   }
  ]

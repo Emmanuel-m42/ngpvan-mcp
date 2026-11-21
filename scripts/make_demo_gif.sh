@@ -19,4 +19,11 @@ sed -e "s|OUTDIR|$outdir|g" -e "s|RECORDING|$recording|g" -e "s|SPEED|$speed|g" 
 export PATH="$here/.venv/bin:$PATH"
 cd "$here"
 vhs "$tape"
+
+# VHS's own GIF runs past 5 MB once the text scrolls; rebuild it from the MP4 at
+# 4 frames a second, 1000 px wide and a 32-colour palette, which stays readable.
+ffmpeg -v error -y -i "$outdir/demo.mp4" \
+  -vf "fps=4,scale=1000:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=32:stats_mode=diff[p];[b][p]paletteuse=dither=none:diff_mode=rectangle" \
+  "$outdir/demo.small.gif"
+mv "$outdir/demo.small.gif" "$outdir/demo.gif"
 ls -l "$outdir/demo.gif" "$outdir/demo.mp4"

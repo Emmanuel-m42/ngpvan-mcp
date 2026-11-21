@@ -73,9 +73,10 @@ def _args(args: dict[str, Any]) -> str:
 
 
 class Player:
-    def __init__(self, console: Console, speed: float) -> None:
+    def __init__(self, console: Console, speed: float, replayed_trace: bool = False) -> None:
         self.c = console
         self.speed = speed
+        self.replayed_trace = replayed_trace
 
     def pause(self, seconds: float) -> None:
         if self.speed > 0:
@@ -95,8 +96,10 @@ class Player:
         tag = model.get("tag", "?")
         detail = ", ".join(str(x) for x in (model.get("quantization"), model.get("parameter_size")) if x)
         provider = model.get("provider", "?")
-        how = ("a scripted plan, not a model (layout check)" if provider == "scripted"
-               else f"a real MCP client session, model served by {provider}")
+        how = {
+            "scripted": "a scripted plan, not a model (layout check)",
+            "agent-trace": "the agent's own tool calls, replayed through the real server",
+        }.get(provider, f"a real MCP client session, model served by {provider}")
         settings = ", ".join(f"{k} {model[k]}" for k in ("thinking", "reasoning_effort") if model.get(k))
         name = model.get("label") or tag
         lines = Text()
@@ -152,7 +155,11 @@ class Player:
         answer = turn["answer"] or f"(no answer: {turn.get('error')})"
         self.c.print(Text("assistant > ", style="bold blue"), end="")
         self.type(answer, style="")
-        self.c.print(Text(f"  {turn['latency_ms'] / 1000:.1f} s for the whole answer", style="dim"))
+        if self.replayed_trace:
+            # The agent ran elsewhere; latency here is the replay's, not the model's.
+            self.c.print(Text("  model time not measured (replayed trace)", style="dim"))
+        else:
+            self.c.print(Text(f"  {turn['latency_ms'] / 1000:.1f} s for the whole answer", style="dim"))
         self.pause(2.0)
 
     def side_by_side(self, call: dict[str, Any]) -> None:
@@ -215,7 +222,8 @@ def main(argv: list[str] | None = None) -> int:
     if missing:
         print(f"not in the recording: {', '.join(missing)}", file=sys.stderr)
         return 2
-    player = Player(Console(width=a.width, highlight=False), a.speed)
+    player = Player(Console(width=a.width, highlight=False), a.speed,
+                    replayed_trace=doc["model"].get("provider") == "agent-trace")
     player.header(doc)
     for q in doc["questions"]:
         if q["id"] in ids:
