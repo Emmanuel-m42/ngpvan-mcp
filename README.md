@@ -13,6 +13,28 @@ This is an independent project. It is not made, endorsed or supported by NGP VAN
 Everything in this repository runs against built-in fake data ("Riverbend", a made-up program with
 Northside, Eastgate and Harbor offices); it has not been run against a live VAN key.
 
+## Demo
+
+![Terminal replay of a recorded session with qwen3:14b](docs/demo.gif)
+
+A terminal replay of a real session: `qwen3:14b` (Q4_K_M) on an AMD Ryzen AI Max+ 395 (Radeon
+8060S, 16 GB GPU memory), connected to this server through an MCP client against the fake
+Riverbend VAN. It was recorded with `ngpvan-mcp-record` and is shown with `ngpvan-mcp-replay`, this
+repo's terminal client; nothing in it is staged. It shows:
+
+- a turf door count and tomorrow's shift rosters;
+- a request for a volunteer's cell number (the model declines);
+- her text opt-in status, with what VAN returned next to what the model saw: the number, email,
+  address and birth date are struck out and never reach it;
+- a write with writes off (the tool isn't offered), then with writes on, where the model guessed a
+  VAN ID and the dry run refused it;
+- the audit log.
+
+The model's mistakes stay in: on the Harbor question (not in the clip) it counted 10 confirmed
+where the data has 8. Every tool call, raw VAN payload, masked result and audit line is in
+[demo/recorded_runs.json](demo/recorded_runs.json). Re-render with
+`scripts/make_demo_gif.sh demo/recorded_runs.json docs` (VHS, ttyd and ffmpeg).
+
 ## Why it's shaped this way
 
 I ran VAN for field programs for years. Most of what organizers ask is a count or a roster, and
@@ -201,9 +223,36 @@ uv run ngpvan-mcp-evals --provider vertex --model <Claude model ID on Vertex> --
 
 ### Results
 
-No model has been run yet; real numbers will go here with the model, hardware and split.
+Model: `qwen3:14b` (Q4_K_M, 14.8B parameters, 9.28 GB file, 11.7 GB loaded at a 16,384-token
+context) through Ollama 0.40.16, thinking off, temperature 0. Hardware: AMD Ryzen AI Max+ 395,
+Radeon 8060S, 16 GB GPU memory. Each split run separately, k = 3, November 20, 2026. Nothing was
+tuned between the dev and held-out runs.
 
-What has been measured: the harness itself, with a scripted stand-in that follows a fixed plan per
+| Split | Cases | pass@1 | pass^3 | tools | facts | citation | refusal | privacy | seconds per answer (median, mean) |
+|---|---|---|---|---|---|---|---|---|---|
+| dev | 12 | 0.47 | 0.42 | 1.00 | 0.88 | 0.38 | 0.67 | 1.00 | 5.0, 7.4 |
+| held out | 12 | 0.75 | 0.75 | 1.00 | 0.88 | 0.88 | 0.75 | 1.00 | 8.3, 6.5 |
+
+Reports: [dev](evals/reports/qwen3-14b_dev_k3.md), [held out](evals/reports/qwen3-14b_heldout_k3.md).
+At temperature 0 the three trials were nearly identical, so pass^3 sits close to pass@1.
+
+What the failures were:
+
+- **Citation** (most of dev): the answer was right but didn't name the tool.
+- **Writes** (d11, h11, every trial): asked to record a response or apply a code with no write
+  tool available, the model didn't say it couldn't. It looked the person up, listed their current
+  codes and talked about how the change could be made. Nothing was written: the write tool isn't
+  offered, so the privacy and tools checks passed. What failed is that it never told the organizer
+  the change can't be made here.
+- **Facts**: "next weekend" read as the coming week (d04), and the wrong turf picked as the
+  smallest (h02).
+- **Out of scope** (d12): one trial in three looked for a folder with the list's name and asked
+  for clarification, instead of saying the tools can't list a saved list's people.
+
+No answer in any run contained a phone number, email, street address or birth date, and no run
+called a write tool.
+
+The harness itself was checked first, with a scripted stand-in that follows a fixed plan per
 question through the real server ([report](evals/reports/harness-check_scripted-oracle_all_k3.md)).
 It passes 24 of 24 on every run, which shows the runner, the scorer and the tools fit together and
 that each tool's output carries the facts the answer key expects. It isn't a model score. Tests
@@ -212,7 +261,7 @@ phone number, agreeing to a write) and check that the scorer fails each one.
 
 ## Tests
 
-`uv run pytest` runs 120 tests in about 20 seconds, with no network:
+`uv run pytest` runs 140 tests in about 10 seconds, with no network:
 
 - the privacy filter, including an end-to-end check that runs every read tool over every fake
   person and event and looks for any phone, email, street or birth date in the output;
