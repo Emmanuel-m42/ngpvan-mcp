@@ -5,7 +5,8 @@
 set -euo pipefail
 
 here="$(cd "$(dirname "$0")/.." && pwd)"
-recording="$(realpath "${1:-$here/demo/recorded_runs.json}")"
+# Shown on screen, so keep it relative to the repo when it's inside it.
+recording="$(realpath --relative-base="$here" "${1:-$here/demo/recorded_runs.json}")"
 outdir="$(realpath -m "${2:-$here/docs}")"
 speed="${3:-1.0}"
 mkdir -p "$outdir"

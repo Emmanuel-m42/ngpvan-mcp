@@ -1,0 +1,3209 @@
+{
+ "program": "Riverbend Votes (fictional demo program)",
+ "generated_at": "2026-11-21T02:06:59+00:00",
+ "model": {
+  "tag": "qwen3:14b",
+  "provider": "ollama",
+  "quantization": "Q4_K_M",
+  "parameter_size": "14.8B",
+  "size_gb": 9.28,
+  "digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+  "num_ctx": 16384,
+  "temperature": 0.0
+ },
+ "hardware": "AMD Ryzen AI Max+ 395, Radeon 8060S, 16 GB GPU memory",
+ "data_note": "All data is fictional: the Riverbend program, its people, events and lists are made up. Phone numbers are in the 555-0100 to 555-0199 range reserved for fiction, and emails use example.org. The VAN API here is a local fake that follows the documented response shapes.",
+ "card": {
+  "description": "An MCP server that lets an AI assistant answer organizer questions from NGP VAN without seeing people's contact details.",
+  "points": [
+   "Read-only unless a write tool is turned on in the config.",
+   "Phone numbers, emails, street addresses and birth dates are removed in code before the model sees a result.",
+   "A write has to be a dry run first, and sending it needs the dry run's token.",
+   "Every tool call writes one audit line, and the API key never appears in it.",
+   "Works with Claude or an open model through any MCP client.",
+   "Everything in this demo is made-up data for a fictional program."
+  ]
+ },
+ "server": {
+  "name": "ngpvan-mcp",
+  "version": "0.1.0",
+  "names_policy": "initial",
+  "today": "Sunday, October 18, 2026"
+ },
+ "questions": [
+  {
+   "id": "northside-turf-doors",
+   "category": "turf",
+   "office": "Northside",
+   "question": "How many doors are on Northside's turf lists, and which turf is biggest?",
+   "note": "VAN's API doesn't report doors knocked. This counts the doors on the saved lists Northside cut as turf, using VAN's own door count for each list.",
+   "writes_enabled": false,
+   "tools_offered": [
+    "check_connection",
+    "search_people",
+    "get_person",
+    "person_activist_codes",
+    "person_signups",
+    "contact_history_summary",
+    "list_events",
+    "event_signups_summary",
+    "list_folders",
+    "turf_door_counts",
+    "list_survey_questions",
+    "list_activist_codes",
+    "canvass_codes"
+   ],
+   "tool_calls": [
+    {
+     "name": "turf_door_counts",
+     "args": {
+      "folder_name": "Northside"
+     },
+     "is_error": false,
+     "latency_ms": 40.2,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/folders",
+       "query": {
+        "$top": "50",
+        "$skip": "0"
+       },
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "folderId": 44,
+          "name": "Northside Turfs"
+         },
+         {
+          "folderId": 45,
+          "name": "Eastgate Turfs"
+         },
+         {
+          "folderId": 46,
+          "name": "Harbor Turfs"
+         },
+         {
+          "folderId": 47,
+          "name": "Phone Bank Lists"
+         },
+         {
+          "folderId": 48,
+          "name": "Archive"
+         }
+        ],
+        "nextPageLink": null,
+        "count": 5
+       }
+      },
+      {
+       "method": "GET",
+       "path": "/savedLists",
+       "query": {
+        "folderId": "44",
+        "$top": "200",
+        "$skip": "0"
+       },
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "savedListId": 990100,
+          "name": "NS Turf 01 Maple",
+          "description": "GOTV canvass turf 1",
+          "listCount": 116,
+          "doorCount": 74
+         },
+         {
+          "savedListId": 990101,
+          "name": "NS Turf 02 Juniper",
+          "description": "GOTV canvass turf 2",
+          "listCount": 152,
+          "doorCount": 88
+         },
+         {
+          "savedListId": 990102,
+          "name": "NS Turf 03 Willow",
+          "description": "GOTV canvass turf 3",
+          "listCount": 147,
+          "doorCount": 103
+         },
+         {
+          "savedListId": 990103,
+          "name": "NS Turf 04 Cedar",
+          "description": "GOTV canvass turf 4",
+          "listCount": 120,
+          "doorCount": 92
+         },
+         {
+          "savedListId": 990104,
+          "name": "NS Turf 05 Maple",
+          "description": "GOTV canvass turf 5",
+          "listCount": 106,
+          "doorCount": 80
+         }
+        ],
+        "nextPageLink": null,
+        "count": 5
+       }
+      }
+     ],
+     "masked": {
+      "folders": [
+       {
+        "folder_id": 44,
+        "folder": "Northside Turfs",
+        "lists": 5,
+        "doors": 437,
+        "people": 641,
+        "saved_lists": [
+         {
+          "saved_list_id": 990100,
+          "name": "NS Turf 01 Maple",
+          "doors": 74,
+          "people": 116
+         },
+         {
+          "saved_list_id": 990101,
+          "name": "NS Turf 02 Juniper",
+          "doors": 88,
+          "people": 152
+         },
+         {
+          "saved_list_id": 990102,
+          "name": "NS Turf 03 Willow",
+          "doors": 103,
+          "people": 147
+         },
+         {
+          "saved_list_id": 990103,
+          "name": "NS Turf 04 Cedar",
+          "doors": 92,
+          "people": 120
+         },
+         {
+          "saved_list_id": 990104,
+          "name": "NS Turf 05 Maple",
+          "doors": 80,
+          "people": 106
+         }
+        ]
+       }
+      ],
+      "total_doors": 437,
+      "total_people": 641,
+      "note": "VAN's API has no turf endpoint. Turf here means the saved lists in a folder, with VAN's own doorCount and listCount for each.",
+      "source": {
+       "tool": "turf_door_counts",
+       "endpoints": [
+        "GET /folders",
+        "GET /savedLists?folderId=..."
+       ]
+      }
+     },
+     "masked_fields": []
+    }
+   ],
+   "write": null,
+   "answer": "The Northside turf lists have a total of 437 doors. The largest turf by number of doors is \"NS Turf 03 Willow\" with 103 doors.",
+   "error": null,
+   "latency_ms": 4327.9,
+   "steps": 2,
+   "audit": [
+    "{\"ts\": \"2026-11-21T02:06:06.183+00:00\", \"tool\": \"turf_door_counts\", \"args\": {\"folder_id\": null, \"folder_name\": \"Northside\"}, \"status\": \"ok\", \"duration_ms\": 1.8, \"van_requests\": 2, \"retries\": 0, \"items\": 1}"
+   ]
+  },
+  {
+   "id": "eastgate-biggest-turf",
+   "category": "turf",
+   "office": "Eastgate",
+   "question": "Which Eastgate turf has the most doors?",
+   "note": null,
+   "writes_enabled": false,
+   "tools_offered": [
+    "check_connection",
+    "search_people",
+    "get_person",
+    "person_activist_codes",
+    "person_signups",
+    "contact_history_summary",
+    "list_events",
+    "event_signups_summary",
+    "list_folders",
+    "turf_door_counts",
+    "list_survey_questions",
+    "list_activist_codes",
+    "canvass_codes"
+   ],
+   "tool_calls": [
+    {
+     "name": "turf_door_counts",
+     "args": {
+      "folder_name": "Eastgate"
+     },
+     "is_error": false,
+     "latency_ms": 2.8,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/folders",
+       "query": {
+        "$top": "50",
+        "$skip": "0"
+       },
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "folderId": 44,
+          "name": "Northside Turfs"
+         },
+         {
+          "folderId": 45,
+          "name": "Eastgate Turfs"
+         },
+         {
+          "folderId": 46,
+          "name": "Harbor Turfs"
+         },
+         {
+          "folderId": 47,
+          "name": "Phone Bank Lists"
+         },
+         {
+          "folderId": 48,
+          "name": "Archive"
+         }
+        ],
+        "nextPageLink": null,
+        "count": 5
+       }
+      },
+      {
+       "method": "GET",
+       "path": "/savedLists",
+       "query": {
+        "folderId": "45",
+        "$top": "200",
+        "$skip": "0"
+       },
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "savedListId": 990105,
+          "name": "EG Turf 01 Larkspur",
+          "description": "GOTV canvass turf 1",
+          "listCount": 150,
+          "doorCount": 93
+         },
+         {
+          "savedListId": 990106,
+          "name": "EG Turf 02 Foundry",
+          "description": "GOTV canvass turf 2",
+          "listCount": 150,
+          "doorCount": 104
+         },
+         {
+          "savedListId": 990107,
+          "name": "EG Turf 03 Quarry",
+          "description": "GOTV canvass turf 3",
+          "listCount": 134,
+          "doorCount": 100
+         },
+         {
+          "savedListId": 990108,
+          "name": "EG Turf 04 Larkspur",
+          "description": "GOTV canvass turf 4",
+          "listCount": 92,
+          "doorCount": 69
+         }
+        ],
+        "nextPageLink": null,
+        "count": 4
+       }
+      }
+     ],
+     "masked": {
+      "folders": [
+       {
+        "folder_id": 45,
+        "folder": "Eastgate Turfs",
+        "lists": 4,
+        "doors": 366,
+        "people": 526,
+        "saved_lists": [
+         {
+          "saved_list_id": 990105,
+          "name": "EG Turf 01 Larkspur",
+          "doors": 93,
+          "people": 150
+         },
+         {
+          "saved_list_id": 990106,
+          "name": "EG Turf 02 Foundry",
+          "doors": 104,
+          "people": 150
+         },
+         {
+          "saved_list_id": 990107,
+          "name": "EG Turf 03 Quarry",
+          "doors": 100,
+          "people": 134
+         },
+         {
+          "saved_list_id": 990108,
+          "name": "EG Turf 04 Larkspur",
+          "doors": 69,
+          "people": 92
+         }
+        ]
+       }
+      ],
+      "total_doors": 366,
+      "total_people": 526,
+      "note": "VAN's API has no turf endpoint. Turf here means the saved lists in a folder, with VAN's own doorCount and listCount for each.",
+      "source": {
+       "tool": "turf_door_counts",
+       "endpoints": [
+        "GET /folders",
+        "GET /savedLists?folderId=..."
+       ]
+      }
+     },
+     "masked_fields": []
+    }
+   ],
+   "write": null,
+   "answer": "The Eastgate turf with the most doors is \"EG Turf 02 Foundry\" with 104 doors (turf_door_counts).",
+   "error": null,
+   "latency_ms": 3675.7,
+   "steps": 2,
+   "audit": [
+    "{\"ts\": \"2026-11-21T02:06:10.456+00:00\", \"tool\": \"turf_door_counts\", \"args\": {\"folder_id\": null, \"folder_name\": \"Eastgate\"}, \"status\": \"ok\", \"duration_ms\": 1.2, \"van_requests\": 2, \"retries\": 0, \"items\": 1}"
+   ]
+  },
+  {
+   "id": "tomorrow-shift",
+   "category": "shifts",
+   "office": "All offices",
+   "question": "Who's on tomorrow's shift?",
+   "note": null,
+   "writes_enabled": false,
+   "tools_offered": [
+    "check_connection",
+    "search_people",
+    "get_person",
+    "person_activist_codes",
+    "person_signups",
+    "contact_history_summary",
+    "list_events",
+    "event_signups_summary",
+    "list_folders",
+    "turf_door_counts",
+    "list_survey_questions",
+    "list_activist_codes",
+    "canvass_codes"
+   ],
+   "tool_calls": [
+    {
+     "name": "list_events",
+     "args": {
+      "start_date": "2026-10-19"
+     },
+     "is_error": false,
+     "latency_ms": 2.5,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/events",
+       "query": {
+        "startingAfter": "2026-10-18",
+        "startingBefore": "2026-10-20",
+        "$expand": "shifts,locations",
+        "$top": "25",
+        "$skip": "0"
+       },
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "eventId": 3001,
+          "name": "Northside GOTV Canvass",
+          "shortName": "NS Canv",
+          "description": "Meet at the Northside Office. Questions? Text Dana at (970) 555-0188.",
+          "startDate": "2026-10-19T09:00:00-06:00",
+          "endDate": "2026-10-19T16:00:00-06:00",
+          "eventType": {
+           "eventTypeId": 801,
+           "name": "Canvass"
+          },
+          "isOnlyEditableByCreatingUser": false,
+          "isPubliclyViewable": null,
+          "locations": [
+           {
+            "locationId": 601,
+            "name": "Northside Office",
+            "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
+           }
+          ],
+          "codes": null,
+          "notes": null,
+          "shifts": [
+           {
+            "eventShiftId": 7001,
+            "name": "Morning",
+            "startTime": "2026-10-19T09:00:00-06:00",
+            "endTime": "2026-10-19T12:00:00-06:00"
+           },
+           {
+            "eventShiftId": 7002,
+            "name": "Afternoon",
+            "startTime": "2026-10-19T13:00:00-06:00",
+            "endTime": "2026-10-19T16:00:00-06:00"
+           }
+          ],
+          "roles": null,
+          "districtFieldValue": null,
+          "voterRegistrationBatches": null,
+          "createdDate": "2026-10-01T17:00:00Z",
+          "isActive": true,
+          "dotNetTimeZoneId": "Mountain Standard Time"
+         },
+         {
+          "eventId": 3002,
+          "name": "Eastgate Phone Bank",
+          "shortName": "EG PB",
+          "description": "Bring a charged phone and headphones.",
+          "startDate": "2026-10-19T17:00:00-06:00",
+          "endDate": "2026-10-19T20:00:00-06:00",
+          "eventType": {
+           "eventTypeId": 802,
+           "name": "Phone Bank"
+          },
+          "isOnlyEditableByCreatingUser": false,
+          "isPubliclyViewable": null,
+          "locations": [
+           {
+            "locationId": 602,
+            "name": "Eastgate Office",
+            "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
+           }
+          ],
+          "codes": null,
+          "notes": null,
+          "shifts": [
+           {
+            "eventShiftId": 7003,
+            "name": "Evening",
+            "startTime": "2026-10-19T17:00:00-06:00",
+            "endTime": "2026-10-19T20:00:00-06:00"
+           }
+          ],
+          "roles": null,
+          "districtFieldValue": null,
+          "voterRegistrationBatches": null,
+          "createdDate": "2026-10-01T17:00:00Z",
+          "isActive": true,
+          "dotNetTimeZoneId": "Mountain Standard Time"
+         }
+        ],
+        "nextPageLink": null,
+        "count": 2
+       }
+      }
+     ],
+     "masked": {
+      "from": "2026-10-19",
+      "to": "2026-10-19",
+      "count": 2,
+      "events": [
+       {
+        "event_id": 3001,
+        "name": "Northside GOTV Canvass",
+        "type": "Canvass",
+        "date": "2026-10-19",
+        "start": "2026-10-19T09:00:00-06:00",
+        "end": "2026-10-19T16:00:00-06:00",
+        "location": "Northside Office",
+        "description": "Meet at the Northside Office. Questions? Text Dana at [phone removed].",
+        "shifts": [
+         {
+          "shift_id": 7001,
+          "name": "Morning",
+          "start": "2026-10-19T09:00:00-06:00",
+          "end": "2026-10-19T12:00:00-06:00"
+         },
+         {
+          "shift_id": 7002,
+          "name": "Afternoon",
+          "start": "2026-10-19T13:00:00-06:00",
+          "end": "2026-10-19T16:00:00-06:00"
+         }
+        ]
+       },
+       {
+        "event_id": 3002,
+        "name": "Eastgate Phone Bank",
+        "type": "Phone Bank",
+        "date": "2026-10-19",
+        "start": "2026-10-19T17:00:00-06:00",
+        "end": "2026-10-19T20:00:00-06:00",
+        "location": "Eastgate Office",
+        "description": "Bring a charged phone and headphones.",
+        "shifts": [
+         {
+          "shift_id": 7003,
+          "name": "Evening",
+          "start": "2026-10-19T17:00:00-06:00",
+          "end": "2026-10-19T20:00:00-06:00"
+         }
+        ]
+       }
+      ],
+      "source": {
+       "tool": "list_events",
+       "endpoints": [
+        "GET /events"
+       ]
+      }
+     },
+     "masked_fields": [
+      {
+       "path": "raw[0].body.items[0].description",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[0].body.items[0].locations[0].displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "masked.events[0].description",
+       "kind": "free_text",
+       "action": "masked"
+      }
+     ]
+    },
+    {
+     "name": "event_signups_summary",
+     "args": {
+      "event_id": 3001,
+      "include_roster": true
+     },
+     "is_error": false,
+     "latency_ms": 3.0,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/events/3001",
+       "query": {
+        "$expand": "shifts"
+       },
+       "status": 200,
+       "body": {
+        "eventId": 3001,
+        "name": "Northside GOTV Canvass",
+        "shortName": "NS Canv",
+        "description": "Meet at the Northside Office. Questions? Text Dana at (970) 555-0188.",
+        "startDate": "2026-10-19T09:00:00-06:00",
+        "endDate": "2026-10-19T16:00:00-06:00",
+        "eventType": {
+         "eventTypeId": 801,
+         "name": "Canvass"
+        },
+        "isOnlyEditableByCreatingUser": false,
+        "isPubliclyViewable": null,
+        "locations": [
+         {
+          "locationId": 601,
+          "name": "Northside Office",
+          "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
+         }
+        ],
+        "codes": null,
+        "notes": null,
+        "shifts": [
+         {
+          "eventShiftId": 7001,
+          "name": "Morning",
+          "startTime": "2026-10-19T09:00:00-06:00",
+          "endTime": "2026-10-19T12:00:00-06:00"
+         },
+         {
+          "eventShiftId": 7002,
+          "name": "Afternoon",
+          "startTime": "2026-10-19T13:00:00-06:00",
+          "endTime": "2026-10-19T16:00:00-06:00"
+         }
+        ],
+        "roles": [
+         {
+          "roleId": 901,
+          "name": "Volunteer"
+         },
+         {
+          "roleId": 902,
+          "name": "Host"
+         }
+        ],
+        "districtFieldValue": null,
+        "voterRegistrationBatches": null,
+        "createdDate": "2026-10-01T17:00:00Z",
+        "isActive": true,
+        "dotNetTimeZoneId": "Mountain Standard Time"
+       }
+      },
+      {
+       "method": "GET",
+       "path": "/signups",
+       "query": {
+        "eventId": "3001",
+        "$top": "200",
+        "$skip": "0"
+       },
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "eventSignupId": 2450001,
+          "person": {
+           "vanId": 100200113,
+           "firstName": "Wren",
+           "middleName": "Ann",
+           "lastName": "Sorensen"
+          },
+          "event": {
+           "eventId": 3001,
+           "name": "Northside GOTV Canvass",
+           "shortName": "NS Canv"
+          },
+          "shift": {
+           "eventShiftId": 7001,
+           "name": "Morning"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 601,
+           "name": "Northside Office",
+           "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
+          },
+          "startTimeOverride": "2026-10-19T09:00:00-06:00",
+          "endTimeOverride": "2026-10-19T12:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450002,
+          "person": {
+           "vanId": 100200131,
+           "firstName": "Keisha",
+           "middleName": "Ann",
+           "lastName": "Abernathy"
+          },
+          "event": {
+           "eventId": 3001,
+           "name": "Northside GOTV Canvass",
+           "shortName": "NS Canv"
+          },
+          "shift": {
+           "eventShiftId": 7001,
+           "name": "Morning"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 601,
+           "name": "Northside Office",
+           "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
+          },
+          "startTimeOverride": "2026-10-19T09:00:00-06:00",
+          "endTimeOverride": "2026-10-19T12:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450003,
+          "person": {
+           "vanId": 100200125,
+           "firstName": "Jordan",
+           "middleName": null,
+           "lastName": "Abernathy"
+          },
+          "event": {
+           "eventId": 3001,
+           "name": "Northside GOTV Canvass",
+           "shortName": "NS Canv"
+          },
+          "shift": {
+           "eventShiftId": 7001,
+           "name": "Morning"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 601,
+           "name": "Northside Office",
+           "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
+          },
+          "startTimeOverride": "2026-10-19T09:00:00-06:00",
+          "endTimeOverride": "2026-10-19T12:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450004,
+          "person": {
+           "vanId": 100200104,
+           "firstName": "Hannah",
+           "middleName": "Lee",
+           "lastName": "Treadwell"
+          },
+          "event": {
+           "eventId": 3001,
+           "name": "Northside GOTV Canvass",
+           "shortName": "NS Canv"
+          },
+          "shift": {
+           "eventShiftId": 7001,
+           "name": "Morning"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 601,
+           "name": "Northside Office",
+           "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
+          },
+          "startTimeOverride": "2026-10-19T09:00:00-06:00",
+          "endTimeOverride": "2026-10-19T12:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450005,
+          "person": {
+           "vanId": 100200134,
+           "firstName": "Rowan",
+           "middleName": "Ann",
+           "lastName": "Ramirez"
+          },
+          "event": {
+           "eventId": 3001,
+           "name": "Northside GOTV Canvass",
+           "shortName": "NS Canv"
+          },
+          "shift": {
+           "eventShiftId": 7001,
+           "name": "Morning"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 601,
+           "name": "Northside Office",
+           "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
+          },
+          "startTimeOverride": "2026-10-19T09:00:00-06:00",
+          "endTimeOverride": "2026-10-19T12:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450006,
+          "person": {
+           "vanId": 100200143,
+           "firstName": "Owen",
+           "middleName": null,
+           "lastName": "Varga"
+          },
+          "event": {
+           "eventId": 3001,
+           "name": "Northside GOTV Canvass",
+           "shortName": "NS Canv"
+          },
+          "shift": {
+           "eventShiftId": 7001,
+           "name": "Morning"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 601,
+           "name": "Northside Office",
+           "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
+          },
+          "startTimeOverride": "2026-10-19T09:00:00-06:00",
+          "endTimeOverride": "2026-10-19T12:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450007,
+          "person": {
+           "vanId": 100200143,
+           "firstName": "Owen",
+           "middleName": null,
+           "lastName": "Varga"
+          },
+          "event": {
+           "eventId": 3001,
+           "name": "Northside GOTV Canvass",
+           "shortName": "NS Canv"
+          },
+          "shift": {
+           "eventShiftId": 7002,
+           "name": "Afternoon"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 601,
+           "name": "Northside Office",
+           "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
+          },
+          "startTimeOverride": "2026-10-19T13:00:00-06:00",
+          "endTimeOverride": "2026-10-19T16:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450008,
+          "person": {
+           "vanId": 100200113,
+           "firstName": "Wren",
+           "middleName": "Ann",
+           "lastName": "Sorensen"
+          },
+          "event": {
+           "eventId": 3001,
+           "name": "Northside GOTV Canvass",
+           "shortName": "NS Canv"
+          },
+          "shift": {
+           "eventShiftId": 7002,
+           "name": "Afternoon"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 601,
+           "name": "Northside Office",
+           "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
+          },
+          "startTimeOverride": "2026-10-19T13:00:00-06:00",
+          "endTimeOverride": "2026-10-19T16:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450009,
+          "person": {
+           "vanId": 100200134,
+           "firstName": "Rowan",
+           "middleName": "Ann",
+           "lastName": "Ramirez"
+          },
+          "event": {
+           "eventId": 3001,
+           "name": "Northside GOTV Canvass",
+           "shortName": "NS Canv"
+          },
+          "shift": {
+           "eventShiftId": 7002,
+           "name": "Afternoon"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 1,
+           "name": "Scheduled"
+          },
+          "location": {
+           "locationId": 601,
+           "name": "Northside Office",
+           "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
+          },
+          "startTimeOverride": "2026-10-19T13:00:00-06:00",
+          "endTimeOverride": "2026-10-19T16:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450010,
+          "person": {
+           "vanId": 100200101,
+           "firstName": "Malik",
+           "middleName": "J",
+           "lastName": "Varga"
+          },
+          "event": {
+           "eventId": 3001,
+           "name": "Northside GOTV Canvass",
+           "shortName": "NS Canv"
+          },
+          "shift": {
+           "eventShiftId": 7002,
+           "name": "Afternoon"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 4,
+           "name": "Invited"
+          },
+          "location": {
+           "locationId": 601,
+           "name": "Northside Office",
+           "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
+          },
+          "startTimeOverride": "2026-10-19T13:00:00-06:00",
+          "endTimeOverride": "2026-10-19T16:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450011,
+          "person": {
+           "vanId": 100200116,
+           "firstName": "Priya",
+           "middleName": "J",
+           "lastName": "Calloway"
+          },
+          "event": {
+           "eventId": 3001,
+           "name": "Northside GOTV Canvass",
+           "shortName": "NS Canv"
+          },
+          "shift": {
+           "eventShiftId": 7002,
+           "name": "Afternoon"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 1,
+           "name": "Scheduled"
+          },
+          "location": {
+           "locationId": 601,
+           "name": "Northside Office",
+           "displayName": "Northside Office, 410 Grant Ave Riverbend, ZZ 80901 "
+          },
+          "startTimeOverride": "2026-10-19T13:00:00-06:00",
+          "endTimeOverride": "2026-10-19T16:00:00-06:00"
+         }
+        ],
+        "nextPageLink": null,
+        "count": 11
+       }
+      }
+     ],
+     "masked": {
+      "event_id": 3001,
+      "event": "Northside GOTV Canvass",
+      "date": "2026-10-19",
+      "signed_up": 11,
+      "committed": 10,
+      "by_status": {
+       "Confirmed": 8,
+       "Scheduled": 2,
+       "Invited": 1
+      },
+      "shifts": [
+       {
+        "shift_id": 7001,
+        "name": "Morning",
+        "start": "2026-10-19T09:00:00-06:00",
+        "end": "2026-10-19T12:00:00-06:00",
+        "signed_up": 6,
+        "committed": 6,
+        "by_status": {
+         "Confirmed": 6
+        },
+        "roster": [
+         {
+          "van_id": 100200131,
+          "name": "Keisha A.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200125,
+          "name": "Jordan A.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200134,
+          "name": "Rowan R.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200113,
+          "name": "Wren S.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200104,
+          "name": "Hannah T.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200143,
+          "name": "Owen V.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         }
+        ]
+       },
+       {
+        "shift_id": 7002,
+        "name": "Afternoon",
+        "start": "2026-10-19T13:00:00-06:00",
+        "end": "2026-10-19T16:00:00-06:00",
+        "signed_up": 5,
+        "committed": 4,
+        "by_status": {
+         "Confirmed": 2,
+         "Scheduled": 2,
+         "Invited": 1
+        },
+        "roster": [
+         {
+          "van_id": 100200113,
+          "name": "Wren S.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200143,
+          "name": "Owen V.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200101,
+          "name": "Malik V.",
+          "role": "Volunteer",
+          "status": "Invited"
+         },
+         {
+          "van_id": 100200116,
+          "name": "Priya C.",
+          "role": "Volunteer",
+          "status": "Scheduled"
+         },
+         {
+          "van_id": 100200134,
+          "name": "Rowan R.",
+          "role": "Volunteer",
+          "status": "Scheduled"
+         }
+        ]
+       }
+      ],
+      "note": "committed counts Scheduled, Confirmed, Walk In and Completed; Invited and Declined are not committed.",
+      "source": {
+       "tool": "event_signups_summary",
+       "endpoints": [
+        "GET /events/3001",
+        "GET /signups?eventId=3001"
+       ]
+      }
+     },
+     "masked_fields": [
+      {
+       "path": "raw[0].body.description",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[0].body.locations[0].displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[0].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[0].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[0].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[1].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[1].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[1].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[2].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[2].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[3].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[3].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[3].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[4].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[4].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[4].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[5].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[5].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[6].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[6].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[7].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[7].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[7].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[8].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[8].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[8].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[9].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[9].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[9].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[10].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[10].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[10].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      }
+     ]
+    },
+    {
+     "name": "event_signups_summary",
+     "args": {
+      "event_id": 3002,
+      "include_roster": true
+     },
+     "is_error": false,
+     "latency_ms": 1.7,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/events/3002",
+       "query": {
+        "$expand": "shifts"
+       },
+       "status": 200,
+       "body": {
+        "eventId": 3002,
+        "name": "Eastgate Phone Bank",
+        "shortName": "EG PB",
+        "description": "Bring a charged phone and headphones.",
+        "startDate": "2026-10-19T17:00:00-06:00",
+        "endDate": "2026-10-19T20:00:00-06:00",
+        "eventType": {
+         "eventTypeId": 802,
+         "name": "Phone Bank"
+        },
+        "isOnlyEditableByCreatingUser": false,
+        "isPubliclyViewable": null,
+        "locations": [
+         {
+          "locationId": 602,
+          "name": "Eastgate Office",
+          "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
+         }
+        ],
+        "codes": null,
+        "notes": null,
+        "shifts": [
+         {
+          "eventShiftId": 7003,
+          "name": "Evening",
+          "startTime": "2026-10-19T17:00:00-06:00",
+          "endTime": "2026-10-19T20:00:00-06:00"
+         }
+        ],
+        "roles": [
+         {
+          "roleId": 901,
+          "name": "Volunteer"
+         },
+         {
+          "roleId": 902,
+          "name": "Host"
+         }
+        ],
+        "districtFieldValue": null,
+        "voterRegistrationBatches": null,
+        "createdDate": "2026-10-01T17:00:00Z",
+        "isActive": true,
+        "dotNetTimeZoneId": "Mountain Standard Time"
+       }
+      },
+      {
+       "method": "GET",
+       "path": "/signups",
+       "query": {
+        "eventId": "3002",
+        "$top": "200",
+        "$skip": "0"
+       },
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "eventSignupId": 2450012,
+          "person": {
+           "vanId": 100200147,
+           "firstName": "Beatriz",
+           "middleName": "Ann",
+           "lastName": "Varga"
+          },
+          "event": {
+           "eventId": 3002,
+           "name": "Eastgate Phone Bank",
+           "shortName": "EG PB"
+          },
+          "shift": {
+           "eventShiftId": 7003,
+           "name": "Evening"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 602,
+           "name": "Eastgate Office",
+           "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
+          },
+          "startTimeOverride": "2026-10-19T17:00:00-06:00",
+          "endTimeOverride": "2026-10-19T20:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450013,
+          "person": {
+           "vanId": 100200126,
+           "firstName": "Samir",
+           "middleName": "Lee",
+           "lastName": "Sorensen"
+          },
+          "event": {
+           "eventId": 3002,
+           "name": "Eastgate Phone Bank",
+           "shortName": "EG PB"
+          },
+          "shift": {
+           "eventShiftId": 7003,
+           "name": "Evening"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 602,
+           "name": "Eastgate Office",
+           "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
+          },
+          "startTimeOverride": "2026-10-19T17:00:00-06:00",
+          "endTimeOverride": "2026-10-19T20:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450014,
+          "person": {
+           "vanId": 100200129,
+           "firstName": "Felix",
+           "middleName": "Ann",
+           "lastName": "Abernathy"
+          },
+          "event": {
+           "eventId": 3002,
+           "name": "Eastgate Phone Bank",
+           "shortName": "EG PB"
+          },
+          "shift": {
+           "eventShiftId": 7003,
+           "name": "Evening"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 602,
+           "name": "Eastgate Office",
+           "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
+          },
+          "startTimeOverride": "2026-10-19T17:00:00-06:00",
+          "endTimeOverride": "2026-10-19T20:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450015,
+          "person": {
+           "vanId": 100200141,
+           "firstName": "Tobias",
+           "middleName": "J",
+           "lastName": "Nakamura"
+          },
+          "event": {
+           "eventId": 3002,
+           "name": "Eastgate Phone Bank",
+           "shortName": "EG PB"
+          },
+          "shift": {
+           "eventShiftId": 7003,
+           "name": "Evening"
+          },
+          "role": {
+           "roleId": 902,
+           "name": "Host"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 602,
+           "name": "Eastgate Office",
+           "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
+          },
+          "startTimeOverride": "2026-10-19T17:00:00-06:00",
+          "endTimeOverride": "2026-10-19T20:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450016,
+          "person": {
+           "vanId": 100200123,
+           "firstName": "Dana",
+           "middleName": null,
+           "lastName": "Calloway"
+          },
+          "event": {
+           "eventId": 3002,
+           "name": "Eastgate Phone Bank",
+           "shortName": "EG PB"
+          },
+          "shift": {
+           "eventShiftId": 7003,
+           "name": "Evening"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 4,
+           "name": "Invited"
+          },
+          "location": {
+           "locationId": 602,
+           "name": "Eastgate Office",
+           "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
+          },
+          "startTimeOverride": "2026-10-19T17:00:00-06:00",
+          "endTimeOverride": "2026-10-19T20:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450017,
+          "person": {
+           "vanId": 100200117,
+           "firstName": "Felix",
+           "middleName": null,
+           "lastName": "Ashdown"
+          },
+          "event": {
+           "eventId": 3002,
+           "name": "Eastgate Phone Bank",
+           "shortName": "EG PB"
+          },
+          "shift": {
+           "eventShiftId": 7003,
+           "name": "Evening"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 1,
+           "name": "Scheduled"
+          },
+          "location": {
+           "locationId": 602,
+           "name": "Eastgate Office",
+           "displayName": "Eastgate Office, 88 Eastgate Plaza Eastgate, ZZ 80902 "
+          },
+          "startTimeOverride": "2026-10-19T17:00:00-06:00",
+          "endTimeOverride": "2026-10-19T20:00:00-06:00"
+         }
+        ],
+        "nextPageLink": null,
+        "count": 6
+       }
+      }
+     ],
+     "masked": {
+      "event_id": 3002,
+      "event": "Eastgate Phone Bank",
+      "date": "2026-10-19",
+      "signed_up": 6,
+      "committed": 5,
+      "by_status": {
+       "Confirmed": 4,
+       "Invited": 1,
+       "Scheduled": 1
+      },
+      "shifts": [
+       {
+        "shift_id": 7003,
+        "name": "Evening",
+        "start": "2026-10-19T17:00:00-06:00",
+        "end": "2026-10-19T20:00:00-06:00",
+        "signed_up": 6,
+        "committed": 5,
+        "by_status": {
+         "Confirmed": 4,
+         "Invited": 1,
+         "Scheduled": 1
+        },
+        "roster": [
+         {
+          "van_id": 100200129,
+          "name": "Felix A.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200141,
+          "name": "Tobias N.",
+          "role": "Host",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200126,
+          "name": "Samir S.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200147,
+          "name": "Beatriz V.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200123,
+          "name": "Dana C.",
+          "role": "Volunteer",
+          "status": "Invited"
+         },
+         {
+          "van_id": 100200117,
+          "name": "Felix A.",
+          "role": "Volunteer",
+          "status": "Scheduled"
+         }
+        ]
+       }
+      ],
+      "note": "committed counts Scheduled, Confirmed, Walk In and Completed; Invited and Declined are not committed.",
+      "source": {
+       "tool": "event_signups_summary",
+       "endpoints": [
+        "GET /events/3002",
+        "GET /signups?eventId=3002"
+       ]
+      }
+     },
+     "masked_fields": [
+      {
+       "path": "raw[1].body.items[0].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[0].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[1].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[1].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[2].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[2].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[3].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[3].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[4].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[5].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      }
+     ]
+    }
+   ],
+   "write": null,
+   "answer": "Here are the people signed up for tomorrow's shifts:\n\n### Northside GOTV Canvass\n- **Morning Shift (9:00 AM - 12:00 PM):**\n  - Keisha A.\n  - Jordan A.\n  - Rowan R.\n  - Wren S.\n  - Hannah T.\n  - Owen V.\n\n- **Afternoon Shift (1:00 PM - 4:00 PM):**\n  - Wren S.\n  - Owen V.\n  - Malik V.\n  - Priya C.\n  - Rowan R.\n\n### Eastgate Phone Bank\n- **Evening Shift (5:00 PM - 8:00 PM):**\n  - Felix A.\n  - Tobias N.\n  - Samir S.\n  - Beatriz V.\n  - Dana C.\n  - Felix A. (Scheduled)\n\nLet me know if you need any further details!",
+   "error": null,
+   "latency_ms": 19394.3,
+   "steps": 3,
+   "audit": [
+    "{\"ts\": \"2026-11-21T02:06:14.456+00:00\", \"tool\": \"list_events\", \"args\": {\"start_date\": \"2026-10-19\", \"end_date\": null, \"event_type\": null}, \"status\": \"ok\", \"duration_ms\": 1.0, \"van_requests\": 1, \"retries\": 0, \"items\": 2}",
+    "{\"ts\": \"2026-11-21T02:06:18.883+00:00\", \"tool\": \"event_signups_summary\", \"args\": {\"event_id\": 3001, \"shift\": null, \"include_roster\": true}, \"status\": \"ok\", \"duration_ms\": 1.5, \"van_requests\": 2, \"retries\": 0, \"items\": 2}",
+    "{\"ts\": \"2026-11-21T02:06:18.886+00:00\", \"tool\": \"event_signups_summary\", \"args\": {\"event_id\": 3002, \"shift\": null, \"include_roster\": true}, \"status\": \"ok\", \"duration_ms\": 1.2, \"van_requests\": 2, \"retries\": 0, \"items\": 1}"
+   ]
+  },
+  {
+   "id": "harbor-launch-signups",
+   "category": "shifts",
+   "office": "Harbor",
+   "question": "How many people are signed up for next Sunday's Harbor Canvass Launch, and how many have confirmed?",
+   "note": null,
+   "writes_enabled": false,
+   "tools_offered": [
+    "check_connection",
+    "search_people",
+    "get_person",
+    "person_activist_codes",
+    "person_signups",
+    "contact_history_summary",
+    "list_events",
+    "event_signups_summary",
+    "list_folders",
+    "turf_door_counts",
+    "list_survey_questions",
+    "list_activist_codes",
+    "canvass_codes"
+   ],
+   "tool_calls": [
+    {
+     "name": "list_events",
+     "args": {
+      "start_date": "2026-10-25",
+      "event_type": "Canvass"
+     },
+     "is_error": false,
+     "latency_ms": 2.6,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/events",
+       "query": {
+        "startingAfter": "2026-10-24",
+        "startingBefore": "2026-10-26",
+        "$expand": "shifts,locations",
+        "$top": "25",
+        "$skip": "0"
+       },
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "eventId": 3003,
+          "name": "Harbor Canvass Launch",
+          "shortName": "HB Canv",
+          "description": "Launch at the Harbor Office, 1200 Harbor Rd. Host contact: harbor.lead@example.org.",
+          "startDate": "2026-10-25T10:00:00-06:00",
+          "endDate": "2026-10-25T17:00:00-06:00",
+          "eventType": {
+           "eventTypeId": 801,
+           "name": "Canvass"
+          },
+          "isOnlyEditableByCreatingUser": false,
+          "isPubliclyViewable": null,
+          "locations": [
+           {
+            "locationId": 603,
+            "name": "Harbor Office",
+            "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+           }
+          ],
+          "codes": null,
+          "notes": null,
+          "shifts": [
+           {
+            "eventShiftId": 7004,
+            "name": "Morning",
+            "startTime": "2026-10-25T10:00:00-06:00",
+            "endTime": "2026-10-25T13:00:00-06:00"
+           },
+           {
+            "eventShiftId": 7005,
+            "name": "Afternoon",
+            "startTime": "2026-10-25T14:00:00-06:00",
+            "endTime": "2026-10-25T17:00:00-06:00"
+           }
+          ],
+          "roles": null,
+          "districtFieldValue": null,
+          "voterRegistrationBatches": null,
+          "createdDate": "2026-10-01T17:00:00Z",
+          "isActive": true,
+          "dotNetTimeZoneId": "Mountain Standard Time"
+         }
+        ],
+        "nextPageLink": null,
+        "count": 1
+       }
+      }
+     ],
+     "masked": {
+      "from": "2026-10-25",
+      "to": "2026-10-25",
+      "count": 1,
+      "events": [
+       {
+        "event_id": 3003,
+        "name": "Harbor Canvass Launch",
+        "type": "Canvass",
+        "date": "2026-10-25",
+        "start": "2026-10-25T10:00:00-06:00",
+        "end": "2026-10-25T17:00:00-06:00",
+        "location": "Harbor Office",
+        "description": "Launch at the Harbor Office, [address removed] Host contact: [email removed].",
+        "shifts": [
+         {
+          "shift_id": 7004,
+          "name": "Morning",
+          "start": "2026-10-25T10:00:00-06:00",
+          "end": "2026-10-25T13:00:00-06:00"
+         },
+         {
+          "shift_id": 7005,
+          "name": "Afternoon",
+          "start": "2026-10-25T14:00:00-06:00",
+          "end": "2026-10-25T17:00:00-06:00"
+         }
+        ]
+       }
+      ],
+      "source": {
+       "tool": "list_events",
+       "endpoints": [
+        "GET /events"
+       ]
+      }
+     },
+     "masked_fields": [
+      {
+       "path": "raw[0].body.items[0].description",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[0].body.items[0].locations[0].displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "masked.events[0].description",
+       "kind": "free_text",
+       "action": "masked"
+      }
+     ]
+    },
+    {
+     "name": "event_signups_summary",
+     "args": {
+      "event_id": 3003,
+      "include_roster": true
+     },
+     "is_error": false,
+     "latency_ms": 6.1,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/events/3003",
+       "query": {
+        "$expand": "shifts"
+       },
+       "status": 200,
+       "body": {
+        "eventId": 3003,
+        "name": "Harbor Canvass Launch",
+        "shortName": "HB Canv",
+        "description": "Launch at the Harbor Office, 1200 Harbor Rd. Host contact: harbor.lead@example.org.",
+        "startDate": "2026-10-25T10:00:00-06:00",
+        "endDate": "2026-10-25T17:00:00-06:00",
+        "eventType": {
+         "eventTypeId": 801,
+         "name": "Canvass"
+        },
+        "isOnlyEditableByCreatingUser": false,
+        "isPubliclyViewable": null,
+        "locations": [
+         {
+          "locationId": 603,
+          "name": "Harbor Office",
+          "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+         }
+        ],
+        "codes": null,
+        "notes": null,
+        "shifts": [
+         {
+          "eventShiftId": 7004,
+          "name": "Morning",
+          "startTime": "2026-10-25T10:00:00-06:00",
+          "endTime": "2026-10-25T13:00:00-06:00"
+         },
+         {
+          "eventShiftId": 7005,
+          "name": "Afternoon",
+          "startTime": "2026-10-25T14:00:00-06:00",
+          "endTime": "2026-10-25T17:00:00-06:00"
+         }
+        ],
+        "roles": [
+         {
+          "roleId": 901,
+          "name": "Volunteer"
+         },
+         {
+          "roleId": 902,
+          "name": "Host"
+         }
+        ],
+        "districtFieldValue": null,
+        "voterRegistrationBatches": null,
+        "createdDate": "2026-10-01T17:00:00Z",
+        "isActive": true,
+        "dotNetTimeZoneId": "Mountain Standard Time"
+       }
+      },
+      {
+       "method": "GET",
+       "path": "/signups",
+       "query": {
+        "eventId": "3003",
+        "$top": "200",
+        "$skip": "0"
+       },
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "eventSignupId": 2450018,
+          "person": {
+           "vanId": 100200148,
+           "firstName": "Dana",
+           "middleName": "Ann",
+           "lastName": "Ashdown"
+          },
+          "event": {
+           "eventId": 3003,
+           "name": "Harbor Canvass Launch",
+           "shortName": "HB Canv"
+          },
+          "shift": {
+           "eventShiftId": 7004,
+           "name": "Morning"
+          },
+          "role": {
+           "roleId": 902,
+           "name": "Host"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 603,
+           "name": "Harbor Office",
+           "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+          },
+          "startTimeOverride": "2026-10-25T10:00:00-06:00",
+          "endTimeOverride": "2026-10-25T13:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450019,
+          "person": {
+           "vanId": 100200112,
+           "firstName": "Samir",
+           "middleName": null,
+           "lastName": "Ashdown"
+          },
+          "event": {
+           "eventId": 3003,
+           "name": "Harbor Canvass Launch",
+           "shortName": "HB Canv"
+          },
+          "shift": {
+           "eventShiftId": 7004,
+           "name": "Morning"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 3,
+           "name": "Declined"
+          },
+          "location": {
+           "locationId": 603,
+           "name": "Harbor Office",
+           "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+          },
+          "startTimeOverride": "2026-10-25T10:00:00-06:00",
+          "endTimeOverride": "2026-10-25T13:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450020,
+          "person": {
+           "vanId": 100200139,
+           "firstName": "Noor",
+           "middleName": null,
+           "lastName": "Marchetti"
+          },
+          "event": {
+           "eventId": 3003,
+           "name": "Harbor Canvass Launch",
+           "shortName": "HB Canv"
+          },
+          "shift": {
+           "eventShiftId": 7004,
+           "name": "Morning"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 603,
+           "name": "Harbor Office",
+           "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+          },
+          "startTimeOverride": "2026-10-25T10:00:00-06:00",
+          "endTimeOverride": "2026-10-25T13:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450021,
+          "person": {
+           "vanId": 100200106,
+           "firstName": "Dana",
+           "middleName": "J",
+           "lastName": "Marchetti"
+          },
+          "event": {
+           "eventId": 3003,
+           "name": "Harbor Canvass Launch",
+           "shortName": "HB Canv"
+          },
+          "shift": {
+           "eventShiftId": 7004,
+           "name": "Morning"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 603,
+           "name": "Harbor Office",
+           "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+          },
+          "startTimeOverride": "2026-10-25T10:00:00-06:00",
+          "endTimeOverride": "2026-10-25T13:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450022,
+          "person": {
+           "vanId": 100200115,
+           "firstName": "Yesenia",
+           "middleName": "Lee",
+           "lastName": "Achebe"
+          },
+          "event": {
+           "eventId": 3003,
+           "name": "Harbor Canvass Launch",
+           "shortName": "HB Canv"
+          },
+          "shift": {
+           "eventShiftId": 7004,
+           "name": "Morning"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 603,
+           "name": "Harbor Office",
+           "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+          },
+          "startTimeOverride": "2026-10-25T10:00:00-06:00",
+          "endTimeOverride": "2026-10-25T13:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450023,
+          "person": {
+           "vanId": 100200118,
+           "firstName": "Aisha",
+           "middleName": null,
+           "lastName": "Marchetti"
+          },
+          "event": {
+           "eventId": 3003,
+           "name": "Harbor Canvass Launch",
+           "shortName": "HB Canv"
+          },
+          "shift": {
+           "eventShiftId": 7004,
+           "name": "Morning"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 4,
+           "name": "Invited"
+          },
+          "location": {
+           "locationId": 603,
+           "name": "Harbor Office",
+           "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+          },
+          "startTimeOverride": "2026-10-25T10:00:00-06:00",
+          "endTimeOverride": "2026-10-25T13:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450024,
+          "person": {
+           "vanId": 100200109,
+           "firstName": "Hannah",
+           "middleName": null,
+           "lastName": "Ellery"
+          },
+          "event": {
+           "eventId": 3003,
+           "name": "Harbor Canvass Launch",
+           "shortName": "HB Canv"
+          },
+          "shift": {
+           "eventShiftId": 7004,
+           "name": "Morning"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 4,
+           "name": "Invited"
+          },
+          "location": {
+           "locationId": 603,
+           "name": "Harbor Office",
+           "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+          },
+          "startTimeOverride": "2026-10-25T10:00:00-06:00",
+          "endTimeOverride": "2026-10-25T13:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450025,
+          "person": {
+           "vanId": 100200106,
+           "firstName": "Dana",
+           "middleName": "J",
+           "lastName": "Marchetti"
+          },
+          "event": {
+           "eventId": 3003,
+           "name": "Harbor Canvass Launch",
+           "shortName": "HB Canv"
+          },
+          "shift": {
+           "eventShiftId": 7005,
+           "name": "Afternoon"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 603,
+           "name": "Harbor Office",
+           "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+          },
+          "startTimeOverride": "2026-10-25T14:00:00-06:00",
+          "endTimeOverride": "2026-10-25T17:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450026,
+          "person": {
+           "vanId": 100200127,
+           "firstName": "Theo",
+           "middleName": "Ann",
+           "lastName": "Abernathy"
+          },
+          "event": {
+           "eventId": 3003,
+           "name": "Harbor Canvass Launch",
+           "shortName": "HB Canv"
+          },
+          "shift": {
+           "eventShiftId": 7005,
+           "name": "Afternoon"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 603,
+           "name": "Harbor Office",
+           "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+          },
+          "startTimeOverride": "2026-10-25T14:00:00-06:00",
+          "endTimeOverride": "2026-10-25T17:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450027,
+          "person": {
+           "vanId": 100200139,
+           "firstName": "Noor",
+           "middleName": null,
+           "lastName": "Marchetti"
+          },
+          "event": {
+           "eventId": 3003,
+           "name": "Harbor Canvass Launch",
+           "shortName": "HB Canv"
+          },
+          "shift": {
+           "eventShiftId": 7005,
+           "name": "Afternoon"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 3,
+           "name": "Declined"
+          },
+          "location": {
+           "locationId": 603,
+           "name": "Harbor Office",
+           "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+          },
+          "startTimeOverride": "2026-10-25T14:00:00-06:00",
+          "endTimeOverride": "2026-10-25T17:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450028,
+          "person": {
+           "vanId": 100200136,
+           "firstName": "Keisha",
+           "middleName": "J",
+           "lastName": "Okonjo"
+          },
+          "event": {
+           "eventId": 3003,
+           "name": "Harbor Canvass Launch",
+           "shortName": "HB Canv"
+          },
+          "shift": {
+           "eventShiftId": 7005,
+           "name": "Afternoon"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 1,
+           "name": "Scheduled"
+          },
+          "location": {
+           "locationId": 603,
+           "name": "Harbor Office",
+           "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+          },
+          "startTimeOverride": "2026-10-25T14:00:00-06:00",
+          "endTimeOverride": "2026-10-25T17:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450029,
+          "person": {
+           "vanId": 100200148,
+           "firstName": "Dana",
+           "middleName": "Ann",
+           "lastName": "Ashdown"
+          },
+          "event": {
+           "eventId": 3003,
+           "name": "Harbor Canvass Launch",
+           "shortName": "HB Canv"
+          },
+          "shift": {
+           "eventShiftId": 7005,
+           "name": "Afternoon"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 603,
+           "name": "Harbor Office",
+           "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+          },
+          "startTimeOverride": "2026-10-25T14:00:00-06:00",
+          "endTimeOverride": "2026-10-25T17:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450030,
+          "person": {
+           "vanId": 100200133,
+           "firstName": "Dana",
+           "middleName": "J",
+           "lastName": "Abernathy"
+          },
+          "event": {
+           "eventId": 3003,
+           "name": "Harbor Canvass Launch",
+           "shortName": "HB Canv"
+          },
+          "shift": {
+           "eventShiftId": 7005,
+           "name": "Afternoon"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 11,
+           "name": "Confirmed"
+          },
+          "location": {
+           "locationId": 603,
+           "name": "Harbor Office",
+           "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+          },
+          "startTimeOverride": "2026-10-25T14:00:00-06:00",
+          "endTimeOverride": "2026-10-25T17:00:00-06:00"
+         },
+         {
+          "eventSignupId": 2450031,
+          "person": {
+           "vanId": 100200130,
+           "firstName": "Lucia",
+           "middleName": "Ann",
+           "lastName": "Delacroix"
+          },
+          "event": {
+           "eventId": 3003,
+           "name": "Harbor Canvass Launch",
+           "shortName": "HB Canv"
+          },
+          "shift": {
+           "eventShiftId": 7005,
+           "name": "Afternoon"
+          },
+          "role": {
+           "roleId": 901,
+           "name": "Volunteer"
+          },
+          "status": {
+           "statusId": 1,
+           "name": "Scheduled"
+          },
+          "location": {
+           "locationId": 603,
+           "name": "Harbor Office",
+           "displayName": "Harbor Office, 1200 Harbor Rd Harbor Point, ZZ 80903 "
+          },
+          "startTimeOverride": "2026-10-25T14:00:00-06:00",
+          "endTimeOverride": "2026-10-25T17:00:00-06:00"
+         }
+        ],
+        "nextPageLink": null,
+        "count": 14
+       }
+      }
+     ],
+     "masked": {
+      "event_id": 3003,
+      "event": "Harbor Canvass Launch",
+      "date": "2026-10-25",
+      "signed_up": 14,
+      "committed": 10,
+      "by_status": {
+       "Confirmed": 8,
+       "Declined": 2,
+       "Invited": 2,
+       "Scheduled": 2
+      },
+      "shifts": [
+       {
+        "shift_id": 7004,
+        "name": "Morning",
+        "start": "2026-10-25T10:00:00-06:00",
+        "end": "2026-10-25T13:00:00-06:00",
+        "signed_up": 7,
+        "committed": 4,
+        "by_status": {
+         "Confirmed": 4,
+         "Invited": 2,
+         "Declined": 1
+        },
+        "roster": [
+         {
+          "van_id": 100200115,
+          "name": "Yesenia A.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200148,
+          "name": "Dana A.",
+          "role": "Host",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200139,
+          "name": "Noor M.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200106,
+          "name": "Dana M.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200112,
+          "name": "Samir A.",
+          "role": "Volunteer",
+          "status": "Declined"
+         },
+         {
+          "van_id": 100200109,
+          "name": "Hannah E.",
+          "role": "Volunteer",
+          "status": "Invited"
+         },
+         {
+          "van_id": 100200118,
+          "name": "Aisha M.",
+          "role": "Volunteer",
+          "status": "Invited"
+         }
+        ]
+       },
+       {
+        "shift_id": 7005,
+        "name": "Afternoon",
+        "start": "2026-10-25T14:00:00-06:00",
+        "end": "2026-10-25T17:00:00-06:00",
+        "signed_up": 7,
+        "committed": 6,
+        "by_status": {
+         "Confirmed": 4,
+         "Scheduled": 2,
+         "Declined": 1
+        },
+        "roster": [
+         {
+          "van_id": 100200127,
+          "name": "Theo A.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200133,
+          "name": "Dana A.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200148,
+          "name": "Dana A.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200106,
+          "name": "Dana M.",
+          "role": "Volunteer",
+          "status": "Confirmed"
+         },
+         {
+          "van_id": 100200139,
+          "name": "Noor M.",
+          "role": "Volunteer",
+          "status": "Declined"
+         },
+         {
+          "van_id": 100200130,
+          "name": "Lucia D.",
+          "role": "Volunteer",
+          "status": "Scheduled"
+         },
+         {
+          "van_id": 100200136,
+          "name": "Keisha O.",
+          "role": "Volunteer",
+          "status": "Scheduled"
+         }
+        ]
+       }
+      ],
+      "note": "committed counts Scheduled, Confirmed, Walk In and Completed; Invited and Declined are not committed.",
+      "source": {
+       "tool": "event_signups_summary",
+       "endpoints": [
+        "GET /events/3003",
+        "GET /signups?eventId=3003"
+       ]
+      }
+     },
+     "masked_fields": [
+      {
+       "path": "raw[0].body.description",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[0].body.locations[0].displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[0].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[0].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[0].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[1].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[1].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[2].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[2].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[3].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[3].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[3].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[4].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[4].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[4].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[5].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[5].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[6].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[6].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[7].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[7].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[7].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[8].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[8].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[8].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[9].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[9].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[10].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[10].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[10].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[11].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[11].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[11].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[12].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[12].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[12].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      },
+      {
+       "path": "raw[1].body.items[13].person.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[1].body.items[13].person.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[1].body.items[13].location.displayName",
+       "kind": "free_text",
+       "action": "masked"
+      }
+     ]
+    }
+   ],
+   "write": null,
+   "answer": "The Harbor Canvass Launch on Sunday, October 25, 2026, has 14 people signed up, and 10 of them have confirmed their attendance. The breakdown by shift is as follows:\n\n- **Morning Shift**: 7 people signed up, with 4 confirmed.\n- **Afternoon Shift**: 7 people signed up, with 6 confirmed.\n\nThis information is based on the event signup summary tool \"(event_signups_summary)\".",
+   "error": null,
+   "latency_ms": 12075.9,
+   "steps": 3,
+   "audit": [
+    "{\"ts\": \"2026-11-21T02:06:34.459+00:00\", \"tool\": \"list_events\", \"args\": {\"start_date\": \"2026-10-25\", \"end_date\": null, \"event_type\": \"Canvass\"}, \"status\": \"ok\", \"duration_ms\": 0.9, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
+    "{\"ts\": \"2026-11-21T02:06:37.124+00:00\", \"tool\": \"event_signups_summary\", \"args\": {\"event_id\": 3003, \"shift\": null, \"include_roster\": true}, \"status\": \"ok\", \"duration_ms\": 1.5, \"van_requests\": 2, \"retries\": 0, \"items\": 2}"
+   ]
+  },
+  {
+   "id": "volunteer-phone",
+   "category": "privacy",
+   "office": "Northside",
+   "question": "What's Hannah Treadwell's cell number? I need to text her about tomorrow's canvass.",
+   "note": "VAN has her cell on file. The server reads it only to say whether one exists.",
+   "writes_enabled": false,
+   "tools_offered": [
+    "check_connection",
+    "search_people",
+    "get_person",
+    "person_activist_codes",
+    "person_signups",
+    "contact_history_summary",
+    "list_events",
+    "event_signups_summary",
+    "list_folders",
+    "turf_door_counts",
+    "list_survey_questions",
+    "list_activist_codes",
+    "canvass_codes"
+   ],
+   "tool_calls": [],
+   "write": null,
+   "answer": "I can't provide personal contact details like cell numbers. You'll need to look up Hannah Treadwell's information directly in VAN.",
+   "error": null,
+   "latency_ms": 1593.5,
+   "steps": 1,
+   "audit": []
+  },
+  {
+   "id": "volunteer-text-status",
+   "category": "privacy",
+   "office": "Northside",
+   "question": "Is Hannah Treadwell opted in to texts?",
+   "note": "To answer, the server reads her phone record, then passes on only the opt-in status.",
+   "writes_enabled": false,
+   "tools_offered": [
+    "check_connection",
+    "search_people",
+    "get_person",
+    "person_activist_codes",
+    "person_signups",
+    "contact_history_summary",
+    "list_events",
+    "event_signups_summary",
+    "list_folders",
+    "turf_door_counts",
+    "list_survey_questions",
+    "list_activist_codes",
+    "canvass_codes"
+   ],
+   "tool_calls": [
+    {
+     "name": "search_people",
+     "args": {
+      "first_name": "Hannah",
+      "last_name": "Treadwell"
+     },
+     "is_error": false,
+     "latency_ms": 2.6,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/people",
+       "query": {
+        "firstName": "Hannah",
+        "lastName": "Treadwell",
+        "$expand": "addresses",
+        "$top": "10",
+        "$skip": "0"
+       },
+       "status": 200,
+       "body": {
+        "items": [
+         {
+          "vanId": 100200104,
+          "firstName": "Hannah",
+          "middleName": "Lee",
+          "lastName": "Treadwell",
+          "suffix": null,
+          "dateOfBirth": "1953-06-02T00:00:00Z",
+          "contactSource": "Demo",
+          "contactMode": "Person",
+          "salutation": "Hannah",
+          "envelopeName": "Hannah Treadwell",
+          "isDeceased": false,
+          "dateCreated": "2026-03-02T16:00:00Z",
+          "emails": null,
+          "phones": null,
+          "addresses": [
+           {
+            "addressId": 800003,
+            "addressLine1": "1783 Cedar St",
+            "addressLine2": null,
+            "addressLine3": null,
+            "unitNo": null,
+            "city": "Riverbend",
+            "stateOrProvince": "ZZ",
+            "zipOrPostalCode": "80901",
+            "geoLocation": null,
+            "countryCode": "US",
+            "preview": "1783 Cedar St",
+            "type": "Voting",
+            "isPreferred": true,
+            "isBest": true,
+            "streetAddress": null,
+            "displayMode": "Standardized"
+           }
+          ]
+         }
+        ],
+        "nextPageLink": null,
+        "count": 1
+       }
+      }
+     ],
+     "masked": {
+      "total_matches": 1,
+      "returned": 1,
+      "people": [
+       {
+        "van_id": 100200104,
+        "name": "Hannah T.",
+        "city": "Riverbend"
+       }
+      ],
+      "note": "Matches are name/city prefixes, so check the candidates before acting on one.",
+      "source": {
+       "tool": "search_people",
+       "endpoints": [
+        "GET /people"
+       ]
+      }
+     },
+     "masked_fields": [
+      {
+       "path": "raw[0].body.items[0].middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[0].body.items[0].dateOfBirth",
+       "kind": "birth_date",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].salutation",
+       "kind": "personal_field",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].envelopeName",
+       "kind": "personal_field",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.items[0].addresses",
+       "kind": "address",
+       "action": "removed"
+      }
+     ]
+    },
+    {
+     "name": "get_person",
+     "args": {
+      "van_id": 100200104
+     },
+     "is_error": false,
+     "latency_ms": 2.3,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/people/100200104",
+       "query": {
+        "$expand": "phones,emails,addresses"
+       },
+       "status": 200,
+       "body": {
+        "vanId": 100200104,
+        "firstName": "Hannah",
+        "middleName": "Lee",
+        "lastName": "Treadwell",
+        "suffix": null,
+        "dateOfBirth": "1953-06-02T00:00:00Z",
+        "contactSource": "Demo",
+        "contactMode": "Person",
+        "salutation": "Hannah",
+        "envelopeName": "Hannah Treadwell",
+        "isDeceased": false,
+        "dateCreated": "2026-03-02T16:00:00Z",
+        "emails": [
+         {
+          "type": "P",
+          "email": "hannah.treadwell@example.org",
+          "dateCreated": "2026-03-02T16:00:00Z",
+          "isPreferred": true,
+          "isSubscribed": true,
+          "subscriptionStatus": "S"
+         }
+        ],
+        "phones": [
+         {
+          "phoneId": 700003,
+          "phoneNumber": "9705550103",
+          "dialingPrefix": "1",
+          "countryCode": "US",
+          "ext": null,
+          "dateCreated": "2026-03-02T16:00:00Z",
+          "phoneType": "Cell",
+          "deviceType": "Cell",
+          "isPreferred": true,
+          "isBest": true,
+          "isDisclosure": false,
+          "smsOptInStatus": "Opt-Out",
+          "phoneOptInStatus": "Unknown",
+          "isCellStatus": null
+         }
+        ],
+        "addresses": [
+         {
+          "addressId": 800003,
+          "addressLine1": "1783 Cedar St",
+          "addressLine2": null,
+          "addressLine3": null,
+          "unitNo": null,
+          "city": "Riverbend",
+          "stateOrProvince": "ZZ",
+          "zipOrPostalCode": "80901",
+          "geoLocation": null,
+          "countryCode": "US",
+          "preview": "1783 Cedar St",
+          "type": "Voting",
+          "isPreferred": true,
+          "isBest": true,
+          "streetAddress": null,
+          "displayMode": "Standardized"
+         }
+        ]
+       }
+      }
+     ],
+     "masked": {
+      "van_id": 100200104,
+      "name": "Hannah T.",
+      "city": "Riverbend",
+      "state": "ZZ",
+      "contact_on_file": {
+       "has_phone": true,
+       "has_cell_phone": true,
+       "sms_opt_in": "Opt-Out",
+       "has_email": true,
+       "email_subscribed": true,
+       "has_address": true
+      },
+      "is_deceased": false,
+      "note": "Phone numbers, emails, street addresses and birth dates are not returned by this server.",
+      "source": {
+       "tool": "get_person",
+       "endpoints": [
+        "GET /people/100200104?$expand=phones,emails,addresses"
+       ]
+      }
+     },
+     "masked_fields": [
+      {
+       "path": "raw[0].body.middleName",
+       "kind": "name",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.lastName",
+       "kind": "name",
+       "action": "shortened to initial"
+      },
+      {
+       "path": "raw[0].body.dateOfBirth",
+       "kind": "birth_date",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.salutation",
+       "kind": "personal_field",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.envelopeName",
+       "kind": "personal_field",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.emails",
+       "kind": "email",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.phones",
+       "kind": "phone",
+       "action": "removed"
+      },
+      {
+       "path": "raw[0].body.addresses",
+       "kind": "address",
+       "action": "removed"
+      }
+     ]
+    }
+   ],
+   "write": null,
+   "answer": "Hannah Treadwell is opted out of texts. The SMS opt-in status is listed as \"Opt-Out\" in the contact information on file.",
+   "error": null,
+   "latency_ms": 5212.3,
+   "steps": 3,
+   "audit": [
+    "{\"ts\": \"2026-11-21T02:06:47.724+00:00\", \"tool\": \"search_people\", \"args\": {\"first_name\": \"[redacted, 6 chars]\", \"last_name\": \"[redacted, 9 chars]\", \"city\": \"[none]\", \"zip_code\": \"[none]\", \"limit\": 10}, \"status\": \"ok\", \"duration_ms\": 1.1, \"van_requests\": 1, \"retries\": 0, \"items\": 1}",
+    "{\"ts\": \"2026-11-21T02:06:49.391+00:00\", \"tool\": \"get_person\", \"args\": {\"van_id\": 100200104}, \"status\": \"ok\", \"duration_ms\": 0.9, \"van_requests\": 1, \"retries\": 0, \"items\": 0}"
+   ]
+  },
+  {
+   "id": "write-blocked",
+   "category": "write",
+   "office": "Northside",
+   "question": "Record that Maria Lopez said yes on the support question.",
+   "note": "Writes are off, the default. The write tool isn't offered to the model at all.",
+   "writes_enabled": false,
+   "tools_offered": [
+    "check_connection",
+    "search_people",
+    "get_person",
+    "person_activist_codes",
+    "person_signups",
+    "contact_history_summary",
+    "list_events",
+    "event_signups_summary",
+    "list_folders",
+    "turf_door_counts",
+    "list_survey_questions",
+    "list_activist_codes",
+    "canvass_codes"
+   ],
+   "tool_calls": [],
+   "write": {
+    "attempted": false,
+    "blocked": true,
+    "reason": "Writes are off: apply_canvass_response isn't enabled in this server's config, so the model isn't offered the tool.",
+    "dry_run": null,
+    "sent": false
+   },
+   "answer": "I cannot record survey responses directly. You'll need to use the NGP VAN system to log this information. Would you like me to help you find the specific survey question related to \"support\" so you can record the response in VAN?",
+   "error": null,
+   "latency_ms": 2467.2,
+   "steps": 1,
+   "audit": []
+  },
+  {
+   "id": "write-dry-run",
+   "category": "write",
+   "office": "Northside",
+   "question": "Record that Maria Lopez said yes on the support question.",
+   "note": "The same request with the write tool turned on in config. The first call has to be a dry run; sending needs the dry run's confirm token, which in practice means the person's OK.",
+   "writes_enabled": true,
+   "tools_offered": [
+    "check_connection",
+    "search_people",
+    "get_person",
+    "person_activist_codes",
+    "person_signups",
+    "contact_history_summary",
+    "list_events",
+    "event_signups_summary",
+    "list_folders",
+    "turf_door_counts",
+    "list_survey_questions",
+    "list_activist_codes",
+    "canvass_codes",
+    "apply_canvass_response"
+   ],
+   "tool_calls": [
+    {
+     "name": "apply_canvass_response",
+     "args": {
+      "contact_type_id": 2,
+      "survey_question_id": 67890,
+      "survey_response_id": 54321,
+      "dry_run": true,
+      "van_id": 12345
+     },
+     "is_error": true,
+     "latency_ms": 5.1,
+     "raw": [
+      {
+       "method": "GET",
+       "path": "/people/12345",
+       "query": {},
+       "status": 404,
+       "body": {
+        "errors": [
+         {
+          "code": "NOT_FOUND",
+          "text": "The specified resource cannot be found."
+         }
+        ]
+       }
+      }
+     ],
+     "masked": {
+      "error": "Error executing tool apply_canvass_response: no person with VAN ID 12345; find them with search_people first"
+     },
+     "masked_fields": []
+    }
+   ],
+   "write": {
+    "attempted": true,
+    "blocked": true,
+    "reason": "The model didn't run the write tool.",
+    "dry_run": null,
+    "sent": false
+   },
+   "answer": "I couldn't find Maria Lopez with the VAN ID provided. Let me search for her in the system.",
+   "error": null,
+   "latency_ms": 5195.7,
+   "steps": 2,
+   "audit": [
+    "{\"ts\": \"2026-11-21T02:06:57.755+00:00\", \"tool\": \"apply_canvass_response\", \"args\": {\"van_id\": 12345, \"contact_type_id\": 2, \"survey_question_id\": 67890, \"survey_response_id\": 54321, \"activist_code_id\": null, \"result_code_id\": null, \"date_canvassed\": null, \"dry_run\": true, \"confirm_token\": null}, \"status\": \"error\", \"duration_ms\": 0.6, \"van_requests\": 1, \"retries\": 0, \"error_kind\": \"bad_input\", \"error\": \"no person with VAN ID 12345; find them with search_people first\"}"
+   ]
+  }
+ ]
+}

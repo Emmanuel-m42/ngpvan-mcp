@@ -16,7 +16,6 @@ import time
 from pathlib import Path
 from typing import Any
 
-from rich.columns import Columns
 from rich.console import Console, Group
 from rich.panel import Panel
 from rich.rule import Rule
@@ -53,10 +52,11 @@ def _person_rows(call: dict[str, Any]) -> list[tuple[str, str, bool]]:
             continue
         hit = any(key == f or f.startswith(key + ".") or f.startswith(key + "[") for f in flagged)
         if isinstance(value, list):
-            leaf = {"phones": "phoneNumber", "emails": "email", "addresses": "addressLine1"}[key]
-            for i, item in enumerate(value):
+            leaf, label = {"phones": ("phoneNumber", "phone"), "emails": ("email", "email"),
+                           "addresses": ("addressLine1", "address")}[key]
+            for item in value:
                 extra = f" ({item['smsOptInStatus']} for texts)" if key == "phones" and "smsOptInStatus" in item else ""
-                rows.append((f"{key}[{i}].{leaf}", f"{item.get(leaf)}{extra}", hit))
+                rows.append((label, f"{item.get(leaf)}{extra}", hit))
         else:
             rows.append((key, str(value)[:10] if key == "dateOfBirth" else str(value), hit))
     return rows
@@ -146,10 +146,14 @@ class Player:
         seen = Table.grid(padding=(0, 1))
         for key, value in _masked_rows(call["masked"]):
             seen.add_row(Text(key, style="dim"), Text(value, style="green"))
-        self.c.print(Columns([
+        pair = Table.grid(expand=True, padding=(0, 1))
+        pair.add_column(ratio=1)
+        pair.add_column(ratio=1)
+        pair.add_row(
             Panel(raw, title="what VAN returned", subtitle="red = removed or shortened", border_style="red"),
             Panel(seen, title="what the model saw", border_style="green"),
-        ]))
+        )
+        self.c.print(pair)
         self.pause(5.0)
 
     def dry_run(self, write: dict[str, Any]) -> None:
