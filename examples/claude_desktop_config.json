@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "ngpvan-demo": {
+      "command": "uv",
+      "args": ["run", "--directory", "/path/to/ngpvan-mcp", "ngpvan-mcp", "--demo"]
+    },
+    "ngpvan": {
+      "command": "uv",
+      "args": ["run", "--directory", "/path/to/ngpvan-mcp", "ngpvan-mcp", "--config", "/path/to/ngpvan-mcp.toml"],
+      "env": {
+        "VAN_APP_NAME": "yourApplicationName",
+        "VAN_API_KEY": "your-api-key-guid"
+      }
+    }
+  }
+}
