@@ -100,4 +100,29 @@ def test_recorder_builds_the_demo_from_a_trace(tmp_path, capsys):
     assert not turf["error"] and turf["tool_calls"][0]["raw"] and turf["tool_calls"][0]["masked"]["total_doors"]
     write = by_id["write-dry-run"]
     assert not write["error"] and write["write"]["dry_run"] and not write["write"]["sent"]
+    assert write["followup"] is None  # it dry-ran in the first turn, so the organizer isn't asked
     assert by_id["write-blocked"]["tool_calls"] == []
+
+
+def test_follow_up_turn_dry_run_then_send_across_cli_calls(tmp_path, capsys):
+    trace = tmp_path / "t.jsonl"
+    case = "write-dry-run.followup"
+    people = call(capsys, trace, case, "search_people", {"first_name": "Maria", "last_name": "Lopez"})
+    sq = call(capsys, trace, case, "list_survey_questions", {"name": "Measure 3"})["survey_questions"][0]
+    change = {"van_id": people["people"][0]["van_id"], "contact_type_id": 2, "survey_question_id": sq["id"],
+              "survey_response_id": sq["responses"][0]["id"]}
+    dry = call(capsys, trace, case, "apply_canvass_response", change | {"dry_run": True})
+    sent = call(capsys, trace, case, "apply_canvass_response",
+                change | {"dry_run": False, "confirm_token": dry["confirm_token"]})
+    assert sent.get("applied")
+    answers = {p["id"]: "I can't do that here." for p in record.PROMPTS}
+    answers["write-dry-run"] = "Which answer did she give: Strong Yes, Lean Yes...?"
+    answers[case] = "Recorded Strong Yes for Maria L. (apply_canvass_response)."
+    a = tmp_path / "a.json"
+    a.write_text(json.dumps(answers))
+    out = tmp_path / "recorded_runs.json"
+    assert record.main(["--provider", "agent-trace", "--trace", str(trace), "--answers", str(a), "--out", str(out)]) == 0
+    q = next(q for q in json.loads(out.read_text())["questions"] if q["id"] == "write-dry-run")
+    assert q["tool_calls"] == [] and not q["followup"]["error"]
+    assert [c["name"] for c in q["followup"]["tool_calls"]][-1] == "apply_canvass_response"
+    assert q["write"]["sent"]

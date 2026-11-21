@@ -22,15 +22,18 @@ that doesn't match what the agent was shown fails the case, so a trace can't be 
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
+from unittest.mock import patch
 
 import anyio
 from mcp import Client
 
+from .. import tools as toolbox_module
 from ..audit import AuditLog
 from ..cli import make_client
 from ..config import Config
@@ -48,13 +51,20 @@ def _contexts() -> dict[str, dict[str, Any]]:
 
     spec = load_cases()
     out = {c["id"]: {"today": spec["today"], "writes": False} for c in spec["cases"]}
-    out |= {p["id"]: {"today": TODAY, "writes": bool(p.get("writes_enabled"))} for p in PROMPTS}
+    for p in PROMPTS:
+        out[p["id"]] = {"today": TODAY, "writes": bool(p.get("writes_enabled"))}
+        if p.get("followup"):
+            out[f"{p['id']}.followup"] = out[p["id"]]
     return out
 
 
-def _server(writes: bool):
+def _server(writes: bool, case: str = ""):
     config = Config(audit_log=None, writes={"apply_canvass_response": writes})
-    return build_server(config, make_client(config, demo=True), AuditLog(None))
+    # Each CLI call is a fresh server, so a dry run's confirm token would never match the send that follows it.
+    # Within one case the CLI derives the token secret from the case id; the replay uses a real random one.
+    seed = hashlib.sha256(f"ngpvan-agent-tool:{case}".encode()).digest()
+    with patch.object(toolbox_module.secrets, "token_bytes", lambda n: seed[:n]):
+        return build_server(config, make_client(config, demo=True), AuditLog(None))
 
 
 async def _prompt(case: str | None) -> str:
@@ -66,8 +76,8 @@ async def _prompt(case: str | None) -> str:
         json.dumps(tools, indent=1)
 
 
-async def _call(tool: str, args: dict[str, Any], writes: bool) -> tuple[str, bool]:
-    async with Client(_server(writes)) as client:
+async def _call(tool: str, args: dict[str, Any], writes: bool, case: str) -> tuple[str, bool]:
+    async with Client(_server(writes, case.removesuffix(".followup"))) as client:
         result = await client.call_tool(tool, args)
     return (result.content[0].text if result.content else ""), bool(result.is_error)
 
@@ -97,7 +107,7 @@ def tool_main(argv: list[str] | None = None) -> int:
     if not isinstance(args, dict):
         print("arguments must be a JSON object", file=sys.stderr)
         return 2
-    text, is_error = anyio.run(_call, a.tool, args, contexts[a.case]["writes"])
+    text, is_error = anyio.run(_call, a.tool, args, contexts[a.case]["writes"], a.case)
     entry = {"case": a.case, "tool": a.tool, "args": args, "result": text, "is_error": is_error,
              "at": datetime.now(UTC).isoformat(timespec="seconds")}
     with open(a.trace, "a", encoding="utf-8") as fh:
@@ -152,16 +162,19 @@ class TraceChat:
         self.current = case_id
 
     async def chat(self, messages, tools):
-        question = next(m["content"] for m in messages if m["role"] == "user")
-        cid = self.current or self.by_question[question]
-        step = sum(1 for m in messages if m["role"] == "assistant")
-        if step == 0:
+        users = [i for i, m in enumerate(messages) if m["role"] == "user"]
+        cid = self.current or self.by_question[messages[users[0]]["content"]]
+        turn = messages[users[-1] + 1:]
+        step = sum(1 for m in turn if m["role"] == "assistant")
+        if step == 0 and len(users) == 1:
             self.trial[cid] = self.trial.get(cid, -1) + 1
         n = self.trial[cid]
         if n >= len(self.runs):
             raise RuntimeError(f"no run {n + 1} for {cid}")
+        if len(users) > 1:  # the organizer's follow-up turn in the recorder
+            cid = f"{cid}.followup"
         calls, answers = self.runs[n][0].get(cid, []), self.runs[n][1]
-        seen = [m for m in messages if m["role"] == "tool"]
+        seen = [m for m in turn if m["role"] == "tool"]
         for i, m in enumerate(seen):
             if _comparable(m["content"]) != _comparable(calls[i]["result"]):
                 self.mismatches.append({"case": cid, "run": n, "call": i, "tool": calls[i]["tool"]})
@@ -170,9 +183,9 @@ class TraceChat:
         if step < len(calls):
             call = calls[step]
             args = dict(call["args"])
-            if "confirm_token" in args and seen:
+            if "confirm_token" in args:
                 # A send after a dry run: the token is per server, so use the one this replay's dry run gave.
-                for m in reversed(seen):
+                for m in reversed([m for m in messages if m["role"] == "tool"]):
                     try:
                         token = json.loads(m["content"]).get("confirm_token")
                     except (ValueError, AttributeError):
