@@ -23,6 +23,7 @@ ngpvan-mcp = "ngpvan_mcp.cli:main"
 ngpvan-mcp-evals = "ngpvan_mcp.evals.runner:main"
 ngpvan-mcp-record = "ngpvan_mcp.evals.record:main"
 ngpvan-mcp-replay = "ngpvan_mcp.evals.replay:main"
+ngpvan-agent-tool = "ngpvan_mcp.evals.agent_trace:tool_main"
 
 [build-system]
 requires = ["uv_build>=0.12.14,<0.13.0"]

@@ -221,6 +221,30 @@ uv run ngpvan-mcp-evals --provider ollama --model qwen2.5:7b --split heldout --k
 uv run ngpvan-mcp-evals --provider vertex --model <Claude model ID on Vertex> --vertex-project P --vertex-region R --split heldout --k 3
 ```
 
+#### An outside agent as the model
+
+A coding agent (for example a Claude subagent) can be the model without an API: it reads the system
+prompt and tool list from `ngpvan-agent-tool prompt --case d01`, calls the real tools from a shell
+with `ngpvan-agent-tool <tool> '<json args>' --case <id> --trace run1.jsonl` (which prints exactly
+what the model loop would put in the tool message, after the privacy filter, and appends the call to
+the trace), and writes its answers to a JSON file, `{"d01": "answer", ...}`. Scoring replays each
+case's calls in order through a fresh demo server inside the normal eval loop, so the same scorer and
+metrics apply; several trace and answer pairs give pass^k:
+
+```bash
+uv run ngpvan-mcp-evals --provider agent-trace --split dev \
+  --trace run1.jsonl --answers run1.json --trace run2.jsonl --answers run2.json --label claude-agent_dev
+uv run ngpvan-mcp-record --provider agent-trace --trace demo.jsonl --answers demo.json   # demo/recorded_runs.json
+```
+
+What's different in this mode: the agent runs its own loop, so this is not the app's loop. The 6-step
+cap isn't applied (each traced call replays as one step), and seconds are replay time, not model
+time. A replayed result that doesn't match what the agent was shown fails the case. The CLI starts a
+fresh server per call, so a write's confirm token is derived from the case id there; the replay uses
+a random one and passes the dry run's token on to the send. Reports label these runs "Claude Opus
+5.5 as the agent through the tool CLI (OpenCode subagent; same tools and prompt, not the app's own
+agent loop)".
+
 ### Results
 
 Model: `qwen3:14b` (Q4_K_M, 14.8B parameters, 9.28 GB file, 11.7 GB loaded at a 16,384-token
