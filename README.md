@@ -20,20 +20,6 @@ the mistakes that hurt are a volunteer's cell number showing up somewhere it sho
 nobody meant to make. So the server covers a small part of the API on purpose, and puts its effort
 into the summaries organizers use and the guard rails around them.
 
-## What exists already
-
-As of November 2026 I couldn't find another MCP server for VAN or EveryAction on GitHub or PyPI.
-Related work:
-
-- [NGPVAN/van-cli](https://github.com/NGPVAN/van-cli): NGP VAN's own experimental TypeScript CLI
-  and SDK. Much wider coverage than this project, reads and writes, no MCP layer and no masking.
-- [NickCrews/van-openapi](https://github.com/NickCrews/van-openapi): a community OpenAPI spec for
-  about 15 people endpoints, checked against the sandbox, with an agent skill that calls the raw API.
-  Its notes on traps (paging, `$expand`, 429s) informed the client here.
-- Python, Ruby and R wrappers (MoveOnOrg/ngpvan_api, Parsons, vanR) for scripts and pipelines.
-
-The difference here is the layer between the API and the model, not API coverage.
-
 ## Safety model
 
 ```mermaid
